@@ -1,17 +1,19 @@
-using UnityEngine;
 using Zenject;
 
-namespace SampleGame
+namespace YooE.Diploma
 {
     public sealed class GameInstaller : MonoInstaller
     {
-        [SerializeField] private CameraConfig _cameraConfig;
-        [SerializeField] private Camera _camera;
-        [SerializeField] private InputConfig _inputConfig;
+        //[SerializeField] private CameraConfig _cameraConfig;
+        //[SerializeField] private Camera _camera;
+        //[SerializeField] private InputConfig _inputConfig;
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public override void InstallBindings()
         {
-            Container
+            Container.BindInterfacesAndSelfTo<LifecycleManager>().AsSingle().NonLazy();
+
+            /*Container
                 .Bind<Camera>()
                 .FromInstance(_camera);
 
@@ -36,7 +38,7 @@ namespace SampleGame
                 .BindInterfacesTo<CameraFollower>()
                 .AsCached()
                 .WithArguments(_cameraConfig.cameraOffset)
-                .NonLazy();
+                .NonLazy();*/
         }
     }
 }

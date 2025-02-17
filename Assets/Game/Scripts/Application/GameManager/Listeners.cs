@@ -1,4 +1,4 @@
-namespace ShootEmUp
+namespace YooE.Diploma
 {
     public class Listeners
     {
