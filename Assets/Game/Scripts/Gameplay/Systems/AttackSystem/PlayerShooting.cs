@@ -1,24 +1,22 @@
 ﻿using UnityEngine;
-using Zenject;
 
 namespace YooE.Diploma
 {
-    public sealed class PlayerShooting : MonoBehaviour, Listeners.IUpdateListener
+    public sealed class PlayerShooting : Listeners.IUpdateListener
     {
-        [SerializeField] private TargetPicker _targetPicker;
-        [SerializeField] private float _shootingDelay = 1.3f;
-        private WeaponView _weaponView;
+        private readonly TargetPicker _targetPicker;
+        private readonly WeaponView[] _weaponsView;
+        private readonly BulletsSystem _bulletsSystem;
+        private readonly ShootingConfig _shootingConfig;
+
         private float _nextShotTime;
 
-        private BulletsSystem _bulletsSystem;
-
-        [SerializeField] private float _bulletSpeed;
-        [SerializeField] private int _damage;
-
-        [Inject]
-        public void Construct(BulletsSystem bulletsSystem, PlayerView weaponView)
+        public PlayerShooting(BulletsSystem bulletsSystem, WeaponView[] weaponsView, TargetPicker targetPicker,
+            ShootingConfig shootingConfig)
         {
-            _weaponView = weaponView.WeaponView;
+            _shootingConfig = shootingConfig;
+            _targetPicker = targetPicker;
+            _weaponsView = weaponsView;
             _bulletsSystem = bulletsSystem;
             _bulletsSystem.OnInit();
         }
@@ -27,27 +25,43 @@ namespace YooE.Diploma
         //TODO: remove change visibility from update
         public void OnUpdate(float deltaTime)
         {
-            if (_targetPicker.TryGetClosestTargetPosition(out var targetPosition))
+            if (_targetPicker.TryGetNClosestTargetsPosition(_weaponsView.Length, out var targetsPositions))
             {
-                _weaponView.RotateWeapon(targetPosition);
+                for (var i = 0; i < _weaponsView.Length; i++)
+                {
+                    _weaponsView[i].RotateWeapon(targetsPositions[i]);
+                }
 
                 if ((Time.time < _nextShotTime)) return;
-                _nextShotTime += _shootingDelay;
-                _weaponView.SetWeaponVisibility(true);
+                _nextShotTime += _shootingConfig.ShootingDelay;
 
-                var velocity = CalculateBulletVelocity(GetShotDirection(targetPosition), _bulletSpeed);
-                _bulletsSystem.FlyBullet(_weaponView.ShootingPointPosition, _damage, velocity);
+                for (var i = 0; i < _weaponsView.Length; i++)
+                {
+                    UpdateWeaponState(_weaponsView[i], targetsPositions[i]);
+                }
             }
             else
             {
                 _nextShotTime += Time.deltaTime;
-                _weaponView.SetWeaponVisibility(false);
+                for (var i = 0; i < _weaponsView.Length; i++)
+                {
+                    _weaponsView[i].SetWeaponVisibility(false);
+                }
             }
         }
 
-        private Vector3 GetShotDirection(Vector3 targetPosition)
+        private void UpdateWeaponState(WeaponView weaponView, Vector3 targetPosition)
         {
-            var direction = targetPosition - _weaponView.ShootingPointPosition;
+            weaponView.SetWeaponVisibility(true);
+
+            var velocity = CalculateBulletVelocity(
+                GetShotDirection(weaponView.ShootingPointPosition, targetPosition), _shootingConfig.BulletSpeed);
+            _bulletsSystem.FlyBullet(weaponView.ShootingPointPosition, _shootingConfig.Damage, velocity);
+        }
+
+        private Vector3 GetShotDirection(Vector3 startShootingPosition, Vector3 targetPosition)
+        {
+            var direction = targetPosition - startShootingPosition;
             return direction.normalized;
         }
 

@@ -16,6 +16,6 @@ MonoBehaviour:
   <RunAcceleration>k__BackingField: 50
   <RunSpeed>k__BackingField: 4
   <Drag>k__BackingField: 20
-  <YVelocity>k__BackingField: -1
+  <YVelocity>k__BackingField: -5
   <RotationSpeed>k__BackingField: 6
   <AnimationsBlendSpeed>k__BackingField: 10

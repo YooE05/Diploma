@@ -7,13 +7,22 @@ namespace YooE.Diploma
         [SerializeField] private GameObject _weaponView;
         [SerializeField] private Transform _shootingPoint;
 
+        [SerializeField] private float _rotateSpeed;
+
+        private Vector3 _resultWeaponPosition;
+
         public Vector3 ShootingPointPosition => _shootingPoint.position;
         private Transform WeaponViewTransform => _weaponView.transform;
 
         public void RotateWeapon(Vector3 targetPosition)
         {
-            var resultPosition = new Vector3(targetPosition.x, 0f, targetPosition.z);
-            WeaponViewTransform.LookAt(resultPosition);
+            _resultWeaponPosition = new Vector3(targetPosition.x, 0f, targetPosition.z);
+
+            var direction = _resultWeaponPosition - WeaponViewTransform.position;
+            WeaponViewTransform.rotation = Quaternion.Lerp(WeaponViewTransform.rotation,
+                Quaternion.LookRotation(direction), Time.deltaTime * _rotateSpeed);
+
+            /* WeaponViewTransform.LookAt(_resultWeaponPosition);*/
         }
 
         public void SetWeaponVisibility(bool isActive)

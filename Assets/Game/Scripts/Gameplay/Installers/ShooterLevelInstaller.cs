@@ -2,7 +2,7 @@ using Zenject;
 
 namespace YooE.Diploma
 {
-    public sealed class GameInstaller : MonoInstaller
+    public sealed class ShooterLevelInstaller : MonoInstaller
     {
         //[SerializeField] private CameraConfig _cameraConfig;
         //[SerializeField] private Camera _camera;

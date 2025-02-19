@@ -2448,7 +2448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128947627558323880}
   m_Layer: 0
-  m_Name: View
+  m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2652,6 +2652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6272016005948413057}
   - component: {fileID: 2261200257143460082}
+  - component: {fileID: 4430904324986991215}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -2704,6 +2705,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.00001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4430904324986991215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837636657432055596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ff03df749c4a5f95d71db56020524d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Animator>k__BackingField: {fileID: 2826880097100320557}
+  <CharacterController>k__BackingField: {fileID: 2261200257143460082}
+  <Camera>k__BackingField: {fileID: 2004204149755102313}
+  <Visual>k__BackingField: {fileID: 2128947627558323880}
+  <WeaponView>k__BackingField: {fileID: 6414544586935209853}
 --- !u!1 &3868510763354664181
 GameObject:
   m_ObjectHideFlags: 0
@@ -4857,6 +4875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2259044705158719730}
+  - component: {fileID: 6414544586935209853}
   m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
@@ -4881,6 +4900,20 @@ Transform:
   m_Father: {fileID: 6272016005948413057}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6414544586935209853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523308049977744052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69f4c18f21b42d3b40ca425334c397e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponView: {fileID: 7523308049977744052}
+  _shootingPoint: {fileID: 4648757090514006722}
 --- !u!1 &7525798324609466953
 GameObject:
   m_ObjectHideFlags: 0

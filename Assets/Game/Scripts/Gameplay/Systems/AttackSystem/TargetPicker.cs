@@ -1,20 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Linq;
 
 namespace YooE.Diploma
 {
-    public sealed class TargetPicker : MonoBehaviour
+    public sealed class TargetPicker
     {
-        [SerializeField] private Transform _targetsOverlapCenter;
-        [SerializeField] private TargetSensorConfig _targetSensorConfig;
+        private readonly TargetSensor _targetsSensor;
+        private readonly Transform _targetsOverlapCenter;
+        private Vector3 OverlapCenterPosition => _targetsOverlapCenter.position;
 
-        private TargetSensor _targetsSensor;
+        private List<Collider> _currentGetTargets = new();
 
-        private void Awake()
+        public TargetPicker(Transform targetsOverlapCenter, TargetSensor targetsSensor)
         {
-            _targetsSensor = new TargetSensor(_targetSensorConfig, _targetsOverlapCenter);
+            _targetsOverlapCenter = targetsOverlapCenter;
+            _targetsSensor = targetsSensor;
         }
 
-        public bool TryGetClosestTargetPosition(out Vector3 closestTargetPosition)
+        /*public bool TryGetClosestTargetPosition(out Vector3 closestTargetPosition)
         {
             if (TryGetClosestTarget(out Collider closestTarget))
             {
@@ -24,36 +29,49 @@ namespace YooE.Diploma
 
             closestTargetPosition = default;
             return false;
-        }
+        }*/
 
-        public bool TryGetClosestTarget(out Collider closestTarget)
+        public bool TryGetNClosestTargetsPosition(int countOfWeapons, out Vector3[] closestTargetPosition)
         {
-            var targets = _targetsSensor.FindPossibleTargets(out var targetsCount);
-            closestTarget = null;
-            if (targets[0] == null) return false;
+            closestTargetPosition = Array.Empty<Vector3>();
+            _currentGetTargets.Clear();
+            _currentGetTargets.AddRange(
+                _targetsSensor.FindPossibleTargets(OverlapCenterPosition, out var targetsCount));
+            _currentGetTargets.RemoveRange(targetsCount, _currentGetTargets.Count - targetsCount);
+            if (targetsCount == 0) return false;
 
-            closestTarget = targets[0];
-            var minSqrDistance = GetSqrMagnitude(closestTarget.transform);
-            for (var i = 1; i < targets.Length; i++)
+            //Array.Copy(_currentGetTargets, _currentGetTargets, targetsCount);
+            //_currentGetTargets = _currentGetTargets.Take(targetsCount) as Collider[];
+            closestTargetPosition = new Vector3[countOfWeapons];
+            for (var i = 0; i < countOfWeapons; i++)
             {
-                if (targets[i] == null) break;
-
-                var newSqrMagnitude = GetSqrMagnitude(targets[i].transform);
-
-                if (newSqrMagnitude <= minSqrDistance)
+                var closestTarget = GetClosestTarget(_currentGetTargets);
+                if (_currentGetTargets.Count > 1)
                 {
-                    minSqrDistance = newSqrMagnitude;
-                    closestTarget = targets[i];
+                    _currentGetTargets.Remove(closestTarget);
                 }
+
+                closestTargetPosition[i] = closestTarget.transform.position;
             }
 
             return true;
         }
 
-        private float GetSqrMagnitude(Transform targetTransform)
+        private Collider GetClosestTarget(List<Collider> targets)
         {
-            var heading = _targetsOverlapCenter.position - targetTransform.position;
+            return targets?.Where(t => t is not null).OrderBy(GetSqrMagnitude).First();
+        }
+
+        private float GetSqrMagnitude(Collider target)
+        {
+            var heading = OverlapCenterPosition - target.transform.position;
             return heading.sqrMagnitude;
         }
+
+        /*private float GetSqrMagnitude(Transform targetTransform)
+        {
+            var heading = OverlapCenterPosition - targetTransform.position;
+            return heading.sqrMagnitude;
+        }*/
     }
 }
