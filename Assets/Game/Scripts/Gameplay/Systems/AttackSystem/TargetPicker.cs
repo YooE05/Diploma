@@ -11,7 +11,7 @@ namespace YooE.Diploma
         private readonly Transform _targetsOverlapCenter;
         private Vector3 OverlapCenterPosition => _targetsOverlapCenter.position;
 
-        private List<Collider> _currentGetTargets = new();
+        private readonly List<Collider> _currentGetTargets = new();
 
         public TargetPicker(Transform targetsOverlapCenter, TargetSensor targetsSensor)
         {
@@ -31,27 +31,26 @@ namespace YooE.Diploma
             return false;
         }*/
 
-        public bool TryGetNClosestTargetsPosition(int countOfWeapons, out Vector3[] closestTargetPosition)
+        public bool TryGetNClosestTargets(int countOfWeapons, out List<Collider> closestTargetPosition)
         {
-            closestTargetPosition = Array.Empty<Vector3>();
+            closestTargetPosition = new List<Collider>();
             _currentGetTargets.Clear();
             _currentGetTargets.AddRange(
                 _targetsSensor.FindPossibleTargets(OverlapCenterPosition, out var targetsCount));
             _currentGetTargets.RemoveRange(targetsCount, _currentGetTargets.Count - targetsCount);
             if (targetsCount == 0) return false;
 
-            //Array.Copy(_currentGetTargets, _currentGetTargets, targetsCount);
-            //_currentGetTargets = _currentGetTargets.Take(targetsCount) as Collider[];
-            closestTargetPosition = new Vector3[countOfWeapons];
+            var diff = countOfWeapons - targetsCount;
+
             for (var i = 0; i < countOfWeapons; i++)
             {
                 var closestTarget = GetClosestTarget(_currentGetTargets);
-                if (_currentGetTargets.Count > 1)
+                if (diff - i <= 0)
                 {
                     _currentGetTargets.Remove(closestTarget);
                 }
 
-                closestTargetPosition[i] = closestTarget.transform.position;
+                closestTargetPosition.Add(closestTarget);
             }
 
             return true;

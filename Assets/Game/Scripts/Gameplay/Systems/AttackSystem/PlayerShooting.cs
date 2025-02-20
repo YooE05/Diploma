@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace YooE.Diploma
 {
@@ -21,23 +23,20 @@ namespace YooE.Diploma
             _bulletsSystem.OnInit();
         }
 
-        //TODO: change hiding weapon to rotate forward when stop shooting
+        //TODO: change hiding weapons to rotate them forward when stop shooting
         //TODO: remove change visibility from update
         public void OnUpdate(float deltaTime)
         {
-            if (_targetPicker.TryGetNClosestTargetsPosition(_weaponsView.Length, out var targetsPositions))
+            if (_targetPicker.TryGetNClosestTargets(_weaponsView.Length, out var targets))
             {
-                for (var i = 0; i < _weaponsView.Length; i++)
-                {
-                    _weaponsView[i].RotateWeapon(targetsPositions[i]);
-                }
+                SetTargetsOnWeapons(targets);
 
                 if ((Time.time < _nextShotTime)) return;
                 _nextShotTime += _shootingConfig.ShootingDelay;
 
                 for (var i = 0; i < _weaponsView.Length; i++)
                 {
-                    UpdateWeaponState(_weaponsView[i], targetsPositions[i]);
+                    Shoot(_weaponsView[i]);
                 }
             }
             else
@@ -50,12 +49,41 @@ namespace YooE.Diploma
             }
         }
 
-        private void UpdateWeaponState(WeaponView weaponView, Vector3 targetPosition)
+        private void SetTargetsOnWeapons(List<Collider> targets)
+        {
+            //Check need to change target on weapon
+            for (var i = 0; i < _weaponsView.Length; i++)
+            {
+                var col = targets.Find(c => c == _weaponsView[i].CurrentTarget);
+                if (col)
+                {
+                    targets.Remove(col);
+                }
+                else
+                {
+                    _weaponsView[i].CurrentTarget = null;
+                }
+            }
+
+            for (var i = 0; i < _weaponsView.Length; i++)
+            {
+                if (_weaponsView[i].CurrentTarget is null)
+                {
+                    _weaponsView[i].CurrentTarget = targets[0];
+                    targets.Remove(targets[0]);
+                }
+
+                _weaponsView[i].RotateWeapon();
+            }
+        }
+
+        private void Shoot(WeaponView weaponView)
         {
             weaponView.SetWeaponVisibility(true);
 
             var velocity = CalculateBulletVelocity(
-                GetShotDirection(weaponView.ShootingPointPosition, targetPosition), _shootingConfig.BulletSpeed);
+                GetShotDirection(weaponView.ShootingPointPosition, weaponView.CurrentTarget.transform.position),
+                _shootingConfig.BulletSpeed);
             _bulletsSystem.FlyBullet(weaponView.ShootingPointPosition, _shootingConfig.Damage, velocity);
         }
 

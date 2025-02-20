@@ -10,13 +10,15 @@ namespace YooE.Diploma
         [SerializeField] private float _rotateSpeed;
 
         private Vector3 _resultWeaponPosition;
+        public Collider CurrentTarget { get; set; }
 
         public Vector3 ShootingPointPosition => _shootingPoint.position;
         private Transform WeaponViewTransform => _weaponView.transform;
 
-        public void RotateWeapon(Vector3 targetPosition)
+        public void RotateWeapon()
         {
-            _resultWeaponPosition = new Vector3(targetPosition.x, 0f, targetPosition.z);
+            _resultWeaponPosition =
+                new Vector3(CurrentTarget.transform.position.x, 0f, CurrentTarget.transform.position.z);
 
             var direction = _resultWeaponPosition - WeaponViewTransform.position;
             WeaponViewTransform.rotation = Quaternion.Lerp(WeaponViewTransform.rotation,

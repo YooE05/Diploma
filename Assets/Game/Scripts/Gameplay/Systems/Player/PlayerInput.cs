@@ -3,12 +3,13 @@ using UnityEngine.InputSystem;
 
 namespace YooE.Diploma
 {
-    public sealed class PlayerLocomotionInput : MonoBehaviour, PlayerControls.IPlayerLocomotionMapActions
+    public sealed class PlayerInput : PlayerControls.IPlayerLocomotionMapActions, Listeners.IInitListener,
+        Listeners.IFinishListener
     {
         private PlayerControls PlayerControls { get; set; }
         public Vector2 MovementInput { get; private set; }
 
-        private void OnEnable()
+        public void OnInit()
         {
             PlayerControls = new PlayerControls();
             PlayerControls.Enable();
@@ -17,7 +18,7 @@ namespace YooE.Diploma
             PlayerControls.PlayerLocomotionMap.SetCallbacks(this);
         }
 
-        private void OnDisable()
+        public void OnFinish()
         {
             PlayerControls.PlayerLocomotionMap.Disable();
             PlayerControls.PlayerLocomotionMap.RemoveCallbacks(this);
