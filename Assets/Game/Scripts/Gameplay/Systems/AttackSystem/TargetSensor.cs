@@ -4,11 +4,16 @@ namespace YooE.Diploma
 {
     public sealed class TargetSensor
     {
-        private readonly LayerMask _layerMask;
-        private readonly int _targetsCapacity;
-        private readonly float _radius;
+        private LayerMask _layerMask;
+        private int _targetsCapacity;
+        private float _radius;
 
         public TargetSensor(TargetSensorConfig config)
+        {
+            ChangeConfig(config);
+        }
+
+        public void ChangeConfig(TargetSensorConfig config)
         {
             _layerMask = config.LayerMask;
             _targetsCapacity = config.TargetsCapacity;

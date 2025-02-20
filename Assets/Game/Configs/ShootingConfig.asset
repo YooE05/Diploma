@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ShootingDelay>k__BackingField: 0.3
   <BulletSpeed>k__BackingField: 5
-  <Damage>k__BackingField: 5
+  <Damage>k__BackingField: 1

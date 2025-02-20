@@ -28,12 +28,17 @@ namespace YooE.Diploma
             bullet.Show();
         }
 
-        private void ReturnBullet(Bullet bullet, Collision collision2D)
+        private void ReturnBullet(Bullet bullet, Collision collision)
         {
             bullet.OnCollisionEntered -= ReturnBullet;
             bullet.Hide();
             Return(bullet);
-            //TODO: do damage to enemy
+
+            var hpComponent = collision.gameObject.GetComponentInParent<HitPointsComponent>();
+            if (hpComponent)
+            {
+                hpComponent.TakeDamage(bullet.Damage);
+            }
         }
 
         private void AddBulletActions(Bullet newBullet)
