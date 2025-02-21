@@ -10,7 +10,7 @@ namespace YooE.Diploma
 
         private EnemyTargetSearcher _targetSearcher;
         private EnemyMotionController _motionController;
-        private DeathObserver _deathObserver;
+        private EnemyDeathObserver _deathObserver;
         private TargetAttack _targetAttack;
 
         private EnemyConfig _enemyConfig;
@@ -32,7 +32,7 @@ namespace YooE.Diploma
             _motionController =
                 new EnemyMotionController(_enemyView, _enemyConfig.RotationSpeed, _enemyConfig.MovementSpeed,
                     _targetSearcher);
-            _deathObserver = new DeathObserver(_enemyView);
+            _deathObserver = new EnemyDeathObserver(_enemyView);
             _targetAttack = new TargetAttack(_enemyConfig.Damage, _enemyView.AnimationEvents,
                 _enemyConfig.AttackRangeSensorConfig,
                 _enemyView.Transform);

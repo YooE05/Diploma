@@ -5,14 +5,14 @@ namespace YooE.Diploma
     public sealed class TargetAttack
     {
         private readonly int _damage;
-        private readonly EnemyAnimationEvents _animationEvents;
+        private readonly AnimationEvents _animationEvents;
         private readonly TargetSensorConfig _targetSensorConfig;
         private readonly Transform _selfTransform;
 
         private TargetSensor _targetSensor;
         private HitPointsComponent _targetHp;
 
-        public TargetAttack(int damage, EnemyAnimationEvents animationEvents, TargetSensorConfig targetSensorConfig,  Transform selfTransform)
+        public TargetAttack(int damage, AnimationEvents animationEvents, TargetSensorConfig targetSensorConfig,  Transform selfTransform)
         {
             _damage = damage;
             _animationEvents = animationEvents;
@@ -26,7 +26,7 @@ namespace YooE.Diploma
         {
             _targetHp = null;
             _targetSensor = new TargetSensor(_targetSensorConfig);
-            _animationEvents.OnPunchEnded += DoDamage;
+            _animationEvents.OnHitEnded += DoDamage;
         }
 
         public void SetTargetHp(Collider target)

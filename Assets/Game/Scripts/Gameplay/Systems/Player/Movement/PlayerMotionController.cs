@@ -2,13 +2,15 @@
 
 namespace YooE.Diploma
 {
-    public sealed class PlayerMotionController : Listeners.IUpdateListener
+    public sealed class PlayerMotionController : Listeners.IUpdateListener, Listeners.IStartListener
     {
         private readonly PlayerInput _playerInput;
         private readonly Camera _playerCamera;
         private readonly PlayerAnimation _playerAnimation;
         private readonly PlayerMovement _playerMovement;
         private readonly PlayerRotation _playerRotation;
+
+        public bool CanAct = false;
 
         public PlayerMotionController(PlayerAnimation playerAnimation, PlayerMovement playerMovement,
             PlayerRotation playerRotation, Camera playerCamera, PlayerInput playerInput)
@@ -20,8 +22,15 @@ namespace YooE.Diploma
             _playerCamera = playerCamera;
         }
 
+        public void OnStart()
+        {
+            CanAct = true;
+        }
+
         public void OnUpdate(float deltaTime)
         {
+            if (!CanAct) return;
+
             var direction = GetMovementDirection();
             _playerMovement.UpdateMovement(direction);
             _playerRotation.UpdateRotation(direction);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace YooE.Diploma
 {
-    public sealed class PlayerShooting : Listeners.IUpdateListener
+    public sealed class PlayerShooting : Listeners.IUpdateListener, Listeners.IStartListener
     {
         private readonly TargetPicker _targetPicker;
         private readonly WeaponView[] _weaponsView;
@@ -12,6 +12,7 @@ namespace YooE.Diploma
         private readonly ShootingConfig _shootingConfig;
 
         private float _nextShotTime;
+        private bool _canShoot;
 
         public PlayerShooting(BulletsSystem bulletsSystem, WeaponView[] weaponsView, TargetPicker targetPicker,
             ShootingConfig shootingConfig)
@@ -21,12 +22,21 @@ namespace YooE.Diploma
             _weaponsView = weaponsView;
             _bulletsSystem = bulletsSystem;
             _bulletsSystem.OnInit();
+            
+            _canShoot = false;
         }
 
         //TODO: change hiding weapons to rotate them forward when stop shooting
         //TODO: remove change visibility from update
+        public void OnStart()
+        {
+            _canShoot = true;
+        }
+
         public void OnUpdate(float deltaTime)
         {
+            if (!_canShoot) return;
+
             if (_targetPicker.TryGetNClosestTargets(_weaponsView.Length, out var targets))
             {
                 SetTargetsOnWeapons(targets);
@@ -42,11 +52,14 @@ namespace YooE.Diploma
             else
             {
                 _nextShotTime += Time.deltaTime;
-                for (var i = 0; i < _weaponsView.Length; i++)
-                {
-                    _weaponsView[i].SetWeaponVisibility(false);
-                }
+                HideWeapons();
             }
+        }
+
+        public void DisableShooting()
+        {
+            _canShoot = false;
+            HideWeapons();
         }
 
         private void SetTargetsOnWeapons(List<Collider> targets)
@@ -74,6 +87,14 @@ namespace YooE.Diploma
                 }
 
                 _weaponsView[i].RotateWeapon();
+            }
+        }
+
+        private void HideWeapons()
+        {
+            for (var i = 0; i < _weaponsView.Length; i++)
+            {
+                _weaponsView[i].SetWeaponVisibility(false);
             }
         }
 

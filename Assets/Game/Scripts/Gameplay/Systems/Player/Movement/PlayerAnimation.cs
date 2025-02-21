@@ -5,6 +5,7 @@ namespace YooE.Diploma
     public sealed class PlayerAnimation
     {
         private readonly Animator _animator;
+        public readonly AnimationEvents AnimationEvents;
         private readonly float _locomotionBlendSpeed = 0.2f;
 
         private static int _inputXHash = Animator.StringToHash("InputX");
@@ -12,9 +13,10 @@ namespace YooE.Diploma
 
         private Vector3 _currentBlendInput = Vector3.zero;
 
-        public PlayerAnimation(Animator animator, float locomotionBlendSpeed)
+        public PlayerAnimation(Animator animator, AnimationEvents animationEvents, float locomotionBlendSpeed)
         {
             _animator = animator;
+            AnimationEvents = animationEvents;
             _locomotionBlendSpeed = locomotionBlendSpeed;
         }
 
@@ -24,6 +26,11 @@ namespace YooE.Diploma
 
             _animator.SetFloat(_inputXHash, _currentBlendInput.x);
             _animator.SetFloat(_inputYHash, _currentBlendInput.y);
+        }
+
+        public void SetAnimatorTrigger(string triggerName)
+        {
+            _animator.SetTrigger(triggerName);
         }
     }
 }

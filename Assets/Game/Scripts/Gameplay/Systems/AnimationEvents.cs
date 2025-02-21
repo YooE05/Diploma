@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace YooE.Diploma
 {
-    public sealed class EnemyAnimationEvents : MonoBehaviour
+    public sealed class AnimationEvents : MonoBehaviour
     {
-        public event Action OnPunchEnded;
+        public event Action OnHitEnded;
         public event Action OnDeathAnimationEnd;
 
         public void DoDamage()
         {
-            OnPunchEnded?.Invoke();
+            OnHitEnded?.Invoke();
         }
 
         public void EndDeathAnimation()

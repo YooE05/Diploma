@@ -6,7 +6,7 @@ namespace YooE.Diploma
     {
         private readonly CharacterController _characterController;
         private readonly PlayerMovementConfig _playerMovementConfig;
-        private PlayerState _playerState;
+        private readonly PlayerState _playerState;
 
         public PlayerMovement(CharacterController characterController, PlayerMovementConfig playerMovementConfig)
         {

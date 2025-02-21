@@ -22,7 +22,7 @@ namespace YooE.Diploma
             Container.Bind<TargetSensor>().AsSingle().WithArguments(_targetSensorConfig)
                 .NonLazy();
             Container.Bind<TargetPicker>().AsSingle().WithArguments(TargetsOverlapCenter).NonLazy();
-            Container.BindInterfacesTo<PlayerShooting>().AsSingle()
+            Container.BindInterfacesAndSelfTo<PlayerShooting>().AsSingle()
                 .WithArguments(_playerView.WeaponViews, _shootingConfig).NonLazy();
         }
     }
