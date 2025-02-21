@@ -73,6 +73,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyGO: {fileID: 3207008342682301884}
   _animator: {fileID: 4103412729748576348}
+  <Agent>k__BackingField: {fileID: 3537648478829149097}
+  <HitPointsComponent>k__BackingField: {fileID: 5491240200765447850}
+  <AnimationEvents>k__BackingField: {fileID: 7030202039932566984}
 --- !u!114 &5491240200765447850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,15 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyView: {fileID: 6456433145603743437}
-  _waitPlayerSensorConfig: {fileID: 11400000, guid: 37673e0199d5f5b40afb50f2ebe4e07a, type: 2}
-  _followPlayerSensorConfig: {fileID: 11400000, guid: c908564dc29b28d45a2eca9c83355ec2, type: 2}
-  _agent: {fileID: 3537648478829149097}
-  _rotationSpeed: 4
-  _movementSpeed: 2.5
-  _hitPointsComponent: {fileID: 5491240200765447850}
-  _animationEvents: {fileID: 7030202039932566984}
-  _damage: 1
-  _attackRangeSensorConfig: {fileID: 11400000, guid: d92b5f948fdad9340aee4ef9a035a343, type: 2}
 --- !u!1 &3235022463277285133
 GameObject:
   m_ObjectHideFlags: 0

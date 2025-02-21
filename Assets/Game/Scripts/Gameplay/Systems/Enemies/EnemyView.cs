@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 namespace YooE.Diploma
 {
@@ -7,7 +8,10 @@ namespace YooE.Diploma
         [SerializeField] private GameObject _enemyGO;
         [SerializeField] private Animator _animator;
 
-        public Vector3 Position => _enemyGO.transform.position;
+        [field: SerializeField] public NavMeshAgent Agent { get; private set; }
+        [field: SerializeField] public HitPointsComponent HitPointsComponent { get; private set; }
+        [field: SerializeField] public EnemyAnimationEvents AnimationEvents { get; private set; }
+
         public Transform Transform => _enemyGO.transform;
 
         public void DisableEnemy()

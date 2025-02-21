@@ -12,12 +12,12 @@ namespace YooE.Diploma
         private readonly EnemyView _enemyView;
         private readonly EnemyAnimationEvents _animationEvents;
 
-        public DeathObserver(HitPointsComponent hitPointsComponent, EnemyView enemyView, EnemyAnimationEvents enemyAnimationEvents)
+        public DeathObserver(EnemyView enemyView)
         {
-            _hitPointsComponent = hitPointsComponent;
             _enemyView = enemyView;
-            _animationEvents = enemyAnimationEvents;
-            
+            _hitPointsComponent = _enemyView.HitPointsComponent;
+            _animationEvents = _enemyView.AnimationEvents;
+
             _hitPointsComponent.OnHpEmpty += StartDeathProcess;
             _animationEvents.OnDeathAnimationEnd += EnemyDeathActions;
         }
@@ -38,6 +38,4 @@ namespace YooE.Diploma
             OnDeathEnd?.Invoke();
         }
     }
-    
-    
 }

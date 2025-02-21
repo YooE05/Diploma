@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 1101352808}
   - component: {fileID: 1101352811}
   - component: {fileID: 1101352812}
+  - component: {fileID: 1101352813}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -611,6 +612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
+  - {fileID: 1101352813}
   - {fileID: 1101352812}
   - {fileID: 1101352811}
   - {fileID: 1101352808}
@@ -677,6 +679,19 @@ MonoBehaviour:
   _shootingConfig: {fileID: 11400000, guid: 4810857454e5bde4287150c2866a1467, type: 2}
   _bulletsPoolConfig: {fileID: 11400000, guid: 3b57a3db8eb89b74cb40ffb4fa76d43a, type: 2}
   _bulletsInitParent: {fileID: 1212524832}
+--- !u!114 &1101352813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101352807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937050103c5ea264caaba7a2d43c2821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _commonEnemyConfig: {fileID: 11400000, guid: 44e2b0c35101f34419341b20a29ac521, type: 2}
 --- !u!1 &1212524831
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,6 +6518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4681195152617740151, guid: 567f76f0497e46f4280d287334e693f8, type: 3}
+      propertyPath: _enemyConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 44e2b0c35101f34419341b20a29ac521, type: 2}
     - target: {fileID: 5497341354625599641, guid: 567f76f0497e46f4280d287334e693f8, type: 3}
       propertyPath: m_RootOrder
       value: -1

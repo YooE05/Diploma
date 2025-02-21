@@ -18,10 +18,10 @@ namespace YooE.Diploma
 
         private bool _needRotate;
 
-        public EnemyMotionController(NavMeshAgent agent, EnemyView enemyView, float rotationSpeed, float movementSpeed,
+        public EnemyMotionController(EnemyView enemyView, float rotationSpeed, float movementSpeed,
             EnemyTargetSearcher enemyTargetSearcher)
         {
-            _agent = agent;
+            _agent = enemyView.Agent;
             _enemyView = enemyView;
             _rotationSpeed = rotationSpeed;
             _movementSpeed = movementSpeed;
