@@ -9,13 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5497341354625599641}
-  - component: {fileID: 5491240200765447850}
-  - component: {fileID: 2856485524238378269}
-  - component: {fileID: 6456433145603743437}
   - component: {fileID: 3537648478829149097}
-  - component: {fileID: 7863950424845024613}
-  - component: {fileID: 2594507845431267534}
-  - component: {fileID: 1675222694123709678}
+  - component: {fileID: 6456433145603743437}
+  - component: {fileID: 5491240200765447850}
+  - component: {fileID: 4681195152617740151}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -40,48 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5491240200765447850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207008342682301884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e3275ecf0c2a9247bbcda7d8aeeb80e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitPoints: 10000
---- !u!114 &2856485524238378269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207008342682301884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0bb6be90bd7f294095a167f210b34a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyView: {fileID: 6456433145603743437}
-  _movement: {fileID: 7863950424845024613}
-  _hitPointsComponent: {fileID: 5491240200765447850}
---- !u!114 &6456433145603743437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207008342682301884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201de094cad74383bcf69037f95a9c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyGO: {fileID: 3207008342682301884}
-  _animator: {fileID: 4103412729748576348}
 --- !u!195 &3537648478829149097
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -104,7 +59,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
---- !u!114 &7863950424845024613
+--- !u!114 &6456433145603743437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,45 +68,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 3207008342682301884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9917664611124cfbb0d5a479389213f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 201de094cad74383bcf69037f95a9c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyGO: {fileID: 3207008342682301884}
+  _animator: {fileID: 4103412729748576348}
+--- !u!114 &5491240200765447850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207008342682301884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3275ecf0c2a9247bbcda7d8aeeb80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitPoints: 100
+--- !u!114 &4681195152617740151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207008342682301884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f231748756fa4ccc96ac0e968a85c6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyView: {fileID: 6456433145603743437}
+  _waitPlayerSensorConfig: {fileID: 11400000, guid: 37673e0199d5f5b40afb50f2ebe4e07a, type: 2}
+  _followPlayerSensorConfig: {fileID: 11400000, guid: c908564dc29b28d45a2eca9c83355ec2, type: 2}
   _agent: {fileID: 3537648478829149097}
-  _target: {fileID: 0}
-  IsMoving: 0
-  HasTarget: 0
---- !u!114 &2594507845431267534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207008342682301884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189554ea97224a9ca3601b808be2b036, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _agent: {fileID: 3537648478829149097}
-  _enemyTransform: {fileID: 5497341354625599641}
-  _target: {fileID: 0}
---- !u!114 &1675222694123709678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3207008342682301884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696c703924e94a2a92554e865c683550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetHP: {fileID: 0}
-  _damage: 1
+  _rotationSpeed: 4
+  _movementSpeed: 2.5
+  _hitPointsComponent: {fileID: 5491240200765447850}
   _animationEvents: {fileID: 7030202039932566984}
-  _movement: {fileID: 7863950424845024613}
-  _targetSensorConfig: {fileID: 11400000, guid: d92b5f948fdad9340aee4ef9a035a343, type: 2}
+  _damage: 1
+  _attackRangeSensorConfig: {fileID: 11400000, guid: d92b5f948fdad9340aee4ef9a035a343, type: 2}
 --- !u!1 &3235022463277285133
 GameObject:
   m_ObjectHideFlags: 0

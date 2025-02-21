@@ -8,6 +8,7 @@ namespace YooE.Diploma
         [SerializeField] private Animator _animator;
 
         public Vector3 Position => _enemyGO.transform.position;
+        public Transform Transform => _enemyGO.transform;
 
         public void DisableEnemy()
         {

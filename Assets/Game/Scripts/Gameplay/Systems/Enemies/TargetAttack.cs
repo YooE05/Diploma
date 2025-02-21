@@ -2,34 +2,50 @@
 
 namespace YooE.Diploma
 {
-    public sealed class TargetAttack : MonoBehaviour
+    public sealed class TargetAttack
     {
-        [SerializeField] private HitPointsComponent _targetHP;
-        [SerializeField] private int _damage;
-        [SerializeField] private EnemyAnimationEvents _animationEvents;
-        [SerializeField] private EnemyMovement _movement;
+        private readonly int _damage;
+        private readonly EnemyAnimationEvents _animationEvents;
+        private readonly TargetSensorConfig _targetSensorConfig;
+        private readonly Transform _selfTransform;
 
-        [SerializeField] private TargetSensorConfig _targetSensorConfig;
         private TargetSensor _targetSensor;
+        private HitPointsComponent _targetHp;
 
-        private void Awake()
+        public TargetAttack(int damage, EnemyAnimationEvents animationEvents, TargetSensorConfig targetSensorConfig,  Transform selfTransform)
         {
+            _damage = damage;
+            _animationEvents = animationEvents;
+            _targetSensorConfig = targetSensorConfig;
+            _selfTransform = selfTransform;
+
+            Init();
+        }
+
+        private void Init()
+        {
+            _targetHp = null;
             _targetSensor = new TargetSensor(_targetSensorConfig);
             _animationEvents.OnPunchEnded += DoDamage;
+        }
+
+        public void SetTargetHp(Collider target)
+        {
+            _targetHp = target?.GetComponent<HitPointsComponent>();
         }
 
         private void DoDamage()
         {
             if (CanDoDamage())
             {
-                _targetHP.TakeDamage(_damage);
+                _targetHp.TakeDamage(_damage);
             }
         }
 
         private bool CanDoDamage()
         {
-            _targetSensor.FindPossibleTargets(transform.position, out var targetCount);
-            return targetCount > 0;
+            _targetSensor.FindPossibleTargets(_selfTransform.position, out var targetCount);
+            return targetCount > 0 && _targetHp;
         }
     }
 }

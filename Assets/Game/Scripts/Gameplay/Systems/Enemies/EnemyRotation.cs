@@ -3,24 +3,23 @@ using UnityEngine.AI;
 
 namespace YooE.Diploma
 {
-    public sealed class EnemyRotation : MonoBehaviour
+    public sealed class EnemyRotation
     {
-        [SerializeField] private NavMeshAgent _agent;
-        [SerializeField] private Transform _enemyTransform;
-        [SerializeField] private float _rotationSpeed;
+        private readonly Transform _enemyTransform;
+        private readonly float _rotationSpeed;
 
-
-        private void Awake()
+        public EnemyRotation(NavMeshAgent agent, Transform enemyTransform, float rotationSpeed)
         {
-            _agent.updateRotation = false;
+            _enemyTransform = enemyTransform;
+            _rotationSpeed = rotationSpeed;
+
+            agent.updateRotation = false;
         }
 
         public void RotateToTarget(Transform target)
         {
             var direction = target.position - _enemyTransform.position;
-            _enemyTransform.rotation =
-                Quaternion.Lerp(_enemyTransform.rotation, Quaternion.LookRotation(direction),
-                    _rotationSpeed * Time.deltaTime);
+            MotionUseCases.Rotate(_enemyTransform, direction, _rotationSpeed * Time.deltaTime);
         }
     }
 }
