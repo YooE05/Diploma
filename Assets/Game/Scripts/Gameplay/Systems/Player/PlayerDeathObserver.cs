@@ -8,9 +8,11 @@ namespace YooE.Diploma
         public event Action OnDeathEnd;
 
         private readonly PlayerShooterBrain _playerShooterBrain;
+        private readonly ShooterPopupsPresenter _popupsPresenter;
 
-        public PlayerDeathObserver(PlayerShooterBrain playerShooterBrain)
+        public PlayerDeathObserver(PlayerShooterBrain playerShooterBrain, ShooterPopupsPresenter popupsPresenter)
         {
+            _popupsPresenter = popupsPresenter;
             _playerShooterBrain = playerShooterBrain;
             Init(playerShooterBrain.GetHitPointsComponent());
         }
@@ -30,6 +32,7 @@ namespace YooE.Diploma
         private void EndDeathActions()
         {
             _playerShooterBrain.AnimationEvents.OnDeathAnimationEnd -= EndDeathActions;
+            _popupsPresenter.ShowRetryPanel();
             OnDeathEnd?.Invoke();
         }
     }

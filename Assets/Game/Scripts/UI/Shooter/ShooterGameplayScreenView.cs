@@ -48,7 +48,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class ShooterGameplayScreenPresenter
+    public sealed class ShooterGameplayScreenPresenter : Listeners.IFinishListener
     {
         private readonly AudioSystem _audioSystem;
         private readonly ShooterGameplayScreenView _gameplayScreenView;
@@ -83,6 +83,11 @@ namespace YooE.Diploma
         {
             _enemyContainer.OnLiveEnemiesCountChanged -= SetEnemySliderValue;
             _gameplayScreenView.OnSoundButtonClicked -= _audioSystem.SetSoundsEnabling;
+        }
+
+        public void OnFinish()
+        {
+            HideScreenView();
         }
 
         public void HideScreenView()

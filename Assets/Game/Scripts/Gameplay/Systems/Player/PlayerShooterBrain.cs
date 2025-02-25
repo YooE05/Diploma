@@ -1,6 +1,6 @@
 ﻿namespace YooE.Diploma
 {
-    public sealed class PlayerShooterBrain
+    public sealed class PlayerShooterBrain : Listeners.IFinishListener
     {
         private readonly HitPointsComponent _hitPointsComponent;
         private readonly PlayerMotionController _playerMotionController;
@@ -34,6 +34,11 @@
         public HitPointsComponent GetHitPointsComponent()
         {
             return _hitPointsComponent;
+        }
+
+        public void OnFinish()
+        {
+            WinActions();
         }
 
         public void WinActions()

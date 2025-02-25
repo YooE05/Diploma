@@ -15,10 +15,9 @@ namespace YooE.Diploma
 
         private void CheckEnemiesRemains(int diedCount, int allCount)
         {
-            if (diedCount == allCount)
-            {
-                OnAllEnemiesDead?.Invoke();
-            }
+            if (diedCount != allCount) return;
+
+            OnAllEnemiesDead?.Invoke();
         }
     }
 }

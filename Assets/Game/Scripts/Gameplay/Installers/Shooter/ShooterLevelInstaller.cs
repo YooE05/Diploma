@@ -28,10 +28,10 @@ namespace YooE.Diploma
 
         private void UI()
         {
-            Container.Bind<ShooterGameplayScreenPresenter>().AsCached()
+            Container.BindInterfacesAndSelfTo<ShooterGameplayScreenPresenter>().AsCached()
                 .WithArguments(_audioSystem, _gameplayScreenView, IsSoundEnabled)
                 .NonLazy();
-            Container.Bind<ShooterPopupsPresenter>().AsCached()
+            Container.BindInterfacesAndSelfTo<ShooterPopupsPresenter>().AsCached()
                 .WithArguments(_popupsView)
                 .NonLazy();
         }
@@ -39,7 +39,7 @@ namespace YooE.Diploma
         private void Player()
         {
             Container.Bind<PlayerDeathObserver>().AsCached().NonLazy();
-            Container.Bind<PlayerShooterBrain>().AsCached().WithArguments(_playerView).NonLazy();
+            Container.BindInterfacesAndSelfTo<PlayerShooterBrain>().AsCached().WithArguments(_playerView).NonLazy();
         }
     }
 }

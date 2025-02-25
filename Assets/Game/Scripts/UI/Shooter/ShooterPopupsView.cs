@@ -57,7 +57,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class ShooterPopupsPresenter
+    public sealed class ShooterPopupsPresenter : Listeners.IFinishListener
     {
         private readonly ShooterPopupsView _shooterPopupsView;
         private readonly GameLoopController _gameLoopController;
@@ -96,6 +96,11 @@ namespace YooE.Diploma
         ~ShooterPopupsPresenter()
         {
             _shooterPopupsView.OnRetryButtonClicked -= RetryGame;
+        }
+
+        public void OnFinish()
+        {
+            ShowEndGamePopup();
         }
 
         public void ShowRetryPanel()
