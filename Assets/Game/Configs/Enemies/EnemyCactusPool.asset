@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f046318b2210428fa2fea53cdc2893bd, type: 3}
+  m_Name: EnemyCactusPool
+  m_EditorClassIdentifier: 
+  <Prefab>k__BackingField: {fileID: 3207008342682301884, guid: 567f76f0497e46f4280d287334e693f8, type: 3}
+  <InitCount>k__BackingField: 5
+  <EnemyCharacteristics>k__BackingField: {fileID: 11400000, guid: 44e2b0c35101f34419341b20a29ac521, type: 2}

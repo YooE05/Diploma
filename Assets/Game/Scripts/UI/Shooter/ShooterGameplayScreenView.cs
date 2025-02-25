@@ -52,19 +52,19 @@ namespace YooE.Diploma
     {
         private readonly AudioSystem _audioSystem;
         private readonly ShooterGameplayScreenView _gameplayScreenView;
-        private readonly EnemyContainer _enemyContainer;
+        private readonly EnemyBrainsInitializer _enemyBrainsInitializer;
 
         //TODO: add SaveSystem to restore soundButton enabling
 
         public ShooterGameplayScreenPresenter(AudioSystem audioSystem, ShooterGameplayScreenView gameplayScreenView,
-            bool isSoundsOn, EnemyContainer enemyContainer)
+            bool isSoundsOn, EnemyBrainsInitializer enemyBrainsInitializer)
         {
             _audioSystem = audioSystem;
             _gameplayScreenView = gameplayScreenView;
             InitGameplayScreenView(isSoundsOn);
-            _enemyContainer = enemyContainer;
+            _enemyBrainsInitializer = enemyBrainsInitializer;
 
-            _enemyContainer.OnLiveEnemiesCountChanged += SetEnemySliderValue;
+            _enemyBrainsInitializer.OnLiveEnemiesCountChanged += SetEnemySliderValue;
             _gameplayScreenView.OnSoundButtonClicked += _audioSystem.SetSoundsEnabling;
         }
 
@@ -81,7 +81,7 @@ namespace YooE.Diploma
 
         ~ShooterGameplayScreenPresenter()
         {
-            _enemyContainer.OnLiveEnemiesCountChanged -= SetEnemySliderValue;
+            _enemyBrainsInitializer.OnLiveEnemiesCountChanged -= SetEnemySliderValue;
             _gameplayScreenView.OnSoundButtonClicked -= _audioSystem.SetSoundsEnabling;
         }
 

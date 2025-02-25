@@ -31,7 +31,7 @@ namespace YooE.Diploma
         public void OnStart()
         {
             _canShoot = true;
-            _nextShotTime = Time.time;
+            _nextShotTime = 0;
         }
 
         public void OnUpdate(float deltaTime)
@@ -42,12 +42,11 @@ namespace YooE.Diploma
             {
                 SetTargetsOnWeapons(targets);
 
-                if ((Time.time < _nextShotTime)) return;
+                if (Time.time < _nextShotTime) return;
                 _nextShotTime += _shootingConfig.ShootingDelay;
 
                 for (var i = 0; i < _weaponsView.Length; i++)
                 {
-                    Debug.Log("shot");
                     Shoot(_weaponsView[i]);
                 }
             }
@@ -66,7 +65,6 @@ namespace YooE.Diploma
 
         private void SetTargetsOnWeapons(List<Collider> targets)
         {
-            //Check need to change target on weapon
             for (var i = 0; i < _weaponsView.Length; i++)
             {
                 var col = targets.Find(c => c == _weaponsView[i].CurrentTarget);

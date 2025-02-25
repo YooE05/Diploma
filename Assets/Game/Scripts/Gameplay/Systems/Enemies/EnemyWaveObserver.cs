@@ -5,12 +5,12 @@ namespace YooE.Diploma
     public sealed class EnemyWaveObserver
     {
         public event Action OnAllEnemiesDead;
-        private readonly EnemyContainer _enemyContainer;
+        private readonly EnemyBrainsInitializer _enemyBrainsInitializer;
 
-        public EnemyWaveObserver(EnemyContainer enemyContainer)
+        public EnemyWaveObserver(EnemyBrainsInitializer enemyBrainsInitializer)
         {
-            _enemyContainer = enemyContainer;
-            _enemyContainer.OnLiveEnemiesCountChanged += CheckEnemiesRemains;
+            _enemyBrainsInitializer = enemyBrainsInitializer;
+            _enemyBrainsInitializer.OnLiveEnemiesCountChanged += CheckEnemiesRemains;
         }
 
         private void CheckEnemiesRemains(int diedCount, int allCount)

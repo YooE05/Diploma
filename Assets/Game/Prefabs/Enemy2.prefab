@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6456433145603743437}
   - component: {fileID: 5491240200765447850}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.12
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
@@ -73,7 +73,7 @@ MonoBehaviour:
   _enemyGO: {fileID: 3207008342682301884}
   _animator: {fileID: 4103412729748576348}
   _collider: {fileID: 893996403640988939}
-  <Type>k__BackingField: 0
+  <Type>k__BackingField: 1
   <Agent>k__BackingField: {fileID: 3537648478829149097}
   <HitPointsComponent>k__BackingField: {fileID: 5491240200765447850}
   <AnimationEvents>k__BackingField: {fileID: 7030202039932566984}
@@ -115,8 +115,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3235022463277285133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.209, z: 0}
-  m_LocalScale: {x: 0.73483, y: 0.9669628, z: 0.73483}
+  m_LocalPosition: {x: 0, y: 0.47, z: 0}
+  m_LocalScale: {x: 0.73483, y: 1.1, z: 0.73483}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5497341354625599641}
@@ -142,7 +142,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.53
-  m_Height: 2.49
+  m_Height: 1.1735249
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7123274587857863518
@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: 68d8f3eae01c5744b996aab3358db0a0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05070764
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: 68d8f3eae01c5744b996aab3358db0a0, type: 3}
       propertyPath: m_LocalScale.z
@@ -247,7 +247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: 68d8f3eae01c5744b996aab3358db0a0, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f046318b2210428fa2fea53cdc2893bd, type: 3}
+  m_Name: EnemyMushroomPool
+  m_EditorClassIdentifier: 
+  <Prefab>k__BackingField: {fileID: 3207008342682301884, guid: ea2915f11d2f9ec45b24c87179acb7e4, type: 3}
+  <InitCount>k__BackingField: 5
+  <EnemyCharacteristics>k__BackingField: {fileID: 11400000, guid: 76da3c4f3cba83740833e3dfdaf67f9b, type: 2}

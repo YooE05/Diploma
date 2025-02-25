@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
@@ -18,18 +17,6 @@ namespace YooE.Diploma
             _targetsOverlapCenter = targetsOverlapCenter;
             _targetsSensor = targetsSensor;
         }
-
-        /*public bool TryGetClosestTargetPosition(out Vector3 closestTargetPosition)
-        {
-            if (TryGetClosestTarget(out Collider closestTarget))
-            {
-                closestTargetPosition = closestTarget.transform.position;
-                return true;
-            }
-
-            closestTargetPosition = default;
-            return false;
-        }*/
 
         public bool TryGetNClosestTargets(int countOfWeapons, out List<Collider> closestTargetPosition)
         {
@@ -66,11 +53,5 @@ namespace YooE.Diploma
             var heading = OverlapCenterPosition - target.transform.position;
             return heading.sqrMagnitude;
         }
-
-        /*private float GetSqrMagnitude(Transform targetTransform)
-        {
-            var heading = OverlapCenterPosition - targetTransform.position;
-            return heading.sqrMagnitude;
-        }*/
     }
 }

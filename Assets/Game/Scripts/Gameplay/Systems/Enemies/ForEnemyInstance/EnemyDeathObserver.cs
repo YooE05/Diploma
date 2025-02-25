@@ -23,6 +23,7 @@ namespace YooE.Diploma
         protected override void StartDeathProcess(GameObject obj)
         {
             _enemyView.SetAnimatorTrigger("IsDead");
+            _enemyView.DisablePhysics();
             base.StartDeathProcess(obj);
         }
 

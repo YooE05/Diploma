@@ -8,16 +8,20 @@ namespace YooE.Diploma
     public class EnemyInstaller : MonoInstaller
     {
         [SerializeField] private EnemyConfig _commonEnemyConfig;
-        private List<EnemyView> _enemyViews = new();
+        [SerializeField] private EnemyPoolsSettings _enemyPoolsSettings;
+        [SerializeField] private Transform _enemiesParent;
+
+        private List<EnemySpawnPoint> _enemySpawnPoints = new();
 
         // ReSharper disable Unity.PerformanceAnalysis
         public override void InstallBindings()
         {
-            _enemyViews = FindObjectsOfType<EnemyView>().ToList();
+            _enemySpawnPoints = FindObjectsOfType<EnemySpawnPoint>().ToList();
 
             Container.Bind<EnemyConfig>().FromInstance(_commonEnemyConfig).AsSingle().NonLazy();
-            Container.BindInterfacesAndSelfTo<EnemyContainer>().AsCached()
-                .WithArguments(_enemyViews, _commonEnemyConfig).NonLazy();
+            Container.BindInterfacesAndSelfTo<EnemySpawner>().AsCached()
+                .WithArguments(_enemySpawnPoints, _enemyPoolsSettings, _enemiesParent).NonLazy();
+            Container.BindInterfacesAndSelfTo<EnemyBrainsInitializer>().AsCached().NonLazy();
             Container.Bind<EnemyWaveObserver>().AsCached().NonLazy();
         }
     }

@@ -6,10 +6,9 @@ namespace YooE.Diploma
 {
     public sealed class EnemyBrain
     {
-        public event Action<EnemyBrain> OnDead;
+        public event Action<EnemyBrain> OnDied;
 
         private readonly CompositeDisposable _disposable = new();
-        private readonly EnemyView _enemyView;
         private readonly EnemyConfig _enemyConfig;
 
         private EnemyTargetSearcher _targetSearcher;
@@ -17,27 +16,29 @@ namespace YooE.Diploma
         private EnemyDeathObserver _deathObserver;
         private TargetAttack _targetAttack;
 
+        public EnemyView View { get; }
+
         private bool _canAct;
 
         public EnemyBrain(EnemyConfig enemyConfig, EnemyView enemyView)
         {
             _enemyConfig = enemyConfig;
-            _enemyView = enemyView;
+            View = enemyView;
             Init();
         }
 
         private void Init()
         {
             _targetSearcher =
-                new EnemyTargetSearcher(_enemyView.Transform, _enemyConfig.WaitPlayerSensorConfig,
+                new EnemyTargetSearcher(View.Transform, _enemyConfig.WaitPlayerSensorConfig,
                     _enemyConfig.FollowPlayerSensorConfig);
             _motionController =
-                new EnemyMotionController(_enemyView, _enemyConfig.RotationSpeed, _enemyConfig.MovementSpeed,
+                new EnemyMotionController(View, _enemyConfig.RotationSpeed, _enemyConfig.MovementSpeed,
                     _targetSearcher);
-            _deathObserver = new EnemyDeathObserver(_enemyView);
-            _targetAttack = new TargetAttack(_enemyConfig.Damage, _enemyView.AnimationEvents,
+            _deathObserver = new EnemyDeathObserver(View);
+            _targetAttack = new TargetAttack(_enemyConfig.Damage, View.AnimationEvents,
                 _enemyConfig.AttackRangeSensorConfig,
-                _enemyView.Transform);
+                View.Transform);
 
             _targetSearcher.CurrentTarget.Subscribe(_targetAttack.SetTargetHp).AddTo(_disposable);
             _canAct = true;
@@ -63,7 +64,7 @@ namespace YooE.Diploma
 
         private void OnDeathEndActions()
         {
-            OnDead?.Invoke(this);
+            OnDied?.Invoke(this);
             _deathObserver.OnDeathEnd -= OnDeathEndActions;
         }
 
