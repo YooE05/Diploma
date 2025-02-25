@@ -6,10 +6,10 @@ namespace YooE.Diploma
     {
         private readonly Animator _animator;
         public readonly AnimationEvents AnimationEvents;
-        private readonly float _locomotionBlendSpeed = 0.2f;
+        private readonly float _locomotionBlendSpeed;
 
-        private static int _inputXHash = Animator.StringToHash("InputX");
-        private static int _inputYHash = Animator.StringToHash("InputY");
+        private static readonly int InputXHash = Animator.StringToHash("InputX");
+        private static readonly int InputYHash = Animator.StringToHash("InputY");
 
         private Vector3 _currentBlendInput = Vector3.zero;
 
@@ -24,13 +24,18 @@ namespace YooE.Diploma
         {
             _currentBlendInput = Vector3.Lerp(_currentBlendInput, inputTarget, _locomotionBlendSpeed * Time.deltaTime);
 
-            _animator.SetFloat(_inputXHash, _currentBlendInput.x);
-            _animator.SetFloat(_inputYHash, _currentBlendInput.y);
+            _animator.SetFloat(InputXHash, _currentBlendInput.x);
+            _animator.SetFloat(InputYHash, _currentBlendInput.y);
         }
 
         public void SetAnimatorTrigger(string triggerName)
         {
             _animator.SetTrigger(triggerName);
+        }
+
+        public void SetAnimatorBool(string valueName, bool value)
+        {
+            _animator.SetBool(valueName, value);
         }
     }
 }

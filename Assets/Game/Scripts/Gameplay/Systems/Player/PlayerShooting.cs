@@ -22,7 +22,7 @@ namespace YooE.Diploma
             _weaponsView = weaponsView;
             _bulletsSystem = bulletsSystem;
             _bulletsSystem.OnInit();
-            
+
             _canShoot = false;
         }
 
@@ -31,6 +31,7 @@ namespace YooE.Diploma
         public void OnStart()
         {
             _canShoot = true;
+            _nextShotTime = Time.time;
         }
 
         public void OnUpdate(float deltaTime)
@@ -46,6 +47,7 @@ namespace YooE.Diploma
 
                 for (var i = 0; i < _weaponsView.Length; i++)
                 {
+                    Debug.Log("shot");
                     Shoot(_weaponsView[i]);
                 }
             }

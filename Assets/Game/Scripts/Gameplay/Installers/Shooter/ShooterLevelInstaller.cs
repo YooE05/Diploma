@@ -1,44 +1,45 @@
+using UnityEngine;
 using Zenject;
 
 namespace YooE.Diploma
 {
     public sealed class ShooterLevelInstaller : MonoInstaller
     {
-        //[SerializeField] private CameraConfig _cameraConfig;
-        //[SerializeField] private Camera _camera;
-        //[SerializeField] private InputConfig _inputConfig;
+        [SerializeField] private PlayerShooterView _playerView;
+        [SerializeField] private GameLoopController _gameLoopController;
+        [SerializeField] private AudioSystem _audioSystem;
+        [SerializeField] private bool IsSoundEnabled;
+
+        [SerializeField] private ShooterGameplayScreenView _gameplayScreenView;
+        [SerializeField] private ShooterPopupsView _popupsView;
 
         // ReSharper disable Unity.PerformanceAnalysis
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<LifecycleManager>().AsSingle().NonLazy();
-
-            /*Container
-                .Bind<Camera>()
-                .FromInstance(_camera);
-
-            Container
-                .Bind<ICharacter>()
-                .FromComponentInHierarchy()
-                .AsSingle();
-
-            Container
-                .BindInterfacesAndSelfTo<MoveController>()
-                .AsCached()
+            Container.BindInterfacesAndSelfTo<LifecycleManager>().AsCached().NonLazy();
+            Container.BindInterfacesAndSelfTo<GameLoopController>().FromInstance(_gameLoopController).AsCached()
                 .NonLazy();
 
-            Container
-                .Bind<IMoveInput>()
-                .To<MoveInput>()
-                .AsSingle()
-                .WithArguments(_inputConfig)
-                .NonLazy();
+            Container.BindInterfacesAndSelfTo<UpdateTimer>().AsCached().NonLazy();
 
-            Container
-                .BindInterfacesTo<CameraFollower>()
-                .AsCached()
-                .WithArguments(_cameraConfig.cameraOffset)
-                .NonLazy();*/
+            UI();
+            Player();
+        }
+
+        private void UI()
+        {
+            Container.Bind<ShooterGameplayScreenPresenter>().AsCached()
+                .WithArguments(_audioSystem, _gameplayScreenView, IsSoundEnabled)
+                .NonLazy();
+            Container.Bind<ShooterPopupsPresenter>().AsCached()
+                .WithArguments(_popupsView)
+                .NonLazy();
+        }
+
+        private void Player()
+        {
+            Container.Bind<PlayerDeathObserver>().AsCached().NonLazy();
+            Container.Bind<PlayerShooterBrain>().AsCached().WithArguments(_playerView).NonLazy();
         }
     }
 }

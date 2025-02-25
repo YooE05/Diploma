@@ -21,8 +21,6 @@ namespace YooE.Diploma
                 .NonLazy();
             Container.BindInterfacesAndSelfTo<PlayerMotionController>().AsSingle()
                 .WithArguments(_playerView.Camera).NonLazy();
-            Container.Bind<PlayerDeathObserver>().AsSingle().WithArguments(_playerView)
-                .NonLazy();
         }
     }
 }

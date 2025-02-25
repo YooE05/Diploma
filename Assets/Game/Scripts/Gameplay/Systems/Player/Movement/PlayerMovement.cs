@@ -35,6 +35,16 @@ namespace YooE.Diploma
             UpdateMovementState(moveDirection);
         }
 
+        public void DisableCharacterControllerComponent()
+        {
+            _characterController.enabled = false;
+        }
+
+        public void EnableCharacterControllerComponent()
+        {
+            _characterController.enabled = true;
+        }
+
         private void UpdateMovementState(Vector3 inputDirection)
         {
             var isGettingInput = inputDirection != Vector3.zero;

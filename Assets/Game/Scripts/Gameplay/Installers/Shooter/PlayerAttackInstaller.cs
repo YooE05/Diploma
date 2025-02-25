@@ -5,7 +5,7 @@ namespace YooE.Diploma
 {
     public class PlayerAttackInstaller : MonoInstaller
     {
-        [SerializeField] private PlayerView _playerView;
+        [SerializeField] private PlayerShooterView _playerView;
 
         [SerializeField] private TargetSensorConfig _targetSensorConfig;
         [SerializeField] private ShootingConfig _shootingConfig;

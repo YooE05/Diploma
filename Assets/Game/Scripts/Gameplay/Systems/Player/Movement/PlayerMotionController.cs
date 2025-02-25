@@ -10,7 +10,7 @@ namespace YooE.Diploma
         private readonly PlayerMovement _playerMovement;
         private readonly PlayerRotation _playerRotation;
 
-        public bool CanAct = false;
+        private bool _canAct;
 
         public PlayerMotionController(PlayerAnimation playerAnimation, PlayerMovement playerMovement,
             PlayerRotation playerRotation, Camera playerCamera, PlayerInput playerInput)
@@ -20,21 +20,30 @@ namespace YooE.Diploma
             _playerMovement = playerMovement;
             _playerRotation = playerRotation;
             _playerCamera = playerCamera;
+
+            DisableMotion();
         }
 
         public void OnStart()
         {
-            CanAct = true;
+            _canAct = true;
+            _playerMovement.EnableCharacterControllerComponent();
         }
 
         public void OnUpdate(float deltaTime)
         {
-            if (!CanAct) return;
+            if (!_canAct) return;
 
             var direction = GetMovementDirection();
             _playerMovement.UpdateMovement(direction);
             _playerRotation.UpdateRotation(direction);
             _playerAnimation.UpdateAnimationViaInputValues(_playerInput.MovementInput);
+        }
+
+        public void DisableMotion()
+        {
+            _canAct = false;
+            _playerMovement.DisableCharacterControllerComponent();
         }
 
         private Vector3 GetMovementDirection()
