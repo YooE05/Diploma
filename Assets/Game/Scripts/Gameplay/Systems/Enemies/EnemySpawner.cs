@@ -20,7 +20,6 @@ namespace YooE.Diploma
                     enemyPoolsSettings.EnemyPoolsСonfigs[i].PoolConfig);
             }
 
-            // _enemyPoolsСonfigs = enemyPoolsSettings.EnemyPoolsСonfigs;
             _enemiesParent = enemiesParent;
             _spawnPoints = spawnPoints;
             _brainsInitializer = brainsInitializer;
@@ -49,17 +48,6 @@ namespace YooE.Diploma
                 _brainsInitializer.InitBrain(newEnemy, _enemyPoolsСonfigs[type].EnemyCharacteristics);
             }
         }
-
-        /*private List<EnemyView> GetAliveEnemyViews()
-        {
-            List<EnemyView> allViews = new();
-            foreach (var enemies in _enemyPools.Values.Select(pool => pool.GetActiveEnemies()))
-            {
-                allViews.AddRange(enemies);
-            }
-
-            return allViews;
-        }*/
 
         private void ReturnEnemy(EnemyBrain enemyBrain)
         {
