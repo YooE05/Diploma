@@ -8,17 +8,10 @@ namespace YooE.Diploma
         public event Action<int, int> OnLiveEnemiesCountChanged;
         public event Action<EnemyBrain> OnBrainDied;
 
-        // private readonly EnemyConfig _enemyConfig;
         private readonly List<EnemyBrain> _enemyBrains = new();
-        //private List<EnemyView> _enemyViews;
 
         private int EnemiesCount => _enemyBrains.Count;
         private int _deadEnemiesCount;
-
-        /*public EnemyBrainsInitializer(EnemyConfig enemyConfig)
-        {
-            _enemyConfig = enemyConfig;
-        }*/
 
         public void OnUpdate(float deltaTime)
         {
@@ -30,8 +23,6 @@ namespace YooE.Diploma
 
         public void InitBrain(EnemyView view, EnemyConfig config)
         {
-            // _enemyViews = views;
-
             var newEnemyBrain = new EnemyBrain(config, view);
             newEnemyBrain.OnDied += IncreaseDiedCount;
             _enemyBrains.Add(newEnemyBrain);

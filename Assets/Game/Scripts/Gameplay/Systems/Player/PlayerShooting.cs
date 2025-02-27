@@ -10,16 +10,18 @@ namespace YooE.Diploma
         private readonly WeaponView[] _weaponsView;
         private readonly BulletsSystem _bulletsSystem;
         private readonly ShootingConfig _shootingConfig;
+        private readonly UpdateTimer _timer;
 
         private float _nextShotTime;
         private bool _canShoot;
 
         public PlayerShooting(BulletsSystem bulletsSystem, WeaponView[] weaponsView, TargetPicker targetPicker,
-            ShootingConfig shootingConfig)
+            ShootingConfig shootingConfig, UpdateTimer timer)
         {
             _shootingConfig = shootingConfig;
             _targetPicker = targetPicker;
             _weaponsView = weaponsView;
+            _timer = timer;
             _bulletsSystem = bulletsSystem;
             _bulletsSystem.OnInit();
 
@@ -36,13 +38,17 @@ namespace YooE.Diploma
 
         public void OnUpdate(float deltaTime)
         {
-            if (!_canShoot) return;
+            if (!_canShoot)
+            {
+                _nextShotTime += Time.deltaTime;
+                return;
+            }
 
             if (_targetPicker.TryGetNClosestTargets(_weaponsView.Length, out var targets))
             {
                 SetTargetsOnWeapons(targets);
 
-                if (Time.time < _nextShotTime) return;
+                if (_timer.CurrentTime < _nextShotTime) return;
                 _nextShotTime += _shootingConfig.ShootingDelay;
 
                 for (var i = 0; i < _weaponsView.Length; i++)

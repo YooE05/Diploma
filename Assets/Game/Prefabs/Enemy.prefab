@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3275ecf0c2a9247bbcda7d8aeeb80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hitPoints: 4
+  HitPoints: 1
 --- !u!1 &3235022463277285133
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,14 +7,14 @@ namespace YooE.Diploma
     {
         public event Action<GameObject> OnHpEmpty;
 
-        [SerializeField] private int _hitPoints;
+        public int HitPoints;
 
-        public bool IsHitPointsExists => _hitPoints > 0;
+        public bool IsHitPointsExists => HitPoints > 0;
 
         public void TakeDamage(int damage)
         {
-            _hitPoints -= damage;
-            if (_hitPoints <= 0)
+            HitPoints -= damage;
+            if (HitPoints <= 0)
             {
                 OnHpEmpty?.Invoke(gameObject);
             }

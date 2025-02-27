@@ -29,6 +29,7 @@ namespace YooE.Diploma
 
         private void Init()
         {
+            View.HitPointsComponent.HitPoints = _enemyConfig.HitPoints;
             _targetSearcher =
                 new EnemyTargetSearcher(View.Transform, _enemyConfig.WaitPlayerSensorConfig,
                     _enemyConfig.FollowPlayerSensorConfig);
