@@ -23,7 +23,7 @@ namespace YooE.Diploma
         public void UpdateEnemySlider(float newDefeatPercent)
         {
             _enemySlider.SetSliderValue(newDefeatPercent / 100f);
-            _enemySlider.SetSliderText($"{((int)newDefeatPercent).ToString()}%");
+            _enemySlider.SetText($"{((int)newDefeatPercent).ToString()}%");
         }
 
         public void SetSoundButtonEnabling(bool isSwitchedOn)

@@ -2,7 +2,7 @@
 
 namespace YooE
 {
-    public sealed class SwitchButtonView : ButtonView
+    public class SwitchButtonView : ButtonView
     {
         [SerializeField] private Sprite _switchOnSprite;
         [SerializeField] private Sprite _switchOffSprite;

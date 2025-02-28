@@ -18,3 +18,4 @@ MonoBehaviour:
   <RotationSpeed>k__BackingField: 4
   <MovementSpeed>k__BackingField: 5
   <Damage>k__BackingField: 1
+  <HitPoints>k__BackingField: 5

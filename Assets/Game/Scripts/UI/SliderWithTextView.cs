@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace YooE
 {
-    public sealed class SliderWithTextView : SliderView
+    public sealed class SliderWithTextView : SliderView, IHaveTextField
     {
         [SerializeField] private TextMeshProUGUI _sliderText;
 
-        public void SetSliderText(string newSliderText)
+        public void SetText(string newText)
         {
-            _sliderText.text = newSliderText;
+            _sliderText.text = newText;
         }
     }
 }

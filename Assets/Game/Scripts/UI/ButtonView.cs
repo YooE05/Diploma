@@ -36,13 +36,15 @@ namespace YooE
         public void EnableButton()
         {
             _button.enabled = true;
-            _button.image.sprite = _enableSprite;
+            if (_enableSprite)
+                _button.image.sprite = _enableSprite;
         }
 
         public void DisableButton()
         {
             _button.enabled = false;
-            _button.image.sprite = _disableSprite;
+            if (_disableSprite)
+                _button.image.sprite = _disableSprite;
         }
 
         private void InvokeButtonClick()
