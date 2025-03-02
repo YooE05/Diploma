@@ -1,12 +1,11 @@
 ﻿using DS.ScriptableObjects;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using YooE.DialogueSystem;
 using Zenject;
 
-namespace YooE.Diploma
+namespace YooE.DialogueSystem
 {
-    public sealed class CharacterDialogueStarter : MonoBehaviour
+    public sealed class CharacterDialogueComponent : MonoBehaviour
     {
         [SerializeField] private DialogueGroupsSequenceConfig _dialogueSequence;
         [SerializeField] private int _currentGroupIndex;
@@ -26,15 +25,13 @@ namespace YooE.Diploma
             StartDialogueGroup(CurrentDialogueGroup);
         }
 
-        [Button]
-        public void StartDialogueGroup(DSDialogueGroupSO groupToStart)
+        private void StartDialogueGroup(DSDialogueGroupSO groupToStart)
         {
             _dialogueState.StartDialogueGroup(groupToStart);
             _dialogueState.OnDialogueGroupFinished += SetNextDialogueGroup;
         }
 
-        [Button]
-        public void SetNextDialogueGroup()
+        private void SetNextDialogueGroup()
         {
             _dialogueState.OnDialogueGroupFinished -= SetNextDialogueGroup;
             if (_dialogueSequence.Groups.Count - 1 > _currentGroupIndex)

@@ -2,7 +2,7 @@
 using DS.ScriptableObjects;
 using UnityEngine;
 
-namespace YooE.Diploma
+namespace YooE.DialogueSystem
 {
     [CreateAssetMenu(
         fileName = "DialogueGroupsSequenceConfig",
