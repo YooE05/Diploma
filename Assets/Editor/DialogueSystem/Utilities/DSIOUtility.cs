@@ -151,10 +151,30 @@ namespace DS.Utilities
                 ungroupedNodeNames.Add(node.DialogueName);
             }
 
+            MoveStartingDialogueToFirstItem(dialogueContainer);
+
             UpdateDialoguesChoicesConnections();
 
             UpdateOldGroupedNodes(groupedNodeNames, graphData);
             UpdateOldUngroupedNodes(ungroupedNodeNames, graphData);
+        }
+
+        private static void MoveStartingDialogueToFirstItem(DSDialogueContainerSO dialogueContainer)
+        {
+            foreach (var groupKP in dialogueContainer.DialogueGroups)
+            {
+                var listOfDialogues = groupKP.Value;
+
+                for (var i = 0; i < listOfDialogues.Count; i++)
+                {
+                    if (listOfDialogues[i].IsStartingDialogue)
+                    {
+                        var tempValue = groupKP.Value[i];
+                        listOfDialogues.Remove(groupKP.Value[i]);
+                        listOfDialogues.Insert(0, tempValue);
+                    }
+                }
+            }
         }
 
         private static void SaveNodeToGraph(DSNode node, DSGraphSaveDataSO graphData)
@@ -167,6 +187,7 @@ namespace DS.Utilities
                 Name = node.DialogueName,
                 Choices = choices,
                 Text = node.Text,
+                CharacterName = node.CharacterName,
                 GroupID = node.Group?.ID,
                 DialogueType = node.DialogueType,
                 Position = node.GetPosition().position
@@ -328,11 +349,13 @@ namespace DS.Utilities
             {
                 List<DSChoiceSaveData> choices = CloneNodeChoices(nodeData.Choices);
 
-                DSNode node = graphView.CreateNode(nodeData.Name, nodeData.DialogueType, nodeData.Position, nodeData.CharacterName,false);
+                DSNode node = graphView.CreateNode(nodeData.Name, nodeData.DialogueType, nodeData.Position,
+                    nodeData.CharacterName, false);
 
                 node.ID = nodeData.ID;
                 node.Choices = choices;
                 node.Text = nodeData.Text;
+                node.CharacterName = nodeData.CharacterName;
 
                 node.Draw();
 

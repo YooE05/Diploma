@@ -3,6 +3,7 @@ using DS.Data;
 using DS.ScriptableObjects;
 using TMPro;
 using UnityEngine;
+using Zenject;
 
 namespace YooE.DialogueSystem
 {
@@ -17,7 +18,8 @@ namespace YooE.DialogueSystem
 
         private DialogueState _dialogueState;
 
-        public void SetDialogueState(DialogueState dialogueState)
+        [Inject]
+        public void Construct(DialogueState dialogueState)
         {
             _dialogueState = dialogueState;
 
@@ -28,6 +30,14 @@ namespace YooE.DialogueSystem
             {
                 _choiceButtons[i].OnChoiceDone += ChoiceDoneActions;
             }
+
+            Hide();
+        }
+
+        private void UnsubscribeFromState()
+        {
+            _dialogueState.OnDialogueStart -= InitDialogueView;
+            _dialogueState.OnDialogueGroupFinished -= Hide;
         }
 
         private void Show()

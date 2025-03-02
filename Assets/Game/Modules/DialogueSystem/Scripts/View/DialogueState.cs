@@ -15,7 +15,7 @@ namespace YooE.DialogueSystem
         private readonly DSDialogueContainerSO _dialogueContainer;
 
         private DSDialogueGroupSO _currentGroup;
-        private List<DSDialogueSO> _groupDialoguesList;
+        private List<DSDialogueSO> _groupDialoguesList = new();
 
         private DSDialogueSO _currentDialogue;
         private DSDialogueSO _nextDialogue;

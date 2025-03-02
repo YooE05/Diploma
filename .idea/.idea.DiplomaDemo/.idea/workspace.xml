@@ -5,72 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94b36f19-ddca-4d9f-8983-166c9ca3b201" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueEventController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueEventController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/DialogueGroupsSequenceConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/DialogueGroupsSequenceConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/ScienceBaseInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с1с.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с1с.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с2с.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с2с.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/ScriptableObjects/DSDialogueContainerSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/ScriptableObjects/DSDialogueContainerSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/ChoiceButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/ChoiceButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialoguePresenter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialoguePresenter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialogueView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialogueView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialoguePanel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialoguePanel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialogueSystem.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialogueSystem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Utilities/DSIOUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Utilities/DSIOUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/DialoguesFileName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/DialoguesFileName.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с1с.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с1с.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с2с.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с2с.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/First.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/First.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Prefab/DialoguePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Prefab/DialoguePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid grey shirt.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid grey shirt.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid mat base.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid mat base.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid orange eyes.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid orange eyes.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid red hair.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid red hair.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet_texture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet_texture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/Animations/Puppet Kid Animation Controller.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/Animations/Puppet Kid Animation Controller.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/puppet_kid.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/puppet_kid.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid v2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid v2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Help_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Help_Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Readme_Builder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Readme_Builder.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Readme.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Readme.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Scenes/Puppet Kid.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Scenes/Puppet Kid.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/DialogueStarter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CharacterDialogueStarter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/DialogueStarter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CharacterDialogueStarter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/ShowHideCubeEventController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/ShowHideCubeEventController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/DialogueEventInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/DialogueEventInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/ScinceBaseInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/ScinceBaseInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/ScienceBaseInstaller.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +63,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/ScinceBaseInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/ScienceBaseInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/EnemyInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/AttackSystem/Bullets/BulletsSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,6 +71,8 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.3/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.3/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0cbf2453ffe348b8bff59f7f22a27d4b93f800/9f/d823ff33/SerializedProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ed26b59c52e4944b9f25c715ba0298d2ba200/2a/37761cd5/InspectorProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ed26b59c52e4944b9f25c715ba0298d2ba200/46/834b3888/DefaultMethodDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/e8/d144d9f6/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605bf8b31fcb444b85176da963870aa746ac00/37/8f9c957e/Array.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/2f/3693467f/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
@@ -179,6 +147,7 @@
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
+          <DesktopClrRuntime />
           <MonoRuntime />
         </list>
       </option>
@@ -213,7 +182,7 @@
       <workItem from="1740691915351" duration="5122000" />
       <workItem from="1740746573665" duration="21986000" />
       <workItem from="1740850573704" duration="8860000" />
-      <workItem from="1740920108393" duration="7863000" />
+      <workItem from="1740920108393" duration="14192000" />
     </task>
     <servers />
   </component>
@@ -244,6 +213,19 @@
           <line>13</line>
           <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Scripts\Gameplay\Systems\Player\PlayerLocomotionInput.cs" containingFunctionPresentation="Constructor 'PlayerLocomotionInput'" />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueView.cs</url>
+          <line>61</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\DialogueSystem\Scripts\View\DialogueView.cs" containingFunctionPresentation="Method 'InitDialogueView'">
+            <startOffsets>
+              <option value="1825" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1857" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
