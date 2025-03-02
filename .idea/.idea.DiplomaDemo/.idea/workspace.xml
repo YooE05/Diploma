@@ -5,25 +5,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94b36f19-ddca-4d9f-8983-166c9ca3b201" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/ChoiceButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/ChoiceButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialoguePresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialoguePresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/IHaveTextField.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/IHaveTextField.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/SwitchButtonViewWithText.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/SwitchButtonViewWithText.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueEventController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueEventController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/CubeController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/Enemies/EnemyMushroomConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/Enemies/EnemyMushroomConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Enemies/ForEnemyInstance/EnemyBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Enemies/ForEnemyInstance/EnemyBrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Player/PlayerShooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Player/PlayerShooting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с1с.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с1с.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с2с.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/First/Dialogues/с2с.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/ScriptableObjects/DSDialogueContainerSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/ScriptableObjects/DSDialogueContainerSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/ChoiceButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/ChoiceButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialoguePresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialoguePresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialogueView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/DialogueView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialoguePanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialoguePanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialogueSystem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialoguesHelper/Prefab/DialogueSystem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/SliderWithTextView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/SliderWithTextView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/SwitchButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/SwitchButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid grey shirt.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid grey shirt.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid mat base.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid mat base.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid orange eyes.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid orange eyes.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid red hair.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet kid red hair.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet_texture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Materials/puppet_texture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/Animations/Puppet Kid Animation Controller.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/Animations/Puppet Kid Animation Controller.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/puppet_kid.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Models/puppet_kid.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid v2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid v2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Prefabs/puppet_kid.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Help_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Help_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Readme_Builder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Icons/Readme_Builder.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Readme/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Scenes/Puppet Kid.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Puppet Kid/Scenes/Puppet Kid.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +97,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/ScinceBaseInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/EnemyInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/AttackSystem/Bullets/BulletsSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,6 +109,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605bf8b31fcb444b85176da963870aa746ac00/37/8f9c957e/Array.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/2f/3693467f/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/44/56a62ac0/PostLateUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/ed/abdff054/ScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/f6/7f34f8c9/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e03928754cde45a28ad4f7368e3dc911d400/fc/e3d37c48/NavMeshAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/ThirdPersonCam.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -75,21 +126,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DialogueLevel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.49422634",
+    "git-widget-placeholder": "DialogueLevel",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.build.unityPlugin",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Editors\2022.3.3f1\Editor\Unity.exe" />
@@ -120,14 +172,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14352">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10672">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14352" />
+      <option name="pid" value="10672" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
-          <DesktopClrRuntime />
           <MonoRuntime />
         </list>
       </option>
@@ -161,6 +212,8 @@
       <workItem from="1740654338018" duration="3110000" />
       <workItem from="1740691915351" duration="5122000" />
       <workItem from="1740746573665" duration="21986000" />
+      <workItem from="1740850573704" duration="8860000" />
+      <workItem from="1740920108393" duration="7863000" />
     </task>
     <servers />
   </component>

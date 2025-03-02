@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: 2
-  <CharacterName>k__BackingField: 
-  <Text>k__BackingField: "\u0444\u044B\u0432\u0444\u044B\u0432"
+  <CharacterName>k__BackingField: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439"
+  <Text>k__BackingField: "\u042F \u0435\u0433\u043E \u0441\u043F\u0440\u044F\u0442\u0430\u043B,
+    \u0443\u0433\u0430\u0434\u0430\u0439 \u0432 \u043A\u0430\u043A\u043E\u0439 \u0440\u0443\u043A\u0435"
   <Choices>k__BackingField:
-  - <Text>k__BackingField: "\u04411"
+  - <Text>k__BackingField: "\u041B\u0435\u0432\u043E\u0439"
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 0cbd40b73b3eef64499f39753e9ded8c, type: 2}
-  - <Text>k__BackingField: "\u04412"
+  - <Text>k__BackingField: "\u041F\u0440\u0430\u0432\u043E\u0439"
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: f8fb365f6e1140b4f8238dffb2f45c20, type: 2}
   <DialogueType>k__BackingField: 1
   <IsStartingDialogue>k__BackingField: 0

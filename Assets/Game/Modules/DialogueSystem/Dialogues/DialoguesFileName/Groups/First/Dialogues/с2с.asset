@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: "\u04412\u0441"
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: "\u04412\u0441"
-  <CharacterName>k__BackingField: 
-  <Text>k__BackingField: 22222
+  <CharacterName>k__BackingField: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439"
+  <Text>k__BackingField: "\u041D\u0435 \u0443\u0433\u0430\u0434\u0430\u043B.."
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 0}

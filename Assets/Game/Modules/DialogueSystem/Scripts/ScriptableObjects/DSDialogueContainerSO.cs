@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace DS.ScriptableObjects
@@ -6,7 +7,10 @@ namespace DS.ScriptableObjects
     public class DSDialogueContainerSO : ScriptableObject
     {
         [field: SerializeField] public string FileName { get; set; }
-        [field: SerializeField] public SerializableDictionary<DSDialogueGroupSO, List<DSDialogueSO>> DialogueGroups { get; set; }
+
+        [field: SerializeField]
+        public SerializableDictionary<DSDialogueGroupSO, List<DSDialogueSO>> DialogueGroups { get; set; }
+
         [field: SerializeField] public List<DSDialogueSO> UngroupedDialogues { get; set; }
 
         public void Initialize(string fileName)
@@ -27,6 +31,11 @@ namespace DS.ScriptableObjects
             }
 
             return dialogueGroupNames;
+        }
+
+        public DSDialogueGroupSO GetDialogueGroup(string groupName)
+        {
+            return DialogueGroups.Keys.FirstOrDefault(k => k.GroupName == groupName);
         }
 
         public List<string> GetGroupedDialogueNames(DSDialogueGroupSO dialogueGroup, bool startingDialoguesOnly)

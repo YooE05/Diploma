@@ -16,15 +16,15 @@ MonoBehaviour:
   <Groups>k__BackingField:
   - <ID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
     <Name>k__BackingField: First
-    <Position>k__BackingField: {x: -343, y: -45}
+    <Position>k__BackingField: {x: -343, y: -53}
   - <ID>k__BackingField: 1a8329be-4050-43b1-a126-18116fc97140
     <Name>k__BackingField: DialogueGroup
-    <Position>k__BackingField: {x: 1078, y: -2}
+    <Position>k__BackingField: {x: 2859, y: -158}
   <Nodes>k__BackingField:
   - <ID>k__BackingField: 77509b42-048f-47a6-be8d-8a11d571951b
     <Name>k__BackingField: 1
     <CharacterName>k__BackingField: 
-    <Text>k__BackingField: "\u042D\u0442\u043E \u043F\u0435\u0440\u0432\u044B\u0439"
+    <Text>k__BackingField: "\u042D\u0442\u043E \u043A\u0443\u0431"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 82834169-ce7c-408a-8ad6-487d2b6284a0
@@ -34,35 +34,17 @@ MonoBehaviour:
   - <ID>k__BackingField: 82834169-ce7c-408a-8ad6-487d2b6284a0
     <Name>k__BackingField: 2
     <CharacterName>k__BackingField: 
-    <Text>k__BackingField: "\u0444\u044B\u0432\u0444\u044B\u0432"
+    <Text>k__BackingField: "\u042F \u0435\u0433\u043E \u0441\u043F\u0440\u044F\u0442\u0430\u043B,
+      \u0443\u0433\u0430\u0434\u0430\u0439 \u0432 \u043A\u0430\u043A\u043E\u0439
+      \u0440\u0443\u043A\u0435"
     <Choices>k__BackingField:
-    - <Text>k__BackingField: "\u04411"
+    - <Text>k__BackingField: "\u041B\u0435\u0432\u043E\u0439"
       <NodeID>k__BackingField: 810b4fa4-f2ff-466a-a164-e52cbfce59b6
-    - <Text>k__BackingField: "\u04412"
+    - <Text>k__BackingField: "\u041F\u0440\u0430\u0432\u043E\u0439"
       <NodeID>k__BackingField: 728a6f85-ee34-44c0-be21-e5a3a3df3305
     <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 121, y: 118}
-  - <ID>k__BackingField: 810b4fa4-f2ff-466a-a164-e52cbfce59b6
-    <Name>k__BackingField: "\u04411\u0441"
-    <CharacterName>k__BackingField: 
-    <Text>k__BackingField: 11111
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 644, y: 14}
-  - <ID>k__BackingField: 728a6f85-ee34-44c0-be21-e5a3a3df3305
-    <Name>k__BackingField: "\u04412\u0441"
-    <CharacterName>k__BackingField: 
-    <Text>k__BackingField: 22222
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 523, y: 245}
   - <ID>k__BackingField: cdccbeae-b33e-4d6a-b97d-d3e471bc26a9
     <Name>k__BackingField: DialogueName
     <CharacterName>k__BackingField: 
@@ -72,7 +54,28 @@ MonoBehaviour:
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 1a8329be-4050-43b1-a126-18116fc97140
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1103, y: 57}
+    <Position>k__BackingField: {x: 2884, y: -99}
+  - <ID>k__BackingField: 810b4fa4-f2ff-466a-a164-e52cbfce59b6
+    <Name>k__BackingField: "\u04411\u0441"
+    <CharacterName>k__BackingField: 
+    <Text>k__BackingField: "\u0422\u044B \u0443\u0433\u0430\u0434\u0430\u043B, \u043E\u043D
+      \u0437\u0434\u0435\u0441\u044C!"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1071, y: 6}
+  - <ID>k__BackingField: 728a6f85-ee34-44c0-be21-e5a3a3df3305
+    <Name>k__BackingField: "\u04412\u0441"
+    <CharacterName>k__BackingField: 
+    <Text>k__BackingField: "\u041D\u0435 \u0443\u0433\u0430\u0434\u0430\u043B.."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1071, y: 370}
   <OldGroupNames>k__BackingField:
   - First
   - DialogueGroup

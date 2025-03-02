@@ -47,6 +47,11 @@ namespace YooE
                 _button.image.sprite = _disableSprite;
         }
 
+        public void ClearListeners()
+        {
+            OnButtonClicked = () => { };
+        }
+
         private void InvokeButtonClick()
         {
             OnButtonClicked?.Invoke();
