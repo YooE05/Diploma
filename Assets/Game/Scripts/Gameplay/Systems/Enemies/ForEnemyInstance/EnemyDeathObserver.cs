@@ -33,7 +33,6 @@ namespace YooE.Diploma
             _enemyView.DisableEnemy();
             OnDeathEnd?.Invoke();
             //Death particles
-            //Add points to player
         }
     }
 }

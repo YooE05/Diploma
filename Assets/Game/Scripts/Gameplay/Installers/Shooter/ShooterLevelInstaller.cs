@@ -1,5 +1,4 @@
 using UnityEngine;
-using YooE.SaveLoad;
 using Zenject;
 
 namespace YooE.Diploma
@@ -25,15 +24,8 @@ namespace YooE.Diploma
             Container.Bind<SceneAudioSystem>().FromInstance(_sceneAudioSystem).AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<UpdateTimer>().AsCached().NonLazy();
 
-            SaveSystem();
             UI();
             Player();
-        }
-
-        private void SaveSystem()
-        {
-            //Container.Bind<SaveLoadManager>().AsSingle().NonLazy();
-           // Container.BindInterfacesAndSelfTo<AudioSaveLoader>().AsSingle().NonLazy();
         }
 
         private void UI()

@@ -14,7 +14,6 @@ namespace YooE.Diploma
         [field: SerializeField] public float Drag { get; private set; } = 20f;
         [field: SerializeField] public float YVelocity { get; private set; } = -9.8f;
         [field: SerializeField] public float RotationSpeed { get; private set; } = 4f;
-
         [field: SerializeField] public float AnimationsBlendSpeed { get; private set; } = 0.2f;
     }
 }

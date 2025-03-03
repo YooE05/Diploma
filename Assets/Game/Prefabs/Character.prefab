@@ -2768,8 +2768,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6272016005948413057}
   - component: {fileID: 2261200257143460082}
-  - component: {fileID: 4256029881889203283}
   - component: {fileID: 2897444156800634203}
+  - component: {fileID: 4256029881889203283}
   m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
@@ -2823,19 +2823,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.00001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4256029881889203283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837636657432055596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e3275ecf0c2a9247bbcda7d8aeeb80e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitPoints: 5
 --- !u!114 &2897444156800634203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2857,6 +2844,19 @@ MonoBehaviour:
   - {fileID: 3534062598288855165}
   - {fileID: 6414544586935209853}
   <HitPointsComponent>k__BackingField: {fileID: 4256029881889203283}
+--- !u!114 &4256029881889203283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837636657432055596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3275ecf0c2a9247bbcda7d8aeeb80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoints: 0
 --- !u!1 &3868510763354664181
 GameObject:
   m_ObjectHideFlags: 0
