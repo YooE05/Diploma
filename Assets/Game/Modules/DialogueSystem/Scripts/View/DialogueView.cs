@@ -47,10 +47,11 @@ namespace YooE.DialogueSystem
             _continueButton.OnButtonClicked += ContinueDialogue;
         }
 
-        public void Hide()
+        private void Hide()
         {
             _dialoguePanel.SetActive(false);
             _continueButton.ClearListeners();
+            _continueButton.OnButtonClicked -= ContinueDialogue;
         }
 
         private void InitDialogueView(DSDialogueSO dialogue)

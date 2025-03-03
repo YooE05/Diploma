@@ -45,7 +45,7 @@ namespace YooE.Diploma
 
         public void SetupEndPopup(string enemyDefeatPercent, string spentTime)
         {
-            _enemyStatisticText.text = enemyDefeatPercent;
+            _enemyStatisticText.text = $"{enemyDefeatPercent} %";
             _timeStatisticText.text = spentTime;
             _endPopup.SetActive(true);
         }
@@ -60,16 +60,17 @@ namespace YooE.Diploma
     public sealed class ShooterPopupsPresenter : Listeners.IFinishListener
     {
         private readonly ShooterPopupsView _shooterPopupsView;
-        private readonly GameLoopController _gameLoopController;
+        private readonly ShooterGameLoopController _shooterGameLoopController;
         private readonly EnemyBrainsInitializer _enemyBrainsInitializer;
         private readonly UpdateTimer _timer;
 
-        public ShooterPopupsPresenter(ShooterPopupsView shooterPopupsView, GameLoopController gameLoopController,
+        public ShooterPopupsPresenter(ShooterPopupsView shooterPopupsView,
+            ShooterGameLoopController shooterGameLoopController,
             EnemyBrainsInitializer enemyBrainsInitializer, UpdateTimer timer)
         {
             _shooterPopupsView = shooterPopupsView;
             _enemyBrainsInitializer = enemyBrainsInitializer;
-            _gameLoopController = gameLoopController;
+            _shooterGameLoopController = shooterGameLoopController;
             _timer = timer;
 
             InitPopupsView();
@@ -80,12 +81,12 @@ namespace YooE.Diploma
 
         private void GoNextLevel()
         {
-            _gameLoopController.GoNextLevel();
+            _shooterGameLoopController.GoNextLevel();
         }
 
         private void RetryGame()
         {
-            _gameLoopController.RetryGameLoop();
+            _shooterGameLoopController.RetryGameLoop();
         }
 
         private void InitPopupsView()

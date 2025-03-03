@@ -406,7 +406,7 @@ namespace DS.Utilities
         {
             CreateFolder("Assets/Editor/DialogueSystem", "Graphs");
 
-            CreateFolder("Assets", "DialogueSystem");
+            CreateFolder("Assets/Game/Modules", "DialogueSystem");
             CreateFolder("Assets/Game/Modules/DialogueSystem", "Dialogues");
 
             CreateFolder("Assets/Game/Modules/DialogueSystem/Dialogues", graphFileName);

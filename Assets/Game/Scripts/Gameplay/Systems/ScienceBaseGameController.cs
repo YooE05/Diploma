@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using YooE.DialogueSystem;
+using YooE.SaveLoad;
 using Zenject;
 
 namespace YooE.Diploma
@@ -9,27 +12,34 @@ namespace YooE.Diploma
         private LifecycleManager _lifecycleManager;
 
         [SerializeField] private string _shooterSceneName;
+        [SerializeField] private CharacterDialogueComponent _scientistCharacterCompomnent;
+
+        private SaveLoadManager _saveLoadManager;
 
         [Inject]
-        public void Construct(LifecycleManager lifecycleManager, EnemyWaveObserver enemyWaveObserver,
-            PlayerShooterBrain playerBrain, UpdateTimer timer)
+        public void Construct(SaveLoadManager saveLoadManager)
         {
-            _lifecycleManager = lifecycleManager;
+            _saveLoadManager = saveLoadManager;
+            _saveLoadManager.LoadGame();
+            //_lifecycleManager = lifecycleManager;
         }
 
         private void Start()
         {
-            _lifecycleManager.OnStart();
-        }
-
-        private void FinishGame()
-        {
-            _lifecycleManager.OnFinish();
+            _scientistCharacterCompomnent.StartCurrentDialogueGroup();
         }
 
         public void GoToShooterScene()
         {
+            _saveLoadManager.SaveGame();
             SceneManager.LoadScene(_shooterSceneName);
+        }
+
+        [Button]
+        public void ResetGame()
+        {
+            _saveLoadManager.ResetGame();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

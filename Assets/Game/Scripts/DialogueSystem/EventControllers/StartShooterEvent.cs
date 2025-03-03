@@ -1,5 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using DS.ScriptableObjects;
+using UnityEditor.Timeline.Actions;
+using UnityEngine;
 using YooE.DialogueSystem;
 
 namespace YooE.Diploma
@@ -18,6 +23,13 @@ namespace YooE.Diploma
 
         protected override void FinishActions()
         {
+            AsyncCountdown(1f, CancellationToken.None).Forget();
+        }
+
+        private async UniTask AsyncCountdown(float countdown, CancellationToken token)
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(countdown), cancellationToken: token);
+
             _scienceBaseGameController.GoToShooterScene();
         }
     }

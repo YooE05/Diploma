@@ -1,4 +1,5 @@
 using UnityEngine;
+using YooE.SaveLoad;
 using Zenject;
 
 namespace YooE.Diploma
@@ -6,8 +7,8 @@ namespace YooE.Diploma
     public sealed class ShooterLevelInstaller : MonoInstaller
     {
         [SerializeField] private PlayerShooterView _playerView;
-        [SerializeField] private GameLoopController _gameLoopController;
-        [SerializeField] private AudioSystem _audioSystem;
+        [SerializeField] private ShooterGameLoopController _shooterGameLoopController;
+        [SerializeField] private SceneAudioSystem _sceneAudioSystem;
         [SerializeField] private bool IsSoundEnabled;
 
         [SerializeField] private ShooterGameplayScreenView _gameplayScreenView;
@@ -17,19 +18,28 @@ namespace YooE.Diploma
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<LifecycleManager>().AsCached().NonLazy();
-            Container.BindInterfacesAndSelfTo<GameLoopController>().FromInstance(_gameLoopController).AsCached()
+            Container.BindInterfacesAndSelfTo<ShooterGameLoopController>().FromInstance(_shooterGameLoopController)
+                .AsCached()
                 .NonLazy();
 
+            Container.Bind<SceneAudioSystem>().FromInstance(_sceneAudioSystem).AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<UpdateTimer>().AsCached().NonLazy();
 
+            SaveSystem();
             UI();
             Player();
+        }
+
+        private void SaveSystem()
+        {
+            //Container.Bind<SaveLoadManager>().AsSingle().NonLazy();
+           // Container.BindInterfacesAndSelfTo<AudioSaveLoader>().AsSingle().NonLazy();
         }
 
         private void UI()
         {
             Container.BindInterfacesAndSelfTo<ShooterGameplayScreenPresenter>().AsCached()
-                .WithArguments(_audioSystem, _gameplayScreenView, IsSoundEnabled)
+                .WithArguments(_gameplayScreenView)
                 .NonLazy();
             Container.BindInterfacesAndSelfTo<ShooterPopupsPresenter>().AsCached()
                 .WithArguments(_popupsView)
