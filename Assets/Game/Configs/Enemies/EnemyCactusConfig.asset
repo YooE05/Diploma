@@ -16,5 +16,6 @@ MonoBehaviour:
   <FollowPlayerSensorConfig>k__BackingField: {fileID: 11400000, guid: c908564dc29b28d45a2eca9c83355ec2, type: 2}
   <AttackRangeSensorConfig>k__BackingField: {fileID: 11400000, guid: d92b5f948fdad9340aee4ef9a035a343, type: 2}
   <RotationSpeed>k__BackingField: 4
-  <MovementSpeed>k__BackingField: 3
+  <MovementSpeed>k__BackingField: 2
   <Damage>k__BackingField: 2
+  <HitPoints>k__BackingField: 7

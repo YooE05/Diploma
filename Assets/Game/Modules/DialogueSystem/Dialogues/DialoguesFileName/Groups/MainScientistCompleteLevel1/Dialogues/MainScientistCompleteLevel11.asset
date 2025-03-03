@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MainScientistCompleteLevel11
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: MainScientistCompleteLevel11
-  <CharacterName>k__BackingField: MainScientist
-  <Text>k__BackingField: "\u0422\u044B \u0441\u043E\u0431\u0440\u0430\u043B \u043E\u0431\u0440\u0430\u0437\u0446\u044B,
-    \u043D\u043E \u043D\u0443\u0436\u043D\u043E \u0435\u0449\u0451."
+  <CharacterName>k__BackingField: "\u0443\u0447\u0451\u043D\u044B\u0439"
+  <Text>k__BackingField: "\u0442\u044B \u0441\u043E\u0431\u0440\u0430\u043B \u043E\u0431\u0440\u0430\u0437\u0446\u044B,
+    \u043D\u043E \u043D\u0443\u0436\u043D\u043E \u0435\u0449\u0451"
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 3e0869fa05bc01e40934f1aa8371a6f3, type: 2}

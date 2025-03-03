@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3275ecf0c2a9247bbcda7d8aeeb80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hitPoints: 4
+  HitPoints: 0
 --- !u!1 &3235022463277285133
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +249,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 68d8f3eae01c5744b996aab3358db0a0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c70a119763214f4fb78bc63ab44c1c1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

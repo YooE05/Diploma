@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: "cube\u04412\u0441"
   <CharacterName>k__BackingField: Cube Wizard
-  <Text>k__BackingField: "\u041D\u0435 \u0443\u0433\u0430\u0434\u0430\u043B.."
+  <Text>k__BackingField: "\u043D\u0435 \u0443\u0433\u0430\u0434\u0430\u043B.."
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 0}

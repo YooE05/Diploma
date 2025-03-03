@@ -5,185 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94b36f19-ddca-4d9f-8983-166c9ca3b201" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/BlockingLoop.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/BlockingLoop.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/BowShot.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/BowShot.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/Buff.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/Buff.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/CastingLoop.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/CastingLoop.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/Death.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/Death.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/GetHit.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/GetHit.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/IdleCombat.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/IdleCombat.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_OneHanded.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_OneHanded.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_TwoHanded.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_TwoHanded.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchLeft.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchLeft.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchRight.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchRight.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/SpellCast.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/SpellCast.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/StunnedLoop.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Combat/StunnedLoop.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Gathering.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Gathering/Gathering.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Gathering/Gathering.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Gathering/MiningLoop.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Gathering/MiningLoop.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/FallingLoop.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/FallingLoop.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/JumpWhileRunning.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/JumpWhileRunning.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Jumps.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Jumps.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollBackward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollBackward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollForward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollForward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollLeft.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollLeft.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollRight.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollRight.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Sprint.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Sprint.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeLeft.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeLeft.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeRight.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeRight.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/LowPolyHumanAnimator.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/LowPolyHumanAnimator.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/PPProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/PPProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Editor/MaterialTilingOffset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/Editor/MaterialTilingOffset.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Armor.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Armor.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Body.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Body.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Eyes.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Eyes.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Hair.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Hair.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Underwear.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Materials_Humans/Underwear.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans/ArmorMeshes_Humans.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans/ArmorMeshes_Humans/PlateSet1_HumanMale.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans/ArmorMeshes_Humans/PlateSet1_HumanMale.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans/ArmorMeshes_Humans/StarterArmor_HumanMale.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans/ArmorMeshes_Humans/StarterArmor_HumanMale.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans/HumanMale_Character.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Meshes_Humans/HumanMale_Character.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Prefabs_Humans.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Prefabs_Humans/HumanMale_Character_FREE.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Prefabs_Humans/HumanMale_Character_FREE.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Textures_Humans.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Textures_Humans/LowPolyArmorTexture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Textures_Humans/LowPolyArmorTexture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Textures_Humans/LowPolyCharacterTexture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Textures_Humans/LowPolyCharacterTexture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DialogueSystem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Utilities/DSIOUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Utilities/DSIOUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/DialogueSystem/TestDialogueSequences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/DialogueSystem/TestDialogueSequences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/ShootingConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/ShootingConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Materials/Audio/15 Pirates Cove.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Materials/Audio/15 Pirates Cove.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/CharacterDialogueComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/CharacterDialogueComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/DialogueCharacterID.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/DialogueCharacterID.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/DialogueSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/DialogueSystemInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/DialoguesFileName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/DialoguesFileName.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/с1с.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/с1с.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/с2с.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/Cube/Dialogues/с2с.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/DialogueGroup.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/DialogueGroup/DialogueGroup.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/DialogueGroup/DialogueGroup.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/DialogueGroup/Dialogues.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/DialogueGroup/Dialogues/DialogueName.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/DialogueGroup/Dialogues/DialogueName.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistCompleteLevel1/Dialogues/1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistCompleteLevel1/Dialogues/1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistCompleteLevel1/Dialogues/2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistCompleteLevel1/Dialogues/2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistEnd/Dialogues/DialogueName.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistEnd/Dialogues/DialogueName.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/UI/GameplayUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/UI/GameplayUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Materials/Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Materials/Floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Materials/Floor.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Materials/Floor.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Materials/Gridbox Prototype Materials/Materials/prototype_512x512_green3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Materials/Gridbox Prototype Materials/Materials/prototype_512x512_green3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Enemy2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Enemy2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/SampleScene/NavMesh-NavMeshSurface.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/EventControllers/ShowHideCubeEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/EventControllers/ShowHideCubeEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/EventControllers/StartShooterEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DialogueSystem/EventControllers/StartShooterEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/GameLoopController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/GameLoopController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScienceBase/ScienceBaseInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScienceBase/ScienceBaseInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/DialogueEventInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScinceBase/DialogueEventInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/ShooterLevelInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/ShooterLevelInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/AudioSystem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/AudioSystem/AudioSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/AudioSystem/AudioSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/ScienceBaseGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/ScienceBaseGameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterPopupsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterPopupsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gizmos.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gizmos/DialogueDatabase Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gizmos/DialogueDatabase Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gizmos/StringAsset Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gizmos/StringAsset Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gizmos/TextTable Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gizmos/TextTable Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/Shooter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/Shooter.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,22 +77,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.49422634&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DialogueLevel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.49422634",
+    "git-widget-placeholder": "FixGameView",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.build.unityPlugin",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Editors\2022.3.3f1\Editor\Unity.exe" />
@@ -292,16 +123,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="25500">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="25500" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <DesktopClrRuntime />
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />

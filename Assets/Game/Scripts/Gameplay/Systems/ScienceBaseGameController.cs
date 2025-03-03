@@ -9,10 +9,9 @@ namespace YooE.Diploma
 {
     public sealed class ScienceBaseGameController : MonoBehaviour
     {
-        private LifecycleManager _lifecycleManager;
-
         [SerializeField] private string _shooterSceneName;
-        [SerializeField] private CharacterDialogueComponent _scientistCharacterCompomnent;
+        [SerializeField] private string _shooterTutorialSceneName;
+        [SerializeField] private CharacterDialogueComponent _scientistCharacterComponent;
 
         private SaveLoadManager _saveLoadManager;
 
@@ -21,18 +20,24 @@ namespace YooE.Diploma
         {
             _saveLoadManager = saveLoadManager;
             _saveLoadManager.LoadGame();
-            //_lifecycleManager = lifecycleManager;
         }
 
         private void Start()
         {
-            _scientistCharacterCompomnent.StartCurrentDialogueGroup();
+            _scientistCharacterComponent.StartCurrentDialogueGroup();
         }
 
         public void GoToShooterScene()
         {
             _saveLoadManager.SaveGame();
-            SceneManager.LoadScene(_shooterSceneName);
+            if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 1)
+            {
+                SceneManager.LoadScene(_shooterTutorialSceneName);
+            }
+            else
+            {
+                SceneManager.LoadScene(_shooterSceneName);
+            }
         }
 
         [Button]

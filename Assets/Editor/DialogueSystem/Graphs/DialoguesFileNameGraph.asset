@@ -16,24 +16,56 @@ MonoBehaviour:
   <Groups>k__BackingField:
   - <ID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
     <Name>k__BackingField: Cube
-    <Position>k__BackingField: {x: -235, y: -53.000034}
+    <Position>k__BackingField: {x: -235, y: -53}
   - <ID>k__BackingField: 1a8329be-4050-43b1-a126-18116fc97140
     <Name>k__BackingField: CubeEnd
-    <Position>k__BackingField: {x: 1672.0001, y: 82.00001}
+    <Position>k__BackingField: {x: 164, y: 666}
   - <ID>k__BackingField: a9576d12-a73a-4358-b04c-ff54d28ac353
     <Name>k__BackingField: MainScientistEnd
-    <Position>k__BackingField: {x: 1341.0001, y: 1915}
+    <Position>k__BackingField: {x: 1341, y: 1915}
   - <ID>k__BackingField: cdd4bc82-8824-4e91-b070-c709660659a8
     <Name>k__BackingField: MainScientistCompleteLevel1
-    <Position>k__BackingField: {x: 1016.0001, y: 1590}
+    <Position>k__BackingField: {x: 1016, y: 1590}
   - <ID>k__BackingField: 9db879cc-3ed6-41d3-9ee7-07ae0bd4ad09
     <Name>k__BackingField: MainScientistStart
-    <Position>k__BackingField: {x: 1160.0001, y: 986.0002}
+    <Position>k__BackingField: {x: 1149, y: 986}
   <Nodes>k__BackingField:
+  - <ID>k__BackingField: 77509b42-048f-47a6-be8d-8a11d571951b
+    <Name>k__BackingField: cube1
+    <CharacterName>k__BackingField: Cube Wizard
+    <Text>k__BackingField: "\u044D\u0442\u043E \u043A\u0443\u0431"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 82834169-ce7c-408a-8ad6-487d2b6284a0
+    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -210, y: 58}
+  - <ID>k__BackingField: a7ced6a2-d534-4ed7-beec-b0db789b8167
+    <Name>k__BackingField: MainScientistCompleteLevel11
+    <CharacterName>k__BackingField: "\u0443\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0442\u044B \u0441\u043E\u0431\u0440\u0430\u043B \u043E\u0431\u0440\u0430\u0437\u0446\u044B,
+      \u043D\u043E \u043D\u0443\u0436\u043D\u043E \u0435\u0449\u0451"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: bf27c651-dce5-4a25-83ca-093b5ad699a5
+    <GroupID>k__BackingField: cdd4bc82-8824-4e91-b070-c709660659a8
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1041, y: 1649}
+  - <ID>k__BackingField: cdccbeae-b33e-4d6a-b97d-d3e471bc26a9
+    <Name>k__BackingField: cubeEnd
+    <CharacterName>k__BackingField: Cube Wizard
+    <Text>k__BackingField: "\u0431\u043E\u043B\u044C\u0448\u0435 \u0442\u044C \u0435\u0433\u043E
+      \u043D\u0435 \u0443\u0432\u0438\u0434\u0438\u0448\u044C."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 1a8329be-4050-43b1-a126-18116fc97140
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 189, y: 725}
   - <ID>k__BackingField: 82834169-ce7c-408a-8ad6-487d2b6284a0
     <Name>k__BackingField: cube2
     <CharacterName>k__BackingField: Cube Wizard
-    <Text>k__BackingField: "\u042F \u0435\u0433\u043E \u0441\u043F\u0440\u044F\u0442\u0430\u043B,
+    <Text>k__BackingField: "\u044F \u0435\u0433\u043E \u0441\u043F\u0440\u044F\u0442\u0430\u043B,
       \u0443\u0433\u0430\u0434\u0430\u0439 \u0432 \u043A\u0430\u043A\u043E\u0439
       \u0440\u0443\u043A\u0435"
     <Choices>k__BackingField:
@@ -44,30 +76,10 @@ MonoBehaviour:
     <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: 123, y: 113}
-  - <ID>k__BackingField: 77509b42-048f-47a6-be8d-8a11d571951b
-    <Name>k__BackingField: cube1
-    <CharacterName>k__BackingField: Cube Wizard
-    <Text>k__BackingField: "\u042D\u0442\u043E \u043A\u0443\u0431"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 82834169-ce7c-408a-8ad6-487d2b6284a0
-    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -210, y: 58}
-  - <ID>k__BackingField: 728a6f85-ee34-44c0-be21-e5a3a3df3305
-    <Name>k__BackingField: "cube\u04412\u0441"
-    <CharacterName>k__BackingField: Cube Wizard
-    <Text>k__BackingField: "\u041D\u0435 \u0443\u0433\u0430\u0434\u0430\u043B.."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1071, y: 370}
   - <ID>k__BackingField: 810b4fa4-f2ff-466a-a164-e52cbfce59b6
     <Name>k__BackingField: "cube\u04411\u0441"
     <CharacterName>k__BackingField: Cube Wizard
-    <Text>k__BackingField: "\u0422\u044B \u0443\u0433\u0430\u0434\u0430\u043B, \u043E\u043D
+    <Text>k__BackingField: "\u0442\u044B \u0443\u0433\u0430\u0434\u0430\u043B, \u043E\u043D
       \u0437\u0434\u0435\u0441\u044C!"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
@@ -75,22 +87,20 @@ MonoBehaviour:
     <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 1071, y: 6}
-  - <ID>k__BackingField: bf27c651-dce5-4a25-83ca-093b5ad699a5
-    <Name>k__BackingField: MainScientistCompleteLevel12
-    <CharacterName>k__BackingField: MainScientist
-    <Text>k__BackingField: "\u041D\u0443 \u0432\u0441\u0451, \u043D\u0435 \u043E\u0442\u0432\u043B\u0435\u043A\u0430\u0439
-      \u043C\u0435\u043D\u044F. \u0418\u0434\u0438 \u043F\u043E\u0431\u0435\u0439
-      \u0432\u0440\u0430\u0433\u043E\u0432."
+  - <ID>k__BackingField: 728a6f85-ee34-44c0-be21-e5a3a3df3305
+    <Name>k__BackingField: "cube\u04412\u0441"
+    <CharacterName>k__BackingField: Cube Wizard
+    <Text>k__BackingField: "\u043D\u0435 \u0443\u0433\u0430\u0434\u0430\u043B.."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: cdd4bc82-8824-4e91-b070-c709660659a8
+    <GroupID>k__BackingField: 1fe6803d-e882-4067-b487-cd44ec180fff
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1755, y: 1649}
+    <Position>k__BackingField: {x: 1071, y: 370}
   - <ID>k__BackingField: f10c4cda-5c22-4c2d-9bb7-bec678faf562
     <Name>k__BackingField: MainScientistStart2
-    <CharacterName>k__BackingField: MainScientist
-    <Text>k__BackingField: "\u0422\u0430\u043A \u0443\u043B\u0435\u043F\u0451\u0442\u044B\u0432\u0430\u0439
+    <CharacterName>k__BackingField: "\u0443\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0442\u0430\u043A \u0443\u043B\u0435\u043F\u0451\u0442\u044B\u0432\u0430\u0439
       \u043E\u0442\u0441\u044E\u0434\u0430 \u0431\u0438\u0442\u044C \u0432\u0440\u0430\u0433\u043E\u0432!"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
@@ -100,8 +110,8 @@ MonoBehaviour:
     <Position>k__BackingField: {x: 1530, y: 1045}
   - <ID>k__BackingField: 3cb18105-3470-45c2-bc49-558d8c664185
     <Name>k__BackingField: MainScientistStart1
-    <CharacterName>k__BackingField: MainScientist
-    <Text>k__BackingField: "\u0422\u044B \u0442\u0443\u0442?"
+    <CharacterName>k__BackingField: "\u0443\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0442\u044B \u0442\u0443\u0442?"
     <Choices>k__BackingField:
     - <Text>k__BackingField: "\u0414\u0430"
       <NodeID>k__BackingField: f10c4cda-5c22-4c2d-9bb7-bec678faf562
@@ -109,52 +119,42 @@ MonoBehaviour:
       <NodeID>k__BackingField: 37d971b9-79ba-4cc8-9cc5-004ff1de104a
     <GroupID>k__BackingField: 9db879cc-3ed6-41d3-9ee7-07ae0bd4ad09
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: 1185, y: 1173}
-  - <ID>k__BackingField: 37d971b9-79ba-4cc8-9cc5-004ff1de104a
-    <Name>k__BackingField: MainScientistStart3
-    <CharacterName>k__BackingField: MainScientist
-    <Text>k__BackingField: "\u0417\u043D\u0430\u0447\u0438\u0442 \u0441\u0440\u0430\u0436\u0430\u0435\u0448\u044C\u0441\u044F
-      \u0441 \u0432\u0440\u0430\u0433\u0430\u043C\u0438, \u0445\u043E\u0440\u043E\u0448\u043E."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 9db879cc-3ed6-41d3-9ee7-07ae0bd4ad09
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1530, y: 1326}
-  - <ID>k__BackingField: a7ced6a2-d534-4ed7-beec-b0db789b8167
-    <Name>k__BackingField: MainScientistCompleteLevel11
-    <CharacterName>k__BackingField: MainScientist
-    <Text>k__BackingField: "\u0422\u044B \u0441\u043E\u0431\u0440\u0430\u043B \u043E\u0431\u0440\u0430\u0437\u0446\u044B,
-      \u043D\u043E \u043D\u0443\u0436\u043D\u043E \u0435\u0449\u0451."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: bf27c651-dce5-4a25-83ca-093b5ad699a5
-    <GroupID>k__BackingField: cdd4bc82-8824-4e91-b070-c709660659a8
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1041, y: 1649}
+    <Position>k__BackingField: {x: 1174, y: 1173}
   - <ID>k__BackingField: 29911163-82e6-4e3e-ad7f-ed93af70e6b1
     <Name>k__BackingField: MainScientistEnd
-    <CharacterName>k__BackingField: MainScientist
-    <Text>k__BackingField: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430
+    <CharacterName>k__BackingField: "\u0443\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0441\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430
       \u043E\u0431\u0440\u0430\u0437\u0446\u044B, \u0442\u044B \u043C\u043D\u0435
-      \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435 \u043D\u0443\u0436\u0435\u043D."
+      \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435 \u043D\u0443\u0436\u0435\u043D"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: a9576d12-a73a-4358-b04c-ff54d28ac353
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 1366, y: 1974}
-  - <ID>k__BackingField: cdccbeae-b33e-4d6a-b97d-d3e471bc26a9
-    <Name>k__BackingField: cubeEnd
-    <CharacterName>k__BackingField: Cube Wizard
-    <Text>k__BackingField: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0442\u044C \u0435\u0433\u043E
-      \u043D\u0435 \u0443\u0432\u0438\u0434\u0438\u0448\u044C."
+  - <ID>k__BackingField: bf27c651-dce5-4a25-83ca-093b5ad699a5
+    <Name>k__BackingField: MainScientistCompleteLevel12
+    <CharacterName>k__BackingField: "\u0443\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u043D\u0443 \u0432\u0441\u0451, \u043D\u0435 \u043E\u0442\u0432\u043B\u0435\u043A\u0430\u0439
+      \u043C\u0435\u043D\u044F, \u0438\u0434\u0438 \u043F\u043E\u0431\u0435\u0439
+      \u0432\u0440\u0430\u0433\u043E\u0432"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 1a8329be-4050-43b1-a126-18116fc97140
+    <GroupID>k__BackingField: cdd4bc82-8824-4e91-b070-c709660659a8
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1697, y: 141}
+    <Position>k__BackingField: {x: 1755, y: 1649}
+  - <ID>k__BackingField: 37d971b9-79ba-4cc8-9cc5-004ff1de104a
+    <Name>k__BackingField: MainScientistStart3
+    <CharacterName>k__BackingField: "\u0443\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0437\u043D\u0430\u0447\u0438\u0442 \u0441\u0440\u0430\u0436\u0430\u0435\u0448\u044C\u0441\u044F
+      \u0441 \u0432\u0440\u0430\u0433\u0430\u043C\u0438, \u0445\u043E\u0440\u043E\u0448\u043E"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 9db879cc-3ed6-41d3-9ee7-07ae0bd4ad09
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1530, y: 1326}
   <OldGroupNames>k__BackingField:
   - Cube
   - CubeEnd
@@ -166,14 +166,17 @@ MonoBehaviour:
     list:
     - Key: Cube
       Value:
-      - cube2
       - cube1
-      - "cube\u04412\u0441"
+      - cube2
       - "cube\u04411\u0441"
+      - "cube\u04412\u0441"
     - Key: MainScientistCompleteLevel1
       Value:
-      - MainScientistCompleteLevel12
       - MainScientistCompleteLevel11
+      - MainScientistCompleteLevel12
+    - Key: CubeEnd
+      Value:
+      - cubeEnd
     - Key: MainScientistStart
       Value:
       - MainScientistStart2
@@ -182,6 +185,3 @@ MonoBehaviour:
     - Key: MainScientistEnd
       Value:
       - MainScientistEnd
-    - Key: CubeEnd
-      Value:
-      - cubeEnd
