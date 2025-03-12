@@ -3,6 +3,6 @@
     public sealed class AudioSettingsData
     {
         public bool IsSoundOn;
-        public float Volume;
+        public float MasterVolume;
     }
 }

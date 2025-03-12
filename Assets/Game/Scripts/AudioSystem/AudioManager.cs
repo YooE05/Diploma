@@ -112,7 +112,7 @@ public sealed class AudioManager : ScriptableObject
 
     public void SetAudioSettings(AudioSettingsData settings)
     {
-        ChangeVolume(_masterAudioMixerGroup.name, settings.Volume);
+        ChangeVolume(_masterAudioMixerGroup.name, settings.MasterVolume);
         SetSoundsEnabling(settings.IsSoundOn);
     }
 
@@ -127,7 +127,7 @@ public sealed class AudioManager : ScriptableObject
         var data = new AudioSettingsData()
         {
             IsSoundOn = IsSoundEnable.Value,
-            Volume = 0.3f
+            MasterVolume = 0.3f
         };
         return data;
     }

@@ -17,7 +17,7 @@ namespace YooE.SaveLoad
             var data = new AudioSettingsData()
             {
                 IsSoundOn = true,
-                Volume = 0.5f,
+                MasterVolume = 0.5f,
             };
 
             audioSystem.SetAudioSettings(data);

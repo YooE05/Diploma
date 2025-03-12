@@ -6,20 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94b36f19-ddca-4d9f-8983-166c9ca3b201" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/DialogueSystem/Graphs/DialoguesFileNameGraph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Configs/DialogueSystem/MainScientistDialogueGroupSequence.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Configs/DialogueSystem/MainScientistDialogueGroupSequence.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/DialoguesFileName.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/DialoguesFileName.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistCompleteLevel1/Dialogues/MainScientistCompleteLevel12.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistCompleteLevel1/Dialogues/MainScientistCompleteLevel12.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/MainScientistStart2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/MainScientistStart2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/MainScientistStart3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Dialogues/DialoguesFileName/Groups/MainScientistStart/Dialogues/MainScientistStart3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/Shooter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/Shooter.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/ShooterLevelInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/ShooterLevelInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Enemies/ForEnemyInstance/EnemyDeathObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Enemies/ForEnemyInstance/EnemyDeathObserver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Player/Movement/PlayerMovementConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Player/Movement/PlayerMovementConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/StartGame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/StartGame.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +46,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ed26b59c52e4944b9f25c715ba0298d2ba200/46/834b3888/DefaultMethodDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1a78e12642e046789a70cdd08092bfad10000/23/a26cbe59/AudioMixer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1a78e12642e046789a70cdd08092bfad10000/da/d0b58585/AudioSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/70/ba40a866/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/e8/d144d9f6/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605bf8b31fcb444b85176da963870aa746ac00/37/8f9c957e/Array.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/2f/3693467f/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,22 +70,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.49422634&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;FixGameView&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.49422634",
+    "git-widget-placeholder": "FixDemo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.build.unityPlugin",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Editors\2022.3.3f1\Editor\Unity.exe" />
@@ -128,13 +116,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11888">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="11888" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -170,6 +160,7 @@
       <workItem from="1740920108393" duration="34050000" />
       <workItem from="1740987116025" duration="22226000" />
       <workItem from="1741020531546" duration="5459000" />
+      <workItem from="1741796884663" duration="9655000" />
     </task>
     <servers />
   </component>
@@ -203,32 +194,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs</url>
-          <line>13</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\DialogueSystem\Characters\CharacterDialogueDataCollector.cs" containingFunctionPresentation="Constructor 'CharacterDialogueDataCollector'">
-            <startOffsets>
-              <option value="468" />
-            </startOffsets>
-            <endOffsets>
-              <option value="493" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\DialogueSystem\Characters\CharacterDialogueDataCollector.cs" containingFunctionPresentation="Method 'SetupCharacters'">
-            <startOffsets>
-              <option value="997" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1038" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs</url>
           <line>57</line>
           <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\DialogueSystem\Characters\CharacterDialogueDataCollector.cs" containingFunctionPresentation="Method 'GetCharactersData'">
             <startOffsets>
@@ -241,17 +206,69 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs</url>
-          <line>78</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\DialogueSystem\Characters\CharacterDialogueDataCollector.cs" containingFunctionPresentation="Method 'AddCharacterComponents'">
+          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioManager.cs</url>
+          <line>166</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioManager.cs" containingFunctionPresentation="Method 'InitializeLayers'">
             <startOffsets>
-              <option value="2625" />
+              <option value="5929" />
             </startOffsets>
             <endOffsets>
-              <option value="2691" />
+              <option value="5986" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayerFactory.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioLayerFactory.cs" containingFunctionPresentation="Method 'CreateAudioLayer'">
+            <startOffsets>
+              <option value="478" />
+            </startOffsets>
+            <endOffsets>
+              <option value="515" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/SettingSoundsMusic.cs</url>
+          <line>13</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Content\SettingSoundsMusic.cs" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="302" />
+            </startOffsets>
+            <endOffsets>
+              <option value="365" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayer.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioLayer.cs" containingFunctionPresentation="Method 'Play'">
+            <startOffsets>
+              <option value="928" />
+            </startOffsets>
+            <endOffsets>
+              <option value="953" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayer.cs</url>
+          <line>13</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioLayer.cs" containingFunctionPresentation="Constructor 'AudioLayer'">
+            <startOffsets>
+              <option value="340" />
+            </startOffsets>
+            <endOffsets>
+              <option value="362" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
