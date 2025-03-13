@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueSequence: {fileID: 11400000, guid: 8cd5f78768a117f4d890d54f44bcde77, type: 2}
-  _currentGroupIndex: 3
+  _currentGroupIndex: 7887
   _dialogueCharacterID: 1
 --- !u!1 &1772696425
 GameObject:

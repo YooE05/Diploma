@@ -50,19 +50,17 @@ namespace YooE.DialogueSystem
         public async UniTaskVoid StartCurrentDialogueGroup()
         {
             await UniTask.WaitUntil(() => _dialogueState != null);
+
             StartDialogueGroup(CurrentDialogueGroup);
         }
 
         private void StartDialogueGroup(DSDialogueGroupSO groupToStart)
         {
             _dialogueState.StartDialogueGroup(groupToStart);
-            _dialogueState.OnDialogueGroupFinished += SetNextDialogueGroup;
         }
 
         private void SetNextDialogueGroup()
         {
-            _dialogueState.OnDialogueGroupFinished -= SetNextDialogueGroup;
-
             if (_dialogueSequence.Groups.Count == 0)
             {
                 Debug.LogError("No dialogue groups for character");

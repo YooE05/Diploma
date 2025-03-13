@@ -1,5 +1,6 @@
 using Audio;
 using UnityEngine;
+using YooE.DialogueSystem;
 using YooE.SaveLoad;
 using Zenject;
 
@@ -20,6 +21,9 @@ namespace YooE.Diploma
 
             Container.BindInterfacesAndSelfTo<AudioManager>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<AudioSaveLoader>().AsSingle().NonLazy();
+            
+            Container.Bind<CharactersDataHandler>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<CharacterDialoguesSaveLoader>().AsSingle().NonLazy();
         }
     }
 }

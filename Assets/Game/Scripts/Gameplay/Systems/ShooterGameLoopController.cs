@@ -2,6 +2,7 @@ using Audio;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YooE.DialogueSystem;
 using YooE.SaveLoad;
 using Zenject;
 
@@ -15,6 +16,7 @@ namespace YooE.Diploma
         private UpdateTimer _timer;
         private SaveLoadManager _saveLoadManager;
         private AudioManager _audioManager;
+        private CharactersDataHandler _charactersDataHandler;
 
         [SerializeField] private string _nextSceneName;
         [SerializeField] private AudioClip _audioClip;
@@ -22,8 +24,9 @@ namespace YooE.Diploma
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, EnemyWaveObserver enemyWaveObserver,
             PlayerShooterBrain playerBrain, UpdateTimer timer, SaveLoadManager saveLoadManager,
-            AudioManager audioManager)
+            AudioManager audioManager, CharactersDataHandler charactersDataHandler)
         {
+            _charactersDataHandler = charactersDataHandler;
             _audioManager = audioManager;
             _lifecycleManager = lifecycleManager;
             _enemyWaveObserver = enemyWaveObserver;
@@ -55,9 +58,9 @@ namespace YooE.Diploma
             if (_playerBrain.IsDead) return;
 
             _timer.StopTimer();
-            _saveLoadManager.SaveGame();
             _lifecycleManager.OnFinish();
-            //SetNextDialogueGroup();
+            _charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
+            _saveLoadManager.SaveGame();
         }
 
         //TODO: replace reload scene by reInitialization all systems to better performance

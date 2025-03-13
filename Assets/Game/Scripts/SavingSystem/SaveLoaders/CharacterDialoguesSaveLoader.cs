@@ -2,19 +2,19 @@
 
 namespace YooE.SaveLoad
 {
-    public sealed class CharacterDialoguesSaveLoader : DataSaveLoader<CharacterDialogueData[], CharactersDataContainer>
+    public sealed class CharacterDialoguesSaveLoader : DataSaveLoader<CharacterDialogueData[], CharactersDataHandler>
     {
-        protected override CharacterDialogueData[] GetData(CharactersDataContainer service)
+        protected override CharacterDialogueData[] GetData(CharactersDataHandler service)
         {
             return service.GetCharactersData();
         }
 
-        protected override void SetData(CharactersDataContainer service, CharacterDialogueData[] data)
+        protected override void SetData(CharactersDataHandler service, CharacterDialogueData[] data)
         {
-            service.SetCharactersData(data);
+            service.SetCharactersDataFromSave(data);
         }
 
-        protected override void SetDefaultData(CharactersDataContainer service)
+        protected override void SetDefaultData(CharactersDataHandler service)
         {
             service.SetDefaultData();
         }

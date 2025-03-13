@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using DS.ScriptableObjects;
 using UnityEngine;
-using YooE.SaveLoad;
 using Zenject;
 
 namespace YooE.DialogueSystem
@@ -14,11 +13,10 @@ namespace YooE.DialogueSystem
 
         public override void InstallBindings()
         {
-            Container.Bind<CharactersDataContainer>().AsSingle().WithArguments(_characters).NonLazy();
-            Container.BindInterfacesAndSelfTo<CharacterDialoguesSaveLoader>().AsSingle().NonLazy();
-
             Container.BindInterfacesAndSelfTo<DialogueView>().FromInstance(_dialogueView).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<DialogueState>().AsSingle().WithArguments(_dialogueContainer).NonLazy();
+
+            Container.Resolve<CharactersDataHandler>().AddCharacters(_characters);
         }
     }
 }
