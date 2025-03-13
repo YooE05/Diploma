@@ -6,7 +6,7 @@ namespace YooE.SaveLoad
     {
         protected override CharacterDialogueData[] GetData(CharactersDataContainer service)
         {
-            return service.CollectCharactersData();
+            return service.GetCharactersData();
         }
 
         protected override void SetData(CharactersDataContainer service, CharacterDialogueData[] data)

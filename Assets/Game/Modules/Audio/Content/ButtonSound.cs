@@ -22,10 +22,10 @@ namespace Audio.Content
 
         private void OnClick()
         {
-            if (AudioManager.Instance.TryGetAudioClipByName(_clipName, out AudioClip audioClip))
+            /*if (AudioManager.Instance.TryGetAudioClipByName(_clipName, out AudioClip audioClip))
             {
                 AudioManager.Instance.PlaySound(audioClip, AudioOutput.UI);
-            }
+            }*/
         }
     }
 }

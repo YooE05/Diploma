@@ -10,13 +10,13 @@ namespace Audio.Content
 
         private void Start()
         {
-            AudioManager.Instance.PlaySound(_audioClip, AudioOutput.Music);
+          //  AudioManager.Instance.PlaySound(_audioClip, AudioOutput.Master);
         }
 
         [ContextMenu(nameof(Apply))]
         private void Apply()
         {
-            AudioManager.Instance.SetVolume(AudioOutput.Music, _musicVolume);
+          //  AudioManager.Instance.SetVolume(AudioOutput.Master, _musicVolume);
         }
     }
 }

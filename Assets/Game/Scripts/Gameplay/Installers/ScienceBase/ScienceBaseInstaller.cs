@@ -8,18 +8,20 @@ namespace YooE.Diploma
     {
         [SerializeField] private CubeHandler _cubeHandler;
         [SerializeField] private ScienceBaseGameController _gameController;
-        [SerializeField] private SceneAudioSystem _sceneAudioSystem;
+
         [SerializeField] private SoundButtonView _soundButtonView;
+        [SerializeField] private string _buttonsClickSoundName = "buttonClick";
 
         public override void InstallBindings()
         {
-            Container.Bind<ScienceBaseGameController>().FromInstance(_gameController).AsCached().NonLazy();
+            Container.BindInterfacesAndSelfTo<SaveLoadManager>().AsCached().NonLazy();
+            Container.BindInterfacesAndSelfTo<ScienceBaseGameController>().FromInstance(_gameController).AsCached()
+                .NonLazy();
             Container.Bind<CubeHandler>().FromInstance(_cubeHandler).AsCached().NonLazy();
-            Container.Bind<SaveLoadManager>().AsSingle().NonLazy();
-            // Container.BindInterfacesTo<CharacterDialoguesSaveLoader>().AsCached().NonLazy();
 
-            Container.Bind<SceneAudioSystem>().FromInstance(_sceneAudioSystem).AsCached().NonLazy();
-            Container.Bind<SoundButtonPresenter>().AsCached().WithArguments(_soundButtonView).NonLazy();
+            Container.BindInterfacesAndSelfTo<SoundButtonPresenter>().AsCached()
+                .WithArguments(_soundButtonView, _buttonsClickSoundName)
+                .NonLazy();
         }
     }
 }

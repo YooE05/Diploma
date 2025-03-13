@@ -1,30 +1,44 @@
-﻿using UniRx;
+﻿using System;
+using Audio;
+using UnityEngine;
+using YooE.SaveLoad;
 
 namespace YooE.Diploma
 {
-    public sealed class SoundButtonPresenter
+    public sealed class SoundButtonPresenter : IDisposable
     {
-        private readonly CompositeDisposable _disposables = new();
-        private readonly SceneAudioSystem _sceneAudioSystem;
+        private readonly AudioManager _audioManager;
         private readonly SoundButtonView _soundButtonView;
+        private readonly string _clipName;
+        private readonly SaveLoadManager _saveLoadManager;
 
-        public SoundButtonPresenter(SceneAudioSystem sceneAudioSystem, SoundButtonView soundButtonView)
+        public SoundButtonPresenter(AudioManager audioManager, SoundButtonView soundButtonView, string buttonClipName,
+            SaveLoadManager saveLoadManager)
         {
+            _saveLoadManager = saveLoadManager;
+            _clipName = buttonClipName;
             _soundButtonView = soundButtonView;
-            _sceneAudioSystem = sceneAudioSystem;
-            InitGameplayScreenView(sceneAudioSystem.IsSoundEnable.Value);
-            sceneAudioSystem.IsSoundEnable.Subscribe(delegate
-                {
-                    InitGameplayScreenView(sceneAudioSystem.IsSoundEnable.Value);
-                })
-                .AddTo(_disposables);
+            _audioManager = audioManager;
+            _audioManager.OnNewSettingsSet += InitGameplayScreenView;
+            InitGameplayScreenView(_audioManager.GetAudioSettings());
 
-            _soundButtonView.OnSoundButtonClicked += _sceneAudioSystem.SetSoundsEnabling;
+            _soundButtonView.OnSoundButtonClicked += OnSoundButtonClicked;
         }
 
-        private void InitGameplayScreenView(bool isSoundsOn)
+        private void InitGameplayScreenView(AudioSettingsData audioSettings)
         {
-            _soundButtonView.SetSoundButtonEnabling(isSoundsOn);
+            _soundButtonView.SetSoundButtonEnabling(audioSettings.IsSoundOn);
+        }
+
+        private void OnSoundButtonClicked(bool isEnable)
+        {
+            if (_audioManager.TryGetAudioClipByName(_clipName, out AudioClip audioClip))
+            {
+                _audioManager.PlaySound(audioClip, AudioOutput.UI);
+            }
+
+            _audioManager.SetSoundsEnabling(isEnable);
+            _saveLoadManager.SaveGame();
         }
 
         public void HideSoundButton()
@@ -32,10 +46,10 @@ namespace YooE.Diploma
             _soundButtonView.Hide();
         }
 
-        ~SoundButtonPresenter()
+        public void Dispose()
         {
-            _soundButtonView.OnSoundButtonClicked -= _sceneAudioSystem.SetSoundsEnabling;
-            _disposables.Dispose();
+            _audioManager.OnNewSettingsSet -= InitGameplayScreenView;
+            _soundButtonView.OnSoundButtonClicked -= _audioManager.SetSoundsEnabling;
         }
     }
 }

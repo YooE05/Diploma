@@ -9,8 +9,6 @@ namespace Audio
 {
     public sealed class AudioManager : IDisposable
     {
-        public static AudioManager Instance => _instance ??= new AudioManager();
-
         private AudioMixer AudioMixer
         {
             get
@@ -51,7 +49,7 @@ namespace Audio
             }
         }
 
-        private static AudioManager _instance;
+        public event Action<AudioSettingsData> OnNewSettingsSet;
 
         private AudioMixer _audioMixer;
         private AudioLibrary _audioLibrary;
@@ -66,17 +64,23 @@ namespace Audio
         private readonly AudioLayerPool _audioLayerPool;
 
         private bool _isSoundsOn;
+        private readonly AudioMixerSnapshot _disableSnapshot;
+        private readonly AudioMixerSnapshot _enableSnapshot;
 
-        private AudioManager()
+        public AudioManager()
         {
             _audioLocalSaver = new AudioLocalSaver();
             _audioLayerFactory = new AudioLayerFactory(AudioLayerSetting);
             AudioMixerGroup audioMixerGroup = GetOutput(EnumUtils<AudioOutput>.ToString(AudioOutput.Master));
             _audioLayerPool = new AudioLayerPool(audioMixerGroup, AudioLayerSetting);
-            //_rootAudioLayer = Camera.main!.transform;
+
             _rootAudioLayer = (new GameObject()).transform;
             _rootAudioLayer.name = "AudioMixerSources";
-            
+            UnityEngine.Object.DontDestroyOnLoad(_rootAudioLayer.gameObject);
+
+            TryGetSnapshot(AudioManagerStaticData.PAUSE_SNAPSHOT_NAME, out _disableSnapshot);
+            TryGetSnapshot(AudioManagerStaticData.UNPAUSE_SNAPSHOT_NAME, out _enableSnapshot);
+
             SetVolume();
             InitializeLayers();
         }
@@ -92,21 +96,17 @@ namespace Audio
             return false;
         }
 
-        public void DisableSound()
+        public void SetSoundsEnabling(bool isEnable)
         {
-            _isSoundsOn = false;
+            _isSoundsOn = isEnable;
+            Transition(_isSoundsOn ? _enableSnapshot : _disableSnapshot);
         }
-        
-        public void EnableSound()
-        {
-            _isSoundsOn = false;
-        }
-        
+
         public void SetVolume(AudioOutput output, float value)
         {
             value = value == 0 ? Mathf.Epsilon : value;
             value = Mathf.Log10(value) * 20;
-            
+
             string channelName = output switch
             {
                 AudioOutput.None => AudioManagerStaticData.SOUNDS_MAIN_CHANNEL_NAME,
@@ -214,8 +214,8 @@ namespace Audio
                 AudioManagerStaticData.CHANNEL_VOLUME_MINIMUM,
                 AudioManagerStaticData.CHANNEL_VOLUME_MAXIMUM);
         }
-        
-       public void Dispose()
+
+        public void Dispose()
         {
             foreach ((AudioOutput _, AudioLayer value) in _audioLayers)
             {
@@ -230,8 +230,26 @@ namespace Audio
             return new AudioSettingsData()
             {
                 IsSoundOn = _isSoundsOn,
-               
+                MasterVolume = _audioLocalSaver.GetVolume(AudioManagerStaticData.SOUNDS_MAIN_CHANNEL_NAME)
             };
+        }
+
+        public void SetAudioSettings(AudioSettingsData data)
+        {
+            var volumes = new Dictionary<string, float>
+            {
+                { AudioManagerStaticData.SOUNDS_MAIN_CHANNEL_NAME, data.MasterVolume },
+                { AudioManagerStaticData.SOUNDS_UI_CHANNEL_NAME, data.MasterVolume },
+                { AudioManagerStaticData.SOUNDS_MUSIC_CHANNEL_NAME, data.MasterVolume }
+            };
+
+            _audioLocalSaver.Construct(volumes);
+            SetVolume();
+
+            _isSoundsOn = data.IsSoundOn;
+            Transition(_isSoundsOn ? _enableSnapshot : _disableSnapshot);
+
+            OnNewSettingsSet?.Invoke(data);
         }
     }
 }

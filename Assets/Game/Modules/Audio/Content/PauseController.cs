@@ -11,8 +11,8 @@ namespace Audio.Content
 
         private void Start()
         {
-            AudioManager.Instance.TryGetSnapshot(AudioManagerStaticData.PAUSE_SNAPSHOT_NAME, out _pauseSnapshot);
-            AudioManager.Instance.TryGetSnapshot(AudioManagerStaticData.UNPAUSE_SNAPSHOT_NAME, out _unPauseSnapshot);
+            //AudioManager.Instance.TryGetSnapshot(AudioManagerStaticData.PAUSE_SNAPSHOT_NAME, out _pauseSnapshot);
+          //  AudioManager.Instance.TryGetSnapshot(AudioManagerStaticData.UNPAUSE_SNAPSHOT_NAME, out _unPauseSnapshot);
         }
 
         private void Update()
@@ -25,8 +25,8 @@ namespace Audio.Content
 
         private void SetPause()
         {
-            _isPause = !_isPause;
-            AudioManager.Instance.Transition(_isPause ? _pauseSnapshot : _unPauseSnapshot);
+           // _isPause = !_isPause;
+           // AudioManager.Instance.Transition(_isPause ? _pauseSnapshot : _unPauseSnapshot);
         }
     }
 }

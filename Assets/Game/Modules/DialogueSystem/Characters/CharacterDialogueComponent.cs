@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using DS.ScriptableObjects;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -46,8 +47,9 @@ namespace YooE.DialogueSystem
         }
 
         [Button]
-        public void StartCurrentDialogueGroup()
+        public async UniTaskVoid StartCurrentDialogueGroup()
         {
+            await UniTask.WaitUntil(() => _dialogueState != null);
             StartDialogueGroup(CurrentDialogueGroup);
         }
 
@@ -75,6 +77,11 @@ namespace YooE.DialogueSystem
             {
                 Debug.Log("There is no more character dialogues!");
             }
+        }
+
+        private void OnDestroy()
+        {
+            //  _dialogueState.OnDialogueGroupFinished? -= SetNextDialogueGroup;
         }
     }
 }

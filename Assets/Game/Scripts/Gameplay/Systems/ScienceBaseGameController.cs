@@ -1,4 +1,6 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using Audio;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using YooE.DialogueSystem;
@@ -12,23 +14,34 @@ namespace YooE.Diploma
         [SerializeField] private string _shooterSceneName;
         [SerializeField] private string _shooterTutorialSceneName;
         [SerializeField] private CharacterDialogueComponent _scientistCharacterComponent;
+        [SerializeField] private AudioClip _audioClip;
 
         private SaveLoadManager _saveLoadManager;
+        private AudioManager _audioManager;
 
         [Inject]
-        public void Construct(SaveLoadManager saveLoadManager)
+        public void Construct(SaveLoadManager saveLoadManager, AudioManager audioManager)
         {
+            _audioManager = audioManager;
             _saveLoadManager = saveLoadManager;
-            _saveLoadManager.LoadGame();
         }
 
         private void Start()
         {
-            _scientistCharacterComponent.StartCurrentDialogueGroup();
+            _saveLoadManager.OnDataLoaded += StartGameplay;
+            _saveLoadManager.LoadGame();
+        }
+
+        private void StartGameplay()
+        {
+            _saveLoadManager.OnDataLoaded -= StartGameplay;
+            _audioManager.PlaySound(_audioClip, AudioOutput.Music);
+            _scientistCharacterComponent.StartCurrentDialogueGroup().Forget();
         }
 
         public void GoToShooterScene()
         {
+            _audioManager.PlaySound(null, AudioOutput.Music);
             _saveLoadManager.SaveGame();
             if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 1)
             {

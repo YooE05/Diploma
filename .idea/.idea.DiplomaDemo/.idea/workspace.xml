@@ -6,7 +6,54 @@
   <component name="ChangeListManager">
     <list default="true" id="94b36f19-ddca-4d9f-8983-166c9ca3b201" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiplomaDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/ButtonSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/ButtonSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/FootstepController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/FootstepController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/PauseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/PauseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/SettingSoundsMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/SettingSoundsMusic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLocalSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLocalSaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioManagerStaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioManagerStaticData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/DialogueSystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/DialogueSystemInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Scripts/View/DialogueView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/UI/SoundButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/UI/SoundButton.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/ScienceBase.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/Shooter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/Shooter.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scenes/ShooterTutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scenes/ShooterTutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Application/ProjectInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Application/ProjectInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/AudioManager.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/AudioManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/AudioManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/AudioManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/AudioMixer.mixer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/AudioMixer.mixer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SceneAudioSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SceneAudioSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SliderManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SliderManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/Sound.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/Sound.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SoundManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SoundManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SoundsRefsSO.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SoundsRefsSO.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SoundsRefsSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/AudioSystem/SoundsRefsSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScienceBase/ScienceBaseInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/ScienceBase/ScienceBaseInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/ShooterLevelInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Installers/Shooter/ShooterLevelInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/ScienceBaseGameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/ScienceBaseGameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/ShooterGameLoopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/ShooterGameLoopController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/SavingSystem/SaveLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/SavingSystem/SaveLoadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/SavingSystem/SaveLoaders/AudioSaveLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/SavingSystem/SaveLoaders/AudioSaveLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/SavingSystem/SaveLoaders/CharacterDialoguesSaveLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/SavingSystem/SaveLoaders/CharacterDialoguesSaveLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/ShooterGameplayScreenPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/UI/Shooter/SoundButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/AudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/AudioMixer.mixer" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +95,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1a78e12642e046789a70cdd08092bfad10000/da/d0b58585/AudioSource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/70/ba40a866/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/e8/d144d9f6/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605bf8b31fcb444b85176da963870aa746ac00/11/086dff75/RuntimeMethodInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605bf8b31fcb444b85176da963870aa746ac00/1c/c3dfcfde/RuntimeConstructorInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605bf8b31fcb444b85176da963870aa746ac00/37/8f9c957e/Array.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605bf8b31fcb444b85176da963870aa746ac00/9e/816c3a73/NullReferenceException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/2f/3693467f/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/44/56a62ac0/PostLateUpdate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab74fe8c3de74feeafac966c034df8aa171c00/6b/874bf889/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,6 +108,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e03928754cde45a28ad4f7368e3dc911d400/fc/e3d37c48/NavMeshAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/ThirdPersonCam.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -70,22 +121,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.49422634",
-    "git-widget-placeholder": "FixDemo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.build.unityPlugin",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.49422634&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;FixDemo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Editors\2022.3.3f1\Editor\Unity.exe" />
@@ -116,15 +167,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11888">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11888" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -160,13 +209,17 @@
       <workItem from="1740920108393" duration="34050000" />
       <workItem from="1740987116025" duration="22226000" />
       <workItem from="1741020531546" duration="5459000" />
-      <workItem from="1741796884663" duration="9655000" />
+      <workItem from="1741796884663" duration="13192000" />
+      <workItem from="1741851150939" duration="6010000" />
+      <workItem from="1741862504556" duration="16933000" />
+      <workItem from="1741888358686" duration="637000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
@@ -174,6 +227,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -193,82 +257,30 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/DialogueSystem/Characters/CharacterDialogueDataCollector.cs</url>
-          <line>57</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\DialogueSystem\Characters\CharacterDialogueDataCollector.cs" containingFunctionPresentation="Method 'GetCharactersData'">
+          <url>file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Player/Movement/PlayerMotionController.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Scripts\Gameplay\Systems\Player\Movement\PlayerMotionController.cs" containingFunctionPresentation="Method 'OnStart'">
             <startOffsets>
-              <option value="1941" />
+              <option value="971" />
             </startOffsets>
             <endOffsets>
-              <option value="2001" />
+              <option value="986" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioManager.cs</url>
-          <line>166</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioManager.cs" containingFunctionPresentation="Method 'InitializeLayers'">
+          <url>file://$PROJECT_DIR$/Assets/Game/Scripts/Gameplay/Systems/Player/Movement/PlayerMotionController.cs</url>
+          <line>34</line>
+          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Scripts\Gameplay\Systems\Player\Movement\PlayerMotionController.cs" containingFunctionPresentation="Method 'OnUpdate'">
             <startOffsets>
-              <option value="5929" />
+              <option value="1132" />
             </startOffsets>
             <endOffsets>
-              <option value="5986" />
+              <option value="1145" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayerFactory.cs</url>
-          <line>18</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioLayerFactory.cs" containingFunctionPresentation="Method 'CreateAudioLayer'">
-            <startOffsets>
-              <option value="478" />
-            </startOffsets>
-            <endOffsets>
-              <option value="515" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Content/SettingSoundsMusic.cs</url>
-          <line>13</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Content\SettingSoundsMusic.cs" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="302" />
-            </startOffsets>
-            <endOffsets>
-              <option value="365" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayer.cs</url>
-          <line>35</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioLayer.cs" containingFunctionPresentation="Method 'Play'">
-            <startOffsets>
-              <option value="928" />
-            </startOffsets>
-            <endOffsets>
-              <option value="953" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game/Modules/Audio/Core/AudioLayer.cs</url>
-          <line>13</line>
-          <properties documentPath="C:\Unity\Projects\DiplomaDemo\Assets\Game\Modules\Audio\Core\AudioLayer.cs" containingFunctionPresentation="Constructor 'AudioLayer'">
-            <startOffsets>
-              <option value="340" />
-            </startOffsets>
-            <endOffsets>
-              <option value="362" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="45" />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -276,6 +288,7 @@
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="closestTargetPosition = {Vector3[]} Vector3[2] Explore" />
         <watch expression="_characterDialogueComponents.Contains(c)" />
+        <watch expression="_button" />
       </configuration>
     </watches-manager>
   </component>

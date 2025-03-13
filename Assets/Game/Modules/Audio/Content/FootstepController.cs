@@ -20,7 +20,7 @@ namespace Audio.Content
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.W))
+            /*if (Input.GetKey(KeyCode.W))
             {
                 if (Time.time - _timeSinceLastFootstep >=
                     Random.Range(_minTimeBetweenFootsteps, _maxTimeBetweenFootsteps))
@@ -31,7 +31,7 @@ namespace Audio.Content
 
                     _timeSinceLastFootstep = Time.time;
                 }
-            }
+            }*/
         }
     }
 }

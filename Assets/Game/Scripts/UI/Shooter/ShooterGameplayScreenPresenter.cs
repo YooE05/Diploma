@@ -1,21 +1,22 @@
-﻿using UniRx;
+﻿using System;
+using Audio;
+using UniRx;
+using Zenject;
 
 namespace YooE.Diploma
 {
-    public sealed class ShooterGameplayScreenPresenter : Listeners.IFinishListener
+    public sealed class ShooterGameplayScreenPresenter : Listeners.IFinishListener, IDisposable
     {
-        private readonly CompositeDisposable _disposables = new();
+        //private readonly CompositeDisposable _disposables = new();
         private readonly ShooterGameplayScreenView _gameplayScreenView;
         private readonly EnemyBrainsInitializer _enemyBrainsInitializer;
 
         private SoundButtonPresenter _soundButtonPresenter;
 
-        public ShooterGameplayScreenPresenter(SceneAudioSystem sceneAudioSystem,
-            ShooterGameplayScreenView gameplayScreenView,
+        public ShooterGameplayScreenPresenter(ShooterGameplayScreenView gameplayScreenView,
             EnemyBrainsInitializer enemyBrainsInitializer)
         {
             _gameplayScreenView = gameplayScreenView;
-            _soundButtonPresenter = new SoundButtonPresenter(sceneAudioSystem, _gameplayScreenView.SoundButtonView);
 
             _enemyBrainsInitializer = enemyBrainsInitializer;
             _enemyBrainsInitializer.OnLiveEnemiesCountChanged += SetEnemySliderValue;
@@ -36,10 +37,15 @@ namespace YooE.Diploma
             _gameplayScreenView.Hide();
         }
 
-        ~ShooterGameplayScreenPresenter()
+        public void Dispose()
+        {
+            _enemyBrainsInitializer.OnLiveEnemiesCountChanged -= SetEnemySliderValue;
+        }
+
+        /*~ShooterGameplayScreenPresenter()
         {
             _enemyBrainsInitializer.OnLiveEnemiesCountChanged -= SetEnemySliderValue;
             _disposables.Dispose();
-        }
+        }*/
     }
 }

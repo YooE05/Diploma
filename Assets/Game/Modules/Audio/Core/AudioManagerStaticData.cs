@@ -11,7 +11,9 @@ namespace Audio
         public const string SOUNDS_MUSIC_CHANNEL_NAME = "SoundsMusicChannel";
         
         public const string PAUSE_SNAPSHOT_NAME = "Pause";
-        public const string UNPAUSE_SNAPSHOT_NAME = "UnPause";
+        public const string UNPAUSE_SNAPSHOT_NAME = "UnPause";      
+        public const string DISABLE_SNAPSHOT_NAME = "Disable";
+        public const string ENABLE_SNAPSHOT_NAME = "Enable";
         
         public const float TRANSITION_DEFAULT_TIME = 0.001f;
         public const float CHANNEL_VOLUME_DEFAULT = 0.0f;

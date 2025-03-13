@@ -45,7 +45,8 @@ namespace Audio
 
         public void Dispose()
         {
-            Object.Destroy(_audioSource.gameObject);
+            if (_audioSource)
+                Object.Destroy(_audioSource.gameObject);
         }
     }
 }

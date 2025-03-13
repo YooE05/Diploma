@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DS.Data;
 using DS.ScriptableObjects;
@@ -7,7 +8,7 @@ using Zenject;
 
 namespace YooE.DialogueSystem
 {
-    public sealed class DialogueView : MonoBehaviour
+    public sealed class DialogueView : MonoBehaviour, IDisposable
     {
         [SerializeField] private GameObject _dialoguePanel;
         [SerializeField] private TextMeshProUGUI _dialogueText;
@@ -32,12 +33,6 @@ namespace YooE.DialogueSystem
             }
 
             Hide();
-        }
-
-        private void UnsubscribeFromState()
-        {
-            _dialogueState.OnDialogueStart -= InitDialogueView;
-            _dialogueState.OnDialogueGroupFinished -= Hide;
         }
 
         private void Show()
@@ -102,6 +97,12 @@ namespace YooE.DialogueSystem
         private void ContinueDialogue()
         {
             _dialogueState.ContinueDialogue();
+        }
+
+        public void Dispose()
+        {
+            _dialogueState.OnDialogueStart -= InitDialogueView;
+            _dialogueState.OnDialogueGroupFinished -= Hide;
         }
     }
 }

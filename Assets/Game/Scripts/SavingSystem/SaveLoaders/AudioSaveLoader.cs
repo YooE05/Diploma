@@ -1,3 +1,5 @@
+using Audio;
+
 namespace YooE.SaveLoad
 {
     public sealed class AudioSaveLoader : DataSaveLoader<AudioSettingsData, AudioManager>

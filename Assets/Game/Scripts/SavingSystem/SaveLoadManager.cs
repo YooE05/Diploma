@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Zenject;
 
 namespace YooE.SaveLoad
 {
     public sealed class SaveLoadManager
     {
+        public event Action OnDataLoaded;
+
         private readonly IGameRepository _gameRepository;
         private readonly DiContainer _container;
         private readonly List<IDataSaveLoader> _dataSaveLoaders;
@@ -15,22 +18,6 @@ namespace YooE.SaveLoad
             _gameRepository = gameRepository;
             _container = container;
             _dataSaveLoaders = dataSaveLoaders;
-        }
-
-        public void AddDataSaveLoader(IDataSaveLoader saveLoader)
-        {
-            if (!_dataSaveLoaders.Contains(saveLoader))
-            {
-                _dataSaveLoaders.Add(saveLoader);
-            }
-        }
-
-        public void RemoveDataSaveLoader(IDataSaveLoader saveLoader)
-        {
-            if (_dataSaveLoaders.Contains(saveLoader))
-            {
-                _dataSaveLoaders.Remove(saveLoader);
-            }
         }
 
         public void SaveGame()
@@ -51,6 +38,8 @@ namespace YooE.SaveLoad
             {
                 _dataSaveLoaders[i].LoadData(_gameRepository, _container);
             }
+
+            OnDataLoaded?.Invoke();
         }
 
         public void ResetGame()
