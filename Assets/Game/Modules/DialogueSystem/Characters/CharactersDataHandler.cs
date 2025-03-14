@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using Utils;
 
 namespace YooE.DialogueSystem
@@ -10,9 +11,10 @@ namespace YooE.DialogueSystem
 
         public void AddCharacters(List<CharacterDialogueComponent> characters)
         {
+            Debug.Log("AddChar");
             _characters.Clear();
             _characters.AddRange(characters);
-            SetDefaultData();
+            SetDefaultComponentsValue();
 
             for (var i = 0; i < characters.Count; i++)
             {
@@ -24,7 +26,7 @@ namespace YooE.DialogueSystem
                 }
             }
 
-            SetCharactersData(_charactersData.ToArray());
+            SetupCharactersDialogueComponent(_charactersData.ToArray());
         }
 
         public void SetNextCharacterDialogueGroup(DialogueCharacterID characterID)
@@ -36,6 +38,16 @@ namespace YooE.DialogueSystem
             {
                 charData.GroupIndex++;
             }
+
+            //Need Testing
+            /*var characterDialogueComponent = _characters.Find(existChar =>
+                existChar.GetCharacterData().DialogueCharacterID ==
+                EnumUtils<DialogueCharacterID>.ToString(characterID));
+
+            if (characterDialogueComponent != null)
+            {
+                characterDialogueComponent.SetNextDialogueGroup();
+            }*/
         }
 
         public CharacterDialogueData[] GetCharactersData()
@@ -56,13 +68,25 @@ namespace YooE.DialogueSystem
 
         public void SetCharactersDataFromSave(CharacterDialogueData[] dataList)
         {
-            _charactersData.Clear();
-            _charactersData.AddRange(dataList);
+            Debug.Log("SetSave");
+            for (var i = 0; i < dataList.Length; i++)
+            {
+                var charId = dataList[i].DialogueCharacterID;
+                var characterDialogueData = _charactersData.Find(existChar => existChar.DialogueCharacterID == charId);
+                if (characterDialogueData == null)
+                {
+                    _charactersData.Add(dataList[i]);
+                }
+                else
+                {
+                    characterDialogueData.GroupIndex = dataList[i].GroupIndex;
+                }
+            }
 
-            SetCharactersData(_charactersData.ToArray());
+            SetupCharactersDialogueComponent(_charactersData.ToArray());
         }
 
-        public void SetCharactersData(CharacterDialogueData[] dataList)
+        private void SetupCharactersDialogueComponent(CharacterDialogueData[] dataList)
         {
             for (var i = 0; i < dataList.Length; i++)
             {
@@ -75,7 +99,24 @@ namespace YooE.DialogueSystem
             }
         }
 
-        public void SetDefaultData()
+        public void SetDefaultDataFromSave()
+        {
+            Debug.Log("SetDefaultSave");
+
+            SetDefaultComponentsValue();
+
+            for (var i = 0; i < _characters.Count; i++)
+            {
+                var charId = _characters[i].GetCharacterData().DialogueCharacterID;
+                var characterDialogueData = _charactersData.Find(existChar => existChar.DialogueCharacterID == charId);
+                if (characterDialogueData == null)
+                {
+                    _charactersData.Add(_characters[i].GetCharacterData());
+                }
+            }
+        }
+
+        private void SetDefaultComponentsValue()
         {
             for (var i = 0; i < _characters.Count; i++)
             {

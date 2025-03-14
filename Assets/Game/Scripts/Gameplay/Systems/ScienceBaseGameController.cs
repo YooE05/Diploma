@@ -1,5 +1,4 @@
-﻿using System;
-using Audio;
+﻿using Audio;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -43,7 +42,7 @@ namespace YooE.Diploma
         {
             _audioManager.PlaySound(null, AudioOutput.Music);
             _saveLoadManager.SaveGame();
-            if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 1)
+            if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
             {
                 SceneManager.LoadScene(_shooterTutorialSceneName);
             }

@@ -1229,7 +1229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerView: {fileID: 2299052652696453431}
   _shooterGameLoopController: {fileID: 1799026140}
-  _sceneAudioSystem: {fileID: 0}
   IsSoundEnabled: 0
   _gameplayScreenView: {fileID: 931743169}
   _popupsView: {fileID: 1657813627}

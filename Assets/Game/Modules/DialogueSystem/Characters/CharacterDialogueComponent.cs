@@ -59,7 +59,7 @@ namespace YooE.DialogueSystem
             _dialogueState.StartDialogueGroup(groupToStart);
         }
 
-        private void SetNextDialogueGroup()
+        public void SetNextDialogueGroup()
         {
             if (_dialogueSequence.Groups.Count == 0)
             {

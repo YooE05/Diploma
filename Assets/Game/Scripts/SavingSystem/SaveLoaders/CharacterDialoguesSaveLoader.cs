@@ -16,7 +16,7 @@ namespace YooE.SaveLoad
 
         protected override void SetDefaultData(CharactersDataHandler service)
         {
-            service.SetDefaultData();
+            service.SetDefaultDataFromSave();
         }
     }
 }
