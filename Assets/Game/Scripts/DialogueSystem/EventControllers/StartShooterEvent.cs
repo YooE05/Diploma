@@ -33,4 +33,21 @@ namespace YooE.Diploma
             _scienceBaseGameController.GoToShooterScene();
         }
     }
+
+    public sealed class EnableMotionEvent : DialogueEventController
+    {
+        private readonly PlayerMotionController _playerMotionController;
+
+        public EnableMotionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            PlayerMotionController playerMotionController) :
+            base(dialogueState, dialogues)
+        {
+            _playerMotionController = playerMotionController;
+        }
+
+        protected override void FinishActions()
+        {
+            _playerMotionController.EnableMotion();
+        }
+    }
 }

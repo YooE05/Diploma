@@ -38,7 +38,7 @@ namespace YooE.Diploma
         {
             _saveLoadManager.OnDataLoaded -= StartGameplay;
             _audioManager.PlaySound(_audioClip, AudioOutput.Music);
-            _scientistCharacterComponent.StartCurrentDialogueGroup().Forget();
+            //_scientistCharacterComponent.StartCurrentDialogueGroup().Forget();
             _lifecycleManager.OnStart();
         }
 

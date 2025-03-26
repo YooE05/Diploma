@@ -7,6 +7,7 @@ namespace YooE.Diploma
     {
         [SerializeField] private PlayerView _playerView;
         [SerializeField] private PlayerMovementConfig _movementConfig;
+        [SerializeField] private LayerMask _noPlayerLayerMask;
 
         // ReSharper disable Unity.PerformanceAnalysis
         public override void InstallBindings()
@@ -20,7 +21,7 @@ namespace YooE.Diploma
                 .WithArguments(_playerView.Animator, _movementConfig.AnimationsBlendSpeed, _playerView.AnimationEvents)
                 .NonLazy();
             Container.BindInterfacesAndSelfTo<PlayerMotionController>().AsSingle()
-                .WithArguments(_playerView.Camera, _playerView.Visual).NonLazy();
+                .WithArguments(_playerView.Camera, _playerView.Visual, _noPlayerLayerMask).NonLazy();
         }
     }
 }
