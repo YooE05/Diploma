@@ -14,6 +14,7 @@ namespace YooE.Diploma
 
         public override void InstallBindings()
         {
+            Container.BindInterfacesAndSelfTo<LifecycleManager>().AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<SaveLoadManager>().AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<ScienceBaseGameController>().FromInstance(_gameController).AsCached()
                 .NonLazy();

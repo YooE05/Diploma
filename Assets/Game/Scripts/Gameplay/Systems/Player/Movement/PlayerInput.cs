@@ -8,6 +8,8 @@ namespace YooE.Diploma
     {
         private PlayerControls PlayerControls { get; set; }
         public Vector2 MovementInput { get; private set; }
+        public Vector2 LastPointerScreenPosition { get; private set; }
+        public bool IsPointerInteracting { get; private set; }
 
         public void OnInit()
         {
@@ -27,6 +29,16 @@ namespace YooE.Diploma
         public void OnMovement(InputAction.CallbackContext context)
         {
             MovementInput = context.ReadValue<Vector2>();
+        }
+
+        public void OnPointerPosition(InputAction.CallbackContext context)
+        {
+            LastPointerScreenPosition = context.ReadValue<Vector2>();
+        }
+
+        public void OnPointerInteractionAbility(InputAction.CallbackContext context)
+        {
+            IsPointerInteracting = context.ReadValueAsButton();
         }
     }
 }

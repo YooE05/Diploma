@@ -20,7 +20,7 @@ namespace YooE.Diploma
                 .WithArguments(_playerView.Animator, _movementConfig.AnimationsBlendSpeed, _playerView.AnimationEvents)
                 .NonLazy();
             Container.BindInterfacesAndSelfTo<PlayerMotionController>().AsSingle()
-                .WithArguments(_playerView.Camera).NonLazy();
+                .WithArguments(_playerView.Camera, _playerView.Visual).NonLazy();
         }
     }
 }
