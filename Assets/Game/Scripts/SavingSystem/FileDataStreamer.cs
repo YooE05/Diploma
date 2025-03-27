@@ -33,7 +33,7 @@ namespace YooE.SaveLoad
                     }
                 }
 
-                Debug.Log("All data was saved");
+              //  Debug.Log("All data was saved");
             }
             catch (Exception e)
             {
@@ -59,7 +59,7 @@ namespace YooE.SaveLoad
                 }
 
                 string jsonGameState = EncryptDecrypt(stringGameState);
-                Debug.Log("All data was loaded");
+              //  Debug.Log("All data was loaded");
                 return JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonGameState);
             }
             catch (Exception e)

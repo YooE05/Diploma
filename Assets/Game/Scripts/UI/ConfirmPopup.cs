@@ -1,0 +1,69 @@
+using System;
+using UnityEngine;
+
+namespace YooE
+{
+    public sealed class ConfirmPopupView : PopupView
+    {
+        public event Action OnConfirm;
+        public event Action OnDecline;
+
+        [SerializeField] private ButtonView _confirmButton;
+        [SerializeField] private ButtonView _declineButton;
+
+        private void OnEnable()
+        {
+            _confirmButton.OnButtonClicked += Confirm;
+            _declineButton.OnButtonClicked += Decline;
+        }
+
+        private void OnDisable()
+        {
+            _confirmButton.OnButtonClicked -= Confirm;
+            _declineButton.OnButtonClicked -= Decline;
+        }
+
+        private void Confirm()
+        {
+            OnConfirm?.Invoke();
+        }
+
+        private void Decline()
+        {
+            OnDecline?.Invoke();
+        }
+    }
+
+    public class PopupView : MonoBehaviour
+    {
+        public event Action OnClose;
+
+        [SerializeField] protected ButtonView _closeButton;
+        [SerializeField] protected GameObject _popupGameObject;
+
+        private void OnEnable()
+        {
+            _closeButton.OnButtonClicked += Hide;
+        }
+
+        private void OnDisable()
+        {
+            _closeButton.OnButtonClicked -= Hide;
+        }
+
+        private void Close()
+        {
+            OnClose?.Invoke();
+        }
+
+        public void Hide()
+        {
+            _popupGameObject.SetActive(false);
+        }
+
+        public void Show()
+        {
+            _popupGameObject.SetActive(true);
+        }
+    }
+}

@@ -46,14 +46,17 @@ namespace YooE.Diploma
         {
             _audioManager.PlaySound(null, AudioOutput.Music);
             _saveLoadManager.SaveGame();
-            if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
+            
+            SceneManager.LoadScene(_shooterSceneName);
+            
+            /*if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
             {
                 SceneManager.LoadScene(_shooterTutorialSceneName);
             }
             else
             {
                 SceneManager.LoadScene(_shooterSceneName);
-            }
+            }*/
         }
 
         [Button]

@@ -11,7 +11,7 @@ namespace YooE.DialogueSystem
 
         public void AddCharacters(List<CharacterDialogueComponent> characters)
         {
-            Debug.Log("AddChar");
+            //Debug.Log("AddChar");
             _characters.Clear();
             _characters.AddRange(characters);
             SetDefaultComponentsValue();
@@ -104,7 +104,8 @@ namespace YooE.DialogueSystem
             Debug.Log("SetDefaultSave");
 
             SetDefaultComponentsValue();
-
+            _charactersData.Clear();
+            
             for (var i = 0; i < _characters.Count; i++)
             {
                 var charId = _characters[i].GetCharacterData().DialogueCharacterID;
