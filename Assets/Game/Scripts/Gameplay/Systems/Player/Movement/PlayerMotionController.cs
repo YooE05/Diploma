@@ -79,6 +79,8 @@ namespace YooE.Diploma
             }*/
 
             var offset = _playerInput.LastPointerScreenPosition - _screenCenter;
+          //  Debug.Log(_playerInput.LastPointerScreenPosition + " " + _screenCenter + " = " + offset + " norm = " + offset.normalized);
+
             return offset.normalized;
         }
 

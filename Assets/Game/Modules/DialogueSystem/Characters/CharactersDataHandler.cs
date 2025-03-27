@@ -86,6 +86,21 @@ namespace YooE.DialogueSystem
             SetupCharactersDialogueComponent(_charactersData.ToArray());
         }
 
+        public void UpdateCharacterDialogueIndex(DialogueCharacterID characterID)
+        {
+            var characterDialogueComponent = _characters.Find(existChar =>
+                existChar.GetCharacterData().DialogueCharacterID ==
+                EnumUtils<DialogueCharacterID>.ToString(characterID));
+
+            if (characterDialogueComponent != null)
+            {
+                var charData = _charactersData.Find(existChar =>
+                    existChar.DialogueCharacterID == EnumUtils<DialogueCharacterID>.ToString(characterID));
+
+                characterDialogueComponent.SetGroupIndex(charData.GroupIndex);
+            }
+        }
+
         private void SetupCharactersDialogueComponent(CharacterDialogueData[] dataList)
         {
             for (var i = 0; i < dataList.Length; i++)
@@ -105,7 +120,7 @@ namespace YooE.DialogueSystem
 
             SetDefaultComponentsValue();
             _charactersData.Clear();
-            
+
             for (var i = 0; i < _characters.Count; i++)
             {
                 var charId = _characters[i].GetCharacterData().DialogueCharacterID;

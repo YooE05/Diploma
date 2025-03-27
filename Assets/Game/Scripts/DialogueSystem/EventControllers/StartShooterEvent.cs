@@ -6,6 +6,7 @@ using DS.ScriptableObjects;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using YooE.DialogueSystem;
+using YooE.SaveLoad;
 
 namespace YooE.Diploma
 {
@@ -48,6 +49,41 @@ namespace YooE.Diploma
         protected override void FinishActions()
         {
             _playerMotionController.EnableMotion();
+        }
+    }
+
+    public sealed class GoNextMainDialogueEvent : DialogueEventController
+    {
+        private readonly CharactersDataHandler _charactersDataHandler;
+
+        public GoNextMainDialogueEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            CharactersDataHandler charactersDataHandler) :
+            base(dialogueState, dialogues)
+        {
+            _charactersDataHandler = charactersDataHandler;
+        }
+
+        protected override void FinishActions()
+        {
+            _charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
+            _charactersDataHandler.UpdateCharacterDialogueIndex(DialogueCharacterID.MainScientist);
+        }
+    }
+
+    public sealed class SaveGameEvent : DialogueEventController
+    {
+        private readonly SaveLoadManager _saveLoadManager;
+
+        public SaveGameEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            SaveLoadManager saveLoadManager) :
+            base(dialogueState, dialogues)
+        {
+            _saveLoadManager = saveLoadManager;
+        }
+
+        protected override void FinishActions()
+        {
+            _saveLoadManager.SaveGame();
         }
     }
 }

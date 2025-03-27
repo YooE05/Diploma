@@ -40,7 +40,7 @@ namespace YooE.Diploma
                 },
                 {
                     ""name"": ""PointerPosition"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""38a0f7b1-ee99-4ef0-a248-587dad3eae13"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",

@@ -11,6 +11,7 @@ namespace YooE.DialogueSystem
     public sealed class DialogueView : MonoBehaviour, IDisposable
     {
         [SerializeField] private GameObject _dialoguePanel;
+        [SerializeField] private GameObject _answersPanel;
         [SerializeField] private TextMeshProUGUI _dialogueText;
         [SerializeField] private TextMeshProUGUI _characterNameText;
         [SerializeField] private ButtonView _continueButton;
@@ -70,10 +71,12 @@ namespace YooE.DialogueSystem
 
             if (choices.Count == 1)
             {
+                _answersPanel.SetActive(false);
                 _continueButton.Show();
             }
             else
             {
+                _answersPanel.SetActive(true);
                 _continueButton.Hide();
 
                 for (var i = 0; i < choices.Count; i++)

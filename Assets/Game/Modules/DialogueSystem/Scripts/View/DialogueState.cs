@@ -75,7 +75,16 @@ namespace YooE.DialogueSystem
             }
 
             _currentDialogue = _nextDialogue;
-            _nextDialogue = null;
+            
+            if (_currentDialogue.DialogueType == DSDialogueType.SingleChoice)
+            {
+                _nextDialogue = _currentDialogue.Choices[0].NextDialogue;
+            }
+            else
+            {
+                _nextDialogue = null;
+            }
+            
             OnDialogueStart?.Invoke(_currentDialogue);
         }
 
