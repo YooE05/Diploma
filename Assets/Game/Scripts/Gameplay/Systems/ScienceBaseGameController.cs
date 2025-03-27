@@ -21,11 +21,13 @@ namespace YooE.Diploma
 
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, SaveLoadManager saveLoadManager,
+            ScienceMethodPopup scienceMethodPopup,
             AudioManager audioManager)
         {
             _lifecycleManager = lifecycleManager;
             _audioManager = audioManager;
             _saveLoadManager = saveLoadManager;
+            scienceMethodPopup.Hide();
         }
 
         private void Start()
@@ -46,9 +48,9 @@ namespace YooE.Diploma
         {
             _audioManager.PlaySound(null, AudioOutput.Music);
             _saveLoadManager.SaveGame();
-            
+
             SceneManager.LoadScene(_shooterSceneName);
-            
+
             /*if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
             {
                 SceneManager.LoadScene(_shooterTutorialSceneName);

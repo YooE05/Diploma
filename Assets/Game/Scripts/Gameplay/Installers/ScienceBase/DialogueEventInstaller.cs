@@ -20,7 +20,6 @@ namespace YooE.Diploma
         [Header("SсienceMethod")]
         [SerializeField]
         private List<DSDialogueSO> _showSMPopupDialogues;
-
         [SerializeField] private List<DSDialogueSO> _hideSMPopupDialogues;
         [SerializeField] private List<DSDialogueSO> _enableObservationDialogues;
         [SerializeField] private List<DSDialogueSO> _enableHypothesisDialogues;

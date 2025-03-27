@@ -1,4 +1,3 @@
-using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,8 +17,8 @@ public class ScienceMethodPopup : MonoBehaviour
 
     private void Awake()
     {
-        ResetAllImage();
-        Hide();
+        ResetAllImage(); 
+        //Hide();
     }
 
     [Button]
