@@ -4,12 +4,7 @@ namespace YooE.Diploma
 {
     public class StageInitializer : MonoBehaviour, IStageInitializer
     {
-        [SerializeField] private Transform _mainNPC;
-        [SerializeField] private Transform _mainNPCSpawnPoint;
-
-        [SerializeField] private Transform _player;
-        [SerializeField] private Transform _playerSpawnPoint;
-
+        [SerializeField] protected CharactersTransformInitializer _charactersTransform;
         [SerializeField] private int _dialogueGroupIndex;
 
         public int GetIndex()
@@ -19,11 +14,7 @@ namespace YooE.Diploma
 
         public virtual void InitGameView()
         {
-            _mainNPC.transform.position = _mainNPCSpawnPoint.position;
-            _mainNPC.transform.rotation = _mainNPCSpawnPoint.rotation;
-
-            _player.transform.position = _playerSpawnPoint.position;
-            _player.transform.rotation = _playerSpawnPoint.rotation;
+            _charactersTransform.MoveCharactersToMainPoints();
         }
     }
 }

@@ -3,7 +3,7 @@ using Zenject;
 
 namespace YooE.Diploma
 {
-    public sealed class Stage4Initializer : StageInitializer
+    public sealed class Stage2Initializer : StageInitializer
     {
         [Inject] private GardenViewController _gardenView;
         [Inject] private FightDoorInteractionComponent _fightZoneInteraction;
@@ -12,8 +12,6 @@ namespace YooE.Diploma
         {
             base.InitGameView();
             _gardenView.ShowEmptyGarden();
-            _gardenView.ShowLightLevers();
-
             _fightZoneInteraction.DisableInteractionAbility();
         }
     }

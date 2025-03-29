@@ -5,9 +5,13 @@ namespace YooE.Diploma
 {
     public sealed class GardenViewController : MonoBehaviour, Listeners.IInitListener
     {
+        //Stage3
         [SerializeField] private GameObject _badGardenGO;
+        [SerializeField] private CharacterInteractionComponent _badGardenInteraction;
         [SerializeField] private GameObject _separatePlantGO;
+        [SerializeField] private CharacterInteractionComponent _separatePlantInteraction;
 
+        //Stage4
         [SerializeField] private GameObject _emptyGardenGO;
         [SerializeField] private SeedPlantInteractionComponent _seedPlantInteraction;
         [SerializeField] private GameObject _plantedSeedsGO;
@@ -33,13 +37,22 @@ namespace YooE.Diploma
         public void ShowSeparatePlant()
         {
             _separatePlantGO.SetActive(true);
+            _separatePlantInteraction.DisableInteractView();
+            _separatePlantInteraction.DisableInteractionAbility();
         }
 
         public void ShowDarkGarden()
         {
             _badGardenGO.SetActive(true);
+            _badGardenInteraction.DisableInteractView();
+            _badGardenInteraction.DisableInteractionAbility();
         }
 
+        public void EnableSeparatePlantAndDarkGardenInteraction()
+        {
+            _separatePlantInteraction.EnableInteractionAbility();
+            _badGardenInteraction.EnableInteractionAbility();
+        }
 
         //Stage4
         public void ShowLightLevers()
@@ -58,7 +71,7 @@ namespace YooE.Diploma
 
         public void HideLightLevers()
         {
-           // _lightLeversGO.SetActive(false);
+            // _lightLeversGO.SetActive(false);
 
             _leverInteraction.DisableInteractView();
             _leverInteraction.DisableInteractionAbility();

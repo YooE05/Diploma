@@ -9,7 +9,6 @@ namespace YooE.Diploma
     {
         [SerializeField] private List<DSDialogueSO> _saveGameDialogues;
 
-        [SerializeField] private List<DSDialogueSO> _showCubeDialogues;
         [SerializeField] private List<DSDialogueSO> _startShooterDialogues;
         [SerializeField] private List<DSDialogueSO> _enableMotionDialogues;
         [SerializeField] private List<DSDialogueSO> _goNextMainQuestDialogues;
@@ -21,12 +20,14 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _stage3CheckPlantDialogues;
 
         [SerializeField] private List<DSDialogueSO> _stage4EnableInteractionDialogues;
+        [SerializeField] private List<DSDialogueSO> _stage3EnableInteractionDialogues;
 
         //Popups
         [SerializeField] private List<DSDialogueSO> _showIndependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _showDependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _hideVarsDialogues;
 
+        [Header("ScienceMethod")]
         //ScienceMethod
         [SerializeField] private List<DSDialogueSO> _showSMPopupDialogues;
         [SerializeField] private List<DSDialogueSO> _hideSMPopupDialogues;
@@ -51,6 +52,9 @@ namespace YooE.Diploma
             Container.Bind<Stage3TaskCheckSeparatePlantEvent>().AsCached().WithArguments(_stage3CheckPlantDialogues)
                 .NonLazy();
 
+            Container.Bind<EnableStage3InteractionsEvent>().AsCached()
+                .WithArguments(_stage3EnableInteractionDialogues)
+                .NonLazy();         
             Container.Bind<EnableLeverAndGardenInteractionEvent>().AsCached()
                 .WithArguments(_stage4EnableInteractionDialogues)
                 .NonLazy();

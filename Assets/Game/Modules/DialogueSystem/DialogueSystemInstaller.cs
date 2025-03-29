@@ -23,15 +23,15 @@ namespace YooE.DialogueSystem
 
             Container.Resolve<CharactersDataHandler>().AddCharacters(_characters);
 
-            Container.Bind<ScienceMethodPopup>().FromInstance(_scienceMethodPopup).NonLazy();
-            Container.Bind<VariablesPopup>().FromInstance(_variablesPopup).NonLazy();
+            Container.BindInterfacesAndSelfTo<ScienceMethodPopup>().FromInstance(_scienceMethodPopup).NonLazy();
+            Container.BindInterfacesAndSelfTo<VariablesPopup>().FromInstance(_variablesPopup).NonLazy();
 
             TaskTrackers();
         }
 
         private void TaskTrackers()
         {
-            Container.Bind<TaskPanel>().FromInstance(_taskPanel).NonLazy();
+            Container.BindInterfacesAndSelfTo<TaskPanel>().FromInstance(_taskPanel).NonLazy();
 
             Container.BindInterfacesAndSelfTo<Stage3TaskTracker>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<Stage4TaskTracker>().AsSingle().NonLazy();

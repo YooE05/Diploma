@@ -154,4 +154,24 @@ namespace YooE.Diploma
             _taskTracker.ShowTasksText();
         }
     }
+
+    public sealed class EnableStage3InteractionsEvent : DialogueEventController
+    {
+        private readonly GardenViewController _gardenViewController;
+        private readonly Stage3TaskTracker _taskTracker;
+
+        public EnableStage3InteractionsEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            GardenViewController gardenViewController, Stage3TaskTracker taskTracker) :
+            base(dialogueState, dialogues)
+        {
+            _gardenViewController = gardenViewController;
+            _taskTracker = taskTracker;
+        }
+
+        protected override void FinishActions()
+        {
+            _gardenViewController.EnableSeparatePlantAndDarkGardenInteraction();
+            _taskTracker.ShowTasksText();
+        }
+    }
 }
