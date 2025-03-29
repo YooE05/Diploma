@@ -11,7 +11,9 @@ namespace YooE.DialogueSystem
         [SerializeField] private DialogueView _dialogueView;
         [SerializeField] private DSDialogueContainerSO _dialogueContainer;
         [SerializeField] private List<CharacterDialogueComponent> _characters;
+
         [SerializeField] private ScienceMethodPopup _scienceMethodPopup;
+        [SerializeField] private VariablesPopup _variablesPopup;
 
         public override void InstallBindings()
         {
@@ -21,13 +23,15 @@ namespace YooE.DialogueSystem
             Container.Resolve<CharactersDataHandler>().AddCharacters(_characters);
 
             Container.Bind<ScienceMethodPopup>().FromInstance(_scienceMethodPopup).NonLazy();
+            Container.Bind<VariablesPopup>().FromInstance(_variablesPopup).NonLazy();
 
-            Stage3();
+            TaskTrackers();
         }
 
-        private void Stage3()
+        private void TaskTrackers()
         {
             Container.BindInterfacesAndSelfTo<Stage3TaskTracker>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<Stage4TaskTracker>().AsSingle().NonLazy();
         }
     }
 }

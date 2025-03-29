@@ -17,9 +17,15 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _stage3CheckGardenDialogues;
         [SerializeField] private List<DSDialogueSO> _stage3CheckPlantDialogues;
 
-        [Header("SсienceMethod")]
-        [SerializeField]
-        private List<DSDialogueSO> _showSMPopupDialogues;
+        [SerializeField] private List<DSDialogueSO> _stage4EnableInteractionDialogues;
+
+        //Popups
+        [SerializeField] private List<DSDialogueSO> _showIndependentVarDialogues;
+        [SerializeField] private List<DSDialogueSO> _showDependentVarDialogues;
+        [SerializeField] private List<DSDialogueSO> _hideVarsDialogues;
+
+        //ScienceMethod
+        [SerializeField] private List<DSDialogueSO> _showSMPopupDialogues;
         [SerializeField] private List<DSDialogueSO> _hideSMPopupDialogues;
         [SerializeField] private List<DSDialogueSO> _enableObservationDialogues;
         [SerializeField] private List<DSDialogueSO> _enableHypothesisDialogues;
@@ -41,7 +47,20 @@ namespace YooE.Diploma
             Container.Bind<Stage3TaskCheckSeparatePlantEvent>().AsCached().WithArguments(_stage3CheckPlantDialogues)
                 .NonLazy();
 
+            Container.Bind<EnableLeverAndGardenInteractionEvent>().AsCached()
+                .WithArguments(_stage4EnableInteractionDialogues)
+                .NonLazy();
+
+            DialoguePopups();
+        }
+
+        private void DialoguePopups()
+        {
             ScienceMethod();
+
+            Container.Bind<ShowIndependentVarEvent>().AsCached().WithArguments(_showIndependentVarDialogues).NonLazy();
+            Container.Bind<ShowDependentVarEvent>().AsCached().WithArguments(_showDependentVarDialogues).NonLazy();
+            Container.Bind<HideVariablesEvent>().AsCached().WithArguments(_hideVarsDialogues).NonLazy();
         }
 
         private void ScienceMethod()

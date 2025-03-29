@@ -1,0 +1,57 @@
+﻿using System.Collections.Generic;
+using DS.ScriptableObjects;
+using YooE.DialogueSystem;
+
+namespace YooE.Diploma
+{
+    public sealed class ShowIndependentVarEvent : DialogueEventController
+    {
+        private readonly VariablesPopup _variablesPopup;
+
+        public ShowIndependentVarEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            VariablesPopup variablesPopup) :
+            base(dialogueState, dialogues)
+        {
+            _variablesPopup = variablesPopup;
+        }
+
+        protected override void StartActions()
+        {
+            _variablesPopup.ShowIndependentPopup();
+        }
+    }
+
+    public sealed class ShowDependentVarEvent : DialogueEventController
+    {
+        private readonly VariablesPopup _variablesPopup;
+
+        public ShowDependentVarEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            VariablesPopup variablesPopup) :
+            base(dialogueState, dialogues)
+        {
+            _variablesPopup = variablesPopup;
+        }
+
+        protected override void StartActions()
+        {
+            _variablesPopup.ShowDependentPopup();
+        }
+    }
+
+    public sealed class HideVariablesEvent : DialogueEventController
+    {
+        private readonly VariablesPopup _variablesPopup;
+
+        public HideVariablesEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            VariablesPopup variablesPopup) :
+            base(dialogueState, dialogues)
+        {
+            _variablesPopup = variablesPopup;
+        }
+
+        protected override void FinishActions()
+        {
+            _variablesPopup.Hide();
+        }
+    }
+}

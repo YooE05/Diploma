@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DS.ScriptableObjects;
-using UnityEditor.Timeline.Actions;
-using UnityEngine;
 using YooE.DialogueSystem;
+using YooE.Diploma.Interaction;
 using YooE.SaveLoad;
 
 namespace YooE.Diploma
@@ -38,17 +37,20 @@ namespace YooE.Diploma
     public sealed class EnableMotionEvent : DialogueEventController
     {
         private readonly PlayerMotionController _playerMotionController;
+        private readonly PlayerInteraction _playerInteraction;
 
         public EnableMotionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
-            PlayerMotionController playerMotionController) :
+            PlayerMotionController playerMotionController, PlayerInteraction playerInteraction) :
             base(dialogueState, dialogues)
         {
             _playerMotionController = playerMotionController;
+            _playerInteraction = playerInteraction;
         }
 
         protected override void FinishActions()
         {
             _playerMotionController.EnableMotion();
+            _playerInteraction.EnableInteraction();
         }
     }
 
@@ -84,6 +86,23 @@ namespace YooE.Diploma
         protected override void FinishActions()
         {
             _saveLoadManager.SaveGame();
+        }
+    }
+
+    public sealed class EnableLeverAndGardenInteractionEvent : DialogueEventController
+    {
+        private readonly GardenViewController _gardenViewController;
+
+        public EnableLeverAndGardenInteractionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            GardenViewController gardenViewController) :
+            base(dialogueState, dialogues)
+        {
+            _gardenViewController = gardenViewController;
+        }
+
+        protected override void FinishActions()
+        {
+            _gardenViewController.EnableLeverAndGardenInteraction();
         }
     }
 }

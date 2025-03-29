@@ -685,7 +685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &669358152
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1297,6 +1297,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerView: {fileID: 2299052652696453431}
   _movementConfig: {fileID: 11400000, guid: 36b5b1a216cedd6499c2d7ec43a7d5a9, type: 2}
+  _noPlayerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1101352812
 MonoBehaviour:
   m_ObjectHideFlags: 0

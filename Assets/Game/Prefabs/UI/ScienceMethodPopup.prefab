@@ -1100,6 +1100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9190248213421999791}
+  - component: {fileID: 8800171017507871390}
   m_Layer: 5
   m_Name: ScienceMethodPopup
   m_TagString: Untagged
@@ -1114,7 +1115,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6084472101336766931}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -1129,6 +1130,26 @@ RectTransform:
   m_AnchoredPosition: {x: -47.84082, y: 96}
   m_SizeDelta: {x: 559.4497, y: -377.33472}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8800171017507871390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084472101336766931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ffc71b005b5124191d72fcbd487116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _popupGO: {fileID: 6084472101336766931}
+  _observationImage: {fileID: 7232267355000975620}
+  _hypothesisImage: {fileID: 1382091485409043778}
+  _experimentImage: {fileID: 6060639875257379256}
+  _analysisImage: {fileID: 2093842295533074998}
+  _conclusionImage: {fileID: 4213553066579864419}
+  _disableColour: {r: 0.49411765, g: 0.65882355, b: 0.6117647, a: 0.72156864}
+  _enableColour: {r: 0.3647059, g: 1, b: 0.41568628, a: 1}
 --- !u!1 &6543557109501675623
 GameObject:
   m_ObjectHideFlags: 0

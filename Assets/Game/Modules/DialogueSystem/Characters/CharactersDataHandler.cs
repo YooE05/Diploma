@@ -101,6 +101,14 @@ namespace YooE.DialogueSystem
             }
         }
 
+        public int GetCharacterDialogueIndex(DialogueCharacterID characterID)
+        {
+            var charData = _charactersData.Find(existChar =>
+                existChar.DialogueCharacterID == EnumUtils<DialogueCharacterID>.ToString(characterID));
+
+            return charData?.GroupIndex ?? 0;
+        }
+
         private void SetupCharactersDialogueComponent(CharacterDialogueData[] dataList)
         {
             for (var i = 0; i < dataList.Length; i++)

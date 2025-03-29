@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: MainScientistDialogueGroupSequence
   m_EditorClassIdentifier: 
   Groups:
+  - {fileID: 11400000, guid: a97cf10c674eb4744820b0ca420b4710, type: 2}
   - {fileID: 11400000, guid: 53ff9aaef5d5dec4392ed5d6fbf91459, type: 2}
   - {fileID: 11400000, guid: 2d4632ad38d7e964995d11cf6c304fdf, type: 2}
   - {fileID: 11400000, guid: 221f42f70343d8e44b0192fc4c5caf46, type: 2}
   - {fileID: 11400000, guid: 696279f3ead9ba146bb5e00c4451efbb, type: 2}
+  - {fileID: 11400000, guid: a97cf10c674eb4744820b0ca420b4710, type: 2}

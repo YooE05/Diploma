@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using YooE.Diploma.Interaction;
 using YooE.SaveLoad;
 using Zenject;
 
@@ -12,6 +13,9 @@ namespace YooE.Diploma
         [SerializeField] private SoundButtonView _soundButtonView;
         [SerializeField] private string _buttonsClickSoundName = "buttonClick";
 
+        [SerializeField] private PlayerInteraction _playerInteraction;
+        [SerializeField] private GardenViewController _gardenViewController;
+
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<LifecycleManager>().AsCached().NonLazy();
@@ -22,6 +26,11 @@ namespace YooE.Diploma
 
             Container.BindInterfacesAndSelfTo<SoundButtonPresenter>().AsCached()
                 .WithArguments(_soundButtonView, _buttonsClickSoundName)
+                .NonLazy();
+
+            Container.Bind<PlayerInteraction>().FromInstance(_playerInteraction).AsCached()
+                .NonLazy();
+            Container.Bind<GardenViewController>().FromInstance(_gardenViewController).AsCached()
                 .NonLazy();
         }
     }

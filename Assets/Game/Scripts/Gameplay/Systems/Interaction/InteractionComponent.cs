@@ -8,9 +8,12 @@ namespace YooE.Diploma.Interaction
         [SerializeField] private GameObject _interactionButtonView;
         [SerializeField] private Button _interactionButton;
 
+        private bool _isInteractable;
+
         public virtual void OnInit()
         {
             DisableInteractView();
+            EnableInteraction();
         }
 
         public virtual void Interact()
@@ -20,6 +23,8 @@ namespace YooE.Diploma.Interaction
 
         public virtual void EnableInteractView()
         {
+            if (!_isInteractable) return;
+
             _interactionButtonView.SetActive(true);
             _interactionButton.onClick.AddListener(Interact);
         }
@@ -28,6 +33,16 @@ namespace YooE.Diploma.Interaction
         {
             _interactionButtonView.SetActive(false);
             _interactionButton.onClick.RemoveListener(Interact);
+        }
+
+        public void DisableInteractionAbility()
+        {
+            _isInteractable = false;
+        }
+
+        public void EnableInteraction()
+        {
+            _isInteractable = true;
         }
     }
 }

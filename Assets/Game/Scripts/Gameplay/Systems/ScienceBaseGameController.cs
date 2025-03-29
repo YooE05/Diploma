@@ -14,6 +14,7 @@ namespace YooE.Diploma
         [SerializeField] private string _shooterTutorialSceneName;
         [SerializeField] private CharacterDialogueComponent _scientistCharacterComponent;
         [SerializeField] private AudioClip _audioClip;
+        [SerializeField] private StagesManger _stagesManger;
 
         private SaveLoadManager _saveLoadManager;
         private AudioManager _audioManager;
@@ -21,13 +22,12 @@ namespace YooE.Diploma
 
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, SaveLoadManager saveLoadManager,
-            ScienceMethodPopup scienceMethodPopup,
-            AudioManager audioManager)
+            ScienceMethodPopup scienceMethodPopup, AudioManager audioManager)
         {
             _lifecycleManager = lifecycleManager;
             _audioManager = audioManager;
             _saveLoadManager = saveLoadManager;
-            scienceMethodPopup.Hide();
+            //scienceMethodPopup.Hide();
         }
 
         private void Start()
@@ -38,6 +38,7 @@ namespace YooE.Diploma
 
         private void StartGameplay()
         {
+            _stagesManger.InitGameViewBySave();
             _saveLoadManager.OnDataLoaded -= StartGameplay;
             _audioManager.PlaySound(_audioClip, AudioOutput.Music);
             //_scientistCharacterComponent.StartCurrentDialogueGroup().Forget();
@@ -65,6 +66,12 @@ namespace YooE.Diploma
         public void ResetGame()
         {
             _saveLoadManager.ResetGame();
+            ReloadScene();
+        }
+
+        [Button]
+        public void ReloadScene()
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
