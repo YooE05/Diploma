@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 2810283503114558746}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -169.91, z: 0}
 --- !u!136 &7245006091106996367
 CapsuleCollider:
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactionButtonView: {fileID: 4394183980838692318}
+  _interactionButton: {fileID: 0}
   _character: {fileID: 0}
 --- !u!1001 &4199562291276602312
 PrefabInstance:
@@ -107,6 +108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6700024180617903973}
     m_Modifications:
+    - target: {fileID: 74250587044759953, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 318117048984994550, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -114,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 485421927187414550, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
       propertyPath: m_Name
       value: InteractionCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 485421927187414550, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2109925789857367762, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
       propertyPath: m_Pivot.x
@@ -198,6 +207,14 @@ PrefabInstance:
     - target: {fileID: 2109925789857367762, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912401729911384177, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519005458401786461, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

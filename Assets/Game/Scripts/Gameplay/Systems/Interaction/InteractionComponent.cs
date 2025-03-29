@@ -13,7 +13,7 @@ namespace YooE.Diploma.Interaction
         public virtual void OnInit()
         {
             DisableInteractView();
-            EnableInteraction();
+            EnableInteractionAbility();
         }
 
         public virtual void Interact()
@@ -40,7 +40,7 @@ namespace YooE.Diploma.Interaction
             _isInteractable = false;
         }
 
-        public void EnableInteraction()
+        public void EnableInteractionAbility()
         {
             _isInteractable = true;
         }

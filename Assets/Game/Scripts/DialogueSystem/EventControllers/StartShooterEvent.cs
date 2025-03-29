@@ -34,6 +34,23 @@ namespace YooE.Diploma
         }
     }
 
+    public sealed class EnableFightDoorEvent : DialogueEventController
+    {
+        private readonly FightDoorInteractionComponent _fightDoor;
+
+        public EnableFightDoorEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            FightDoorInteractionComponent fightDoor) :
+            base(dialogueState, dialogues)
+        {
+            _fightDoor = fightDoor;
+        }
+
+        protected override void FinishActions()
+        {
+            _fightDoor.EnableInteractionAbility();
+        }
+    }
+
     public sealed class EnableMotionEvent : DialogueEventController
     {
         private readonly PlayerMotionController _playerMotionController;
@@ -72,6 +89,23 @@ namespace YooE.Diploma
         }
     }
 
+    public sealed class HideTaskPanelEvent : DialogueEventController
+    {
+        private readonly TaskPanel _taskPanel;
+
+        public HideTaskPanelEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            TaskPanel taskPanel) :
+            base(dialogueState, dialogues)
+        {
+            _taskPanel = taskPanel;
+        }
+
+        protected override void StartActions()
+        {
+            _taskPanel.Hide();
+        }
+    }
+
     public sealed class SaveGameEvent : DialogueEventController
     {
         private readonly SaveLoadManager _saveLoadManager;
@@ -87,22 +121,37 @@ namespace YooE.Diploma
         {
             _saveLoadManager.SaveGame();
         }
+
+        /*protected override void FinishActions()
+        {
+            AsyncCountdown(1f, CancellationToken.None).Forget();
+        }
+
+        private async UniTask AsyncCountdown(float countdown, CancellationToken token)
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(countdown), cancellationToken: token);
+
+            _saveLoadManager.SaveGame();
+        }*/
     }
 
     public sealed class EnableLeverAndGardenInteractionEvent : DialogueEventController
     {
         private readonly GardenViewController _gardenViewController;
+        private readonly Stage4TaskTracker _taskTracker;
 
         public EnableLeverAndGardenInteractionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
-            GardenViewController gardenViewController) :
+            GardenViewController gardenViewController, Stage4TaskTracker taskTracker) :
             base(dialogueState, dialogues)
         {
             _gardenViewController = gardenViewController;
+            _taskTracker = taskTracker;
         }
 
         protected override void FinishActions()
         {
             _gardenViewController.EnableLeverAndGardenInteraction();
+            _taskTracker.ShowTasksText();
         }
     }
 }

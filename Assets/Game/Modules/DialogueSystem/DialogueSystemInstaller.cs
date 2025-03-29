@@ -14,6 +14,7 @@ namespace YooE.DialogueSystem
 
         [SerializeField] private ScienceMethodPopup _scienceMethodPopup;
         [SerializeField] private VariablesPopup _variablesPopup;
+        [SerializeField] private TaskPanel _taskPanel;
 
         public override void InstallBindings()
         {
@@ -30,6 +31,8 @@ namespace YooE.DialogueSystem
 
         private void TaskTrackers()
         {
+            Container.Bind<TaskPanel>().FromInstance(_taskPanel).NonLazy();
+
             Container.BindInterfacesAndSelfTo<Stage3TaskTracker>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<Stage4TaskTracker>().AsSingle().NonLazy();
         }

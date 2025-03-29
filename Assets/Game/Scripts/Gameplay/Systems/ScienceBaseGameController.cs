@@ -61,7 +61,7 @@ namespace YooE.Diploma
                 SceneManager.LoadScene(_shooterSceneName);
             }*/
         }
-
+        
         [Button]
         public void ResetGame()
         {

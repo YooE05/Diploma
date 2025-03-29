@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,12 +17,6 @@ namespace YooE.Diploma
 
         [SerializeField] private Color _disableColour;
         [SerializeField] private Color _enableColour;
-
-        /*private void Awake()
-        {
-            ResetAllImage();
-            //Hide();
-        }*/
 
         public void OnInit()
         {

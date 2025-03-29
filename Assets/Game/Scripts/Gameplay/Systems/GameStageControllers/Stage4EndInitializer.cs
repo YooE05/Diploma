@@ -4,7 +4,7 @@ using Zenject;
 
 namespace YooE.Diploma
 {
-    public sealed class Stage4Initializer : StageInitializer
+    public sealed class Stage4EndInitializer : StageInitializer
     {
         [SerializeField] private GardenViewController _gardenView;
 
@@ -14,9 +14,10 @@ namespace YooE.Diploma
         {
             base.InitGameView();
             _gardenView.ShowEmptyGarden();
-            _gardenView.ShowLightLevers();
+            _gardenView.ShowPlantedGarden();
+            _gardenView.HideLightLevers();
 
-            _fightZoneInteraction.DisableInteractionAbility();
+            _fightZoneInteraction.EnableInteractionAbility();
         }
     }
 }

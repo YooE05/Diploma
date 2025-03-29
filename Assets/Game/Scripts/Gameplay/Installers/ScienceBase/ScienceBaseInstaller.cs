@@ -16,6 +16,8 @@ namespace YooE.Diploma
         [SerializeField] private PlayerInteraction _playerInteraction;
         [SerializeField] private GardenViewController _gardenViewController;
 
+        [SerializeField] private FightDoorInteractionComponent _fightDoorInteraction;
+
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<LifecycleManager>().AsCached().NonLazy();
@@ -30,7 +32,11 @@ namespace YooE.Diploma
 
             Container.Bind<PlayerInteraction>().FromInstance(_playerInteraction).AsCached()
                 .NonLazy();
-            Container.Bind<GardenViewController>().FromInstance(_gardenViewController).AsCached()
+            Container.BindInterfacesAndSelfTo<GardenViewController>().FromInstance(_gardenViewController).AsCached()
+                .NonLazy();
+
+            Container.BindInterfacesAndSelfTo<FightDoorInteractionComponent>().FromInstance(_fightDoorInteraction)
+                .AsCached()
                 .NonLazy();
         }
     }

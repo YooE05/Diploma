@@ -52,13 +52,13 @@ namespace YooE.Diploma
 
         public void EnableLeverAndGardenInteraction()
         {
-            _leverInteraction.EnableInteraction();
-            _seedPlantInteraction.EnableInteraction();
+            _leverInteraction.EnableInteractionAbility();
+            _seedPlantInteraction.EnableInteractionAbility();
         }
 
         public void HideLightLevers()
         {
-            _lightLeversGO.SetActive(false);
+           // _lightLeversGO.SetActive(false);
 
             _leverInteraction.DisableInteractView();
             _leverInteraction.DisableInteractionAbility();

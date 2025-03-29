@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using YooE.DialogueSystem;
 
 namespace YooE.Diploma
@@ -8,9 +9,14 @@ namespace YooE.Diploma
         private bool _gardenChecked;
 
         private readonly CharactersDataHandler _charactersDataHandler;
+        private readonly TaskPanel _taskPanel;
 
-        public Stage3TaskTracker(CharactersDataHandler charactersDataHandler)
+        private const string CheckGardenText = "Осмотреть грядку";
+        private const string CheckSeparatePlantText = "Подобрать упавшее семечко";
+
+        public Stage3TaskTracker(CharactersDataHandler charactersDataHandler, TaskPanel taskPanel)
         {
+            _taskPanel = taskPanel;
             _charactersDataHandler = charactersDataHandler;
             ResetTasks();
         }
@@ -21,6 +27,7 @@ namespace YooE.Diploma
         {
             if (IsAllTasksComplete) return;
 
+            _taskPanel.CompleteTask(CheckGardenText);
             _gardenChecked = true;
             CheckTaskCompletion();
         }
@@ -29,6 +36,7 @@ namespace YooE.Diploma
         {
             if (IsAllTasksComplete) return;
 
+            _taskPanel.CompleteTask(CheckSeparatePlantText);
             _separatePlantChecked = true;
             CheckTaskCompletion();
         }
@@ -47,6 +55,12 @@ namespace YooE.Diploma
             _charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
             _charactersDataHandler.UpdateCharacterDialogueIndex(DialogueCharacterID.MainScientist);
         }
+
+        public void ShowTasksText()
+        {
+            _taskPanel.SetUpTasks(new List<string> { CheckGardenText, CheckSeparatePlantText });
+            _taskPanel.Show();
+        }
     }
 
     public sealed class Stage4TaskTracker
@@ -55,10 +69,17 @@ namespace YooE.Diploma
         private bool _lightEnabled;
 
         private readonly CharactersDataHandler _charactersDataHandler;
+        private readonly TaskPanel _taskPanel;
 
-        public Stage4TaskTracker(CharactersDataHandler charactersDataHandler)
+        private const string AdjustGardenLightText = "Настроить свет";
+        private const string PlantSeedsText = "Посадить семена";
+
+        public Stage4TaskTracker(CharactersDataHandler charactersDataHandler, TaskPanel taskPanel)
         {
+            _taskPanel = taskPanel;
             _charactersDataHandler = charactersDataHandler;
+
+            _taskPanel.Hide();
             ResetTasks();
         }
 
@@ -68,6 +89,7 @@ namespace YooE.Diploma
         {
             if (IsAllTasksComplete) return;
 
+            _taskPanel.CompleteTask(AdjustGardenLightText);
             _lightEnabled = true;
             CheckTaskCompletion();
         }
@@ -76,6 +98,7 @@ namespace YooE.Diploma
         {
             if (IsAllTasksComplete) return;
 
+            _taskPanel.CompleteTask(PlantSeedsText);
             _seedsPlanted = true;
             CheckTaskCompletion();
         }
@@ -93,6 +116,12 @@ namespace YooE.Diploma
 
             _charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
             _charactersDataHandler.UpdateCharacterDialogueIndex(DialogueCharacterID.MainScientist);
+        }
+
+        public void ShowTasksText()
+        {
+            _taskPanel.SetUpTasks(new List<string> { AdjustGardenLightText, PlantSeedsText });
+            _taskPanel.Show();
         }
     }
 }

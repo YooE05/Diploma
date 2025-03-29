@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5603764559411085637}
   - component: {fileID: 1155208915511702377}
   - component: {fileID: 318117048984994550}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: InteractionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 109709660854173367}
   - component: {fileID: 4912401729911384177}
   - component: {fileID: 7263858357111204314}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: InteractionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 4127422331615040652}
   - component: {fileID: 4904033539869998901}
   - component: {fileID: 3753513452908291618}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -3,9 +3,10 @@ using Zenject;
 
 namespace YooE.Diploma.Interaction
 {
-    public sealed class GoShooterZoneInteractionComponent : InteractionComponent
+    public sealed class FightDoorInteractionComponent : InteractionComponent
     {
         [SerializeField] private ConfirmPopupView _goShooterAskPopup;
+
         [Inject] private PlayerMotionController _playerMotionController;
         [Inject] private ScienceBaseGameController _gameController;
 
@@ -18,6 +19,9 @@ namespace YooE.Diploma.Interaction
         public override void Interact()
         {
             base.Interact();
+
+            DisableInteractView();
+            DisableInteractionAbility();
 
             _playerMotionController.DisableMotion();
             _goShooterAskPopup.Show();
@@ -34,6 +38,8 @@ namespace YooE.Diploma.Interaction
             _goShooterAskPopup.Hide();
 
             _playerMotionController.EnableMotion();
+            EnableInteractView();
+            EnableInteractionAbility();
         }
 
         private void StartShooterScene()

@@ -14,6 +14,9 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _enableMotionDialogues;
         [SerializeField] private List<DSDialogueSO> _goNextMainQuestDialogues;
 
+        [SerializeField] private List<DSDialogueSO> _enableFightDoorDialogues;
+        [SerializeField] private List<DSDialogueSO> _hideTaskPanelDialogues;
+
         [SerializeField] private List<DSDialogueSO> _stage3CheckGardenDialogues;
         [SerializeField] private List<DSDialogueSO> _stage3CheckPlantDialogues;
 
@@ -37,10 +40,11 @@ namespace YooE.Diploma
         {
             Container.Bind<SaveGameEvent>().AsCached().WithArguments(_saveGameDialogues).NonLazy();
 
-            Container.Bind<ShowHideCubeEvent>().AsCached().WithArguments(_showCubeDialogues).NonLazy();
+            Container.Bind<EnableFightDoorEvent>().AsCached().WithArguments(_enableFightDoorDialogues).NonLazy();
             Container.Bind<StartShooterEvent>().AsCached().WithArguments(_startShooterDialogues).NonLazy();
             Container.Bind<EnableMotionEvent>().AsCached().WithArguments(_enableMotionDialogues).NonLazy();
             Container.Bind<GoNextMainDialogueEvent>().AsCached().WithArguments(_goNextMainQuestDialogues).NonLazy();
+            Container.Bind<HideTaskPanelEvent>().AsCached().WithArguments(_hideTaskPanelDialogues).NonLazy();
 
             Container.Bind<Stage3TaskCheckGardenEvent>().AsCached().WithArguments(_stage3CheckGardenDialogues)
                 .NonLazy();
