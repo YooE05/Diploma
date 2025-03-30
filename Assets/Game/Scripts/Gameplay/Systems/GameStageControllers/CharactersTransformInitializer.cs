@@ -11,6 +11,7 @@ namespace YooE.Diploma
         [SerializeField] private Transform _player;
         [SerializeField] private Transform _playerNearNPCPoint;
         [SerializeField] private Transform _playerDoorPoint;
+        [SerializeField] private Transform _playerLabCenterPoint;
 
         public void MoveCharactersToMainPoints()
         {
@@ -31,6 +32,12 @@ namespace YooE.Diploma
         {
             _mainNPC.transform.position = _mainNPCGardenPoint.position;
             _mainNPC.transform.rotation = _mainNPCGardenPoint.rotation;
+        }
+
+        public void MovePlayerToSceneCenter()
+        {
+            _player.transform.position = _playerLabCenterPoint.position;
+            _player.transform.rotation = _playerLabCenterPoint.rotation;
         }
     }
 }

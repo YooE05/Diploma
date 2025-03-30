@@ -121,39 +121,8 @@ namespace YooE.Diploma
         {
             _saveLoadManager.SaveGame();
         }
-
-        /*protected override void FinishActions()
-        {
-            AsyncCountdown(1f, CancellationToken.None).Forget();
-        }
-
-        private async UniTask AsyncCountdown(float countdown, CancellationToken token)
-        {
-            await UniTask.Delay(TimeSpan.FromSeconds(countdown), cancellationToken: token);
-
-            _saveLoadManager.SaveGame();
-        }*/
     }
 
-    public sealed class EnableStage4InteractionEvent : DialogueEventController
-    {
-        private readonly GardenViewController _gardenViewController;
-        private readonly Stage4TaskTracker _taskTracker;
-
-        public EnableStage4InteractionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
-            GardenViewController gardenViewController, Stage4TaskTracker taskTracker) :
-            base(dialogueState, dialogues)
-        {
-            _gardenViewController = gardenViewController;
-            _taskTracker = taskTracker;
-        }
-
-        protected override void FinishActions()
-        {
-            _gardenViewController.EnableLeverAndGardenInteraction();
-            _taskTracker.ShowTasksText();
-        }
-    }
 
     public sealed class EnableStage3InteractionsEvent : DialogueEventController
     {
@@ -189,6 +158,66 @@ namespace YooE.Diploma
         protected override void FinishActions()
         {
             _gardenViewController.DisableStage3Interaction();
+        }
+    }
+
+    public sealed class EnableStage4InteractionEvent : DialogueEventController
+    {
+        private readonly GardenViewController _gardenViewController;
+        private readonly Stage4TaskTracker _taskTracker;
+
+        public EnableStage4InteractionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            GardenViewController gardenViewController, Stage4TaskTracker taskTracker) :
+            base(dialogueState, dialogues)
+        {
+            _gardenViewController = gardenViewController;
+            _taskTracker = taskTracker;
+        }
+
+        protected override void FinishActions()
+        {
+            _gardenViewController.EnableLeverAndGardenInteraction();
+            _taskTracker.ShowTasksText();
+        }
+    }
+
+    public sealed class EnableStage5InteractionsEvent : DialogueEventController
+    {
+        private readonly LockersViewController _lockersController;
+        private readonly Stage5TaskTracker _taskTracker;
+
+        public EnableStage5InteractionsEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            LockersViewController lockersController, Stage5TaskTracker taskTracker) :
+            base(dialogueState, dialogues)
+        {
+            _lockersController = lockersController;
+            _taskTracker = taskTracker;
+        }
+
+        protected override void FinishActions()
+        {
+            _lockersController.EnableLockersInteraction();
+            _taskTracker.ShowTasksText();
+        }
+    }
+
+    public sealed class EnableGardenStage5InteractionsEvent : DialogueEventController
+    {
+        private readonly GardenViewController _gardenViewController;
+        private readonly Stage5TaskTracker _taskTracker;
+
+        public EnableGardenStage5InteractionsEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            GardenViewController gardenViewController, Stage5TaskTracker taskTracker) :
+            base(dialogueState, dialogues)
+        {
+            _gardenViewController = gardenViewController;
+            _taskTracker = taskTracker;
+        }
+
+        protected override void FinishActions()
+        {
+            _gardenViewController.EnableStage5Interaction();
+            _taskTracker.ShowMeasurePlantsTaskText();
         }
     }
 }

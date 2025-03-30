@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: IntroDialogue1
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: IntroDialogue1
-  <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-  <Text>k__BackingField: "\u041E\u0439 \u0431\u041B\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F\u042F,
-    \u0438\u0434\u0438 \u043D\u0430\u0445\u0443\u0439"
+  <CharacterName>k__BackingField: "\u041D\u0430\u0443\u0447\u0440\u0443\u043A"
+  <Text>k__BackingField: "\u0422\u0430\u043A\u0438\u043C\u0438 \u0442\u0435\u043C\u043F\u0430\u043C\u0438
+    \u0442\u044B \u0434\u0438\u043F\u043B\u043E\u043C \u043D\u0435 \u043D\u0430\u043F\u0438\u0448\u0435\u0448\u044C.."
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 0}

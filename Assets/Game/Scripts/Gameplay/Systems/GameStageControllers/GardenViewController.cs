@@ -18,6 +18,10 @@ namespace YooE.Diploma
         [SerializeField] private GameObject _lightLeversGO;
         [SerializeField] private LightLeverInteractionComponent _leverInteraction;
 
+        //Stage5
+        [SerializeField] private GameObject _grownGardenGO;
+        [SerializeField] private MeasureInteractionComponent _grownGardenGOInteraction;
+
         public void OnInit()
         {
             HideView();
@@ -31,6 +35,8 @@ namespace YooE.Diploma
             _emptyGardenGO.SetActive(false);
             _plantedSeedsGO.SetActive(false);
             _lightLeversGO.SetActive(false);
+
+            _grownGardenGO.SetActive(false);
         }
 
         //Stage3
@@ -96,7 +102,20 @@ namespace YooE.Diploma
 
         public void ShowPlantedGarden()
         {
+            _emptyGardenGO.SetActive(true);
             _plantedSeedsGO.SetActive(true);
+        }
+
+        public void ShowGrownGarden()
+        {
+            _grownGardenGO.SetActive(true);
+        }
+
+        //Stage5
+        
+        public void EnableStage5Interaction()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

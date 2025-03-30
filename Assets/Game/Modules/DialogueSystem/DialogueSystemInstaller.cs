@@ -35,6 +35,7 @@ namespace YooE.DialogueSystem
 
             Container.BindInterfacesAndSelfTo<Stage3TaskTracker>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<Stage4TaskTracker>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<Stage5TaskTracker>().AsSingle().NonLazy();
         }
     }
 }

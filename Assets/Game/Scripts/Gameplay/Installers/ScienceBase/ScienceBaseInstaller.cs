@@ -15,6 +15,7 @@ namespace YooE.Diploma
 
         [SerializeField] private PlayerInteraction _playerInteraction;
         [SerializeField] private GardenViewController _gardenViewController;
+        [SerializeField] private LockersViewController _lockersViewController;
 
         [SerializeField] private FightDoorInteractionComponent _fightDoorInteraction;
 
@@ -33,6 +34,8 @@ namespace YooE.Diploma
             Container.Bind<PlayerInteraction>().FromInstance(_playerInteraction).AsCached()
                 .NonLazy();
             Container.BindInterfacesAndSelfTo<GardenViewController>().FromInstance(_gardenViewController).AsCached()
+                .NonLazy();
+            Container.BindInterfacesAndSelfTo<LockersViewController>().FromInstance(_lockersViewController).AsCached()
                 .NonLazy();
 
             Container.BindInterfacesAndSelfTo<FightDoorInteractionComponent>().FromInstance(_fightDoorInteraction)

@@ -13,6 +13,9 @@ namespace YooE.Diploma
         public override void InitGameView()
         {
             base.InitGameView();
+
+            _charactersTransform.MovePlayerToNPC();
+
             _gardenView.ShowEmptyGarden();
             _gardenView.ShowPlantedGarden();
             _gardenView.HideLightLevers();
