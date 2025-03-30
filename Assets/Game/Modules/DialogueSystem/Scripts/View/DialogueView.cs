@@ -19,6 +19,7 @@ namespace YooE.DialogueSystem
         [SerializeField] private List<ChoiceButton> _choiceButtons = new();
 
         private DialogueState _dialogueState;
+        private bool _isButtonsSubscribed;
 
         [Inject]
         public void Construct(DialogueState dialogueState)
@@ -27,11 +28,6 @@ namespace YooE.DialogueSystem
 
             _dialogueState.OnDialogueStart += InitDialogueView;
             _dialogueState.OnDialogueGroupFinished += Hide;
-
-            for (var i = 0; i < _choiceButtons.Count; i++)
-            {
-                _choiceButtons[i].OnChoiceDone += ChoiceDoneActions;
-            }
 
             Hide();
         }
@@ -67,7 +63,10 @@ namespace YooE.DialogueSystem
             for (var i = 0; i < _choiceButtons.Count; i++)
             {
                 _choiceButtons[i].Reset();
+                // _choiceButtons[i].OnChoiceDone = (DSDialogueChoiceData d) => { };
             }
+
+            SubscribeUnsubscribeOnButtons(false);
 
             if (choices.Count == 1)
             {
@@ -83,7 +82,43 @@ namespace YooE.DialogueSystem
                 {
                     _choiceButtons[i].SetUpAndShow(choices[i]);
                 }
+
+                SubscribeUnsubscribeOnButtons(true);
             }
+        }
+
+        private void SubscribeUnsubscribeOnButtons(bool needSubscribe)
+        {
+            if (needSubscribe)
+            {
+                if (!_isButtonsSubscribed)
+                {
+                    for (var i = 0; i < _choiceButtons.Count; i++)
+                    {
+                        _choiceButtons[i].OnChoiceDone += ChoiceDoneActions;
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Repeated buttonsSubscribe");
+                }
+            }
+            else
+            {
+                if (_isButtonsSubscribed)
+                {
+                    for (var i = 0; i < _choiceButtons.Count; i++)
+                    {
+                        _choiceButtons[i].OnChoiceDone -= ChoiceDoneActions;
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Repeated buttons Unsubscribe");
+                }
+            }
+
+            _isButtonsSubscribed = needSubscribe;
         }
 
         private void ChoiceDoneActions(DSDialogueSO nextDialog)

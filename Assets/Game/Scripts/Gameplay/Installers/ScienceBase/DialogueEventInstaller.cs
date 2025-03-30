@@ -19,9 +19,11 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _stage3CheckGardenDialogues;
         [SerializeField] private List<DSDialogueSO> _stage3CheckPlantDialogues;
 
-        [SerializeField] private List<DSDialogueSO> _stage4EnableInteractionDialogues;
         [SerializeField] private List<DSDialogueSO> _stage3EnableInteractionDialogues;
+        [SerializeField] private List<DSDialogueSO> _stage3DisableInteractionDialogues;
 
+        [SerializeField] private List<DSDialogueSO> _stage4EnableInteractionDialogues;
+        
         //Popups
         [SerializeField] private List<DSDialogueSO> _showIndependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _showDependentVarDialogues;
@@ -54,8 +56,11 @@ namespace YooE.Diploma
 
             Container.Bind<EnableStage3InteractionsEvent>().AsCached()
                 .WithArguments(_stage3EnableInteractionDialogues)
+                .NonLazy();    
+            Container.Bind<DisableStage3InteractionsEvent>().AsCached()
+                .WithArguments(_stage3DisableInteractionDialogues)
                 .NonLazy();         
-            Container.Bind<EnableLeverAndGardenInteractionEvent>().AsCached()
+            Container.Bind<EnableStage4InteractionEvent>().AsCached()
                 .WithArguments(_stage4EnableInteractionDialogues)
                 .NonLazy();
 

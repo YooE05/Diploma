@@ -808,6 +808,7 @@ GameObject:
   - component: {fileID: 837995351}
   - component: {fileID: 837995345}
   - component: {fileID: 837995352}
+  - component: {fileID: 837995353}
   - component: {fileID: 837995347}
   - component: {fileID: 837995348}
   m_Layer: 0
@@ -849,6 +850,7 @@ MonoBehaviour:
   - {fileID: 837995351}
   - {fileID: 837995345}
   - {fileID: 837995352}
+  - {fileID: 837995353}
   - {fileID: 837995347}
   - {fileID: 837995348}
 --- !u!114 &837995345
@@ -878,7 +880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _charactersTransform: {fileID: 837995349}
-  _dialogueGroupIndex: 5
+  _dialogueGroupIndex: 7
 --- !u!114 &837995348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _charactersTransform: {fileID: 837995349}
-  _dialogueGroupIndex: 7
+  _dialogueGroupIndex: 10
   _gardenView: {fileID: 1198605829}
 --- !u!114 &837995349
 MonoBehaviour:
@@ -954,6 +956,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _charactersTransform: {fileID: 837995349}
   _dialogueGroupIndex: 4
+--- !u!114 &837995353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837995341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f600f7f4bc664badac15f127c8ff29ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _charactersTransform: {fileID: 837995349}
+  _dialogueGroupIndex: 6
 --- !u!1 &850437899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,7 +1387,7 @@ MonoBehaviour:
   _saveGameDialogues:
   - {fileID: 11400000, guid: 25fcf4dfc50a5ff4695b6921ef6a523c, type: 2}
   - {fileID: 11400000, guid: e1548be13ebff3844a8bad8c388432ae, type: 2}
-  - {fileID: 11400000, guid: 8e587a79a8f8e5e4caceb988feed94ed, type: 2}
+  - {fileID: 11400000, guid: d39870236229e5f41916e460e7ccbf32, type: 2}
   - {fileID: 11400000, guid: 12443a6c00646514b8eab7545a2a126d, type: 2}
   _startShooterDialogues:
   - {fileID: 11400000, guid: 25fcf4dfc50a5ff4695b6921ef6a523c, type: 2}
@@ -1382,7 +1398,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8713979eece1ae940b4d8f43394d0a5c, type: 2}
   - {fileID: 11400000, guid: 9b1833a2ae5adf84b8bf645c6de0ad6b, type: 2}
   - {fileID: 11400000, guid: 77ba3c89c7d781247b639f8bdaa290d8, type: 2}
-  - {fileID: 11400000, guid: 8e587a79a8f8e5e4caceb988feed94ed, type: 2}
+  - {fileID: 11400000, guid: d39870236229e5f41916e460e7ccbf32, type: 2}
   - {fileID: 11400000, guid: dad1129cc9bbe37459e5517c02d824f7, type: 2}
   - {fileID: 11400000, guid: 9d8b1338ec35e334db3edcf285a65874, type: 2}
   - {fileID: 11400000, guid: 99c3aa9b8c61af74bbeefafa51d5defa, type: 2}
@@ -1397,6 +1413,7 @@ MonoBehaviour:
   _enableFightDoorDialogues:
   - {fileID: 11400000, guid: 314980e0ca95c9e41836316076994d55, type: 2}
   - {fileID: 11400000, guid: 3b5c605c651b2ec41bb48443374a3d5a, type: 2}
+  - {fileID: 11400000, guid: 8e587a79a8f8e5e4caceb988feed94ed, type: 2}
   _hideTaskPanelDialogues:
   - {fileID: 11400000, guid: 314980e0ca95c9e41836316076994d55, type: 2}
   - {fileID: 11400000, guid: b9731172c6f90a6408151d627cc947d9, type: 2}
@@ -1404,10 +1421,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 77ba3c89c7d781247b639f8bdaa290d8, type: 2}
   _stage3CheckPlantDialogues:
   - {fileID: 11400000, guid: 9b1833a2ae5adf84b8bf645c6de0ad6b, type: 2}
-  _stage4EnableInteractionDialogues:
-  - {fileID: 11400000, guid: 9d8b1338ec35e334db3edcf285a65874, type: 2}
   _stage3EnableInteractionDialogues:
   - {fileID: 11400000, guid: e1548be13ebff3844a8bad8c388432ae, type: 2}
+  _stage3DisableInteractionDialogues:
+  - {fileID: 11400000, guid: 47d521577f2066a4d8c017aacc9b2d6c, type: 2}
+  _stage4EnableInteractionDialogues:
+  - {fileID: 11400000, guid: 9d8b1338ec35e334db3edcf285a65874, type: 2}
   _showIndependentVarDialogues:
   - {fileID: 11400000, guid: 124f7b522bc9261478eb191eea24b24f, type: 2}
   _showDependentVarDialogues:
@@ -2254,21 +2273,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6344981512706878853, guid: d30969a502530684ca17c13aa70f392f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8847176811988315890, guid: d30969a502530684ca17c13aa70f392f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1893153181}
-    - target: {fileID: 9055758610516313953, guid: d30969a502530684ca17c13aa70f392f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1893153181}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6268409559017191533, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d30969a502530684ca17c13aa70f392f, type: 3}
@@ -2288,9 +2294,9 @@ RectTransform:
   m_Father: {fileID: 4450958454057803334}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1791, y: -359}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -129, y: -324.24}
   m_SizeDelta: {x: 213.26001, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &604066771905389887 stripped
@@ -2714,9 +2720,9 @@ RectTransform:
   m_Father: {fileID: 4450958454057803334}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1791, y: -233.30011}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -129, y: -215.72}
   m_SizeDelta: {x: 213.26001, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747659783375404714

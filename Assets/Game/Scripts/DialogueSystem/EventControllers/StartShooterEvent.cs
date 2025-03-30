@@ -135,12 +135,12 @@ namespace YooE.Diploma
         }*/
     }
 
-    public sealed class EnableLeverAndGardenInteractionEvent : DialogueEventController
+    public sealed class EnableStage4InteractionEvent : DialogueEventController
     {
         private readonly GardenViewController _gardenViewController;
         private readonly Stage4TaskTracker _taskTracker;
 
-        public EnableLeverAndGardenInteractionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+        public EnableStage4InteractionEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
             GardenViewController gardenViewController, Stage4TaskTracker taskTracker) :
             base(dialogueState, dialogues)
         {
@@ -170,8 +170,25 @@ namespace YooE.Diploma
 
         protected override void FinishActions()
         {
-            _gardenViewController.EnableSeparatePlantAndDarkGardenInteraction();
+            _gardenViewController.EnableStage3Interaction();
             _taskTracker.ShowTasksText();
+        }
+    }
+
+    public sealed class DisableStage3InteractionsEvent : DialogueEventController
+    {
+        private readonly GardenViewController _gardenViewController;
+
+        public DisableStage3InteractionsEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            GardenViewController gardenViewController) :
+            base(dialogueState, dialogues)
+        {
+            _gardenViewController = gardenViewController;
+        }
+
+        protected override void FinishActions()
+        {
+            _gardenViewController.DisableStage3Interaction();
         }
     }
 }

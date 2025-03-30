@@ -3,11 +3,10 @@ using Zenject;
 
 namespace YooE.Diploma
 {
-    public sealed class Stage3NeedCheckInitializer : StageInitializer
+    public sealed class Stage3EndInitializer : StageInitializer
     {
         [Inject] private GardenViewController _gardenView;
         [Inject] private FightDoorInteractionComponent _fightZoneInteraction;
-        [Inject] private Stage3TaskTracker _taskTracker;
 
         public override void InitGameView()
         {
@@ -15,11 +14,9 @@ namespace YooE.Diploma
 
             _gardenView.ShowDarkGarden();
             _gardenView.ShowSeparatePlant();
-            _gardenView.EnableStage3Interaction();
 
-            _taskTracker.ShowTasksText();
             _charactersTransform.MovePlayerToNPC();
-            _fightZoneInteraction.DisableInteractionAbility();
+            _fightZoneInteraction.EnableInteractionAbility();
         }
     }
 }

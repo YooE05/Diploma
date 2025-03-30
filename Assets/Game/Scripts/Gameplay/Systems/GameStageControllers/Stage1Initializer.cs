@@ -12,6 +12,8 @@ namespace YooE.Diploma
         {
             base.InitGameView();
             _charactersTransform.MovePlayerToNPC();
+
+            _gardenView.ShowEmptyGarden();
         }
     }
 }

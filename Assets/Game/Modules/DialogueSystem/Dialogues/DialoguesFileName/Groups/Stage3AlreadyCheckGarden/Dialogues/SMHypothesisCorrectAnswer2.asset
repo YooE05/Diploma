@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
-  m_Name: SMHypothesisCorrectAnswer
+  m_Name: SMHypothesisCorrectAnswer2
   m_EditorClassIdentifier: 
-  <DialogueName>k__BackingField: SMHypothesisCorrectAnswer
+  <DialogueName>k__BackingField: SMHypothesisCorrectAnswer2
   <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-  <Text>k__BackingField: "\u041C\u044B \u043E\u0431\u044F\u0437\u0430\u043D\u044B
-    \u044D\u0442\u043E \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C."
+  <Text>k__BackingField: "\u041F\u0440\u0438\u043D\u0435\u0441\u0438 \u0435\u0449\u0451
+    \u0441\u0435\u043C\u044F\u043D!"
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: d39870236229e5f41916e460e7ccbf32, type: 2}
+    <NextDialogue>k__BackingField: {fileID: 0}
   <DialogueType>k__BackingField: 0
   <IsStartingDialogue>k__BackingField: 0

@@ -48,10 +48,19 @@ namespace YooE.Diploma
             _badGardenInteraction.DisableInteractionAbility();
         }
 
-        public void EnableSeparatePlantAndDarkGardenInteraction()
+        public void EnableStage3Interaction()
         {
             _separatePlantInteraction.EnableInteractionAbility();
             _badGardenInteraction.EnableInteractionAbility();
+        }
+
+        public void DisableStage3Interaction()
+        {
+            _separatePlantInteraction.DisableInteractView();
+            _separatePlantInteraction.DisableInteractionAbility();
+
+            _badGardenInteraction.DisableInteractView();
+            _badGardenInteraction.DisableInteractionAbility();
         }
 
         //Stage4
