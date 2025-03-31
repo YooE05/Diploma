@@ -109,13 +109,17 @@ namespace YooE.Diploma
         public void ShowGrownGarden()
         {
             _grownGardenGO.SetActive(true);
+            
+            _grownGardenGOInteraction.DisableInteractionAbility();
+            _grownGardenGOInteraction.DisableInteractView();
         }
 
         //Stage5
-        
+
         public void EnableStage5Interaction()
         {
-            throw new System.NotImplementedException();
+            _grownGardenGOInteraction.EnableInteractionAbility();
+            _grownGardenGOInteraction.EnableInteractView();
         }
     }
 }

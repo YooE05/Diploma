@@ -7,6 +7,7 @@ namespace YooE.Diploma
     {
         public event Action OnHitEnded;
         public event Action OnDeathAnimationEnd;
+        public event Action OnWaitingTransitionEnd;
 
         public void DoDamage()
         {
@@ -16,6 +17,11 @@ namespace YooE.Diploma
         public void EndDeathAnimation()
         {
             OnDeathAnimationEnd?.Invoke();
+        }
+
+        public void EndWaitingTransition()
+        {
+            OnWaitingTransitionEnd?.Invoke();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace YooE.Diploma
         [SerializeField] private string _buttonsClickSoundName = "buttonClick";
 
         [SerializeField] private PlayerInteraction _playerInteraction;
+        [SerializeField] private UIAnimationController _uiAnimationController;
         [SerializeField] private GardenViewController _gardenViewController;
         [SerializeField] private LockersViewController _lockersViewController;
 
@@ -30,6 +31,9 @@ namespace YooE.Diploma
             Container.BindInterfacesAndSelfTo<SoundButtonPresenter>().AsCached()
                 .WithArguments(_soundButtonView, _buttonsClickSoundName)
                 .NonLazy();
+            Container.BindInterfacesAndSelfTo<UIAnimationController>().FromInstance(_uiAnimationController).AsCached()
+                .NonLazy();
+
 
             Container.Bind<PlayerInteraction>().FromInstance(_playerInteraction).AsCached()
                 .NonLazy();

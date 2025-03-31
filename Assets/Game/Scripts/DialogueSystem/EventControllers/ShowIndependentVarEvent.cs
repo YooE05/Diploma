@@ -54,4 +54,55 @@ namespace YooE.Diploma
             _variablesPopup.Hide();
         }
     }
+
+    public sealed class ShowQualityDataEvent : DialogueEventController
+    {
+        private readonly DataPopup _dataPopup;
+
+        public ShowQualityDataEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            DataPopup dataPopup) :
+            base(dialogueState, dialogues)
+        {
+            _dataPopup = dataPopup;
+        }
+
+        protected override void StartActions()
+        {
+            _dataPopup.ShowQualityPopup();
+        }
+    }
+
+    public sealed class ShowQuantitativeDataEvent : DialogueEventController
+    {
+        private readonly DataPopup _dataPopup;
+
+        public ShowQuantitativeDataEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            DataPopup dataPopup) :
+            base(dialogueState, dialogues)
+        {
+            _dataPopup = dataPopup;
+        }
+
+        protected override void StartActions()
+        {
+            _dataPopup.ShowQuantitativePopup();
+        }
+    }
+
+    public sealed class HideDataEvent : DialogueEventController
+    {
+        private readonly DataPopup _dataPopup;
+
+        public HideDataEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            DataPopup dataPopup) :
+            base(dialogueState, dialogues)
+        {
+            _dataPopup = dataPopup;
+        }
+
+        protected override void StartActions()
+        {
+            _dataPopup.Hide();
+        }
+    }
 }

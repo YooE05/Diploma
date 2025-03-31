@@ -54,6 +54,8 @@ namespace YooE.Diploma
                 _stageInitializers[needInitializerId].InitGameView();
                 return;
             }
+
+            _stageInitializers[^1].InitGameView();
         }
 
         public void InitGameViewBySave()

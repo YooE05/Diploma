@@ -30,6 +30,7 @@ namespace YooE.Diploma
             for (var i = 0; i < _taskList.Count; i++)
             {
                 _taskList[i].text = i + 1 <= tasks.Count ? tasks[i] : string.Empty;
+                _taskList[i].fontStyle = _taskList[i].fontStyle & ~FontStyles.Strikethrough;
             }
         }
 

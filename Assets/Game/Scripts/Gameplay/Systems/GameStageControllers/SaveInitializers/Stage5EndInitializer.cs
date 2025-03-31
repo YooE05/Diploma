@@ -14,6 +14,8 @@ namespace YooE.Diploma
             _startInitializer.InitGameView();
 
             _charactersTransform.MovePlayerToSceneCenter();
+            _charactersTransform.MoveMainNPCToGarden();
+
             _fightZoneInteraction.EnableInteractionAbility();
         }
     }

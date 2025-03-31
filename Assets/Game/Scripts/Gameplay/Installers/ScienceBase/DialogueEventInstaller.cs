@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using DS.ScriptableObjects;
 using UnityEngine;
+using YooE.DialogueSystem;
 using Zenject;
 
 namespace YooE.Diploma
 {
     public class DialogueEventInstaller : MonoInstaller
     {
+        [SerializeField] private CharacterDialogueComponent _mainNPC;
+
         [SerializeField] private List<DSDialogueSO> _saveGameDialogues;
 
         [SerializeField] private List<DSDialogueSO> _startShooterDialogues;
@@ -23,18 +26,27 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _stage3DisableInteractionDialogues;
 
         [SerializeField] private List<DSDialogueSO> _stage4EnableInteractionDialogues;
-        
+
         [SerializeField] private List<DSDialogueSO> _stage5EnableItemsDialogues;
         [SerializeField] private List<DSDialogueSO> _stage5EnableGardenInteractionsDialogues;
-        
+        [SerializeField] private List<DSDialogueSO> _stage5ShowWaitAnimationDialogues;
+        [SerializeField] private List<DSDialogueSO> _stage5GetMeasureStickDialogues;
+        [SerializeField] private List<DSDialogueSO> _stage5GetNotepadDialogues;
+
         //Popups
         [SerializeField] private List<DSDialogueSO> _showIndependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _showDependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _hideVarsDialogues;
 
+        [SerializeField] private List<DSDialogueSO> _showQualityDataDialogues;
+        [SerializeField] private List<DSDialogueSO> _showQuantitativeDataDialogues;
+        [SerializeField] private List<DSDialogueSO> _hideDataDialogues;
+
         [Header("ScienceMethod")]
         //ScienceMethod
-        [SerializeField] private List<DSDialogueSO> _showSMPopupDialogues;
+        [SerializeField]
+        private List<DSDialogueSO> _showSMPopupDialogues;
+
         [SerializeField] private List<DSDialogueSO> _hideSMPopupDialogues;
         [SerializeField] private List<DSDialogueSO> _enableObservationDialogues;
         [SerializeField] private List<DSDialogueSO> _enableHypothesisDialogues;
@@ -52,6 +64,19 @@ namespace YooE.Diploma
             Container.Bind<GoNextMainDialogueEvent>().AsCached().WithArguments(_goNextMainQuestDialogues).NonLazy();
             Container.Bind<HideTaskPanelEvent>().AsCached().WithArguments(_hideTaskPanelDialogues).NonLazy();
 
+            Stage4();
+
+            Container.Bind<EnableStage4InteractionEvent>().AsCached()
+                .WithArguments(_stage4EnableInteractionDialogues)
+                .NonLazy();
+
+            Stage5();
+
+            DialoguePopups();
+        }
+
+        private void Stage4()
+        {
             Container.Bind<Stage3TaskCheckGardenEvent>().AsCached().WithArguments(_stage3CheckGardenDialogues)
                 .NonLazy();
             Container.Bind<Stage3TaskCheckSeparatePlantEvent>().AsCached().WithArguments(_stage3CheckPlantDialogues)
@@ -59,22 +84,29 @@ namespace YooE.Diploma
 
             Container.Bind<EnableStage3InteractionsEvent>().AsCached()
                 .WithArguments(_stage3EnableInteractionDialogues)
-                .NonLazy();    
+                .NonLazy();
             Container.Bind<DisableStage3InteractionsEvent>().AsCached()
                 .WithArguments(_stage3DisableInteractionDialogues)
-                .NonLazy();         
-            Container.Bind<EnableStage4InteractionEvent>().AsCached()
-                .WithArguments(_stage4EnableInteractionDialogues)
                 .NonLazy();
-            
+        }
+
+        private void Stage5()
+        {
             Container.Bind<EnableStage5InteractionsEvent>().AsCached()
                 .WithArguments(_stage5EnableItemsDialogues)
-                .NonLazy();    
+                .NonLazy();
             Container.Bind<EnableGardenStage5InteractionsEvent>().AsCached()
                 .WithArguments(_stage5EnableGardenInteractionsDialogues)
-                .NonLazy();  
-
-            DialoguePopups();
+                .NonLazy();
+            Container.Bind<Stage5ShowWaitAnimationEvent>().AsCached()
+                .WithArguments(_stage5ShowWaitAnimationDialogues, _mainNPC)
+                .NonLazy();
+            Container.Bind<Stage5GetMeasureStickEvent>().AsCached()
+                .WithArguments(_stage5GetMeasureStickDialogues)
+                .NonLazy();
+            Container.Bind<Stage5GetNotepadEvent>().AsCached()
+                .WithArguments(_stage5GetNotepadDialogues)
+                .NonLazy();
         }
 
         private void DialoguePopups()
@@ -84,6 +116,11 @@ namespace YooE.Diploma
             Container.Bind<ShowIndependentVarEvent>().AsCached().WithArguments(_showIndependentVarDialogues).NonLazy();
             Container.Bind<ShowDependentVarEvent>().AsCached().WithArguments(_showDependentVarDialogues).NonLazy();
             Container.Bind<HideVariablesEvent>().AsCached().WithArguments(_hideVarsDialogues).NonLazy();
+
+            Container.Bind<ShowQualityDataEvent>().AsCached().WithArguments(_showQualityDataDialogues).NonLazy();
+            Container.Bind<ShowQuantitativeDataEvent>().AsCached().WithArguments(_showQuantitativeDataDialogues)
+                .NonLazy();
+            Container.Bind<HideDataEvent>().AsCached().WithArguments(_hideDataDialogues).NonLazy();
         }
 
         private void ScienceMethod()

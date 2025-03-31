@@ -7,7 +7,6 @@ namespace YooE.Diploma.Interaction
         [Inject] private Stage4TaskTracker _stage4TaskTracker;
         [Inject] private GardenViewController _gardenViewController;
 
-
         public override void Interact()
         {
             base.Interact();

@@ -14,6 +14,7 @@ namespace YooE.DialogueSystem
 
         [SerializeField] private ScienceMethodPopup _scienceMethodPopup;
         [SerializeField] private VariablesPopup _variablesPopup;
+        [SerializeField] private DataPopup _dataPopup;
         [SerializeField] private TaskPanel _taskPanel;
 
         public override void InstallBindings()
@@ -25,6 +26,7 @@ namespace YooE.DialogueSystem
 
             Container.BindInterfacesAndSelfTo<ScienceMethodPopup>().FromInstance(_scienceMethodPopup).NonLazy();
             Container.BindInterfacesAndSelfTo<VariablesPopup>().FromInstance(_variablesPopup).NonLazy();
+            Container.BindInterfacesAndSelfTo<DataPopup>().FromInstance(_dataPopup).NonLazy();
 
             TaskTrackers();
         }
