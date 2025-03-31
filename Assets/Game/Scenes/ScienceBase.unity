@@ -4203,6 +4203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 645272982275525066, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_text
+      value: "- \u043D\u0430\u0439\u0434\u0438 3 \u0430\u043F\u0435\u043B\u044C\u0441\u0438\u043D\u0430"
+      objectReference: {fileID: 0}
     - target: {fileID: 2323095424506344528, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 66.6499
@@ -4327,6 +4331,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 371.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5247178326273092229, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_text
+      value: "- \u043D\u0430\u0439\u0434\u0438 3 \u0430\u043F\u0435\u043B\u044C\u0441\u0438\u043D\u0430"
+      objectReference: {fileID: 0}
     - target: {fileID: 5258235743679042966, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4346,6 +4354,10 @@ PrefabInstance:
     - target: {fileID: 5258235743679042966, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613562028417159682, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_text
+      value: "- \u043D\u0430\u0439\u0434\u0438 3 \u0430\u043F\u0435\u043B\u044C\u0441\u0438\u043D\u0430"
       objectReference: {fileID: 0}
     - target: {fileID: 7316335068630087236, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_Sprite

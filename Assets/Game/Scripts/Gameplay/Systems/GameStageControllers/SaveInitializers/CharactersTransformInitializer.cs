@@ -19,13 +19,13 @@ namespace YooE.Diploma
             _mainNPC.transform.rotation = _mainNPCCommonPoint.rotation;
 
             _player.transform.position = _playerDoorPoint.position;
-            _player.transform.rotation = _playerDoorPoint.rotation;
+            //_player.transform.rotation = _playerDoorPoint.rotation;
         }
 
         public void MovePlayerToNPC()
         {
             _player.transform.position = _playerNearNPCPoint.position;
-            _player.transform.rotation = _playerNearNPCPoint.rotation;
+            //   _player.transform.rotation = _playerNearNPCPoint.rotation;
         }
 
         public void MoveMainNPCToGarden()
@@ -37,7 +37,7 @@ namespace YooE.Diploma
         public void MovePlayerToSceneCenter()
         {
             _player.transform.position = _playerLabCenterPoint.position;
-            _player.transform.rotation = _playerLabCenterPoint.rotation;
+            // _player.transform.rotation = _playerLabCenterPoint.rotation;
         }
     }
 }
