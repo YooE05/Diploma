@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace YooE.Diploma.Interaction
 {
     public abstract class InteractionComponent : MonoBehaviour, Listeners.IInitListener
     {
         [SerializeField] private GameObject _interactionButtonView;
-        [SerializeField] private Button _interactionButton;
+        [SerializeField] private ButtonView _interactionButton;
 
         private bool _isInteractable;
 
@@ -26,13 +25,13 @@ namespace YooE.Diploma.Interaction
             if (!_isInteractable) return;
 
             _interactionButtonView.SetActive(true);
-            _interactionButton.onClick.AddListener(Interact);
+            _interactionButton.OnButtonClicked += Interact;
         }
 
         public virtual void DisableInteractView()
         {
             _interactionButtonView.SetActive(false);
-            _interactionButton.onClick.RemoveListener(Interact);
+            _interactionButton.OnButtonClicked -= Interact;
         }
 
         public void DisableInteractionAbility()

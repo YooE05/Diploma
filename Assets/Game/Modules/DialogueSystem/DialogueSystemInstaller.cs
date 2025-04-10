@@ -16,6 +16,8 @@ namespace YooE.DialogueSystem
         [SerializeField] private VariablesPopup _variablesPopup;
         [SerializeField] private DataPopup _dataPopup;
         [SerializeField] private TaskPanel _taskPanel;
+        [SerializeField] private GraphPanelInteraction _graphPanel;
+        [SerializeField] private AverageNotesAndConclusionUI _averageNotesPanel;
 
         public override void InstallBindings()
         {
@@ -27,6 +29,9 @@ namespace YooE.DialogueSystem
             Container.BindInterfacesAndSelfTo<ScienceMethodPopup>().FromInstance(_scienceMethodPopup).NonLazy();
             Container.BindInterfacesAndSelfTo<VariablesPopup>().FromInstance(_variablesPopup).NonLazy();
             Container.BindInterfacesAndSelfTo<DataPopup>().FromInstance(_dataPopup).NonLazy();
+
+            Container.BindInterfacesAndSelfTo<GraphPanelInteraction>().FromInstance(_graphPanel).NonLazy();
+            Container.BindInterfacesAndSelfTo<AverageNotesAndConclusionUI>().FromInstance(_averageNotesPanel).NonLazy();
 
             TaskTrackers();
         }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Tutorial.Gameplay;
+using UnityEngine;
 using YooE.Diploma.Interaction;
 using YooE.SaveLoad;
 using Zenject;
@@ -19,6 +20,8 @@ namespace YooE.Diploma
         [SerializeField] private LockersViewController _lockersViewController;
 
         [SerializeField] private FightDoorInteractionComponent _fightDoorInteraction;
+
+        [SerializeField] private NavigationManager _navigationManager;
 
         public override void InstallBindings()
         {
@@ -44,6 +47,9 @@ namespace YooE.Diploma
 
             Container.BindInterfacesAndSelfTo<FightDoorInteractionComponent>().FromInstance(_fightDoorInteraction)
                 .AsCached()
+                .NonLazy();
+
+            Container.BindInterfacesAndSelfTo<NavigationManager>().FromInstance(_navigationManager).AsCached()
                 .NonLazy();
         }
     }

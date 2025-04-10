@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +18,11 @@ namespace YooE
         private void OnEnable()
         {
             _button.onClick.AddListener(InvokeButtonClick);
+        }
+
+        private void InvokeButtonClick()
+        {
+            OnButtonClicked?.Invoke();
         }
 
         private void OnDisable()
@@ -50,11 +57,6 @@ namespace YooE
         public void ClearListeners()
         {
             OnButtonClicked = () => { };
-        }
-
-        private void InvokeButtonClick()
-        {
-            OnButtonClicked?.Invoke();
         }
     }
 }

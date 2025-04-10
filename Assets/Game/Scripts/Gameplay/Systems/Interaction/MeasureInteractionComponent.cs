@@ -12,6 +12,7 @@ namespace YooE.Diploma.Interaction
         private PlayerMotionController _playerMotionController;
         private PlayerInteraction _playerInteraction;
 
+        private bool _getMeasuring;
 
         [Inject]
         public void Construct(Stage5TaskTracker stage5TaskTracker, UIAnimationController uiAnimationController,
@@ -24,10 +25,15 @@ namespace YooE.Diploma.Interaction
 
             _playerMotionController = playerMotionController;
             _playerInteraction = playerInteraction;
+
+            _getMeasuring = false;
         }
 
         public override void Interact()
         {
+            if (_getMeasuring) return;
+
+            _getMeasuring = true;
             base.Interact();
             _uiAnimationController.StartWritingAnimation().Forget();
             _uiAnimationController.OnGetMeasurement += DoneMeasurementActions;

@@ -42,6 +42,12 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _showQuantitativeDataDialogues;
         [SerializeField] private List<DSDialogueSO> _hideDataDialogues;
 
+        [SerializeField] private List<DSDialogueSO> _showAverageNotesDialogues;
+        [SerializeField] private List<DSDialogueSO> _hideAverageNotesDialogues;
+        [SerializeField] private List<DSDialogueSO> _showGraphDialogues;
+        [SerializeField] private List<DSDialogueSO> _showConclusionPopupDialogues;
+        [SerializeField] private List<DSDialogueSO> _hideConclusionPopupDialogues;
+
         [Header("ScienceMethod")]
         //ScienceMethod
         [SerializeField]
@@ -64,18 +70,14 @@ namespace YooE.Diploma
             Container.Bind<GoNextMainDialogueEvent>().AsCached().WithArguments(_goNextMainQuestDialogues).NonLazy();
             Container.Bind<HideTaskPanelEvent>().AsCached().WithArguments(_hideTaskPanelDialogues).NonLazy();
 
-            Stage4();
-
-            Container.Bind<EnableStage4InteractionEvent>().AsCached()
-                .WithArguments(_stage4EnableInteractionDialogues)
-                .NonLazy();
-
+            Stage34();
             Stage5();
+            Stage6();
 
             DialoguePopups();
         }
 
-        private void Stage4()
+        private void Stage34()
         {
             Container.Bind<Stage3TaskCheckGardenEvent>().AsCached().WithArguments(_stage3CheckGardenDialogues)
                 .NonLazy();
@@ -87,6 +89,10 @@ namespace YooE.Diploma
                 .NonLazy();
             Container.Bind<DisableStage3InteractionsEvent>().AsCached()
                 .WithArguments(_stage3DisableInteractionDialogues)
+                .NonLazy();
+
+            Container.Bind<EnableStage4InteractionEvent>().AsCached()
+                .WithArguments(_stage4EnableInteractionDialogues)
                 .NonLazy();
         }
 
@@ -106,6 +112,25 @@ namespace YooE.Diploma
                 .NonLazy();
             Container.Bind<Stage5GetNotepadEvent>().AsCached()
                 .WithArguments(_stage5GetNotepadDialogues)
+                .NonLazy();
+        }
+
+        private void Stage6()
+        {
+            Container.Bind<Stage6ShowAverageNotesEvent>().AsCached()
+                .WithArguments(_showAverageNotesDialogues)
+                .NonLazy();
+            Container.Bind<Stage6HideAverageNotesEvent>().AsCached()
+                .WithArguments(_hideAverageNotesDialogues)
+                .NonLazy();
+            Container.Bind<Stage6ShowGraphEvent>().AsCached()
+                .WithArguments(_showGraphDialogues)
+                .NonLazy();
+            Container.Bind<Stage6ShowConclusionPopupEvent>().AsCached()
+                .WithArguments(_showConclusionPopupDialogues)
+                .NonLazy();
+            Container.Bind<Stage6HideConclusionPopupEvent>().AsCached()
+                .WithArguments(_hideConclusionPopupDialogues)
                 .NonLazy();
         }
 
