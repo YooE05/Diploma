@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace YooE.Diploma
@@ -16,6 +17,12 @@ namespace YooE.Diploma
 
         public void EndDeathAnimation()
         {
+            DeathDelayAsync().Forget();
+        }
+
+        private async UniTaskVoid DeathDelayAsync()
+        {
+            await UniTask.WaitForSeconds(1f);
             OnDeathAnimationEnd?.Invoke();
         }
 
