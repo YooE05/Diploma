@@ -1,5 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1822745448982257095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3621748152039433010}
+  - component: {fileID: 6792400413414448809}
+  - component: {fileID: 2444548319749795019}
+  m_Layer: 0
+  m_Name: TargetsCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3621748152039433010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822745448982257095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5497341354625599641}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6792400413414448809
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822745448982257095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2444548319749795019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822745448982257095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49ea211603c40709e1308c3ffe21804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3207008342682301884
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +100,7 @@ Transform:
   - {fileID: 2471118222479728924}
   - {fileID: 4087880050590537894}
   - {fileID: 5928500938113133446}
+  - {fileID: 3621748152039433010}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,6 +145,7 @@ MonoBehaviour:
   <Agent>k__BackingField: {fileID: 3537648478829149097}
   <HitPointsComponent>k__BackingField: {fileID: 5491240200765447850}
   <AnimationEvents>k__BackingField: {fileID: 4728210877501344012}
+  <TargetsCollector>k__BackingField: {fileID: 2444548319749795019}
 --- !u!114 &5491240200765447850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +255,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5497341354625599641}
     m_Modifications:
+    - target: {fileID: 549367897848709288, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 549367897848709288, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

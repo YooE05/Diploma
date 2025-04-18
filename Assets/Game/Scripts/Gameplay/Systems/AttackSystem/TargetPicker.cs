@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
 namespace YooE.Diploma
 {
-    public sealed class TargetPicker
+  public sealed class TargetPicker
     {
         private readonly TargetSensor _targetsSensor;
         private readonly Transform _targetsOverlapCenter;

@@ -13,6 +13,7 @@ namespace YooE.Diploma
         [field: SerializeField] public NavMeshAgent Agent { get; private set; }
         [field: SerializeField] public HitPointsComponent HitPointsComponent { get; private set; }
         [field: SerializeField] public AnimationEvents AnimationEvents { get; private set; }
+        [field: SerializeField] public TargetsCollector TargetsCollector { get; private set; }
 
         public Transform Transform => _enemyGO.transform;
 
