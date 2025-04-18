@@ -30,7 +30,7 @@ namespace YooE.Diploma
         {
             View.HitPointsComponent.SetStartHp(_enemyConfig.HitPoints);
             _targetSearcher =
-                new EnemyTargetSearcher(View.Transform, View.TargetsCollector, _enemyConfig.WaitPlayerSensorConfig,
+                new EnemyTargetSearcher(View.TargetsCollector, _enemyConfig.WaitPlayerSensorConfig,
                     _enemyConfig.FollowPlayerSensorConfig);
             _motionController =
                 new EnemyMotionController(View, _enemyConfig.RotationSpeed, _enemyConfig.MovementSpeed,

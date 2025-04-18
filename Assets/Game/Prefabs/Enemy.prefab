@@ -357,6 +357,10 @@ PrefabInstance:
       propertyPath: _visualGO
       value: 
       objectReference: {fileID: 5928500938113133446}
+    - target: {fileID: 2731486948499422839, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
+      propertyPath: NeedCanvasFollow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4224104361934921905, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_UiScaleMode
       value: 1

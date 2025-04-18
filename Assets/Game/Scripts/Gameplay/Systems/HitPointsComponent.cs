@@ -16,6 +16,11 @@ namespace YooE.Diploma
 
         private void Awake()
         {
+            if (_startHp == 0)
+            {
+                _startHp = HitPoints;
+            }
+
             _hpSlider?.SetNewValue(1f);
         }
 
@@ -30,10 +35,10 @@ namespace YooE.Diploma
             _hpSlider?.SetNewValue(HitPoints / (float)_startHp);
         }
 
-        public void SetStartHp(int enemyConfigHitPoints)
+        public void SetStartHp(int configHitPoints)
         {
-            _startHp = enemyConfigHitPoints;
-            HitPoints = enemyConfigHitPoints;
+            _startHp = configHitPoints;
+            HitPoints = configHitPoints;
         }
     }
 }

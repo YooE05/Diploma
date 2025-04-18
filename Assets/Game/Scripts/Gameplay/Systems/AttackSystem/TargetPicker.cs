@@ -1,30 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
 namespace YooE.Diploma
 {
-  public sealed class TargetPicker
+    public sealed class TargetPicker
     {
-        private readonly TargetSensor _targetsSensor;
+        private readonly TargetsCollector _targetsCollector;
         private readonly Transform _targetsOverlapCenter;
         private Vector3 OverlapCenterPosition => _targetsOverlapCenter.position;
 
         private readonly List<Collider> _currentGetTargets = new();
 
-        public TargetPicker(Transform targetsOverlapCenter, TargetSensor targetsSensor)
+        public TargetPicker(TargetSensorConfig targetSensorConfig, Transform targetsOverlapCenter,
+            TargetsCollector targetsCollector)
         {
             _targetsOverlapCenter = targetsOverlapCenter;
-            _targetsSensor = targetsSensor;
+            _targetsCollector = targetsCollector;
+            _targetsCollector.Init(targetSensorConfig);
         }
 
         public bool TryGetNClosestTargets(int countOfWeapons, out List<Collider> closestTargetPosition)
         {
             closestTargetPosition = new List<Collider>();
             _currentGetTargets.Clear();
-            _currentGetTargets.AddRange(
-                _targetsSensor.FindPossibleTargets(OverlapCenterPosition, out var targetsCount));
+            _currentGetTargets.AddRange(_targetsCollector.GetRegisteredObjects());
+            var targetsCount = _currentGetTargets.Count;
             _currentGetTargets.RemoveRange(targetsCount, _currentGetTargets.Count - targetsCount);
             if (targetsCount == 0) return false;
 

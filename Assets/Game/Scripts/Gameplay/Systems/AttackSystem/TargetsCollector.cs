@@ -35,6 +35,15 @@ namespace YooE.Diploma
             _collider.radius = _radius;
         }
 
+        void Update()
+        {
+            for (var i = _objects.Count - 1; i >= 0; i--)
+            {
+                if (!_objects[i].enabled)
+                    _objects.RemoveAt(i);
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (!_isInited) return;

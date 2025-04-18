@@ -8,10 +8,11 @@ namespace YooE.Diploma
         [SerializeField] private RectTransform _healthBarRect;
         [SerializeField] private Transform _visualGO;
 
-        public bool NeedShowHp;
+        public bool NeedCanvasFollow = true;
         private Camera _camera;
 
         [SerializeField] private SliderView _sliderView;
+        [SerializeField] private bool _needHideWhenEmpty = true;
 
         private void Start()
         {
@@ -20,7 +21,7 @@ namespace YooE.Diploma
 
         private void Update()
         {
-            if (!NeedShowHp) return;
+            if (!NeedCanvasFollow) return;
             if (_healthBarRect == null) return;
 
             var worldPosition = _visualGO.position + _offset;
@@ -30,12 +31,16 @@ namespace YooE.Diploma
 
         public void SetNewValue(float newValue)
         {
-            Debug.Log(newValue);
-
             if (_sliderView == null) return;
+
             if (newValue <= 0)
             {
-                _sliderView.gameObject.SetActive(false);
+                if (_needHideWhenEmpty)
+                {
+                    _sliderView.gameObject.SetActive(false);
+                }
+
+                _sliderView.SetSliderValue(0);
                 return;
             }
 
