@@ -113,7 +113,8 @@ namespace YooE.Diploma
         {
             var stringDefeatPercent = ((int)_enemyBrainsInitializer.GetDefeatPercent()).ToString();
             var time = new TimeSpan(0, 0, (int)_timer.CurrentTime);
-            var stringSpentTime = $"{time.Minutes} : {time.Seconds}";
+            var stringSpentTime = $"{time.Minutes}:";
+            stringSpentTime += time.Seconds < 10 ? $"0{time.Seconds}" : $"{time.Seconds}";
             _shooterPopupsView.SetupEndPopup(stringDefeatPercent, stringSpentTime);
         }
     }

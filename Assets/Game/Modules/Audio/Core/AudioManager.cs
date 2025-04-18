@@ -81,7 +81,7 @@ namespace Audio
             TryGetSnapshot(AudioManagerStaticData.PAUSE_SNAPSHOT_NAME, out _disableSnapshot);
             TryGetSnapshot(AudioManagerStaticData.UNPAUSE_SNAPSHOT_NAME, out _enableSnapshot);
 
-            SetVolume();
+            //SetVolume();
             InitializeLayers();
         }
 
@@ -244,7 +244,7 @@ namespace Audio
             };
 
             _audioLocalSaver.Construct(volumes);
-            SetVolume();
+           // SetVolume();
 
             _isSoundsOn = data.IsSoundOn;
             Transition(_isSoundsOn ? _enableSnapshot : _disableSnapshot);

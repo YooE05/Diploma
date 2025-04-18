@@ -14,8 +14,8 @@ namespace Audio
         public const string UNPAUSE_SNAPSHOT_NAME = "UnPause";      
         public const string DISABLE_SNAPSHOT_NAME = "Disable";
         public const string ENABLE_SNAPSHOT_NAME = "Enable";
-        
-        public const float TRANSITION_DEFAULT_TIME = 0.001f;
+
+        public const float TRANSITION_DEFAULT_TIME = 0f;//0.001f;
         public const float CHANNEL_VOLUME_DEFAULT = 0.0f;
         public const float CHANNEL_VOLUME_MAXIMUM = 0.0f;
         public const float CHANNEL_VOLUME_MINIMUM = -80.0f;

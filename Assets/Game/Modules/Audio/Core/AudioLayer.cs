@@ -35,7 +35,7 @@ namespace Audio
 
             _audioSource.clip = clip;
             _audioSource.volume = volumeScale;
-            _audioSource.Play();
+            _audioSource.PlayDelayed(0.01f);
         }
 
         public void SetPosition(Vector3 position)

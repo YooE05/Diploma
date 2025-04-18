@@ -32,7 +32,7 @@ namespace YooE.Diploma
 
         private void OnSoundButtonClicked(bool isEnable)
         {
-            if (_audioManager.TryGetAudioClipByName(_clipName, out AudioClip audioClip))
+            if (_audioManager.TryGetAudioClipByName(_clipName, out var audioClip))
             {
                 _audioManager.PlaySound(audioClip, AudioOutput.UI);
             }
@@ -49,7 +49,7 @@ namespace YooE.Diploma
         public void Dispose()
         {
             _audioManager.OnNewSettingsSet -= InitGameplayScreenView;
-            _soundButtonView.OnSoundButtonClicked -= _audioManager.SetSoundsEnabling;
+            _soundButtonView.OnSoundButtonClicked -= OnSoundButtonClicked; //_audioManager.SetSoundsEnabling;
         }
     }
 }

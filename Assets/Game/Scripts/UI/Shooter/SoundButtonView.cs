@@ -1,7 +1,5 @@
 ﻿using System;
-using Audio;
 using UnityEngine;
-using Zenject;
 
 namespace YooE.Diploma
 {
