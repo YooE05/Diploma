@@ -428,6 +428,17 @@ Transform:
   m_Father: {fileID: 997662013}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507840631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7014544996240857261, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+  m_PrefabInstance: {fileID: 162375585447597691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d7e00ad6644efcabc543e399c59a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &515188326 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1923037180367348790, guid: f3b177096901c7a43bc4e139e9d6b8d8, type: 3}
@@ -1497,7 +1508,7 @@ MonoBehaviour:
   _scienceMethodPopup: {fileID: 1377645363}
   _variablesPopup: {fileID: 3199086839326872314}
   _dataPopup: {fileID: 2234115870435508755}
-  _taskPanel: {fileID: 1988194950}
+  _taskPanel: {fileID: 507840631}
   _graphPanel: {fileID: 433833883}
   _averageNotesPanel: {fileID: 162375585447597700}
 --- !u!114 &1289871834
@@ -2269,17 +2280,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1988194950 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7427868585225373057, guid: d30969a502530684ca17c13aa70f392f, type: 3}
-  m_PrefabInstance: {fileID: 162375585447597691}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08d7e00ad6644efcabc543e399c59a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2011931253 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2995098048633061642, guid: 85fbea06923e70b4f893c38c4f40d88c, type: 3}
@@ -2455,6 +2455,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4610549402524049324, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4882642579488066526, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_Name
       value: '[ScienceBaseCanvas]'
@@ -2524,7 +2528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -129, y: -328.13}
+  m_AnchoredPosition: {x: -129, y: 0}
   m_SizeDelta: {x: 213.26001, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &604066771905389887 stripped
@@ -2826,7 +2830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -129, y: -215.83}
+  m_AnchoredPosition: {x: -129, y: 0}
   m_SizeDelta: {x: 213.26001, y: 86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747659783375404714
@@ -3410,8 +3414,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Reload
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
-  m_sharedMaterial: {fileID: -6952921308463103417, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
+  m_sharedMaterial: {fileID: 1413921694796591244, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3913,8 +3917,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Reset
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
-  m_sharedMaterial: {fileID: -6952921308463103417, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
+  m_sharedMaterial: {fileID: 1413921694796591244, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

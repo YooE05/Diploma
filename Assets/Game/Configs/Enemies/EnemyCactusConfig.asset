@@ -17,5 +17,5 @@ MonoBehaviour:
   <AttackRangeSensorConfig>k__BackingField: {fileID: 11400000, guid: d92b5f948fdad9340aee4ef9a035a343, type: 2}
   <RotationSpeed>k__BackingField: 4
   <MovementSpeed>k__BackingField: 2
-  <Damage>k__BackingField: 2
-  <HitPoints>k__BackingField: 7
+  <Damage>k__BackingField: 0
+  <HitPoints>k__BackingField: 15

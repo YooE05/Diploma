@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
 namespace YooE.Diploma
@@ -53,16 +54,24 @@ namespace YooE.Diploma
 
         public async UniTaskVoid StartNotebookPickAnimation()
         {
+            _notepadPickPopup.transform.DOScale(0f, 0f).SetLink(_notepadPickPopup);
             _notepadPickPopup.gameObject.SetActive(true);
+            _notepadPickPopup.transform.DOScale(1f, 0.5f).SetLink(_notepadPickPopup);
             await AsyncCountdown(_timeToPickupAnimation);
+            _notepadPickPopup.transform.DOScale(0f, 0.5f).SetLink(_notepadPickPopup);
+            await AsyncCountdown(0.5f);
             _notepadPickPopup.gameObject.SetActive(false);
             OnItemPicked?.Invoke();
         }
 
         public async UniTaskVoid StartMeasureStickPickAnimation()
         {
+            _measureStickPickPopup.transform.DOScale(0f, 0f).SetLink(_measureStickPickPopup);
             _measureStickPickPopup.gameObject.SetActive(true);
+            _measureStickPickPopup.transform.DOScale(1f, 0.5f).SetLink(_measureStickPickPopup);
             await AsyncCountdown(_timeToPickupAnimation);
+            _measureStickPickPopup.transform.DOScale(0f, 0.5f).SetLink(_measureStickPickPopup);
+            await AsyncCountdown(0.5f);
             _measureStickPickPopup.gameObject.SetActive(false);
             OnItemPicked?.Invoke();
         }

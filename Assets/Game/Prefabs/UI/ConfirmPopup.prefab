@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You want go to the fight?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
-  m_sharedMaterial: {fileID: -6952921308463103417, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
+  m_sharedMaterial: {fileID: 1413921694796591244, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,8 +203,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: No
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
-  m_sharedMaterial: {fileID: -6952921308463103417, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
+  m_sharedMaterial: {fileID: 1413921694796591244, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -564,7 +564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8397139780044017713
 RectTransform:
   m_ObjectHideFlags: 0
@@ -639,10 +639,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a07ec4375c5dd4685b3d1b48c6e7d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _confirmButton: {fileID: 6440362088322310253}
-  _declineButton: {fileID: 8738033095092566763}
   _closeButton: {fileID: 411627715731837014}
   _popupGameObject: {fileID: 5890675568749479957}
+  _confirmButton: {fileID: 6440362088322310253}
+  _declineButton: {fileID: 8738033095092566763}
 --- !u!1 &6139734249017851663
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1243543306614462433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -848,8 +848,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Yes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
-  m_sharedMaterial: {fileID: -6952921308463103417, guid: b8889e0215f60364cbdf41cc83d9e342, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
+  m_sharedMaterial: {fileID: 1413921694796591244, guid: efa720dd1e607e0479a2aba353586eb2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
