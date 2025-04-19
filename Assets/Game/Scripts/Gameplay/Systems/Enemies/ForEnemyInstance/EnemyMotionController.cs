@@ -44,6 +44,11 @@ namespace YooE.Diploma
             //  _enemyTargetSearcher.OnTargetChanged += SetNewTarget;
         }
 
+        public void StopMotion()
+        {
+            _enemyView.SetAnimatorTrigger("IsFinish");
+        }
+
         public void MoveAndRotate()
         {
             if (_needRotate)

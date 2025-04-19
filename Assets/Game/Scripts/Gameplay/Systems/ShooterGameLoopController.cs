@@ -17,6 +17,7 @@ namespace YooE.Diploma
         private SaveLoadManager _saveLoadManager;
         private AudioManager _audioManager;
         private CharactersDataHandler _charactersDataHandler;
+        [SerializeField] private ShooterEndZone _shooterEndZone;
 
         [SerializeField] private string _nextSceneName;
         [SerializeField] private AudioClip _audioClip;
@@ -35,6 +36,7 @@ namespace YooE.Diploma
 
             _saveLoadManager = saveLoadManager;
             _enemyWaveObserver.OnAllEnemiesDead += FinishGame;
+            if (_shooterEndZone != null) _shooterEndZone.OnFinish += FinishGame;
         }
 
         private void Start()
@@ -55,6 +57,7 @@ namespace YooE.Diploma
         private void FinishGame()
         {
             _enemyWaveObserver.OnAllEnemiesDead -= FinishGame;
+            if (_shooterEndZone != null) _shooterEndZone.OnFinish -= FinishGame;
             if (_playerBrain.IsDead) return;
 
             _timer.StopTimer();

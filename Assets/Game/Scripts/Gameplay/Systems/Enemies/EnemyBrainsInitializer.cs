@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace YooE.Diploma
 {
-    public sealed class EnemyBrainsInitializer : Listeners.IStartListener, Listeners.IUpdateListener
+    public sealed class EnemyBrainsInitializer : Listeners.IStartListener, Listeners.IUpdateListener,
+        Listeners.IFinishListener
     {
         public event Action<int, int> OnLiveEnemiesCountChanged;
         public event Action<EnemyBrain> OnBrainDied;
@@ -18,6 +19,14 @@ namespace YooE.Diploma
             for (var i = 0; i < EnemiesCount; i++)
             {
                 _enemyBrains[i].Update();
+            }
+        }
+
+        public void OnFinish()
+        {
+            for (var i = 0; i < EnemiesCount; i++)
+            {
+                _enemyBrains[i].AfterFinishState();
             }
         }
 

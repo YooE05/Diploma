@@ -55,6 +55,12 @@ namespace YooE.Diploma
             _targetSearcher.TryFindPlayer();
         }
 
+        public void AfterFinishState()
+        {
+            if (_canAct)
+                _motionController.StopMotion();
+        }
+
         private void DeathStartActions()
         {
             _canAct = false;
