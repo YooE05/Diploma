@@ -8,8 +8,8 @@ namespace YooE.Diploma
         private readonly TargetPicker _targetPicker;
         private readonly WeaponView[] _weaponsView;
         private readonly BulletsSystem _bulletsSystem;
-        private readonly ShootingConfig _shootingConfig;
         private readonly UpdateTimer _timer;
+        private ShootingConfig _shootingConfig;
 
         private float _nextShotTime;
         private bool _canShoot;
@@ -66,6 +66,11 @@ namespace YooE.Diploma
         {
             _canShoot = false;
             HideWeapons();
+        }
+
+        public void ChangeShootingConfig(ShootingConfig shootingConfig)
+        {
+            _shootingConfig = shootingConfig;
         }
 
         private void SetTargetsOnWeapons(List<Collider> targets)

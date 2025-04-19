@@ -9,6 +9,7 @@ namespace YooE
     public class ButtonView : MonoBehaviour
     {
         public event Action OnButtonClicked;
+        public event Action<ButtonView> OnCurrentButtonClicked;
 
         [SerializeField] protected Button _button;
 
@@ -23,6 +24,7 @@ namespace YooE
         private void InvokeButtonClick()
         {
             OnButtonClicked?.Invoke();
+            OnCurrentButtonClicked?.Invoke(this);
         }
 
         private void OnDisable()

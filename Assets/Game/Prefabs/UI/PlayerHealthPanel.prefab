@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.2999878, y: 0}
+  m_AnchoredPosition: {x: -0.2999878, y: 0}
   m_SizeDelta: {x: 9.399969, y: 0.00000059604645}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2911009369503977578
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1022973338495511850}
   - component: {fileID: 9129995528689267907}
   m_Layer: 5
-  m_Name: EnemiesSlider
+  m_Name: PlayerHpSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 8506606280178159321}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
@@ -181,6 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1022973338495511850}
+  _duration: 0.5
+  _initValue: 1
   _sliderText: {fileID: 9162921925216074581}
 --- !u!1 &3374509921567865736
 GameObject:
@@ -269,6 +271,7 @@ GameObject:
   - component: {fileID: 7850960611289312924}
   - component: {fileID: 2991733594290267866}
   - component: {fileID: 8546444181564370866}
+  - component: {fileID: 2279566192851990139}
   m_Layer: 5
   m_Name: PlayerHealthPanel
   m_TagString: Untagged
@@ -336,6 +339,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2279566192851990139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429387081348595406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4971e7722f87f4083f595f33a252bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offset: {x: 0, y: 2, z: 0}
+  _healthBarRect: {fileID: 0}
+  _visualGO: {fileID: 0}
+  NeedCanvasFollow: 0
+  _sliderView: {fileID: 9129995528689267907}
+  _needHideWhenEmpty: 0
 --- !u!1 &3608439620490489935
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,12 +445,12 @@ GameObject:
   - component: {fileID: 7390671535839168956}
   - component: {fileID: 9162921925216074581}
   m_Layer: 5
-  m_Name: EnemyCountText
+  m_Name: PlayerHpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &899471427612081493
 RectTransform:
   m_ObjectHideFlags: 0
