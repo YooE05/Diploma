@@ -257,15 +257,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 549367897848709288, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.457
       objectReference: {fileID: 0}
     - target: {fileID: 549367897848709288, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2366624099901844318, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_Name
       value: HpBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366624099901844318, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2731486948499422839, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: _visualGO

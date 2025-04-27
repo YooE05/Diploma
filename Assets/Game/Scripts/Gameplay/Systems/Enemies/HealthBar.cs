@@ -13,10 +13,15 @@ namespace YooE.Diploma
 
         [SerializeField] private SliderView _sliderView;
         [SerializeField] private bool _needHideWhenEmpty = true;
+        [SerializeField] private bool _needHideBeforeDamage = true;
 
         private void Start()
         {
             _camera = Camera.main;
+            if (_needHideBeforeDamage)
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         private void Update()
@@ -32,6 +37,7 @@ namespace YooE.Diploma
         public void SetNewValue(float newValue)
         {
             if (_sliderView == null) return;
+            gameObject.SetActive(true);
 
             if (newValue <= 0)
             {

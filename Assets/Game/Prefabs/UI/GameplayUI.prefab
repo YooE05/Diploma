@@ -980,69 +980,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6241771045870522324}
     m_Modifications:
-    - target: {fileID: 251294765439383321, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 251294765439383321, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 251294765439383321, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 251294765439383321, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 251294765439383321, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3240516480320604274, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
       propertyPath: m_Name
       value: WeaponsMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3469373447446482996, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3469373447446482996, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3469373447446482996, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3469373447446482996, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3469373447446482996, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3519587122709204174, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3519587122709204174, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3519587122709204174, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3519587122709204174, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3519587122709204174, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5140503693676552875, guid: c434552cac6250a4b85fdcc4464b56f6, type: 3}
       propertyPath: m_Pivot.x
@@ -1146,6 +1086,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6241771045870522324}
     m_Modifications:
+    - target: {fileID: 2279566192851990139, guid: 349df654e2dbcb248a5de24e780e02b7, type: 3}
+      propertyPath: _needHideBeforeDamage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3429387081348595406, guid: 349df654e2dbcb248a5de24e780e02b7, type: 3}
       propertyPath: m_Name
       value: PlayerHealthPanel

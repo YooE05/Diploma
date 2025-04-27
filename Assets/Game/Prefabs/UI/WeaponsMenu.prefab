@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7488828640099046004}
   - component: {fileID: 4693205903175526447}
   - component: {fileID: 2185540513279320622}
+  - component: {fileID: 380729961922538060}
   m_Layer: 5
   m_Name: WeaponsMenu
   m_TagString: Untagged
@@ -106,6 +107,26 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &380729961922538060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240516480320604274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555c60a6aa8242ab9cf19d700d57d56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponButtons:
+  - {fileID: 8252408615868527329}
+  - {fileID: 2682876421842668357}
+  - {fileID: 3867710385001257975}
+  _shootingConfigs:
+  - {fileID: 11400000, guid: 4810857454e5bde4287150c2866a1467, type: 2}
+  - {fileID: 11400000, guid: ebaf3cc0c2dfaf94d9a37e2f3b60f67e, type: 2}
+  - {fileID: 11400000, guid: 59de55a742c9719428972b093b2b7297, type: 2}
 --- !u!1 &5113410214091533620
 GameObject:
   m_ObjectHideFlags: 0

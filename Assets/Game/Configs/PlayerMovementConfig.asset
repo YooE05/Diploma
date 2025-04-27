@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MovingThreshold>k__BackingField: 0.01
   <RunAcceleration>k__BackingField: 50
-  <RunSpeed>k__BackingField: 4
+  <RunSpeed>k__BackingField: 7
   <Drag>k__BackingField: 20
   <YVelocity>k__BackingField: -5
-  <RotationSpeed>k__BackingField: 6
+  <RotationSpeed>k__BackingField: 10
   <AnimationsBlendSpeed>k__BackingField: 10

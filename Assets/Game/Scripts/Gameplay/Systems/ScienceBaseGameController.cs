@@ -50,7 +50,9 @@ namespace YooE.Diploma
             _audioManager.PlaySound(null, AudioOutput.Music);
             _saveLoadManager.SaveGame();
 
-            SceneManager.LoadScene(_shooterSceneName);
+            // LoadShooterScene(_scientistCharacterComponent.GetCharacterData().GroupIndex);
+
+            LoadShooterScene(_scientistCharacterComponent.GetCharacterData().GroupIndex);
 
             /*if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
             {
@@ -61,7 +63,23 @@ namespace YooE.Diploma
                 SceneManager.LoadScene(_shooterSceneName);
             }*/
         }
-        
+
+        private void LoadShooterScene(int mainDialogueGroupIndex)
+        {
+            var sceneName = mainDialogueGroupIndex switch
+            {
+                0 => "ShooterTutorial",
+                2 => "Shooter1",
+                6 => "Shooter2",
+                10 => "Shooter3",
+                17 => "Shooter4",
+                19 => "Shooter5",
+                _ => "ShooterEndless"
+            };
+
+            SceneManager.LoadScene(sceneName);
+        }
+
         [Button]
         public void ResetGame()
         {
