@@ -24,7 +24,8 @@ namespace YooE.Diploma
 
         //EndStage
         [SerializeField] private GameObject _endGardenGO;
-
+        [SerializeField] private InteractionComponent _endGardenGOInteraction;
+        
         public void OnInit()
         {
             HideView();
@@ -128,6 +129,7 @@ namespace YooE.Diploma
         public void ShowEndStageGarden()
         {
             _endGardenGO.SetActive(true);
+            _endGardenGOInteraction.EnableInteractionAbility();
         }
     }
 }

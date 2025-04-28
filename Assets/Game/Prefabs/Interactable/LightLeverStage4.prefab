@@ -99,6 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactionButtonView: {fileID: 1128207088176304900}
   _interactionButton: {fileID: 8841913748480277619}
+  _lightGO: {fileID: 0}
+  _smallLightMeshRenderer: {fileID: 0}
+  _middleLightMeshRenderer: {fileID: 0}
+  _bigLightMeshRenderer: {fileID: 0}
+  _smallLightAlfa: 0.227451
+  _middleLightAlfa: 0.282353
+  _bigLightAlfa: 0.6431373
 --- !u!1 &5656078987503893903
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6157590972336339630
 Transform:
   m_ObjectHideFlags: 0
@@ -122,7 +129,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5656078987503893903}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.02, y: 0.65, z: -9.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -150,7 +157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8206966712231926145
 Transform:
   m_ObjectHideFlags: 0
@@ -363,11 +370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3753513452908291618, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
       propertyPath: m_text
-      value: "\u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C"
+      value: "\u0432\u043A\u043B\u044E\u0447\u0438\u0442\u044C"
       objectReference: {fileID: 0}
     - target: {fileID: 3753513452908291618, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
       propertyPath: m_fontSize
-      value: 19.15
+      value: 20.25
       objectReference: {fileID: 0}
     - target: {fileID: 4912401729911384177, guid: 0fb043edab47be14b9b78f56c89e7625, type: 3}
       propertyPath: m_PresetInfoIsWorld

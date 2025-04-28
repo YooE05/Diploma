@@ -14,7 +14,7 @@ namespace YooE.Diploma
         private readonly LayerMask _layerMask;
 
         private readonly Vector2 _screenCenter;
-        private bool _canAct;
+        public bool СanAct;
 
         public PlayerMotionController(PlayerAnimation playerAnimation, PlayerMovement playerMovement,
             PlayerRotation playerRotation, Camera playerCamera, PlayerInput playerInput, Transform playerTransform,
@@ -29,18 +29,24 @@ namespace YooE.Diploma
             _layerMask = layerWithoutPlayer;
 
             DisableMotion();
+            СanAct = true;
 
             _screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
         }
 
         public void OnStart()
         {
-            EnableMotion();
+            if (СanAct)
+                EnableMotion();
+            else
+            {
+                DisableMotion();
+            }
         }
 
         public void OnUpdate(float deltaTime)
         {
-            if (!_canAct) return;
+            if (!СanAct) return;
 
             var moveOffset = GetMoveOffset();
             var direction = GetMovementDirection(moveOffset);
@@ -52,13 +58,13 @@ namespace YooE.Diploma
 
         public void EnableMotion()
         {
-            _canAct = true;
+            СanAct = true;
             _playerMovement.EnableCharacterControllerComponent();
         }
 
         public void DisableMotion()
         {
-            _canAct = false;
+            СanAct = false;
 
             _playerAnimation.StopMoveAnimation();
             _playerMovement.DisableCharacterControllerComponent();
@@ -79,7 +85,7 @@ namespace YooE.Diploma
             }*/
 
             var offset = _playerInput.LastPointerScreenPosition - _screenCenter;
-          //  Debug.Log(_playerInput.LastPointerScreenPosition + " " + _screenCenter + " = " + offset + " norm = " + offset.normalized);
+            //  Debug.Log(_playerInput.LastPointerScreenPosition + " " + _screenCenter + " = " + offset + " norm = " + offset.normalized);
 
             return offset.normalized;
         }

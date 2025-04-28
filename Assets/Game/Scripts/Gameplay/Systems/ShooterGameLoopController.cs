@@ -75,7 +75,7 @@ namespace YooE.Diploma
 
         public void GoNextLevel()
         {
-            SceneManager.LoadScene("ScienceBase"); //(_nextSceneName);
+            SceneManager.LoadScene("ScienceBaseVisual"); //(_nextSceneName);
         }
 
         [Button]

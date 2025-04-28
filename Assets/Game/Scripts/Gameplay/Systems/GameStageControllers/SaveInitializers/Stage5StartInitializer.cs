@@ -1,12 +1,11 @@
-﻿using UnityEngine;
-using YooE.Diploma.Interaction;
+﻿using YooE.Diploma.Interaction;
 using Zenject;
 
 namespace YooE.Diploma
 {
     public sealed class Stage5StartInitializer : StageInitializer
     {
-        [SerializeField] private GardenViewController _gardenView;
+        [Inject] private GardenViewController _gardenView;
         [Inject] private FightDoorInteractionComponent _fightZoneInteraction;
 
         public override void InitGameView()

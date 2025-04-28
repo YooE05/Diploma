@@ -14,6 +14,7 @@ namespace YooE.Diploma
 
         public override void InitGameView()
         {
+            base.InitGameView();
             _gardenView.ShowEndStageGarden();
         }
     }
