@@ -343,52 +343,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 549367897848709288, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.457
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 549367897848709288, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2366624099901844318, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_Name
       value: HpBarCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2366624099901844318, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2731486948499422839, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: _visualGO
       value: 
       objectReference: {fileID: 5928500938113133446}
-    - target: {fileID: 2731486948499422839, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: NeedCanvasFollow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4224104361934921905, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4224104361934921905, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.507
-      objectReference: {fileID: 0}
-    - target: {fileID: 4224104361934921905, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 4224104361934921905, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969697649651539398, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 1023
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969697649651539398, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
-      propertyPath: m_IgnoreReversedGraphics
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6056666081816431080, guid: f2aecb20ab040bf488f0b22e6882c6ec, type: 3}
       propertyPath: m_Pivot.x
       value: 0

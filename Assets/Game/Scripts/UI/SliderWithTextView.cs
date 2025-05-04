@@ -1,15 +1,19 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace YooE
 {
     public sealed class SliderWithTextView : SliderView, IHaveTextField
     {
-        [SerializeField] private TextMeshProUGUI _sliderText;
+        [SerializeField] private List<TextMeshProUGUI> _sliderText;
 
         public void SetText(string newText)
         {
-            _sliderText.text = newText;
+            for (var i = 0; i < _sliderText.Count; i++)
+            {
+                _sliderText[i].text = newText;
+            }
         }
     }
 }

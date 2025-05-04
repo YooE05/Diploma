@@ -1,4 +1,3 @@
-using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,8 +14,8 @@ namespace YooE.Diploma
         [SerializeField] private Image _analysisImage;
         [SerializeField] private Image _conclusionImage;
 
-        [SerializeField] private Color _disableColour;
-        [SerializeField] private Color _enableColour;
+        [SerializeField] private Sprite _disableSprite;
+        [SerializeField] private Sprite _enableSprite;
 
         public void OnInit()
         {
@@ -39,55 +38,55 @@ namespace YooE.Diploma
         [Button]
         public void ResetAllImage()
         {
-            _observationImage.color = _disableColour;
-            _hypothesisImage.color = _disableColour;
-            _experimentImage.color = _disableColour;
-            _analysisImage.color = _disableColour;
-            _conclusionImage.color = _disableColour;
+            _observationImage.sprite = _disableSprite;
+            _hypothesisImage.sprite = _disableSprite;
+            _experimentImage.sprite = _disableSprite;
+            _analysisImage.sprite = _disableSprite;
+            _conclusionImage.sprite = _disableSprite;
         }
 
         [Button]
         public void EnableObservation()
         {
             ResetAllImage();
-            _observationImage.color = _enableColour;
+            _observationImage.sprite = _enableSprite;
         }
 
         [Button]
         public void EnableHypothesis()
         {
             ResetAllImage();
-            _observationImage.color = _enableColour;
-            _hypothesisImage.color = _enableColour;
+            _observationImage.sprite = _enableSprite;
+            _hypothesisImage.sprite = _enableSprite;
         }
 
         [Button]
         public void EnableExperiment()
         {
             ResetAllImage();
-            _observationImage.color = _enableColour;
-            _hypothesisImage.color = _enableColour;
-            _experimentImage.color = _enableColour;
+            _observationImage.sprite = _enableSprite;
+            _hypothesisImage.sprite = _enableSprite;
+            _experimentImage.sprite = _enableSprite;
         }
 
         [Button]
         public void EnableAnalysis()
         {
             ResetAllImage();
-            _observationImage.color = _enableColour;
-            _hypothesisImage.color = _enableColour;
-            _experimentImage.color = _enableColour;
-            _analysisImage.color = _enableColour;
+            _observationImage.sprite = _enableSprite;
+            _hypothesisImage.sprite = _enableSprite;
+            _experimentImage.sprite = _enableSprite;
+            _analysisImage.sprite = _enableSprite;
         }
 
         [Button]
         public void EnableConclusion()
         {
-            _observationImage.color = _enableColour;
-            _hypothesisImage.color = _enableColour;
-            _experimentImage.color = _enableColour;
-            _analysisImage.color = _enableColour;
-            _conclusionImage.color = _enableColour;
+            _observationImage.sprite = _enableSprite;
+            _hypothesisImage.sprite = _enableSprite;
+            _experimentImage.sprite = _enableSprite;
+            _analysisImage.sprite = _enableSprite;
+            _conclusionImage.sprite = _enableSprite;
         }
     }
 }

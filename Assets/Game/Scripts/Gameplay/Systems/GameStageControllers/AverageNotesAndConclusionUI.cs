@@ -29,7 +29,7 @@ namespace YooE.Diploma
             _mySequence = DOTween.Sequence();
             for (var i = 0; i < _notesGO.Count; i++)
             {
-                _mySequence.Append(_notesGO[i].transform.DOScale(1, 0.5f).From(0));
+                _mySequence.Append(_notesGO[i].transform.DOScale(0.62f, 0.5f).From(0));
             }
 
             _mySequence.Append(_averageNote.transform.DOScale(1, 1f).From(0));

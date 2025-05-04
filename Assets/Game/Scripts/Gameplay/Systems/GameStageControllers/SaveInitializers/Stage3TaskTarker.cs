@@ -12,7 +12,7 @@ namespace YooE.Diploma
         private readonly TaskPanel _taskPanel;
 
         private const string CheckGardenText = "Осмотреть грядку";
-        private const string CheckSeparatePlantText = "Подобрать упавшее семечко";
+        private const string CheckSeparatePlantText = "Убрать семечко";
 
         public Stage3TaskTracker(CharactersDataHandler charactersDataHandler, TaskPanel taskPanel)
         {

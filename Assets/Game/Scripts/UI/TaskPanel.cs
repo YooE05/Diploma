@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 namespace YooE.Diploma
@@ -7,7 +6,7 @@ namespace YooE.Diploma
     public sealed class TaskPanel : MonoBehaviour, Listeners.IInitListener
     {
         [SerializeField] private GameObject _panelGO;
-        [SerializeField] private List<TextMeshProUGUI> _taskList = new();
+        [SerializeField] private List<TaskView> _taskList;
 
         public void OnInit()
         {
@@ -27,24 +26,27 @@ namespace YooE.Diploma
 
         public void SetUpTasks(List<string> tasks)
         {
-            for (var i = 0; i < _taskList.Count; i++)
+            ClearTasks();
+
+            for (var i = 0; i < tasks.Count; i++)
             {
-                _taskList[i].text = i + 1 <= tasks.Count ? tasks[i] : string.Empty;
-                _taskList[i].fontStyle = _taskList[i].fontStyle & ~FontStyles.Strikethrough;
+                _taskList[i].Show(tasks[i]);
             }
         }
 
         public void CompleteTask(string completeTaskText)
         {
-            var tmpCompleted = _taskList.Find(t => t.text == completeTaskText);
-            tmpCompleted.fontStyle = FontStyles.Strikethrough;
+            for (var i = 0; i < _taskList.Count; i++)
+            {
+                _taskList[i].TryComplete(completeTaskText);
+            }
         }
 
         private void ClearTasks()
         {
             for (var i = 0; i < _taskList.Count; i++)
             {
-                _taskList[i].text = string.Empty;
+                _taskList[i].Hide();
             }
         }
     }

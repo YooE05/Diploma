@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 5297894022304301146}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 162, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8974618217219426641
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa6e9fb0449172044990237717aadc47, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34731dbafcc8ef24484c98f97ee563fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 6075637505599352020}
-  _enableSprite: {fileID: 21300000, guid: aa6e9fb0449172044990237717aadc47, type: 3}
+  _enableSprite: {fileID: 21300000, guid: 34731dbafcc8ef24484c98f97ee563fc, type: 3}
   _disableSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  _switchOnSprite: {fileID: 21300000, guid: aa6e9fb0449172044990237717aadc47, type: 3}
-  _switchOffSprite: {fileID: 21300000, guid: 9eb15146d3ea5814ca94ac19b6decbf1, type: 3}
+  _switchOnSprite: {fileID: 21300000, guid: 34731dbafcc8ef24484c98f97ee563fc, type: 3}
+  _switchOffSprite: {fileID: 21300000, guid: a90f7a9d688068948950fb932fbe34fa, type: 3}
 --- !u!1 &1145892857856927211
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +149,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5297894022304301146}
   - component: {fileID: 1706757961270716337}
-  - component: {fileID: 5805956757492507632}
   - component: {fileID: 7677754365461078073}
   m_Layer: 5
   m_Name: SoundButton
@@ -187,36 +186,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145892857856927211}
   m_CullTransparentMesh: 1
---- !u!114 &5805956757492507632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145892857856927211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &7677754365461078073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,4 +199,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundsButton: {fileID: 4930810299681426134}
-  _clipName: buttonClick

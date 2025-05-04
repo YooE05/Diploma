@@ -38,8 +38,8 @@ namespace YooE.Diploma.Interaction
             _goShooterAskPopup.Hide();
 
             _playerMotionController.EnableMotion();
-            EnableInteractView();
             EnableInteractionAbility();
+            EnableInteractView();
         }
 
         private void StartShooterScene()

@@ -6,6 +6,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using YooE.DialogueSystem;
 using Zenject;
+using UnityEngine.UI;
 
 namespace YooE.Diploma
 {
@@ -19,6 +20,13 @@ namespace YooE.Diploma
 
         [SerializeField] private GameObject _tutorialHand;
         private Tween _handAnimation;
+
+        [SerializeField] private GameObject _graphPoint1;
+        [SerializeField] private GameObject _graphPoint2;
+        [SerializeField] private GameObject _graphPoint3;
+
+        [SerializeField] private GameObject _graphLine;
+        [SerializeField] private Image _graphLineImage;
 
         private int _clickedButtonsCount;
         private CharactersDataHandler _charactersDataHandler;
@@ -50,6 +58,11 @@ namespace YooE.Diploma
             _notepadButton1.OnButtonClicked += Button1Click;
             _notepadButton2.OnButtonClicked += Button2Click;
             _notepadButton3.OnButtonClicked += Button3Click;
+
+            _graphPoint1.SetActive(false);
+            _graphPoint2.SetActive(false);
+            _graphPoint3.SetActive(false);
+            _graphLine.SetActive(false);
 
             _panelGO.SetActive(true);
             ShowTutorialHand();
@@ -84,6 +97,7 @@ namespace YooE.Diploma
             _notepadButton1.DisableButton();
             _notepadButton1.OnButtonClicked -= Button1Click;
             //play Animation
+            _graphPoint1.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
             HideTutorialHand();
@@ -94,6 +108,7 @@ namespace YooE.Diploma
             _notepadButton2.DisableButton();
             _notepadButton2.OnButtonClicked -= Button2Click;
             //play Animation
+            _graphPoint2.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
             HideTutorialHand();
@@ -104,6 +119,7 @@ namespace YooE.Diploma
             _notepadButton3.DisableButton();
             _notepadButton3.OnButtonClicked -= Button3Click;
             //play Animation
+            _graphPoint3.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
             HideTutorialHand();
@@ -119,7 +135,11 @@ namespace YooE.Diploma
 
         private async UniTaskVoid ShowGraphAnimation()
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(1f), cancellationToken: CancellationToken.None);
+            var tween = _graphLineImage.DOFade(1f, 4f).From(0).SetLink(_graphLine);
+            tween.Play();
+            _graphLine.SetActive(true);
+
+            await UniTask.Delay(TimeSpan.FromSeconds(7f), cancellationToken: CancellationToken.None);
             Hide();
             GoNextMainDialogue();
         }

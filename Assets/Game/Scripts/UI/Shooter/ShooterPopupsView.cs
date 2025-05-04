@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace YooE.Diploma
 {
@@ -10,11 +11,14 @@ namespace YooE.Diploma
         public event Action OnContinueButtonClicked;
 
         [SerializeField] private ButtonView _retryButton;
+        [SerializeField] private GameObject _retryButtonPopup;
 
         [SerializeField] private GameObject _endPopup;
         [SerializeField] private ButtonView _continueButton;
         [SerializeField] private TextMeshProUGUI _enemyStatisticText;
         [SerializeField] private TextMeshProUGUI _timeStatisticText;
+
+        [SerializeField] private Image _fadeImage;
 
         private void OnEnable()
         {
@@ -40,19 +44,22 @@ namespace YooE.Diploma
 
         public void ShowRetryButton()
         {
-            _retryButton.Show();
+            _retryButtonPopup.SetActive(true);
+            _fadeImage.enabled = true;
         }
 
         public void SetupEndPopup(string enemyDefeatPercent, string spentTime)
         {
             _enemyStatisticText.text = $"{enemyDefeatPercent} %";
             _timeStatisticText.text = spentTime;
+            _fadeImage.enabled = true;
             _endPopup.SetActive(true);
         }
 
         public void Hide()
         {
-            _retryButton.Hide();
+            _fadeImage.enabled = false;
+            _retryButtonPopup.SetActive(false);
             _endPopup.SetActive(false);
         }
     }
