@@ -1,6 +1,5 @@
 ﻿using System;
 using Audio;
-using UnityEngine;
 using YooE.SaveLoad;
 
 namespace YooE.Diploma

@@ -13,10 +13,10 @@ namespace YooE.Diploma
             _rotationSpeed = rotationSpeed;
         }
 
-        public void UpdateRotation(Vector3 direction)
+        public void UpdateRotation(Vector3 direction, float deltaTime)
         {
             if (direction != Vector3.zero)
-                MotionUseCases.Rotate(_playerVisual, direction, _rotationSpeed * Time.deltaTime);
+                MotionUseCases.Rotate(_playerVisual, direction, _rotationSpeed * deltaTime);
         }
     }
 }

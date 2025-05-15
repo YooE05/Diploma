@@ -26,7 +26,7 @@ namespace YooE.Diploma
             _currentGetTargets.Clear();
             _currentGetTargets.AddRange(_targetsCollector.GetRegisteredObjects());
             var targetsCount = _currentGetTargets.Count;
-            _currentGetTargets.RemoveRange(targetsCount, _currentGetTargets.Count - targetsCount);
+            //_currentGetTargets.RemoveRange(targetsCount, _currentGetTargets.Count - targetsCount);
             if (targetsCount == 0) return false;
 
             var diff = countOfWeapons - targetsCount;

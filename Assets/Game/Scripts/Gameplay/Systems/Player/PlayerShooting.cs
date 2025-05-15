@@ -39,7 +39,7 @@ namespace YooE.Diploma
         {
             if (!_canShoot)
             {
-                _nextShotTime += Time.deltaTime;
+                _nextShotTime += deltaTime;
                 return;
             }
 
@@ -57,7 +57,7 @@ namespace YooE.Diploma
             }
             else
             {
-                _nextShotTime += Time.deltaTime;
+                _nextShotTime += deltaTime;
                 HideWeapons();
             }
         }

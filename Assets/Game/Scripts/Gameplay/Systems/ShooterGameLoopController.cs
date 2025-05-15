@@ -75,6 +75,7 @@ namespace YooE.Diploma
 
         public void GoNextLevel()
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("ScienceBaseVisual"); //(_nextSceneName);
         }
 

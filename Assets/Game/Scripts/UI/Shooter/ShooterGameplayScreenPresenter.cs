@@ -1,7 +1,4 @@
 ﻿using System;
-using Audio;
-using UniRx;
-using Zenject;
 
 namespace YooE.Diploma
 {
@@ -9,17 +6,17 @@ namespace YooE.Diploma
     {
         //private readonly CompositeDisposable _disposables = new();
         private readonly ShooterGameplayScreenView _gameplayScreenView;
-        private readonly EnemyBrainsInitializer _enemyBrainsInitializer;
+        private readonly EnemiesInitializer _enemiesInitializer;
 
         private SoundButtonPresenter _soundButtonPresenter;
 
         public ShooterGameplayScreenPresenter(ShooterGameplayScreenView gameplayScreenView,
-            EnemyBrainsInitializer enemyBrainsInitializer)
+            EnemiesInitializer enemiesInitializer)
         {
             _gameplayScreenView = gameplayScreenView;
 
-            _enemyBrainsInitializer = enemyBrainsInitializer;
-            _enemyBrainsInitializer.OnLiveEnemiesCountChanged += SetEnemySliderValue;
+            _enemiesInitializer = enemiesInitializer;
+            _enemiesInitializer.OnLiveEnemiesCountChanged += SetEnemySliderValue;
         }
 
         private void SetEnemySliderValue(int deadCount, int allCount)
@@ -39,7 +36,7 @@ namespace YooE.Diploma
 
         public void Dispose()
         {
-            _enemyBrainsInitializer.OnLiveEnemiesCountChanged -= SetEnemySliderValue;
+            _enemiesInitializer.OnLiveEnemiesCountChanged -= SetEnemySliderValue;
         }
 
         /*~ShooterGameplayScreenPresenter()

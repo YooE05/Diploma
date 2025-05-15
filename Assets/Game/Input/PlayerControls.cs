@@ -30,7 +30,7 @@ namespace YooE.Diploma
             ""id"": ""ddc00ee3-8bb3-4607-a7fd-63575c808e65"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""5971ec03-36aa-4cd0-9f5e-27fcbefcb226"",
                     ""expectedControlType"": ""Vector2"",
@@ -65,7 +65,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -76,7 +76,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -87,7 +87,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -98,7 +98,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -109,7 +109,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -120,7 +120,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -131,7 +131,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -142,7 +142,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -153,7 +153,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -164,7 +164,7 @@ namespace YooE.Diploma
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -219,7 +219,7 @@ namespace YooE.Diploma
 }");
             // PlayerLocomotionMap
             m_PlayerLocomotionMap = asset.FindActionMap("PlayerLocomotionMap", throwIfNotFound: true);
-            m_PlayerLocomotionMap_Movement = m_PlayerLocomotionMap.FindAction("Movement", throwIfNotFound: true);
+            m_PlayerLocomotionMap_Move = m_PlayerLocomotionMap.FindAction("Move", throwIfNotFound: true);
             m_PlayerLocomotionMap_PointerPosition = m_PlayerLocomotionMap.FindAction("PointerPosition", throwIfNotFound: true);
             m_PlayerLocomotionMap_PointerInteractionAbility = m_PlayerLocomotionMap.FindAction("PointerInteractionAbility", throwIfNotFound: true);
         }
@@ -283,14 +283,14 @@ namespace YooE.Diploma
         // PlayerLocomotionMap
         private readonly InputActionMap m_PlayerLocomotionMap;
         private List<IPlayerLocomotionMapActions> m_PlayerLocomotionMapActionsCallbackInterfaces = new List<IPlayerLocomotionMapActions>();
-        private readonly InputAction m_PlayerLocomotionMap_Movement;
+        private readonly InputAction m_PlayerLocomotionMap_Move;
         private readonly InputAction m_PlayerLocomotionMap_PointerPosition;
         private readonly InputAction m_PlayerLocomotionMap_PointerInteractionAbility;
         public struct PlayerLocomotionMapActions
         {
             private @PlayerControls m_Wrapper;
             public PlayerLocomotionMapActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Movement => m_Wrapper.m_PlayerLocomotionMap_Movement;
+            public InputAction @Move => m_Wrapper.m_PlayerLocomotionMap_Move;
             public InputAction @PointerPosition => m_Wrapper.m_PlayerLocomotionMap_PointerPosition;
             public InputAction @PointerInteractionAbility => m_Wrapper.m_PlayerLocomotionMap_PointerInteractionAbility;
             public InputActionMap Get() { return m_Wrapper.m_PlayerLocomotionMap; }
@@ -302,9 +302,9 @@ namespace YooE.Diploma
             {
                 if (instance == null || m_Wrapper.m_PlayerLocomotionMapActionsCallbackInterfaces.Contains(instance)) return;
                 m_Wrapper.m_PlayerLocomotionMapActionsCallbackInterfaces.Add(instance);
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
                 @PointerPosition.started += instance.OnPointerPosition;
                 @PointerPosition.performed += instance.OnPointerPosition;
                 @PointerPosition.canceled += instance.OnPointerPosition;
@@ -315,9 +315,9 @@ namespace YooE.Diploma
 
             private void UnregisterCallbacks(IPlayerLocomotionMapActions instance)
             {
-                @Movement.started -= instance.OnMovement;
-                @Movement.performed -= instance.OnMovement;
-                @Movement.canceled -= instance.OnMovement;
+                @Move.started -= instance.OnMove;
+                @Move.performed -= instance.OnMove;
+                @Move.canceled -= instance.OnMove;
                 @PointerPosition.started -= instance.OnPointerPosition;
                 @PointerPosition.performed -= instance.OnPointerPosition;
                 @PointerPosition.canceled -= instance.OnPointerPosition;
@@ -343,7 +343,7 @@ namespace YooE.Diploma
         public PlayerLocomotionMapActions @PlayerLocomotionMap => new PlayerLocomotionMapActions(this);
         public interface IPlayerLocomotionMapActions
         {
-            void OnMovement(InputAction.CallbackContext context);
+            void OnMove(InputAction.CallbackContext context);
             void OnPointerPosition(InputAction.CallbackContext context);
             void OnPointerInteractionAbility(InputAction.CallbackContext context);
         }

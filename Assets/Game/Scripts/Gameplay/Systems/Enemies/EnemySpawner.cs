@@ -9,10 +9,10 @@ namespace YooE.Diploma
         private readonly Dictionary<EnemyType, EnemyPool> _enemyPools = new();
         private readonly List<EnemySpawnPoint> _spawnPoints;
         private readonly Transform _enemiesParent;
-        private readonly EnemyBrainsInitializer _brainsInitializer;
+        private readonly EnemiesInitializer _enemiesInitializer;
 
         public EnemySpawner(List<EnemySpawnPoint> spawnPoints, EnemyPoolsSettings enemyPoolsSettings,
-            Transform enemiesParent, EnemyBrainsInitializer brainsInitializer)
+            Transform enemiesParent, EnemiesInitializer enemiesInitializer)
         {
             for (var i = 0; i < enemyPoolsSettings.EnemyPoolsСonfigs.Count; i++)
             {
@@ -22,13 +22,13 @@ namespace YooE.Diploma
 
             _enemiesParent = enemiesParent;
             _spawnPoints = spawnPoints;
-            _brainsInitializer = brainsInitializer;
+            _enemiesInitializer = enemiesInitializer;
         }
 
         public void OnInit()
         {
             SpawnEnemies();
-            _brainsInitializer.OnBrainDied += ReturnEnemy;
+            _enemiesInitializer.OnEnemyDied += ReturnEnemy;
         }
 
         private void SpawnEnemies()
@@ -43,21 +43,21 @@ namespace YooE.Diploma
                     _enemyPools.Add(type, newPool);
                 }
 
-                var newEnemy = _enemyPools[type].GetEnemy();
-                newEnemy.SetPosition(_spawnPoints[i].SpawnPosition);
-                _brainsInitializer.InitBrain(newEnemy, _enemyPoolsСonfigs[type].EnemyCharacteristics);
+                var newEnemyView = _enemyPools[type].GetEnemy();
+                newEnemyView.SetPosition(_spawnPoints[i].SpawnPosition);
+                _enemiesInitializer.InitEnemy(newEnemyView, _enemyPoolsСonfigs[type].EnemyCharacteristics);
             }
         }
 
-        private void ReturnEnemy(EnemyBrain enemyBrain)
+        private void ReturnEnemy(Enemy enemy)
         {
-            var view = enemyBrain.View;
+            var view = enemy.View;
             _enemyPools[view.Type].ReturnEnemy(view);
         }
 
         ~EnemySpawner()
         {
-            _brainsInitializer.OnBrainDied -= ReturnEnemy;
+            _enemiesInitializer.OnEnemyDied -= ReturnEnemy;
         }
     }
 }

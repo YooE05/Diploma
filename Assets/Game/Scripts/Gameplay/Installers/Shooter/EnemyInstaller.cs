@@ -21,7 +21,7 @@ namespace YooE.Diploma
             Container.Bind<EnemyConfig>().FromInstance(_commonEnemyConfig).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<EnemySpawner>().AsCached()
                 .WithArguments(_enemySpawnPoints, _enemyPoolsSettings, _enemiesParent).NonLazy();
-            Container.BindInterfacesAndSelfTo<EnemyBrainsInitializer>().AsCached().NonLazy();
+            Container.BindInterfacesAndSelfTo<EnemiesInitializer>().AsCached().NonLazy();
             Container.Bind<EnemyWaveObserver>().AsCached().NonLazy();
         }
     }

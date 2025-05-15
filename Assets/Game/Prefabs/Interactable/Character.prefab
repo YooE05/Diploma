@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueSequence: {fileID: 11400000, guid: 8cd5f78768a117f4d890d54f44bcde77, type: 2}
-  _currentGroupIndex: 7887
+  _currentGroupIndex: 2
   _dialogueCharacterID: 1
 --- !u!1001 &980838108034300019
 PrefabInstance:
@@ -153,6 +153,22 @@ PrefabInstance:
     - target: {fileID: 2810283503114558746, guid: dbc3bd3c01dbe0b43893ac53231b2c72, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529660287341348211, guid: dbc3bd3c01dbe0b43893ac53231b2c72, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.78787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529660287341348211, guid: dbc3bd3c01dbe0b43893ac53231b2c72, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.78787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529660287341348211, guid: dbc3bd3c01dbe0b43893ac53231b2c72, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.78787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529660287341348211, guid: dbc3bd3c01dbe0b43893ac53231b2c72, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5127253662941031298, guid: dbc3bd3c01dbe0b43893ac53231b2c72, type: 3}
       propertyPath: _character

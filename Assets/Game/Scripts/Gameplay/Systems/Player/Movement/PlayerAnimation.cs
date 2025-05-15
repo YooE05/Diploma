@@ -20,9 +20,9 @@ namespace YooE.Diploma
             _locomotionBlendSpeed = locomotionBlendSpeed;
         }
 
-        public void SmoothlyUpdateAnimation(Vector2 inputTarget)
+        public void SmoothlyUpdateAnimation(Vector2 inputTarget, float deltaTime)
         {
-            _currentBlendInput = Vector3.Lerp(_currentBlendInput, inputTarget, _locomotionBlendSpeed * Time.deltaTime);
+            _currentBlendInput = Vector3.Lerp(_currentBlendInput, inputTarget, _locomotionBlendSpeed * deltaTime);
             SetMoveAnimationValues(_currentBlendInput);
         }
 
@@ -31,7 +31,7 @@ namespace YooE.Diploma
             _animator.SetFloat(InputXHash, inputTarget.x);
             _animator.SetFloat(InputYHash, inputTarget.y);
         }
-        
+
         public void StopMoveAnimation()
         {
             SetMoveAnimationValues(Vector2.zero);

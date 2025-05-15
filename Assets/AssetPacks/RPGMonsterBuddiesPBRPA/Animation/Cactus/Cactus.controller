@@ -83,7 +83,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cactus_SenseSomethingMaint
+  m_Name: Cactus_SenseSomething
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -374,25 +374,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: HasTarget
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsDead
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsFinish
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -439,7 +439,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cactus_WalkFWD
+  m_Name: Cactus_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -783,7 +783,7 @@ AnimatorStateMachine:
     m_Position: {x: 90, y: 460, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6426579264433560804}
-    m_Position: {x: -10, y: -170, z: 0}
+    m_Position: {x: -520, y: -320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3294049035850038410}
     m_Position: {x: 90, y: 250, z: 0}
@@ -795,7 +795,7 @@ AnimatorStateMachine:
     m_Position: {x: 480, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 385160802644305663}
-    m_Position: {x: 250, y: -170, z: 0}
+    m_Position: {x: -260, y: -320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5216594718692824874}
     m_Position: {x: 480, y: 450, z: 0}
@@ -810,22 +810,22 @@ AnimatorStateMachine:
     m_Position: {x: 480, y: 670, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7397919442118658790}
-    m_Position: {x: 250, y: -50, z: 0}
+    m_Position: {x: -260, y: -200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 210774078581206226}
     m_Position: {x: 810, y: 460, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1516871039663688396}
-    m_Position: {x: -510, y: -400, z: 0}
+    m_Position: {x: -520, y: -400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9188783226061403085}
-    m_Position: {x: -30, y: -410, z: 0}
+    m_Position: {x: -40, y: -400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9054988256709439777}
-    m_Position: {x: -30, y: -330, z: 0}
+    m_Position: {x: -40, y: -320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5919078856068639624}
-    m_Position: {x: -10, y: -50, z: 0}
+    m_Position: {x: -520, y: -200, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -2855018683190628502}
@@ -833,8 +833,8 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -230, y: -400, z: 0}
-  m_EntryPosition: {x: -200, y: 20, z: 0}
+  m_AnyStatePosition: {x: -240, y: -390, z: 0}
+  m_EntryPosition: {x: -500, y: -130, z: 0}
   m_ExitPosition: {x: -230, y: -460, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 5919078856068639624}
@@ -845,7 +845,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cactus_Attack01
+  m_Name: Cactus_Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

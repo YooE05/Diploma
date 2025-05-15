@@ -53,7 +53,7 @@ namespace YooE
             {
                 elapsed += Time.deltaTime;
                 _slider.value = Mathf.Lerp(start, _targetValue, elapsed / _duration);
-                await UniTask.WaitForEndOfFrame(cancellationToken);
+                await UniTask.Yield(cancellationToken);
             }
 
             _slider.value = _targetValue;

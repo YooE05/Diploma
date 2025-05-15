@@ -26,7 +26,7 @@ namespace YooE.Diploma
             PlayerControls.PlayerLocomotionMap.RemoveCallbacks(this);
         }
 
-        public void OnMovement(InputAction.CallbackContext context)
+        public void OnMove(InputAction.CallbackContext context)
         {
             MovementInput = context.ReadValue<Vector2>();
         }

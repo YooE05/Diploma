@@ -15746,6 +15746,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1560898341}
     m_Modifications:
+    - target: {fileID: 762792618923627021, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 59.867188
+      objectReference: {fileID: 0}
     - target: {fileID: 2125809789960644045, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15762,6 +15766,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2807857171076923154, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
+      propertyPath: _visualGO
+      value: 
+      objectReference: {fileID: 1046301158}
     - target: {fileID: 3324982722724896282, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15922,6 +15930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7429225621298129439, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7999812340389351938, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -15946,10 +15958,6 @@ PrefabInstance:
     - target: {fileID: 3837636657432055596, guid: 2440cdfd5dcf76f4caceeee5b77b57bd, type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 4256029881889203283, guid: 2440cdfd5dcf76f4caceeee5b77b57bd, type: 3}
-      propertyPath: _hpSlider
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6272016005948413057, guid: 2440cdfd5dcf76f4caceeee5b77b57bd, type: 3}
       propertyPath: m_RootOrder

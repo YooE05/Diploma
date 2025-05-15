@@ -68,15 +68,15 @@ namespace YooE.Diploma
     {
         private readonly ShooterPopupsView _shooterPopupsView;
         private readonly ShooterGameLoopController _shooterGameLoopController;
-        private readonly EnemyBrainsInitializer _enemyBrainsInitializer;
+        private readonly EnemiesInitializer _enemiesInitializer;
         private readonly UpdateTimer _timer;
 
         public ShooterPopupsPresenter(ShooterPopupsView shooterPopupsView,
             ShooterGameLoopController shooterGameLoopController,
-            EnemyBrainsInitializer enemyBrainsInitializer, UpdateTimer timer)
+            EnemiesInitializer enemiesInitializer, UpdateTimer timer)
         {
             _shooterPopupsView = shooterPopupsView;
-            _enemyBrainsInitializer = enemyBrainsInitializer;
+            _enemiesInitializer = enemiesInitializer;
             _shooterGameLoopController = shooterGameLoopController;
             _timer = timer;
 
@@ -118,7 +118,7 @@ namespace YooE.Diploma
 
         public void ShowEndGamePopup()
         {
-            var stringDefeatPercent = ((int)_enemyBrainsInitializer.GetDefeatPercent()).ToString();
+            var stringDefeatPercent = ((int)_enemiesInitializer.GetDefeatPercent()).ToString();
             var time = new TimeSpan(0, 0, (int)_timer.CurrentTime);
             var stringSpentTime = $"{time.Minutes}:";
             stringSpentTime += time.Seconds < 10 ? $"0{time.Seconds}" : $"{time.Seconds}";

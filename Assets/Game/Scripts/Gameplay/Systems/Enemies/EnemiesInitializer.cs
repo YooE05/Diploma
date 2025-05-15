@@ -3,22 +3,22 @@ using System.Collections.Generic;
 
 namespace YooE.Diploma
 {
-    public sealed class EnemyBrainsInitializer : Listeners.IStartListener, Listeners.IUpdateListener,
+    public sealed class EnemiesInitializer : Listeners.IStartListener, Listeners.IUpdateListener,
         Listeners.IFinishListener
     {
         public event Action<int, int> OnLiveEnemiesCountChanged;
-        public event Action<EnemyBrain> OnBrainDied;
+        public event Action<Enemy> OnEnemyDied;
 
-        private readonly List<EnemyBrain> _enemyBrains = new();
+        private readonly List<Enemy> _enemies = new();
 
-        private int EnemiesCount => _enemyBrains.Count;
+        private int EnemiesCount => _enemies.Count;
         private int _deadEnemiesCount;
 
         public void OnUpdate(float deltaTime)
         {
             for (var i = 0; i < EnemiesCount; i++)
             {
-                _enemyBrains[i].Update();
+                _enemies[i].Update();
             }
         }
 
@@ -26,15 +26,15 @@ namespace YooE.Diploma
         {
             for (var i = 0; i < EnemiesCount; i++)
             {
-                _enemyBrains[i].AfterFinishState();
+                _enemies[i].AfterFinishState();
             }
         }
 
-        public void InitBrain(EnemyView view, EnemyConfig config)
+        public void InitEnemy(EnemyView view, EnemyConfig config)
         {
-            var newEnemyBrain = new EnemyBrain(config, view);
-            newEnemyBrain.OnDied += IncreaseDiedCount;
-            _enemyBrains.Add(newEnemyBrain);
+            var newEnemy = new Enemy(config, view);
+            newEnemy.OnDied += IncreaseDiedCount;
+            _enemies.Add(newEnemy);
         }
 
         public void OnStart()
@@ -48,11 +48,11 @@ namespace YooE.Diploma
             return _deadEnemiesCount / (float)EnemiesCount * 100;
         }
 
-        private void IncreaseDiedCount(EnemyBrain deadBrain)
+        private void IncreaseDiedCount(Enemy dead)
         {
             _deadEnemiesCount += 1;
-            OnBrainDied?.Invoke(deadBrain);
-            deadBrain.OnDied -= IncreaseDiedCount;
+            OnEnemyDied?.Invoke(dead);
+            dead.OnDied -= IncreaseDiedCount;
             OnLiveEnemiesCountChanged?.Invoke(_deadEnemiesCount, EnemiesCount);
         }
     }

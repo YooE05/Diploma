@@ -3,9 +3,9 @@ using UniRx;
 
 namespace YooE.Diploma
 {
-    public sealed class EnemyBrain
+    public sealed class Enemy
     {
-        public event Action<EnemyBrain> OnDied;
+        public event Action<Enemy> OnDied;
 
         private readonly CompositeDisposable _disposable = new();
         private readonly EnemyConfig _enemyConfig;
@@ -19,7 +19,7 @@ namespace YooE.Diploma
 
         private bool _canAct;
 
-        public EnemyBrain(EnemyConfig enemyConfig, EnemyView enemyView)
+        public Enemy(EnemyConfig enemyConfig, EnemyView enemyView)
         {
             _enemyConfig = enemyConfig;
             View = enemyView;
@@ -74,7 +74,7 @@ namespace YooE.Diploma
             _deathObserver.OnDeathEnd -= OnDeathEndActions;
         }
 
-        ~EnemyBrain()
+        ~Enemy()
         {
             _disposable.Dispose();
         }

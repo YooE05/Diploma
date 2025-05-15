@@ -34,8 +34,6 @@ namespace YooE.Diploma
                 }
             });
             
-            
-
             _saveLoadManager.SaveGame();
             _gameController.ReloadScene();
         }

@@ -15,22 +15,20 @@ namespace YooE.Diploma
             _playerState = new PlayerState();
         }
 
-        public void UpdateMovement(Vector3 moveDirection)
+        public void UpdateMovement(Vector3 moveDirection, float deltaTime)
         {
-            Vector3 movementDelta = moveDirection * _playerMovementConfig.RunAcceleration * Time.deltaTime;
-            Vector3 newVelocity = _characterController.velocity + movementDelta;
+            var movementDelta = moveDirection * _playerMovementConfig.RunAcceleration * deltaTime;
+            var newVelocity = _characterController.velocity + movementDelta;
 
-            // Add drag to player
-            Vector3 currentDrag = newVelocity.normalized * _playerMovementConfig.Drag * Time.deltaTime;
-            newVelocity = (newVelocity.magnitude > _playerMovementConfig.Drag * Time.deltaTime)
+            var currentDrag = newVelocity.normalized * _playerMovementConfig.Drag * deltaTime;
+            newVelocity = (newVelocity.magnitude > _playerMovementConfig.Drag * deltaTime)
                 ? newVelocity - currentDrag
                 : Vector3.zero;
             newVelocity = Vector3.ClampMagnitude(newVelocity, _playerMovementConfig.RunSpeed);
 
             newVelocity.y = _playerMovementConfig.YVelocity;
 
-            // Move character (Unity suggests only calling this once per tick)
-            _characterController.Move(newVelocity * Time.deltaTime);
+            _characterController.Move(newVelocity * deltaTime);
 
             UpdateMovementState(moveDirection);
         }

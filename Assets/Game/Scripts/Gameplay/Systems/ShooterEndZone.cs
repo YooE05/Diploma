@@ -8,17 +8,17 @@ namespace YooE.Diploma
     {
         public event Action OnFinish;
 
-        private EnemyBrainsInitializer _enemyBrainsInitializer;
+        private EnemiesInitializer _enemiesInitializer;
         [SerializeField] private float _finishPercent;
         [SerializeField] private GameObject _cantFinishPanel;
 
         private bool _canFinishLevel = false;
 
         [Inject]
-        public void Construct(EnemyBrainsInitializer enemyBrainsInitializer)
+        public void Construct(EnemiesInitializer enemiesInitializer)
         {
-            _enemyBrainsInitializer = enemyBrainsInitializer;
-            _enemyBrainsInitializer.OnLiveEnemiesCountChanged += ChangeFinishAbility;
+            _enemiesInitializer = enemiesInitializer;
+            _enemiesInitializer.OnLiveEnemiesCountChanged += ChangeFinishAbility;
             _canFinishLevel = false;
             _cantFinishPanel.SetActive(false);
         }
@@ -51,7 +51,7 @@ namespace YooE.Diploma
         private void FinishActions()
         {
             _cantFinishPanel.SetActive(false);
-            _enemyBrainsInitializer.OnLiveEnemiesCountChanged -= ChangeFinishAbility;
+            _enemiesInitializer.OnLiveEnemiesCountChanged -= ChangeFinishAbility;
         }
 
         private void ChangeFinishAbility(int deadEnemiesCount, int enemiesCount)

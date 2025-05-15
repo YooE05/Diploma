@@ -51,9 +51,9 @@ namespace YooE.Diploma
             var moveOffset = GetMoveOffset();
             var direction = GetMovementDirection(moveOffset);
 
-            _playerMovement.UpdateMovement(direction);
-            _playerRotation.UpdateRotation(direction);
-            _playerAnimation.SmoothlyUpdateAnimation(moveOffset);
+            _playerMovement.UpdateMovement(direction, deltaTime);
+            _playerRotation.UpdateRotation(direction, deltaTime);
+            _playerAnimation.SmoothlyUpdateAnimation(moveOffset, deltaTime);
         }
 
         public void EnableMotion()

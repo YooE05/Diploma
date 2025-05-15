@@ -26,6 +26,11 @@ namespace YooE.Diploma
 
         private void Update()
         {
+            UpdateSliderPosition();
+        }
+
+        private void UpdateSliderPosition()
+        {
             if (!NeedCanvasFollow) return;
             if (_healthBarRect == null) return;
 

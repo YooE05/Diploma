@@ -19,7 +19,7 @@ namespace YooE.Diploma
 
         public void DisableEnemy()
         {
-            _enemyGO.SetActive(false);
+            _enemyGO?.SetActive(false);
         }
 
         public void DisablePhysics()
