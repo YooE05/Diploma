@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TestDialogueSequences
   m_EditorClassIdentifier: 
   Groups:
-  - {fileID: 11400000, guid: 0106222f5ed66a74b9011203a6de688a, type: 2}
-  - {fileID: 11400000, guid: 5b4b4855d6b5c714aa9b21762e4a99d2, type: 2}
+  - {fileID: 11400000, guid: 4fc113d9f7f664a4081548414cbf52fb, type: 2}
+  - {fileID: 11400000, guid: b4229a1ad62fdf1448e5b80f6f209f12, type: 2}

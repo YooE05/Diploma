@@ -2067,6 +2067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937050103c5ea264caaba7a2d43c2821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isEndless: 0
   _commonEnemyConfig: {fileID: 11400000, guid: 44e2b0c35101f34419341b20a29ac521, type: 2}
   _enemyPoolsSettings: {fileID: 11400000, guid: 558d79ecfa8b23b46b90fea346ce97db, type: 2}
   _enemiesParent: {fileID: 1386555316}
@@ -2937,7 +2938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " WASD \u0438\u043B\u0438 \u043C\u044B\u0448\u043A\u0430 \u0447\u0442\u043E\u0431\u044B
+  m_text: " WASD \u0438\u043B\u0438 \u043C\u044B\u0448\u043A\u0430, \u0447\u0442\u043E\u0431\u044B
     \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 117b0738eca7545faa9cde2a85c84e9f, type: 2}
@@ -3956,7 +3957,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shooterEndZone: {fileID: 0}
-  _nextSceneName: ScienceBase
   _audioClip: {fileID: 8300000, guid: 1e38feb6f8ac78d48916cd0015787708, type: 3}
 --- !u!4 &1865113079 stripped
 Transform:
@@ -4617,6 +4617,10 @@ PrefabInstance:
     - target: {fileID: 7429225621298129439, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
       propertyPath: m_Name
       value: GameplayUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854512774802330546, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7999812340389351938, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
       propertyPath: m_AnchorMax.x

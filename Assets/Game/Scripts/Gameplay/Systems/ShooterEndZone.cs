@@ -54,7 +54,7 @@ namespace YooE.Diploma
             _enemiesInitializer.OnLiveEnemiesCountChanged -= ChangeFinishAbility;
         }
 
-        private void ChangeFinishAbility(int deadEnemiesCount, int enemiesCount)
+        private void ChangeFinishAbility(int deadEnemiesCount, int enemiesCount, int _)
         {
             if (deadEnemiesCount / (float)enemiesCount >= _finishPercent / 100f)
             {

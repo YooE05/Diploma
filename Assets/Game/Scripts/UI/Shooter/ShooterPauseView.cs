@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Zenject;
+using UnityEngine.SceneManagement;
 
 namespace YooE.Diploma
 {
@@ -10,13 +10,13 @@ namespace YooE.Diploma
 
         [SerializeField] private ConfirmPopupView _confirmPopupView;
 
-        private ShooterGameLoopController _shooterGameLoopController;
+        /*private ShooterGameLoopController _shooterGameLoopController;
 
         [Inject]
         public void Construct(ShooterGameLoopController shooterGameLoopController)
         {
             _shooterGameLoopController = shooterGameLoopController;
-        }
+        }*/
 
         private void Awake()
         {
@@ -54,7 +54,7 @@ namespace YooE.Diploma
         private void ExitLevel()
         {
             Time.timeScale = 1f;
-            _shooterGameLoopController.GoNextLevel();
+            SceneManager.LoadScene("ScienceBaseVisual");
         }
     }
 }

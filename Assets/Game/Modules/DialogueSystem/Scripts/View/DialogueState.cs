@@ -53,7 +53,7 @@ namespace YooE.DialogueSystem
             StartDialogue(_groupDialoguesList[0]);
         }
 
-        private void StartDialogue(DSDialogueSO dialogue)
+        public void StartDialogue(DSDialogueSO dialogue)
         {
             _currentDialogue = dialogue;
             if (_currentDialogue.DialogueType == DSDialogueType.SingleChoice)

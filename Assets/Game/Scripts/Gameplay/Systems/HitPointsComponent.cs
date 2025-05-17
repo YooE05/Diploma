@@ -8,11 +8,11 @@ namespace YooE.Diploma
         [SerializeField] private HealthBar _hpSlider;
         public event Action<GameObject> OnHpEmpty;
 
-        public int HitPoints;
+        public float HitPoints;
 
         public bool IsHitPointsExists => HitPoints > 0;
 
-        private int _startHp;
+        private float _startHp;
 
         private void Awake()
         {
@@ -24,7 +24,7 @@ namespace YooE.Diploma
             _hpSlider?.SetNewValue(1f);
         }
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(float damage)
         {
             HitPoints -= damage;
             if (HitPoints <= 0)
@@ -35,10 +35,20 @@ namespace YooE.Diploma
             _hpSlider?.SetNewValue(HitPoints / (float)_startHp);
         }
 
-        public void SetStartHp(int configHitPoints)
+        public void SetStartHp(float configHitPoints)
         {
             _startHp = configHitPoints;
             HitPoints = configHitPoints;
+
+            _hpSlider?.SetNewValue(1f);
+            _hpSlider?.ResetHpBar();
+        }
+
+        public void SetFullHp()
+        {
+            HitPoints = _startHp;
+            _hpSlider?.SetNewValue(1f);
+            _hpSlider?.ResetHpBar();
         }
     }
 }

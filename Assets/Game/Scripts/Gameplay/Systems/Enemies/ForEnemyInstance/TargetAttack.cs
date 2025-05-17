@@ -4,7 +4,7 @@ namespace YooE.Diploma
 {
     public sealed class TargetAttack
     {
-        private readonly int _damage;
+        private readonly float _damage;
         private readonly AnimationEvents _animationEvents;
         private readonly TargetSensorConfig _targetSensorConfig;
         private readonly Transform _selfTransform;
@@ -13,7 +13,7 @@ namespace YooE.Diploma
         private HitPointsComponent _targetHp;
         private bool _hasAttackAbility;
 
-        public TargetAttack(int damage, AnimationEvents animationEvents, TargetSensorConfig targetSensorConfig,
+        public TargetAttack(float damage, AnimationEvents animationEvents, TargetSensorConfig targetSensorConfig,
             Transform selfTransform)
         {
             _damage = damage;

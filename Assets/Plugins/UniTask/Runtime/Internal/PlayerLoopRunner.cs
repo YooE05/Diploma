@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace Cysharp.Threading.Tasks.Internal
@@ -17,7 +16,6 @@ namespace Cysharp.Threading.Tasks.Internal
         bool running = false;
         IPlayerLoopItem[] loopItems = new IPlayerLoopItem[InitialSize];
         MinimumQueue<IPlayerLoopItem> waitQueue = new MinimumQueue<IPlayerLoopItem>(InitialSize);
-
 
 
         public PlayerLoopRunner(PlayerLoopTiming timing)

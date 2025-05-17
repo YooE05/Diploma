@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace YooE.Diploma
@@ -17,6 +18,7 @@ namespace YooE.Diploma
         [SerializeField] private ButtonView _continueButton;
         [SerializeField] private TextMeshProUGUI _enemyStatisticText;
         [SerializeField] private TextMeshProUGUI _timeStatisticText;
+        [SerializeField] private TextMeshProUGUI _newRecordText;
 
         [SerializeField] private Image _fadeImage;
 
@@ -50,14 +52,21 @@ namespace YooE.Diploma
 
         public void SetupEndPopup(string enemyDefeatPercent, string spentTime)
         {
-            _enemyStatisticText.text = $"{enemyDefeatPercent} %";
+            _enemyStatisticText.text = enemyDefeatPercent;
             _timeStatisticText.text = spentTime;
             _fadeImage.enabled = true;
             _endPopup.SetActive(true);
         }
 
+        public void SetupNewRecordText(string recordText)
+        {
+            _newRecordText.text = recordText;
+            _newRecordText.gameObject.SetActive(true);
+        }
+
         public void Hide()
         {
+            _newRecordText.gameObject.SetActive(false);
             _fadeImage.enabled = false;
             _retryButtonPopup.SetActive(false);
             _endPopup.SetActive(false);
@@ -67,17 +76,21 @@ namespace YooE.Diploma
     public sealed class ShooterPopupsPresenter : Listeners.IFinishListener
     {
         private readonly ShooterPopupsView _shooterPopupsView;
-        private readonly ShooterGameLoopController _shooterGameLoopController;
+
+        // private readonly ShooterGameLoopController _shooterGameLoopController;
         private readonly EnemiesInitializer _enemiesInitializer;
         private readonly UpdateTimer _timer;
+        private readonly bool _isEndless;
 
         public ShooterPopupsPresenter(ShooterPopupsView shooterPopupsView,
-            ShooterGameLoopController shooterGameLoopController,
-            EnemiesInitializer enemiesInitializer, UpdateTimer timer)
+//            ShooterGameLoopController shooterGameLoopController,
+            EnemiesInitializer enemiesInitializer, UpdateTimer timer, bool isEndless = false)
         {
+            _isEndless = isEndless;
+
             _shooterPopupsView = shooterPopupsView;
             _enemiesInitializer = enemiesInitializer;
-            _shooterGameLoopController = shooterGameLoopController;
+            //   _shooterGameLoopController = shooterGameLoopController;
             _timer = timer;
 
             InitPopupsView();
@@ -88,12 +101,15 @@ namespace YooE.Diploma
 
         private void GoNextLevel()
         {
-            _shooterGameLoopController.GoNextLevel();
+            //_shooterGameLoopController.GoNextLevel();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("ScienceBaseVisual");
         }
 
         private void RetryGame()
         {
-            _shooterGameLoopController.RetryGameLoop();
+            //_shooterGameLoopController.RetryGameLoop();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         private void InitPopupsView()
@@ -108,7 +124,8 @@ namespace YooE.Diploma
 
         public void OnFinish()
         {
-            ShowEndGamePopup();
+            if (!_isEndless)
+                ShowEndGamePopup();
         }
 
         public void ShowRetryPanel()
@@ -118,11 +135,30 @@ namespace YooE.Diploma
 
         public void ShowEndGamePopup()
         {
-            var stringDefeatPercent = ((int)_enemiesInitializer.GetDefeatPercent()).ToString();
+            string stringDefeat;
+            if (_isEndless)
+            {
+                stringDefeat = (_enemiesInitializer.GetTotalDefeatCount()).ToString();
+
+                var recordText = "НОВЫЙ РЕКОРД!";
+
+                var currentScore = _enemiesInitializer.GetTotalDefeatCount();
+                var recordScore = _enemiesInitializer.BestScore;
+                if (currentScore <= recordScore)
+                    recordText = $"РЕКОРД - {recordScore}";
+
+                _shooterPopupsView.SetupNewRecordText(recordText);
+            }
+            else
+            {
+                stringDefeat = ((int)_enemiesInitializer.GetDefeatPercent()).ToString();
+                stringDefeat = $"{stringDefeat} %";
+            }
+
             var time = new TimeSpan(0, 0, (int)_timer.CurrentTime);
             var stringSpentTime = $"{time.Minutes}:";
             stringSpentTime += time.Seconds < 10 ? $"0{time.Seconds}" : $"{time.Seconds}";
-            _shooterPopupsView.SetupEndPopup(stringDefeatPercent, stringSpentTime);
+            _shooterPopupsView.SetupEndPopup(stringDefeat, stringSpentTime);
         }
     }
 }

@@ -8,19 +8,18 @@ using Zenject;
 
 namespace YooE.Diploma
 {
-    public sealed class ShooterGameLoopController : MonoBehaviour
+    public class ShooterGameLoopController : MonoBehaviour
     {
-        private LifecycleManager _lifecycleManager;
-        private EnemyWaveObserver _enemyWaveObserver;
-        private PlayerShooterBrain _playerBrain;
-        private UpdateTimer _timer;
-        private SaveLoadManager _saveLoadManager;
-        private AudioManager _audioManager;
-        private CharactersDataHandler _charactersDataHandler;
-        [SerializeField] private ShooterEndZone _shooterEndZone;
+        protected LifecycleManager _lifecycleManager;
+        protected EnemyWaveObserver _enemyWaveObserver;
+        protected PlayerShooterBrain _playerBrain;
+        protected UpdateTimer _timer;
+        protected SaveLoadManager _saveLoadManager;
+        protected AudioManager _audioManager;
+        protected CharactersDataHandler _charactersDataHandler;
+        [SerializeField] protected ShooterEndZone _shooterEndZone;
 
-        [SerializeField] private string _nextSceneName;
-        [SerializeField] private AudioClip _audioClip;
+        [SerializeField] protected AudioClip _audioClip;
 
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, EnemyWaveObserver enemyWaveObserver,

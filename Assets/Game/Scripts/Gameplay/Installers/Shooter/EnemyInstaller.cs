@@ -7,6 +7,8 @@ namespace YooE.Diploma
 {
     public class EnemyInstaller : MonoInstaller
     {
+        [SerializeField] private bool _isEndless = false;
+
         [SerializeField] private EnemyConfig _commonEnemyConfig;
         [SerializeField] private EnemyPoolsSettings _enemyPoolsSettings;
         [SerializeField] private Transform _enemiesParent;
@@ -20,7 +22,7 @@ namespace YooE.Diploma
 
             Container.Bind<EnemyConfig>().FromInstance(_commonEnemyConfig).AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<EnemySpawner>().AsCached()
-                .WithArguments(_enemySpawnPoints, _enemyPoolsSettings, _enemiesParent).NonLazy();
+                .WithArguments(_enemySpawnPoints, _enemyPoolsSettings, _enemiesParent, _isEndless).NonLazy();
             Container.BindInterfacesAndSelfTo<EnemiesInitializer>().AsCached().NonLazy();
             Container.Bind<EnemyWaveObserver>().AsCached().NonLazy();
         }

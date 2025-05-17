@@ -21,9 +21,12 @@ namespace YooE.Diploma
 
             Container.BindInterfacesAndSelfTo<AudioManager>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<AudioSaveLoader>().AsSingle().NonLazy();
-            
+
             Container.Bind<CharactersDataHandler>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<CharacterDialoguesSaveLoader>().AsSingle().NonLazy();
+
+            Container.Bind<PlayerScoreAndMoneyContainer>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<PlayerDataSaveLoader>().AsSingle().NonLazy();
         }
     }
 }

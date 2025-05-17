@@ -22,6 +22,11 @@ namespace YooE.Diploma
             _enemyGO?.SetActive(false);
         }
 
+        public void EnablePhysics()
+        {
+            _collider.enabled = true;
+        }
+
         public void DisablePhysics()
         {
             _collider.enabled = false;
@@ -30,6 +35,7 @@ namespace YooE.Diploma
         public void EnableEnemy()
         {
             _enemyGO.SetActive(true);
+            EnablePhysics();
         }
 
         public void SetAnimatorBool(string varName, bool conditions)

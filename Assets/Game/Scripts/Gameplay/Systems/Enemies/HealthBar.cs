@@ -15,13 +15,23 @@ namespace YooE.Diploma
         [SerializeField] private bool _needHideWhenEmpty = true;
         [SerializeField] private bool _needHideBeforeDamage = true;
 
-        private void Start()
+        public void Start()
         {
             _camera = Camera.main;
             if (_needHideBeforeDamage)
             {
                 gameObject.SetActive(false);
             }
+        }
+
+        public void ResetHpBar()
+        {
+            if (_needHideBeforeDamage)
+            {
+                gameObject.SetActive(false);
+            }
+
+            _sliderView.gameObject.SetActive(true);
         }
 
         private void Update()

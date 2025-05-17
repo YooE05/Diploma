@@ -2,7 +2,8 @@
 
 namespace YooE.Diploma
 {
-    public sealed class ShooterGameplayScreenPresenter : Listeners.IFinishListener, IDisposable
+    public sealed class ShooterGameplayScreenPresenter : Listeners.IFinishListener, IDisposable,
+        Listeners.IStartListener
     {
         //private readonly CompositeDisposable _disposables = new();
         private readonly ShooterGameplayScreenView _gameplayScreenView;
@@ -17,11 +18,29 @@ namespace YooE.Diploma
 
             _enemiesInitializer = enemiesInitializer;
             _enemiesInitializer.OnLiveEnemiesCountChanged += SetEnemySliderValue;
+            _enemiesInitializer.OnLiveEnemiesCountChanged += SetNewTotalDefeatEnemyCount;
         }
 
-        private void SetEnemySliderValue(int deadCount, int allCount)
+        private void SetNewTotalDefeatEnemyCount(int _1, int _2, int totalDefeat)
         {
-            _gameplayScreenView.UpdateEnemySlider(deadCount / (float)allCount * 100);
+            _gameplayScreenView.UpdateScoreText(totalDefeat);
+        }
+
+        private void SetEnemySliderValue(int deadCount, int allCount, int _)
+        {
+            if (allCount == 0)
+            {
+                _gameplayScreenView.UpdateEnemySlider(0);
+            }
+            else
+            {
+                _gameplayScreenView.UpdateEnemySlider(deadCount / (float)allCount * 100);
+            }
+        }
+
+        public void OnStart()
+        {
+            _gameplayScreenView.SetUpRecordText(_enemiesInitializer.BestScore);
         }
 
         public void OnFinish()

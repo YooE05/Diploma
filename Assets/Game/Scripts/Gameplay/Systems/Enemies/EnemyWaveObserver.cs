@@ -13,7 +13,7 @@ namespace YooE.Diploma
             _enemiesInitializer.OnLiveEnemiesCountChanged += CheckEnemiesRemains;
         }
 
-        private void CheckEnemiesRemains(int diedCount, int allCount)
+        private void CheckEnemiesRemains(int diedCount, int allCount, int _)
         {
             if (diedCount != allCount) return;
 
