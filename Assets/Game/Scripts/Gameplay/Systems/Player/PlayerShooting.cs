@@ -104,18 +104,19 @@ namespace YooE.Diploma
         {
             for (var i = 0; i < _weaponsView.Length; i++)
             {
-                _weaponsView[i].SetWeaponVisibility(false);
+                _weaponsView[i].SetWeaponVisibility(false, _shootingConfig.EnemyType);
             }
         }
 
         private void Shoot(WeaponView weaponView)
         {
-            weaponView.SetWeaponVisibility(true);
+            weaponView.SetWeaponVisibility(true, _shootingConfig.EnemyType);
 
             var velocity = CalculateBulletVelocity(
                 GetShotDirection(weaponView.ShootingPointPosition, weaponView.CurrentTarget.transform.position),
                 _shootingConfig.BulletSpeed);
-            _bulletsSystem.FlyBullet(weaponView.ShootingPointPosition, _shootingConfig.Damage, velocity);
+            _bulletsSystem.FlyBullet(weaponView.ShootingPointPosition, _shootingConfig.Damage, velocity,
+                _shootingConfig.EnemyType, _shootingConfig.BulletColor);
         }
 
         private Vector3 GetShotDirection(Vector3 startShootingPosition, Vector3 targetPosition)

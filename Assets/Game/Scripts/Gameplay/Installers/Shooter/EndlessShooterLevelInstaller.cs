@@ -18,7 +18,7 @@ namespace YooE.Diploma
         // ReSharper disable Unity.PerformanceAnalysis
         public override void InstallBindings()
         {
-           //Container.BindInterfacesAndSelfTo<PlayerScoreSaveLoader2>().AsCached().NonLazy();
+            //Container.BindInterfacesAndSelfTo<PlayerScoreSaveLoader2>().AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<SaveLoadManager>().AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<LifecycleManager>().AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<EndlessShooterGameLoop>().FromInstance(_shooterGameLoopController)
@@ -47,6 +47,7 @@ namespace YooE.Diploma
 
         private void Player()
         {
+            Container.BindInterfacesAndSelfTo<PlayerShooterInput>().AsSingle().NonLazy();
             Container.Bind<PlayerDeathObserver>().AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<PlayerShooterBrain>().AsCached().WithArguments(_playerView).NonLazy();
         }

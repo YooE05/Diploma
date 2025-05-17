@@ -213,6 +213,74 @@ namespace YooE.Diploma
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""ShooterMap"",
+            ""id"": ""e9f2f49c-b132-4ec9-a989-94325c33079b"",
+            ""actions"": [
+                {
+                    ""name"": ""ThirdWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""85608df9-618f-4621-92fe-ae4e47160d27"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SecondWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""174bbd4f-36b9-40ec-a273-66cca6a82776"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FirstWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""1f92ce15-d0b6-4252-b40f-0d0dd22e9c9d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0592357d-41ec-412e-9f71-95079e15e71a"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FirstWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""045aa6fc-1bbf-4bce-9d7b-7032d6d68fb0"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SecondWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f84ecb93-fd18-4423-af6f-63a06559d053"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThirdWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -222,6 +290,11 @@ namespace YooE.Diploma
             m_PlayerLocomotionMap_Move = m_PlayerLocomotionMap.FindAction("Move", throwIfNotFound: true);
             m_PlayerLocomotionMap_PointerPosition = m_PlayerLocomotionMap.FindAction("PointerPosition", throwIfNotFound: true);
             m_PlayerLocomotionMap_PointerInteractionAbility = m_PlayerLocomotionMap.FindAction("PointerInteractionAbility", throwIfNotFound: true);
+            // ShooterMap
+            m_ShooterMap = asset.FindActionMap("ShooterMap", throwIfNotFound: true);
+            m_ShooterMap_ThirdWeapon = m_ShooterMap.FindAction("ThirdWeapon", throwIfNotFound: true);
+            m_ShooterMap_SecondWeapon = m_ShooterMap.FindAction("SecondWeapon", throwIfNotFound: true);
+            m_ShooterMap_FirstWeapon = m_ShooterMap.FindAction("FirstWeapon", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -341,11 +414,79 @@ namespace YooE.Diploma
             }
         }
         public PlayerLocomotionMapActions @PlayerLocomotionMap => new PlayerLocomotionMapActions(this);
+
+        // ShooterMap
+        private readonly InputActionMap m_ShooterMap;
+        private List<IShooterMapActions> m_ShooterMapActionsCallbackInterfaces = new List<IShooterMapActions>();
+        private readonly InputAction m_ShooterMap_ThirdWeapon;
+        private readonly InputAction m_ShooterMap_SecondWeapon;
+        private readonly InputAction m_ShooterMap_FirstWeapon;
+        public struct ShooterMapActions
+        {
+            private @PlayerControls m_Wrapper;
+            public ShooterMapActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+            public InputAction @ThirdWeapon => m_Wrapper.m_ShooterMap_ThirdWeapon;
+            public InputAction @SecondWeapon => m_Wrapper.m_ShooterMap_SecondWeapon;
+            public InputAction @FirstWeapon => m_Wrapper.m_ShooterMap_FirstWeapon;
+            public InputActionMap Get() { return m_Wrapper.m_ShooterMap; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(ShooterMapActions set) { return set.Get(); }
+            public void AddCallbacks(IShooterMapActions instance)
+            {
+                if (instance == null || m_Wrapper.m_ShooterMapActionsCallbackInterfaces.Contains(instance)) return;
+                m_Wrapper.m_ShooterMapActionsCallbackInterfaces.Add(instance);
+                @ThirdWeapon.started += instance.OnThirdWeapon;
+                @ThirdWeapon.performed += instance.OnThirdWeapon;
+                @ThirdWeapon.canceled += instance.OnThirdWeapon;
+                @SecondWeapon.started += instance.OnSecondWeapon;
+                @SecondWeapon.performed += instance.OnSecondWeapon;
+                @SecondWeapon.canceled += instance.OnSecondWeapon;
+                @FirstWeapon.started += instance.OnFirstWeapon;
+                @FirstWeapon.performed += instance.OnFirstWeapon;
+                @FirstWeapon.canceled += instance.OnFirstWeapon;
+            }
+
+            private void UnregisterCallbacks(IShooterMapActions instance)
+            {
+                @ThirdWeapon.started -= instance.OnThirdWeapon;
+                @ThirdWeapon.performed -= instance.OnThirdWeapon;
+                @ThirdWeapon.canceled -= instance.OnThirdWeapon;
+                @SecondWeapon.started -= instance.OnSecondWeapon;
+                @SecondWeapon.performed -= instance.OnSecondWeapon;
+                @SecondWeapon.canceled -= instance.OnSecondWeapon;
+                @FirstWeapon.started -= instance.OnFirstWeapon;
+                @FirstWeapon.performed -= instance.OnFirstWeapon;
+                @FirstWeapon.canceled -= instance.OnFirstWeapon;
+            }
+
+            public void RemoveCallbacks(IShooterMapActions instance)
+            {
+                if (m_Wrapper.m_ShooterMapActionsCallbackInterfaces.Remove(instance))
+                    UnregisterCallbacks(instance);
+            }
+
+            public void SetCallbacks(IShooterMapActions instance)
+            {
+                foreach (var item in m_Wrapper.m_ShooterMapActionsCallbackInterfaces)
+                    UnregisterCallbacks(item);
+                m_Wrapper.m_ShooterMapActionsCallbackInterfaces.Clear();
+                AddCallbacks(instance);
+            }
+        }
+        public ShooterMapActions @ShooterMap => new ShooterMapActions(this);
         public interface IPlayerLocomotionMapActions
         {
             void OnMove(InputAction.CallbackContext context);
             void OnPointerPosition(InputAction.CallbackContext context);
             void OnPointerInteractionAbility(InputAction.CallbackContext context);
+        }
+        public interface IShooterMapActions
+        {
+            void OnThirdWeapon(InputAction.CallbackContext context);
+            void OnSecondWeapon(InputAction.CallbackContext context);
+            void OnFirstWeapon(InputAction.CallbackContext context);
         }
     }
 }

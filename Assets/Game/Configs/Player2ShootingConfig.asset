@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20eb3c61e85b4914bb56392758712c78, type: 3}
   m_Name: Player2ShootingConfig
   m_EditorClassIdentifier: 
-  <ShootingDelay>k__BackingField: 1
+  <ShootingDelay>k__BackingField: 0.1
   <BulletSpeed>k__BackingField: 5
-  <Damage>k__BackingField: 5
+  <Damage>k__BackingField: 1
+  <EnemyType>k__BackingField: 1
+  <BulletColor>k__BackingField: {r: 0.83921576, g: 0.1254902, b: 0.36078432, a: 1}

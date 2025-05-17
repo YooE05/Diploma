@@ -10,12 +10,30 @@ namespace YooE.Diploma
 
         [SerializeField] private List<ButtonView> _weaponButtons;
         [SerializeField] private List<ShootingConfig> _shootingConfigs;
+        private PlayerShooterInput _playerShooterInput;
 
         [Inject]
-        public void Construct(PlayerShooting playerShooting)
+        public void Construct(PlayerShooting playerShooting, PlayerShooterInput playerShooterInput)
         {
+            _playerShooterInput = playerShooterInput;
+
             _playerShooting = playerShooting;
             ClearOtherSwitches(0);
+        }
+
+        private void SelectWeapon1()
+        {
+            EnableWeapon(0);
+        }
+
+        private void SelectWeapon2()
+        {
+            EnableWeapon(1);
+        }
+
+        private void SelectWeapon3()
+        {
+            EnableWeapon(2);
         }
 
         private void OnEnable()
@@ -28,6 +46,7 @@ namespace YooE.Diploma
             Unsubscribe();
         }
 
+
         private void Subscribe()
         {
             if (_weaponButtons.Count != _shootingConfigs.Count) return;
@@ -36,6 +55,10 @@ namespace YooE.Diploma
             {
                 _weaponButtons[i].OnCurrentButtonClicked += EnableWeapon;
             }
+
+            _playerShooterInput.OnFirstWeaponPicked += SelectWeapon1;
+            _playerShooterInput.OnSecondWeaponPicked += SelectWeapon2;
+            _playerShooterInput.OnThirdWeaponPicked += SelectWeapon3;
         }
 
         private void Unsubscribe()
@@ -46,6 +69,10 @@ namespace YooE.Diploma
             {
                 _weaponButtons[i].OnCurrentButtonClicked -= EnableWeapon;
             }
+
+            _playerShooterInput.OnFirstWeaponPicked -= SelectWeapon1;
+            _playerShooterInput.OnSecondWeaponPicked -= SelectWeapon2;
+            _playerShooterInput.OnThirdWeaponPicked -= SelectWeapon3;
         }
 
         private void EnableWeapon(ButtonView buttonView)
@@ -53,6 +80,12 @@ namespace YooE.Diploma
             var index = _weaponButtons.IndexOf(buttonView);
             ClearOtherSwitches(index);
             SwitchWeapon(_shootingConfigs[index]);
+        }
+
+        private void EnableWeapon(int weaponIndex)
+        {
+            ClearOtherSwitches(weaponIndex);
+            SwitchWeapon(_shootingConfigs[weaponIndex]);
         }
 
         private void ClearOtherSwitches(int weaponIndex)

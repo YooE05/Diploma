@@ -72,10 +72,11 @@ namespace YooE.Diploma
 
         private void StartGame()
         {
-            SpawnEnemyWave().Forget();
+            SpawnEnemyWave(0f).Forget();
             _gameplayScreenView.Show();
             _startPanel.SetActive(false);
             _startButton.OnButtonClicked -= StartGame;
+            
             _lifecycleManager.OnStart();
             _timer.RestartTimer();
         }
@@ -88,10 +89,10 @@ namespace YooE.Diploma
             _timer.RestartTimer();
         }
 
-        private async UniTaskVoid SpawnEnemyWave()
+        private async UniTaskVoid SpawnEnemyWave(float delay)
         {
             _gameplayScreenView.ShowWaveNumber(_waveIndex + 1);
-            await UniTask.WaitForSeconds(2f);
+            await UniTask.WaitForSeconds(delay);
 
             _enemyWaveObserver.OnAllEnemiesDead += DefeatWave;
 
@@ -141,7 +142,7 @@ namespace YooE.Diploma
             _questionsGenerator.OnBadAnswer -= OnBadAnswer;
             _questionsGenerator.OnGoodAnswer -= OnGoodAnswer;
 
-            SpawnEnemyWave().Forget();
+            SpawnEnemyWave(2f).Forget();
         }
 
         private void FinishGame()

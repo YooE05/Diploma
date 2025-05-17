@@ -189,6 +189,74 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "ShooterMap",
+            "id": "e9f2f49c-b132-4ec9-a989-94325c33079b",
+            "actions": [
+                {
+                    "name": "ThirdWeapon",
+                    "type": "Button",
+                    "id": "85608df9-618f-4621-92fe-ae4e47160d27",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondWeapon",
+                    "type": "Button",
+                    "id": "174bbd4f-36b9-40ec-a273-66cca6a82776",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FirstWeapon",
+                    "type": "Button",
+                    "id": "1f92ce15-d0b6-4252-b40f-0d0dd22e9c9d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0592357d-41ec-412e-9f71-95079e15e71a",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FirstWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "045aa6fc-1bbf-4bce-9d7b-7032d6d68fb0",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f84ecb93-fd18-4423-af6f-63a06559d053",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThirdWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

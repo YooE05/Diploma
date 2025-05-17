@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feca1ae29b944baa90a4dbeac7daebc0, type: 3}
   m_Name: BulletsPoolConfig
   m_EditorClassIdentifier: 
-  <Prefab>k__BackingField: {fileID: 4392334461835811801, guid: 51c4d45f3b77ac24ea40907d415a8847, type: 3}
+  <Prefab>k__BackingField: {fileID: 4392334461835811801, guid: 6cfbd6be2086a5f46a558bc87490bd6d, type: 3}
   <InitCount>k__BackingField: 50

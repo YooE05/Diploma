@@ -46,6 +46,7 @@ namespace YooE.Diploma
 
         private void Player()
         {
+            Container.BindInterfacesAndSelfTo<PlayerShooterInput>().AsSingle().NonLazy();
             Container.Bind<PlayerDeathObserver>().AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<PlayerShooterBrain>().AsCached().WithArguments(_playerView).NonLazy();
         }
