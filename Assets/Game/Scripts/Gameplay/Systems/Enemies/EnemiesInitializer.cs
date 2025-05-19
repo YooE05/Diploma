@@ -17,7 +17,7 @@ namespace YooE.Diploma
         private int _totalDeadEnemiesCount;
         public int BestScore;
 
-        [Inject] private PlayerScoreAndMoneyContainer _playerScoreAndMoneyContainer;
+        [Inject] private PlayerDataContainer _playerDataContainer;
 
         public void OnUpdate(float deltaTime)
         {
@@ -34,7 +34,7 @@ namespace YooE.Diploma
                 BestScore = _totalDeadEnemiesCount;
             }
 
-            _playerScoreAndMoneyContainer.SetLevelResults(_totalDeadEnemiesCount, BestScore);
+            _playerDataContainer.SetLevelResults(_totalDeadEnemiesCount, BestScore);
 
             for (var i = 0; i < EnemiesCount; i++)
             {
@@ -56,7 +56,7 @@ namespace YooE.Diploma
 
         public void OnStart()
         {
-            BestScore = _playerScoreAndMoneyContainer.BestScore;
+            BestScore = _playerDataContainer.BestScore;
             _deadEnemiesCount = 0;
             OnLiveEnemiesCountChanged?.Invoke(_deadEnemiesCount, EnemiesCount, _totalDeadEnemiesCount);
         }

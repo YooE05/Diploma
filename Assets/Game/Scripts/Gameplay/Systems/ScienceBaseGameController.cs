@@ -19,18 +19,17 @@ namespace YooE.Diploma
         private SaveLoadManager _saveLoadManager;
         private AudioManager _audioManager;
         private LifecycleManager _lifecycleManager;
-        private PlayerScoreAndMoneyContainer _playerScoreAndMoneyContainer;
+        private PlayerDataContainer _playerDataContainer;
 
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, SaveLoadManager saveLoadManager,
             ScienceMethodPopup scienceMethodPopup, AudioManager audioManager,
-            PlayerScoreAndMoneyContainer playerScoreAndMoneyContainer)
+            PlayerDataContainer playerDataContainer)
         {
-            _playerScoreAndMoneyContainer = playerScoreAndMoneyContainer;
+            _playerDataContainer = playerDataContainer;
             _lifecycleManager = lifecycleManager;
             _audioManager = audioManager;
             _saveLoadManager = saveLoadManager;
-            //scienceMethodPopup.Hide();
         }
 
         private void Start()
@@ -41,9 +40,9 @@ namespace YooE.Diploma
 
         private void StartGameplay()
         {
-            Debug.Log(_playerScoreAndMoneyContainer.LastScore);
-            Debug.Log(_playerScoreAndMoneyContainer.BestScore);
-            Debug.Log(_playerScoreAndMoneyContainer.CurrentMoney);
+            Debug.Log(_playerDataContainer.LastScore);
+            Debug.Log(_playerDataContainer.BestScore);
+            Debug.Log(_playerDataContainer.CurrentMoney);
 
             _stagesManger.InitGameViewBySave();
             _saveLoadManager.OnDataLoaded -= StartGameplay;
@@ -53,6 +52,8 @@ namespace YooE.Diploma
             {
                 _scientistCharacterComponent.StartCurrentDialogueGroup().Forget();
             }
+
+            _playerDataContainer.IsGameCompleted = _scientistCharacterComponent.GetCharacterData().GroupIndex > 20;
 
             _lifecycleManager.OnStart();
         }

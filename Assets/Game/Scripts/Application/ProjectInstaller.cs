@@ -25,7 +25,7 @@ namespace YooE.Diploma
             Container.Bind<CharactersDataHandler>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<CharacterDialoguesSaveLoader>().AsSingle().NonLazy();
 
-            Container.Bind<PlayerScoreAndMoneyContainer>().AsSingle().NonLazy();
+            Container.Bind<PlayerDataContainer>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<PlayerDataSaveLoader>().AsSingle().NonLazy();
         }
     }

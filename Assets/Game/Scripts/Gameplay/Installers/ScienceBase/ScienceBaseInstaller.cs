@@ -22,6 +22,7 @@ namespace YooE.Diploma
         [SerializeField] private FightDoorInteractionComponent _fightDoorInteraction;
 
         [SerializeField] private NavigationManager _navigationManager;
+        [SerializeField] private StoreManager _storeManager;
 
         public override void InstallBindings()
         {
@@ -50,6 +51,8 @@ namespace YooE.Diploma
                 .NonLazy();
 
             Container.BindInterfacesAndSelfTo<NavigationManager>().FromInstance(_navigationManager).AsCached()
+                .NonLazy();
+            Container.BindInterfacesAndSelfTo<StoreManager>().FromInstance(_storeManager).AsCached()
                 .NonLazy();
         }
     }
