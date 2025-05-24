@@ -52,7 +52,7 @@ namespace YooE.Diploma
                 }
                 else if (bulletType != EnemyType.Any)
                 {
-                    _damageMultiplier = 0.5f;
+                    _damageMultiplier = 0.75f;
                 }
             }
 

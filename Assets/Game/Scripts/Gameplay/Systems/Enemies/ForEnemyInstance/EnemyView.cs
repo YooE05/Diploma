@@ -54,5 +54,10 @@ namespace YooE.Diploma
             _enemyGO.transform.position = spawnPosition;
             Agent.enabled = true;
         }
+
+        public void SetRotation(Quaternion spawnRotation)
+        {
+            _enemyGO.transform.rotation = spawnRotation;
+        }
     }
 }

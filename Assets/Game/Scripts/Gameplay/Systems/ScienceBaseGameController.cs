@@ -48,10 +48,10 @@ namespace YooE.Diploma
             _saveLoadManager.OnDataLoaded -= StartGameplay;
             _audioManager.PlaySound(_audioClip, AudioOutput.Music);
 
-            if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
+            /*if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
             {
                 _scientistCharacterComponent.StartCurrentDialogueGroup().Forget();
-            }
+            }*/
 
             _playerDataContainer.IsGameCompleted = _scientistCharacterComponent.GetCharacterData().GroupIndex > 20;
 

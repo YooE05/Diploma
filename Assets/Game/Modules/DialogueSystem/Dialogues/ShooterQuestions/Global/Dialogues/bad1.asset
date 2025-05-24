@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: bad1
   <CharacterName>k__BackingField: "\u043F\u043E\u043C\u043E\u0449\u043D\u0438\u043A"
-  <Text>k__BackingField: net
+  <Text>k__BackingField: "\u042D\u0445, \u0432 \u044D\u0442\u043E\u0442 \u0440\u0430\u0437
+    \u0442\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E"
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 0}

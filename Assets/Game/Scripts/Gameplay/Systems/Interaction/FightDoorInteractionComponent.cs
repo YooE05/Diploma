@@ -13,7 +13,7 @@ namespace YooE.Diploma.Interaction
         public override void OnInit()
         {
             base.OnInit();
-            _goShooterAskPopup.Hide();
+            _goShooterAskPopup.HideNoAnimation();
         }
 
         public override void Interact()

@@ -54,7 +54,7 @@ namespace YooE.Diploma
         public void SpawnEnemyWave(EnemyWave enemyWave)
         {
             _enemiesInitializer.ClearEnemies();
-            
+
             if (_spawnPoints.Count == 0)
             {
                 Debug.LogWarning("No Enemy Spawnpoints");
@@ -80,7 +80,8 @@ namespace YooE.Diploma
 
                 var newEnemyView = _enemyPools[type].GetEnemy();
                 newEnemyView.SetPosition(currentSpawnPoints[i].SpawnPosition);
-                _enemiesInitializer.InitEnemy(newEnemyView,
+                newEnemyView.SetRotation(currentSpawnPoints[i].SpawnRotation);
+                _enemiesInitializer.InitEnemy(newEnemyView, 
                     _enemyPoolsConfigs[type].EnemyCharacteristics.GetCloneWithNewValues(enemyWave.EnemyWaveData[type]));
             }
 
@@ -91,6 +92,8 @@ namespace YooE.Diploma
         {
             for (var i = 0; i < _spawnPoints.Count; i++)
             {
+                if (_spawnPoints[i].EnemyType == EnemyType.Any) continue;
+
                 var type = _spawnPoints[i].EnemyType;
                 if (!_enemyPools.ContainsKey(type))
                 {
@@ -101,6 +104,7 @@ namespace YooE.Diploma
 
                 var newEnemyView = _enemyPools[type].GetEnemy();
                 newEnemyView.SetPosition(_spawnPoints[i].SpawnPosition);
+                newEnemyView.SetRotation(_spawnPoints[i].SpawnRotation);
                 _enemiesInitializer.InitEnemy(newEnemyView, _enemyPoolsConfigs[type].EnemyCharacteristics);
             }
         }

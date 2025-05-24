@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using DS.Data;
 using DS.ScriptableObjects;
 using TMPro;
@@ -29,17 +30,28 @@ namespace YooE.DialogueSystem
             _dialogueState.OnDialogueStart += InitDialogueView;
             _dialogueState.OnDialogueGroupFinished += Hide;
 
-            Hide();
+            HideNoAnimation();
         }
 
         private void Show()
         {
+            _dialoguePanel.transform.DOLocalMoveX(-1924.63f, 0f).Play().SetLink(_dialoguePanel);
+            _dialoguePanel.transform.DOLocalMoveX(-8f, 0.5f).Play().SetLink(_dialoguePanel);
             _dialoguePanel.SetActive(true);
             _continueButton.ClearListeners();
             _continueButton.OnButtonClicked += ContinueDialogue;
         }
 
         private void Hide()
+        {
+            _dialoguePanel.transform.DOLocalMoveX(-1924.63f, 0.5f).Play().SetLink(_dialoguePanel)
+                .OnComplete(() => { _dialoguePanel.SetActive(false); });
+
+            _continueButton.ClearListeners();
+            _continueButton.OnButtonClicked -= ContinueDialogue;
+        }
+
+        private void HideNoAnimation()
         {
             _dialoguePanel.SetActive(false);
             _continueButton.ClearListeners();
@@ -72,6 +84,8 @@ namespace YooE.DialogueSystem
             {
                 _answersPanel.SetActive(false);
                 _continueButton.Show();
+                _continueButton.transform.DOLocalMoveX(859.19f, 0.6f).From(887f).SetLoops(-1, LoopType.Yoyo)
+                    .SetLink(_continueButton.gameObject).Play();
             }
             else
             {

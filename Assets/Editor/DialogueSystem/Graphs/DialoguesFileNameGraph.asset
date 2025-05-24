@@ -16,94 +16,94 @@ MonoBehaviour:
   <Groups>k__BackingField:
   - <ID>k__BackingField: 1d962444-6eed-4c77-98c4-28ee1e5f5d24
     <Name>k__BackingField: Stage3PlayerSeparatePlant
-    <Position>k__BackingField: {x: -237, y: 1307.0002}
+    <Position>k__BackingField: {x: -237, y: 1307}
   - <ID>k__BackingField: 659d603c-326e-4559-9e57-470df3a1bd41
     <Name>k__BackingField: Stage3PlayerGarden
-    <Position>k__BackingField: {x: -941, y: 1310.0005}
+    <Position>k__BackingField: {x: -941, y: 1310}
   - <ID>k__BackingField: dedaa8f3-9d89-4812-a69d-d5ff888a795f
     <Name>k__BackingField: Stage3MainCheckGarden
-    <Position>k__BackingField: {x: -795, y: 993.0003}
+    <Position>k__BackingField: {x: -1158, y: 993}
   - <ID>k__BackingField: 7b0db88d-7bdb-4312-a141-259d14dc4564
     <Name>k__BackingField: Stage3MainCheckGardenWait
-    <Position>k__BackingField: {x: 255.99988, y: 993.0003}
+    <Position>k__BackingField: {x: 256, y: 993}
   - <ID>k__BackingField: 42356f86-01cc-494b-81ab-f4f0e77d311f
     <Name>k__BackingField: Stage3AlreadyCheckGarden
-    <Position>k__BackingField: {x: -925, y: 1707.0004}
+    <Position>k__BackingField: {x: -925, y: 1707}
   - <ID>k__BackingField: 486625a5-5b3b-4b46-8b62-c0c89e37de71
     <Name>k__BackingField: Stage3End
-    <Position>k__BackingField: {x: -1648, y: 1758.0005}
+    <Position>k__BackingField: {x: -1648, y: 1758}
   - <ID>k__BackingField: dda47e32-1aa8-4e06-97ef-39687e06800f
     <Name>k__BackingField: Stage1Main
-    <Position>k__BackingField: {x: -394, y: 316.00024}
+    <Position>k__BackingField: {x: -394, y: 316}
   - <ID>k__BackingField: 63541d1f-8c20-4413-9c5c-0ea4efaaf299
     <Name>k__BackingField: Stage4Start
-    <Position>k__BackingField: {x: -1581, y: 2616.0002}
+    <Position>k__BackingField: {x: -1581, y: 2616}
   - <ID>k__BackingField: 4e9c86a3-f227-434c-a985-82b7636e6aea
     <Name>k__BackingField: Stage4WaitSeedPlant
-    <Position>k__BackingField: {x: 3374.0002, y: 2617.0002}
+    <Position>k__BackingField: {x: 3374, y: 2617}
   - <ID>k__BackingField: fa972cd1-31ee-4bcb-a019-edb43268e96d
     <Name>k__BackingField: Stage4SeedsPlanted
-    <Position>k__BackingField: {x: -1646, y: 2986.0002}
+    <Position>k__BackingField: {x: -1646, y: 2986}
   - <ID>k__BackingField: 763f838f-4a0e-409b-8ee0-91206b3c928b
     <Name>k__BackingField: Stage4End
-    <Position>k__BackingField: {x: -188, y: 2980.0002}
+    <Position>k__BackingField: {x: -188, y: 2980}
   - <ID>k__BackingField: 03754fe8-d655-495c-a234-3e08beeec94c
     <Name>k__BackingField: Stage2Start
-    <Position>k__BackingField: {x: -751, y: 653.00024}
+    <Position>k__BackingField: {x: -756, y: 653}
   - <ID>k__BackingField: 4472b501-1dc5-49e4-a5a9-c4c9e4e813b0
     <Name>k__BackingField: Stage2End
-    <Position>k__BackingField: {x: 702.0001, y: 652.00024}
+    <Position>k__BackingField: {x: 702, y: 652}
   - <ID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
     <Name>k__BackingField: Stage5Start
-    <Position>k__BackingField: {x: -753, y: 3316.0002}
+    <Position>k__BackingField: {x: -753, y: 3316}
   - <ID>k__BackingField: ef9ddcd0-d03c-4b86-8d41-f12424cbe481
     <Name>k__BackingField: Stage5WaitMesureStick
-    <Position>k__BackingField: {x: -1533, y: 3454.0002}
+    <Position>k__BackingField: {x: -1533, y: 3454}
   - <ID>k__BackingField: 9fae7d4a-4a79-4882-8aa6-c0a9a87cc7fa
     <Name>k__BackingField: Stage5DoMeasurement
-    <Position>k__BackingField: {x: 804, y: 4021.0002}
+    <Position>k__BackingField: {x: 804, y: 4021}
   - <ID>k__BackingField: 1a950aab-36f1-4f8b-a5fb-b236139dfa6d
     <Name>k__BackingField: Stage5BringItems
-    <Position>k__BackingField: {x: -1462, y: 4024.0002}
+    <Position>k__BackingField: {x: -1462, y: 4024}
   - <ID>k__BackingField: e33388f7-4e9f-49d1-8310-4f896f5c211b
     <Name>k__BackingField: Stage5EndMeasurement
-    <Position>k__BackingField: {x: 2503, y: 4025.0002}
+    <Position>k__BackingField: {x: 2503, y: 4025}
   - <ID>k__BackingField: 6e331be3-5ec5-4854-84ea-fe12eb1d41eb
     <Name>k__BackingField: Stage5End
-    <Position>k__BackingField: {x: 4565, y: 4027.0002}
+    <Position>k__BackingField: {x: 4565, y: 4027}
   - <ID>k__BackingField: 73c7a825-c33e-4429-b4ae-44ebf3db15b3
     <Name>k__BackingField: Stage5SeekItem1
-    <Position>k__BackingField: {x: -2942.0002, y: 3457.0002}
+    <Position>k__BackingField: {x: -2942, y: 3457}
   - <ID>k__BackingField: 0105e7e8-3a6c-4e25-ac5d-93d1d48f07ae
     <Name>k__BackingField: Stage5SeekItem2
-    <Position>k__BackingField: {x: -2614, y: 3457.0002}
+    <Position>k__BackingField: {x: -2614, y: 3457}
   - <ID>k__BackingField: 6b42378e-c09f-4c93-ab1b-c9fdb1cb2182
     <Name>k__BackingField: Stage5SeekItem3
-    <Position>k__BackingField: {x: -2287.0002, y: 3457.0002}
+    <Position>k__BackingField: {x: -2287, y: 3457}
   - <ID>k__BackingField: 2e47fddc-b166-4ed4-a872-83b447e1422f
     <Name>k__BackingField: Stage5FindMeasureStick
-    <Position>k__BackingField: {x: -2933.001, y: 3821.0002}
+    <Position>k__BackingField: {x: -2933, y: 3821}
   - <ID>k__BackingField: 4a35f6b6-1d05-49da-a611-d95933af3524
     <Name>k__BackingField: Stage5FindNotepad
-    <Position>k__BackingField: {x: -2330.9998, y: 3819.0002}
+    <Position>k__BackingField: {x: -2331, y: 3819}
   - <ID>k__BackingField: 2551f0fd-fff8-4176-b294-fb4b2f64dd54
     <Name>k__BackingField: Stage5WaitMeasurment
-    <Position>k__BackingField: {x: 71.99988, y: 4031.0002}
+    <Position>k__BackingField: {x: 72, y: 4031}
   - <ID>k__BackingField: 1601e08d-7578-47bf-82f5-39ff7bc07a79
     <Name>k__BackingField: Stage6Start
-    <Position>k__BackingField: {x: -2088.0002, y: 4469.0005}
+    <Position>k__BackingField: {x: -2088, y: 4469}
   - <ID>k__BackingField: bd4aa652-4176-4ae2-8b62-c2907156f118
     <Name>k__BackingField: Stage6Graph
-    <Position>k__BackingField: {x: 1402, y: 4358.0005}
+    <Position>k__BackingField: {x: 1402, y: 4358}
   - <ID>k__BackingField: c9185e1c-e44b-41ec-8283-b62ecfd52d83
     <Name>k__BackingField: Stage7Start
-    <Position>k__BackingField: {x: -1382, y: 5026.0005}
+    <Position>k__BackingField: {x: -1382, y: 5026}
   - <ID>k__BackingField: 569f7244-f9e9-4d84-9610-d73217d6b307
     <Name>k__BackingField: Stage7End
-    <Position>k__BackingField: {x: 4333, y: 5030.0005}
+    <Position>k__BackingField: {x: 4333, y: 5030}
   - <ID>k__BackingField: ec9c7635-3452-4fa8-b265-8c1ca29b4024
     <Name>k__BackingField: Stage8ScienceMethod
-    <Position>k__BackingField: {x: -753, y: 5393.0005}
+    <Position>k__BackingField: {x: -753, y: 5393}
   <Nodes>k__BackingField:
   - <ID>k__BackingField: 5eb8d92a-b145-4b77-9c2e-034244b9ed34
     <Name>k__BackingField: SMHypothesis1
@@ -196,50 +196,18 @@ MonoBehaviour:
     <GroupID>k__BackingField: 659d603c-326e-4559-9e57-470df3a1bd41
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -916, y: 1369}
-  - <ID>k__BackingField: 2d42b2ef-de04-483d-801b-80c05ef40f49
-    <Name>k__BackingField: NeedCheckGarde1
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0411\u043B\u0430 \u0431\u043B\u0430 \u0431\u043B\u0430"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: a72a57b6-e89d-4c10-a86d-6e6f184669e1
-    <GroupID>k__BackingField: dedaa8f3-9d89-4812-a69d-d5ff888a795f
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -770, y: 1052}
-  - <ID>k__BackingField: a72a57b6-e89d-4c10-a86d-6e6f184669e1
-    <Name>k__BackingField: NeedCheckGarde2
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C \u0433\u0440\u044F\u0434\u043A\u0438
-      \u0438 \u0440\u043E\u0441\u0442\u043E\u043A"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: dedaa8f3-9d89-4812-a69d-d5ff888a795f
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -439, y: 1052}
   - <ID>k__BackingField: 2b714996-cfef-4e54-9f1b-acb6583c96e4
     <Name>k__BackingField: NeedCheckGardeWait
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0422\u044B \u043D\u0435 \u0432\u0441\u0451 \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u043B"
+    <Text>k__BackingField: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u0442\u044B
+      \u043D\u0435 \u0432\u0441\u0451 \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u043B,
+      \u043C\u0440\u0440."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 7b0db88d-7bdb-4312-a141-259d14dc4564
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 281, y: 1052}
-  - <ID>k__BackingField: 9df693b4-5d30-4f2d-90f5-4eea6c130790
-    <Name>k__BackingField: AlreadyCheckGarden1
-    <CharacterName>k__BackingField: "\u041C\u044B"
-    <Text>k__BackingField: "\u041D\u0438\u0447\u0451 \u043D\u0435 \u0440\u0430\u0441\u0442\u0451\u0442,
-      \u0430 \u0442\u043E\u0442, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0442\u044B
-      \u043F\u0440\u043E\u0440\u043E\u043D\u0438\u043B \u043A\u0430\u043A \u0440\u0430\u0437
-      \u0442\u0430\u043A\u0438 \u0432\u044B\u0440\u043E\u0441."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 0379807c-a09b-4a41-b1ce-d33531994334
-    <GroupID>k__BackingField: 42356f86-01cc-494b-81ab-f4f0e77d311f
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -900, y: 1906}
   - <ID>k__BackingField: 22aca532-8061-4705-a7e6-daf9da34e184
     <Name>k__BackingField: SMObservation2
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439\r"
@@ -247,8 +215,7 @@ MonoBehaviour:
       \u043D\u0430\u0441\u0447\u0451\u0442 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u0439?"
     <Choices>k__BackingField:
     - <Text>k__BackingField: "\u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u0432\u044B\u0440\u043E\u0441\u043B\u0438
-        \u043E\u0434\u0438\u043D\u0430\u043A\u043E\u0432\u043E \u043D\u0430 \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445
-        \u0441 \u0440\u0430\u0437\u043D\u043E\u0439 \u043E\u0441\u0432\u0435\u0449\u0451\u043D\u043D\u043E\u0441\u0442\u044C\u044E"
+        \u0432\u0435\u0437\u0434\u0435 \u043E\u0434\u0438\u043D\u0430\u043A\u043E\u0432\u043E"
       <NodeID>k__BackingField: 4b7cb6fe-ee77-413f-8007-716825cdc943
     - <Text>k__BackingField: "\u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u043D\u0430
         \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445
@@ -295,32 +262,11 @@ MonoBehaviour:
     <GroupID>k__BackingField: 486625a5-5b3b-4b46-8b62-c0c89e37de71
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -1623, y: 1817}
-  - <ID>k__BackingField: 0379807c-a09b-4a41-b1ce-d33531994334
-    <Name>k__BackingField: AlreadyCheckGarden2
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u041D\u0443\u0436\u043D\u043E \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u0442\u044C
-      \u043D\u0430\u0443\u0447\u043D\u044B\u0439 \u043C\u0435\u0442\u043E\u0434"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 9c86e525-08cf-4104-94bb-7474e19ff115
-    <GroupID>k__BackingField: 42356f86-01cc-494b-81ab-f4f0e77d311f
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -184, y: 1906}
-  - <ID>k__BackingField: c0049beb-0810-4015-8bef-e7f43d924065
-    <Name>k__BackingField: SMObservation1addition
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "*\u0447\u0442\u043E-\u0442\u043E \u043F\u0440\u043E \u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u0435*"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 22aca532-8061-4705-a7e6-daf9da34e184
-    <GroupID>k__BackingField: 42356f86-01cc-494b-81ab-f4f0e77d311f
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1530, y: 2196}
   - <ID>k__BackingField: 90b9ee82-5580-4439-91aa-754709048f5f
     <Name>k__BackingField: SeparatePlant2
     <CharacterName>k__BackingField: "\u041C\u044B"
     <Text>k__BackingField: "\u041D\u0430 \u0443\u0434\u0438\u0432\u043B\u0435\u043D\u0438\u0435
-      \u0438\u043C\u0435\u043D\u043D\u043E \u043E\u043D \u0432\u044B\u0440\u043E\u0441
+      \u0438\u043C\u0435\u043D\u043D\u043E \u043E\u043D\u043E \u0432\u044B\u0440\u043E\u0441\u043B\u043E
       \u043B\u0443\u0447\u0448\u0435 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0445!
       \u041D\u0430\u0434\u043E \u043E\u0431 \u044D\u0442\u043E\u043C \u0441\u043E\u043E\u0431\u0449\u0438\u0442\u044C."
     <Choices>k__BackingField:
@@ -345,9 +291,12 @@ MonoBehaviour:
     <Name>k__BackingField: SMExperiment5
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u0418 \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0432\u0435
-      \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
-      \u0442\u043E-\u0442\u043E-\u0442\u043E. \u0423 \u043D\u0430\u0441 \u044D\u0442\u043E
-      \u0434\u043B\u0438\u043D\u0430 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u0439."
+      \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 - \u044D\u0442\u043E
+      \u0442\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043C\u0435\u043D\u044F\u044E\u0442\u0441\u044F
+      \u043F\u043E\u0441\u043B\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439
+      \u043D\u0430\u0448\u0438\u0445 \u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0445
+      \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0445. \u0423 \u043D\u0430\u0441
+      \u044D\u0442\u043E \u0434\u043B\u0438\u043D\u0430 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u0439."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: c0a088e1-33e7-4d12-9368-4f04e9fff4f7
@@ -359,8 +308,8 @@ MonoBehaviour:
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u0417\u0430\u0441\u0430\u0434\u0438 \u0433\u0440\u044F\u0434\u043A\u0443
       \u0438 \u043D\u0430 \u044D\u0442\u043E\u0442 \u0440\u0430\u0437 \u043D\u0430\u0441\u0442\u0440\u043E\u0439
-      \u0441\u0432\u0435\u0442, \u0447\u0442\u043E\u0431\u044B \u043E\u043D \u0431\u044B\u043B
-      \u0440\u0430\u0437\u043D\u044B\u0439."
+      \u0441\u0432\u0435\u0442, \u0447\u0442\u043E\u0431\u044B \u0443\u0447\u0430\u0441\u0442\u043A\u0438
+      \u0431\u044B\u043B\u0438 \u0440\u0430\u0437\u043D\u043E\u0439 \u043E\u0441\u0432\u0435\u0449\u0451\u043D\u043D\u043E\u0441\u0442\u0438."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -419,20 +368,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: 63541d1f-8c20-4413-9c5c-0ea4efaaf299
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 550, y: 2675}
-  - <ID>k__BackingField: 294911f7-7a37-4e49-abef-f29335477030
-    <Name>k__BackingField: SMExperiment4
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442
-      \u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0435 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435
-      \u044D\u0442\u043E \u0442\u0430\u043A\u0438\u0435-\u0442\u043E \u0442\u0430\u043A\u0438\u0435-\u0442\u043E.
-      \u0423 \u043D\u0430\u0441 \u044D\u0442\u043E \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
-      \u0441\u0432\u0435\u0442\u0430."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: b77836ce-7965-4563-b4ff-6d70e7fef7a3
-    <GroupID>k__BackingField: 63541d1f-8c20-4413-9c5c-0ea4efaaf299
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1232, y: 2675}
   - <ID>k__BackingField: e257bc99-fde7-4992-869a-f83e301241b3
     <Name>k__BackingField: Stage4SeedsPlanted1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -480,43 +415,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: fa972cd1-31ee-4bcb-a019-edb43268e96d
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -909, y: 3045}
-  - <ID>k__BackingField: 79d06ac2-b078-4292-a08a-7e2df95a3fc0
-    <Name>k__BackingField: Stage2Start1
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0420\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u044B,
-      \u043C\u044B \u0438\u0445 \u0432\u0437\u0440\u0430\u0441\u0442\u0438\u043C
-      \u0432 \u0441\u0432\u043E\u0438\u0445 \u0443\u0441\u043B\u043E\u0432\u0438\u044F\u0445
-      \u0438 \u0441\u0440\u0430\u0437\u0443 \u0432\u0441\u0451 \u043F\u043E\u0439\u043C\u0451\u043C."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 9760a191-4297-43bc-93ae-d78f7511e69e
-    <GroupID>k__BackingField: 03754fe8-d655-495c-a234-3e08beeec94c
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -726, y: 712}
-  - <ID>k__BackingField: 8127b71a-a243-43f1-a0cd-fe7c7ff0bda8
-    <Name>k__BackingField: Stage2End1
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0415\u0441\u043B\u0438 \u0431\u0443\u0434\u0435\u0448\u044C
-      \u043C\u0435\u0434\u043B\u0438\u0442\u044C, \u043D\u0430\u043C \u043D\u0435\u0447\u0435\u0433\u043E
-      \u0431\u0443\u0434\u0435\u0442 \u0441\u043F\u0430\u0441\u0430\u0442\u044C."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 4472b501-1dc5-49e4-a5a9-c4c9e4e813b0
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 727, y: 711}
-  - <ID>k__BackingField: 9760a191-4297-43bc-93ae-d78f7511e69e
-    <Name>k__BackingField: Stage2Start2
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: " \u0418\u0434\u0438 \u043E\u043F\u044F\u0442\u044C \u0432\u043E\u044E\u0439
-      \u0438\u043B\u0438 \u043C\u043E\u0436\u0435\u0448\u044C \u043E\u0431\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u044C
-      \u043D\u0430\u0448\u0443 \u0431\u0430\u0437\u0443.\r"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 03754fe8-d655-495c-a234-3e08beeec94c
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -47, y: 712}
   - <ID>k__BackingField: 454e8ecf-fd10-4f00-9e24-24853ee999ae
     <Name>k__BackingField: SMHypothesisCorrectAnswer
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -531,8 +429,8 @@ MonoBehaviour:
   - <ID>k__BackingField: 5eca81d3-cc7d-4a78-bb40-472efa460dfa
     <Name>k__BackingField: SMHypothesisCorrectAnswer2
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u041F\u0440\u0438\u043D\u0435\u0441\u0438 \u0435\u0449\u0451
-      \u0441\u0435\u043C\u044F\u043D!"
+    <Text>k__BackingField: "\u041F\u0440\u0438\u043D\u0435\u0441\u0438 \u043C\u043D\u0435
+      \u0435\u0449\u0451 \u0441\u0435\u043C\u044F\u043D!"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -555,48 +453,26 @@ MonoBehaviour:
     <Text>k__BackingField: "\u041D\u0430\u0448\u0438 \u0441\u0430\u0436\u0435\u043D\u0446\u044B
       \u043F\u043E\u0434\u0440\u043E\u0441\u043B\u0438. \u0422\u0435\u043F\u0435\u0440\u044C
       \u043C\u044B \u043C\u043E\u0436\u0435\u043C \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C
-      \u0434\u0430\u043D\u043D\u044B\u0435."
+      \u0441 \u043D\u0438\u0445 \u0434\u0430\u043D\u043D\u044B\u0435."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 0e07c359-fff1-4374-b6e3-d9a259f2aeec
     <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -419, y: 3457}
-  - <ID>k__BackingField: 0e07c359-fff1-4374-b6e3-d9a259f2aeec
-    <Name>k__BackingField: Stage5Start3
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0414\u0430\u043D\u043D\u044B\u0435 \u044D\u0442\u043E
-      \u0432\u0441\u0451 \u0447\u0442\u043E \u043C\u043E\u0436\u043D\u043E \u0438\u0437\u043C\u0435\u0440\u0438\u0442\u044C."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 80c4b4eb-2b70-47b7-99ca-44ae9d0a3da4
-    <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 261, y: 3457}
   - <ID>k__BackingField: 80c4b4eb-2b70-47b7-99ca-44ae9d0a3da4
     <Name>k__BackingField: Stage5DataQuality1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u041A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435
-      \u0434\u0430\u043D\u043D\u044B\u0435 \u044D\u0442\u043E \u0442\u043E-\u0442\u043E
-      \u0442\u043E-\u0442\u043E"
+      \u0434\u0430\u043D\u043D\u044B\u0435 - \u044D\u0442\u043E \u0442\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+      \u043C\u043E\u0436\u043D\u043E \u043E\u043F\u0438\u0441\u0430\u0442\u044C \u0441\u043B\u043E\u0432\u0430\u043C\u0438
+      \u0438\u043B\u0438 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0430\u043C\u0438."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 87c5bf10-1b77-4e1f-ac19-7e2c9d054850
     <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 937, y: 3457}
-  - <ID>k__BackingField: 87c5bf10-1b77-4e1f-ac19-7e2c9d054850
-    <Name>k__BackingField: Stage5DataQuantitative1
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435
-      \u0434\u0430\u043D\u043D\u044B\u0435 \u044D\u0442\u043E \u0442\u043E-\u0442\u043E
-      \u0442\u043E-\u0442\u043E"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: f9db6287-e739-4fbe-abff-22fbd8d808e2
-    <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1610, y: 3457}
   - <ID>k__BackingField: 4971d6a5-af83-4bc5-89a8-5b240a0dd622
     <Name>k__BackingField: Stage5DataAsk2
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -608,18 +484,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 261, y: 3714}
-  - <ID>k__BackingField: 15153c89-bbc7-4a72-876b-f91ae3dec199
-    <Name>k__BackingField: Stage5DataAskWrong
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u041D\u0435 \u0441\u043E\u0432\u0441\u0435\u043C, \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435
-      \u0434\u0430\u043D\u043D\u044B\u0435 \u043C\u044B \u0431\u044B \u043C\u0435\u0440\u0438\u043B\u0438,
-      \u0435\u0441\u043B\u0438 \u0431\u044B "
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 2780213d-1781-4191-b4df-79c15c9a2f6a
-    <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 3050, y: 3375}
   - <ID>k__BackingField: 244bec49-158c-4ac8-9127-10963d3038d1
     <Name>k__BackingField: Stage5DataAskCorrect1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -710,9 +574,11 @@ MonoBehaviour:
     <Position>k__BackingField: {x: -1508, y: 3513}
   - <ID>k__BackingField: 36b92e23-ace3-4d43-abc4-e94a33eb76d0
     <Name>k__BackingField: IntroDialogue1
-    <CharacterName>k__BackingField: "\u041D\u0430\u0443\u0447\u0440\u0443\u043A"
-    <Text>k__BackingField: "\u0422\u0430\u043A\u0438\u043C\u0438 \u0442\u0435\u043C\u043F\u0430\u043C\u0438
-      \u0442\u044B \u0434\u0438\u043F\u043B\u043E\u043C \u043D\u0435 \u043D\u0430\u043F\u0438\u0448\u0435\u0448\u044C.."
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041D\u0435\u0442 \u0432\u0440\u0435\u043C\u0435\u043D\u0438
+      \u043E\u0431\u044A\u044F\u0441\u043D\u044F\u0442\u044C, \u0441\u0440\u043E\u0447\u043D\u043E
+      \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u043C \u0442\u0435\u0431\u044F
+      \u0441\u043F\u0430\u0441\u0430\u0442\u044C \u043C\u0438\u0440!"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
@@ -724,32 +590,19 @@ MonoBehaviour:
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u0422\u0435\u043F\u0435\u0440\u044C \u0438\u0437\u043C\u0435\u0440\u0438\u043C
       \u043D\u0430\u0448\u0438 \u0440\u043E\u0441\u0442\u043A\u0438 \u0438 \u0437\u0430\u043F\u0438\u0448\u0435\u043C
-      \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0441\u0432\u0435\u0442\u0430
-      \u043A\u0430\u0436\u0434\u043E\u0433\u043E."
+      \u0438\u0445 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0441\u0432\u0435\u0442\u0430."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 
     <GroupID>k__BackingField: 1a950aab-36f1-4f8b-a5fb-b236139dfa6d
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -635, y: 4083}
-  - <ID>k__BackingField: 4d1b0da5-5d20-4898-866f-23bcbe20d15a
-    <Name>k__BackingField: Stage5BringItems1
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u041E\u0442\u043B\u0438\u0447\u043D\u043E, \u0442\u044B
-      \u043D\u0430\u0448\u0451\u043B \u043B\u0438\u043D\u0435\u0439\u043A\u0443 \u0438
-      \u0431\u043B\u043E\u043A\u043D\u043E\u0442."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 1d3caa9c-d270-4dac-a7d9-2736c6f959df
-    <GroupID>k__BackingField: 1a950aab-36f1-4f8b-a5fb-b236139dfa6d
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -1437, y: 4083}
   - <ID>k__BackingField: b51ed944-e969-4be2-8d47-b99219c6d34c
     <Name>k__BackingField: Stage5DoMeasurement2
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u041D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0432\u043E\u0434\u0438\u0442\u044C
       \u043C\u0438\u043D\u0438\u043C\u0443\u043C \u0442\u0440\u0438 \u0440\u0430\u0437\u0430
-      \u0434\u043B\u044F \u0447\u0438\u0441\u0442\u043E\u0442\u044B \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442\u0430"
+      \u0434\u043B\u044F \u0447\u0438\u0441\u0442\u043E\u0442\u044B \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442\u0430."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: a3c81d6b-47af-4af9-9c97-012b9784baf1
@@ -772,26 +625,13 @@ MonoBehaviour:
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u0412\u0441\u0435 \u0437\u0430\u043C\u0435\u0440\u044B
       \u0441\u0434\u0435\u043B\u0430\u043D\u044B, \u043C\u044B \u043C\u043E\u0436\u0435\u043C
-      \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043A \u0430\u043D\u0430\u043B\u0438\u0437\u0443"
+      \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043A \u0430\u043D\u0430\u043B\u0438\u0437\u0443."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: e1dc6a9b-276d-40dd-856a-de606cb35933
     <GroupID>k__BackingField: e33388f7-4e9f-49d1-8310-4f896f5c211b
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 2528, y: 4084}
-  - <ID>k__BackingField: e1dc6a9b-276d-40dd-856a-de606cb35933
-    <Name>k__BackingField: Stage5EndMeasurement2
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u041D\u043E \u043C\u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E
-      \u0447\u0442\u043E \u0441\u043E\u043E\u0431\u0449\u0438\u043B\u0438, \u0447\u0442\u043E
-      \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u043E\u0447\u0435\u043D\u044C
-      \u0432\u0437\u0431\u0443\u043D\u0442\u043E\u0432\u0430\u043B\u0438\u0441\u044C."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: dadcba7a-b40c-41dc-89ab-3ba2365932ab
-    <GroupID>k__BackingField: e33388f7-4e9f-49d1-8310-4f896f5c211b
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 3200, y: 4084}
   - <ID>k__BackingField: ad3870a9-2b62-4d06-8c62-4a76ae812531
     <Name>k__BackingField: Stage5End
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -931,7 +771,7 @@ MonoBehaviour:
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u0412\u043E\u0437\u044C\u043C\u0451\u043C \u0441\u0440\u0435\u0434\u043D\u0438\u0435
       \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u0438\u0437 \u0442\u0440\u0451\u0445
-      \u043D\u0430\u0448\u0438\u0445 \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u0439"
+      \u043D\u0430\u0448\u0438\u0445 \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u0439."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 6e7d87bc-d0d8-40e5-81e2-9c15a5787093
@@ -942,24 +782,13 @@ MonoBehaviour:
     <Name>k__BackingField: Stage6Start2
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u0414\u0430\u0432\u0430\u0439 \u0432\u0438\u0437\u0443\u0430\u043B\u0438\u0437\u0438\u0440\u0443\u0435\u043C
-      \u043D\u0430\u0448\u0438 \u0434\u0430\u043D\u043D\u044B\u0435"
+      \u043D\u0430\u0448\u0438 \u0434\u0430\u043D\u043D\u044B\u0435."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 7defd171-b1bd-49cd-ac65-a570a07380d7
     <GroupID>k__BackingField: 1601e08d-7578-47bf-82f5-39ff7bc07a79
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -664, y: 4528}
-  - <ID>k__BackingField: 6e7d87bc-d0d8-40e5-81e2-9c15a5787093
-    <Name>k__BackingField: Stage6Start4
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0410 \u0442\u0435\u043F\u0435\u0440\u044C \u043F\u043E\u0441\u0442\u0440\u043E\u0438\u043C
-      \u043F\u043E \u043D\u0438\u043C \u0433\u0440\u0430\u0444\u0438\u043A"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 1601e08d-7578-47bf-82f5-39ff7bc07a79
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 681, y: 4528}
   - <ID>k__BackingField: 89e4949f-01d0-4735-909d-38ea17089cbe
     <Name>k__BackingField: Stage6Graph1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -1110,21 +939,10 @@ MonoBehaviour:
     <GroupID>k__BackingField: c9185e1c-e44b-41ec-8283-b62ecfd52d83
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -1357, y: 5085}
-  - <ID>k__BackingField: ff8690a3-a6cb-40f7-919d-ea557219c051
-    <Name>k__BackingField: Stage7Experiment
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u043F\u0440\u043E\u0432\u0435\u043B\u0438 \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442
-      \u0438 \u0434\u0430\u0436\u0435 \u043D\u0435 \u043E\u0434\u0438\u043D"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: a4b070b0-65c7-4638-92e6-98086a38ca17
-    <GroupID>k__BackingField: c9185e1c-e44b-41ec-8283-b62ecfd52d83
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1380, y: 5085}
   - <ID>k__BackingField: 22c7d2cb-c65c-4192-acce-bdfcb054b1dd
     <Name>k__BackingField: Stage7AfterScienceMethod1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u042D\u0442\u043E \u043F\u043E\u0442\u0440\u044F\u0441\u0430\u044E\u0449\u0435"
+    <Text>k__BackingField: "\u042D\u0442\u043E \u043F\u043E\u0442\u0440\u044F\u0441\u0430\u044E\u0449\u0435!"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 3652344f-b28c-45ab-b1d3-1909bb563846
@@ -1149,27 +967,13 @@ MonoBehaviour:
   - <ID>k__BackingField: 05f74371-d61b-4079-9214-c52d4f652277
     <Name>k__BackingField: Stage7Conclusion
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0438 \u043D\u0430\u043A\u043E\u043D\u0435\u0446 \u0432\u044B\u0432\u043E\u0434"
+    <Text>k__BackingField: "\u0418, \u043D\u0430\u043A\u043E\u043D\u0435\u0446, \u0432\u044B\u0432\u043E\u0434"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 22c7d2cb-c65c-4192-acce-bdfcb054b1dd
     <GroupID>k__BackingField: c9185e1c-e44b-41ec-8283-b62ecfd52d83
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 2334, y: 5085}
-  - <ID>k__BackingField: dca6fddb-409d-4a83-bff1-0d088e70d234
-    <Name>k__BackingField: Stage7End2
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0422\u044B \u0442\u0430\u043A\u0436\u0435 \u0432\u0441\u0435\u0433\u0434\u0430
-      \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u043F\u043E\u0434\u043E\u0439\u0442\u0438
-      \u043A\u043E \u043C\u043D\u0435 \u0438 \u043C\u044B \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u043C
-      \u0441 \u0442\u043E\u0431\u043E\u0439, \u043A\u0430\u043A \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442
-      \u043D\u0430\u0443\u0447\u043D\u044B\u0439 \u043C\u0435\u0442\u043E\u0434."
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: 569f7244-f9e9-4d84-9610-d73217d6b307
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 5063, y: 5089}
   - <ID>k__BackingField: 74df3613-5839-4e4b-9d72-b74a9a334852
     <Name>k__BackingField: Stage7End1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -1200,27 +1004,13 @@ MonoBehaviour:
     <Name>k__BackingField: Stage8SMStart1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u041E, \u043F\u0440\u0438\u0432\u0435\u0442, \u043D\u0430\u0448
-      \u0441\u043F\u0430\u0441\u0438\u043B\u044C \u043C\u0438\u0440\u0430!"
+      \u0441\u043F\u0430\u0441\u0438\u0442\u0435\u043B\u044C \u043C\u0438\u0440\u0430!"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: f20a46a9-57f5-4f15-abaa-4a23d67b87e6
     <GroupID>k__BackingField: ec9c7635-3452-4fa8-b265-8c1ca29b4024
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: -728, y: 5604}
-  - <ID>k__BackingField: e8abc0ec-b1ff-4f6a-b955-0e26b9de5d17
-    <Name>k__BackingField: Stage8SMNo
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0412 \u0442\u0430\u043A\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435
-      \u0441\u043E\u0432\u0435\u0442\u0443\u044E \u043F\u043E\u0431\u043E\u043B\u0442\u0430\u0442\u044C
-      \u0442\u0435\u0431\u0435 \u0441 \u043C\u043E\u0438\u043C\u0438 \u043A\u043E\u043B\u043B\u0435\u0433\u0430\u043C\u0438,
-      \u0438\u043C \u0435\u0441\u0442\u044C, \u0447\u0442\u043E \u0442\u0435\u0431\u0435
-      \u0440\u0430\u0441\u0441\u043A\u0430\u0437\u0430\u0442\u044C"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 
-    <GroupID>k__BackingField: ec9c7635-3452-4fa8-b265-8c1ca29b4024
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 839, y: 5740}
   - <ID>k__BackingField: 10011ebd-937b-4a0d-80ea-138388cebba0
     <Name>k__BackingField: Stage8SMBase
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
@@ -1260,7 +1050,7 @@ MonoBehaviour:
   - <ID>k__BackingField: 49b437d5-4007-44ee-a9cb-18536a0586bc
     <Name>k__BackingField: Stage7Hypothesis
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0441\u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043B\u0438
+    <Text>k__BackingField: "\u0421\u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043B\u0438
       \u0433\u0438\u043F\u043E\u0442\u0435\u0437\u0443"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
@@ -1282,7 +1072,7 @@ MonoBehaviour:
   - <ID>k__BackingField: 500203d2-de2e-4587-827a-d8eb203d57a4
     <Name>k__BackingField: Stage8SMExperiment
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0441\u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043B\u0438
+    <Text>k__BackingField: "\u0421\u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043B\u0438
       \u0433\u0438\u043F\u043E\u0442\u0435\u0437\u0443"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
@@ -1290,20 +1080,10 @@ MonoBehaviour:
     <GroupID>k__BackingField: ec9c7635-3452-4fa8-b265-8c1ca29b4024
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 2207, y: 5452}
-  - <ID>k__BackingField: 94275cfb-5287-4e48-9bda-5b51e08edefa
-    <Name>k__BackingField: Stage8SMAnalysis
-    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0441\u0434\u0435\u043B\u0430\u043B\u0438 \u0430\u043D\u0430\u043B\u0438\u0437"
-    <Choices>k__BackingField:
-    - <Text>k__BackingField: Next Dialogue
-      <NodeID>k__BackingField: 58e1f163-769c-4578-bff2-3c3705f5b04f
-    <GroupID>k__BackingField: ec9c7635-3452-4fa8-b265-8c1ca29b4024
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 2878, y: 5452}
   - <ID>k__BackingField: a4b070b0-65c7-4638-92e6-98086a38ca17
     <Name>k__BackingField: Stage7Analysis
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0441\u0434\u0435\u043B\u0430\u043B\u0438 \u0430\u043D\u0430\u043B\u0438\u0437\r"
+    <Text>k__BackingField: "\u0421\u0434\u0435\u043B\u0430\u043B\u0438 \u0430\u043D\u0430\u043B\u0438\u0437\r"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 05f74371-d61b-4079-9214-c52d4f652277
@@ -1313,7 +1093,7 @@ MonoBehaviour:
   - <ID>k__BackingField: 58e1f163-769c-4578-bff2-3c3705f5b04f
     <Name>k__BackingField: Stage8SMConclusion
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0438 \u043D\u0430\u043A\u043E\u043D\u0435\u0446 \u0432\u044B\u0432\u043E\u0434"
+    <Text>k__BackingField: "\u0418, \u043D\u0430\u043A\u043E\u043D\u0435\u0446, \u0432\u044B\u0432\u043E\u0434"
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 27090260-fae6-4817-a447-a17b49e8a887
@@ -1345,9 +1125,9 @@ MonoBehaviour:
   - <ID>k__BackingField: 3c69078f-bea7-420e-8aec-7d1ecc11ed0f
     <Name>k__BackingField: Stage6Start0
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-    <Text>k__BackingField: "\u0422\u0435\u043F\u0435\u0440\u044C \u043C\u044B \u0432
-      \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438 \u043D\u0430
-      \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u0432\u0440\u0435\u043C\u044F"
+    <Text>k__BackingField: "\u0424\u0443\u0445, \u0442\u0435\u043F\u0435\u0440\u044C
+      \u043C\u044B \u0432 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438
+      \u043D\u0430 \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u0432\u0440\u0435\u043C\u044F."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: fb00a414-68f4-4310-8239-9cc2f78f2a1c
@@ -1358,7 +1138,7 @@ MonoBehaviour:
     <Name>k__BackingField: Stage6Start1
     <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
     <Text>k__BackingField: "\u041C\u043E\u0436\u0435\u043C \u043F\u0435\u0440\u0435\u0439\u0442\u0438
-      \u043A \u0430\u043D\u0430\u043B\u0438\u0437\u0443 \u0434\u0430\u043D\u043D\u044B\u0445"
+      \u043A \u0430\u043D\u0430\u043B\u0438\u0437\u0443 \u0434\u0430\u043D\u043D\u044B\u0445."
     <Choices>k__BackingField:
     - <Text>k__BackingField: Next Dialogue
       <NodeID>k__BackingField: 43e0fad2-d28d-4801-8a63-12007cd55cee
@@ -1378,6 +1158,244 @@ MonoBehaviour:
     <GroupID>k__BackingField: bd4aa652-4176-4ae2-8b62-c2907156f118
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 4571, y: 4417}
+  - <ID>k__BackingField: 9760a191-4297-43bc-93ae-d78f7511e69e
+    <Name>k__BackingField: Stage2Start2
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0410 \u0442\u044B \u043F\u043E\u043A\u0430 \u043C\u043E\u0436\u0435\u0448\u044C
+      \u043F\u043E\u0439\u0442\u0438 \u043E\u0431\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u044C
+      \u043D\u0430\u0448\u0443 \u0431\u0430\u0437\u0443.\r"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 03754fe8-d655-495c-a234-3e08beeec94c
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -47, y: 712}
+  - <ID>k__BackingField: 8127b71a-a243-43f1-a0cd-fe7c7ff0bda8
+    <Name>k__BackingField: Stage2End1
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041D\u043E \u0435\u0441\u043B\u0438 \u0431\u0443\u0434\u0435\u0448\u044C
+      \u043C\u0435\u0434\u043B\u0438\u0442\u044C, \u043D\u0430\u043C \u043D\u0435\u0447\u0435\u0433\u043E
+      \u0431\u0443\u0434\u0435\u0442 \u0441\u043F\u0430\u0441\u0430\u0442\u044C."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 4472b501-1dc5-49e4-a5a9-c4c9e4e813b0
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 727, y: 711}
+  - <ID>k__BackingField: 2d42b2ef-de04-483d-801b-80c05ef40f49
+    <Name>k__BackingField: NeedCheckGarde1
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0421 \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u0435\u043C,
+      \u044F \u0432\u0441\u0451 \u043F\u043E\u0441\u0430\u0434\u0438\u043B \u0432
+      \u043D\u0430\u0448\u0435\u043C \u0441\u0430\u0434\u0443 \u043D\u0430\u0432\u0435\u0440\u0445\u0443."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: a72a57b6-e89d-4c10-a86d-6e6f184669e1
+    <GroupID>k__BackingField: dedaa8f3-9d89-4812-a69d-d5ff888a795f
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -1133, y: 1052}
+  - <ID>k__BackingField: 9df693b4-5d30-4f2d-90f5-4eea6c130790
+    <Name>k__BackingField: AlreadyCheckGarden1
+    <CharacterName>k__BackingField: "\u041C\u044B"
+    <Text>k__BackingField: "\u0412 \u0441\u0430\u0434\u0443 \u043D\u0438\u0447\u0435\u0433\u043E
+      \u043D\u0435 \u0432\u044B\u0440\u043E\u0441\u043B\u043E, \u0430 \u0432\u043E\u0442
+      \u0442\u043E \u0441\u0435\u043C\u0435\u0447\u043A\u043E \u043D\u0430\u0431\u043E\u0440\u043E\u0442."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 0379807c-a09b-4a41-b1ce-d33531994334
+    <GroupID>k__BackingField: 42356f86-01cc-494b-81ab-f4f0e77d311f
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -900, y: 1906}
+  - <ID>k__BackingField: 0379807c-a09b-4a41-b1ce-d33531994334
+    <Name>k__BackingField: AlreadyCheckGarden2
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0425\u043C\u043C, \u0434\u0430\u0432\u0430\u0439 \u043A\u0430
+      \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u043C. \u041D\u0443\u0436\u043D\u043E
+      \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u0442\u044C \u043D\u0430\u0443\u0447\u043D\u044B\u0439
+      \u043C\u0435\u0442\u043E\u0434"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 9c86e525-08cf-4104-94bb-7474e19ff115
+    <GroupID>k__BackingField: 42356f86-01cc-494b-81ab-f4f0e77d311f
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -184, y: 1906}
+  - <ID>k__BackingField: c0049beb-0810-4015-8bef-e7f43d924065
+    <Name>k__BackingField: SMObservation1addition
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u042D\u0442\u043E \u0442\u043E, \u0447\u0442\u043E \u043C\u044B
+      \u043C\u043E\u0436\u0435\u043C \u0437\u0430\u043C\u0435\u0442\u0438\u0442\u044C
+      \u0441\u0430\u043C\u0438, \u0431\u0435\u0437 \u0432\u0441\u044F\u043A\u0438\u0445
+      \u0440\u0430\u0441\u0447\u0451\u0442\u043E\u0432 \u0438 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 22aca532-8061-4705-a7e6-daf9da34e184
+    <GroupID>k__BackingField: 42356f86-01cc-494b-81ab-f4f0e77d311f
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1472, y: 2181}
+  - <ID>k__BackingField: 294911f7-7a37-4e49-abef-f29335477030
+    <Name>k__BackingField: SMExperiment4
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442
+      \u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0435 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435
+      \u044D\u0442\u043E \u0442\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+      \u043C\u044B \u0443\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0435\u043C
+      \u0441\u0430\u043C\u0438. \u0423 \u043D\u0430\u0441 \u044D\u0442\u043E \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+      \u0441\u0432\u0435\u0442\u0430."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: b77836ce-7965-4563-b4ff-6d70e7fef7a3
+    <GroupID>k__BackingField: 63541d1f-8c20-4413-9c5c-0ea4efaaf299
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1232, y: 2675}
+  - <ID>k__BackingField: 0e07c359-fff1-4374-b6e3-d9a259f2aeec
+    <Name>k__BackingField: Stage5Start3
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0414\u0430\u043D\u043D\u044B\u0435 \u044D\u0442\u043E
+      \u0432\u0441\u044F \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F,
+      \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0431\u0440\u0430\u0442\u044C
+      \u0438\u0437 \u043C\u0438\u0440\u0430."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 80c4b4eb-2b70-47b7-99ca-44ae9d0a3da4
+    <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 261, y: 3457}
+  - <ID>k__BackingField: 87c5bf10-1b77-4e1f-ac19-7e2c9d054850
+    <Name>k__BackingField: Stage5DataQuantitative1
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435
+      \u0434\u0430\u043D\u043D\u044B\u0435 - \u044D\u0442\u043E \u0442\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+      \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u0441\u0447\u0438\u0442\u0430\u0442\u044C."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: f9db6287-e739-4fbe-abff-22fbd8d808e2
+    <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1610, y: 3457}
+  - <ID>k__BackingField: 15153c89-bbc7-4a72-876b-f91ae3dec199
+    <Name>k__BackingField: Stage5DataAskWrong
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041D\u0435 \u0441\u043E\u0432\u0441\u0435\u043C, \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u043C\u0438
+      \u0434\u0430\u043D\u043D\u044B\u043C\u0438 \u0443 \u043D\u0430\u0441 \u043C\u043E\u0433
+      \u0431\u044B \u0431\u044B\u0442\u044C \u0446\u0432\u0435\u0442 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u0439."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 2780213d-1781-4191-b4df-79c15c9a2f6a
+    <GroupID>k__BackingField: cb7ac4ec-93a9-4c08-abd7-511d276a7bc5
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3050, y: 3375}
+  - <ID>k__BackingField: 4d1b0da5-5d20-4898-866f-23bcbe20d15a
+    <Name>k__BackingField: Stage5BringItems1
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041E\u0442\u043B\u0438\u0447\u043D\u043E, \u0442\u044B
+      \u043D\u0430\u0448\u0451\u043B \u043B\u0438\u043D\u0435\u0439\u043A\u0443 \u0438
+      \u043C\u043E\u0439 \u043B\u044E\u0431\u0438\u043C\u044B\u0439 \u0431\u043B\u043E\u043A\u043D\u043E\u0442."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 1d3caa9c-d270-4dac-a7d9-2736c6f959df
+    <GroupID>k__BackingField: 1a950aab-36f1-4f8b-a5fb-b236139dfa6d
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -1437, y: 4083}
+  - <ID>k__BackingField: e1dc6a9b-276d-40dd-856a-de606cb35933
+    <Name>k__BackingField: Stage5EndMeasurement2
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041E \u043D\u0435\u0442! \u041C\u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E
+      \u0447\u0442\u043E \u0441\u043E\u043E\u0431\u0449\u0438\u043B\u0438, \u0447\u0442\u043E
+      \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u0441\u0438\u043B\u044C\u043D\u043E
+      \u0432\u0437\u0431\u0443\u043D\u0442\u043E\u0432\u0430\u043B\u0438\u0441\u044C."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: dadcba7a-b40c-41dc-89ab-3ba2365932ab
+    <GroupID>k__BackingField: e33388f7-4e9f-49d1-8310-4f896f5c211b
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 3200, y: 4084}
+  - <ID>k__BackingField: 6e7d87bc-d0d8-40e5-81e2-9c15a5787093
+    <Name>k__BackingField: Stage6Start4
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0418 \u043F\u043E\u0441\u0442\u0440\u043E\u0438\u043C
+      \u043F\u043E \u043D\u0438\u043C \u0433\u0440\u0430\u0444\u0438\u043A."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 1601e08d-7578-47bf-82f5-39ff7bc07a79
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 681, y: 4528}
+  - <ID>k__BackingField: ff8690a3-a6cb-40f7-919d-ea557219c051
+    <Name>k__BackingField: Stage7Experiment
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041F\u0440\u043E\u0432\u0435\u043B\u0438 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442\u043E\u0432."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: a4b070b0-65c7-4638-92e6-98086a38ca17
+    <GroupID>k__BackingField: c9185e1c-e44b-41ec-8283-b62ecfd52d83
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1380, y: 5085}
+  - <ID>k__BackingField: dca6fddb-409d-4a83-bff1-0d088e70d234
+    <Name>k__BackingField: Stage7End2
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0422\u044B \u0442\u0430\u043A\u0436\u0435 \u0432\u0441\u0435\u0433\u0434\u0430
+      \u0441\u043C\u043E\u0436\u0435\u0448\u044C \u043F\u043E\u0434\u043E\u0439\u0442\u0438
+      \u043A\u043E \u043C\u043D\u0435, \u0438 \u043C\u044B \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u043C
+      \u0441 \u0442\u043E\u0431\u043E\u0439, \u043A\u0430\u043A \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442
+      \u043D\u0430\u0443\u0447\u043D\u044B\u0439 \u043C\u0435\u0442\u043E\u0434."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: 569f7244-f9e9-4d84-9610-d73217d6b307
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 5063, y: 5089}
+  - <ID>k__BackingField: 94275cfb-5287-4e48-9bda-5b51e08edefa
+    <Name>k__BackingField: Stage8SMAnalysis
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0421\u0434\u0435\u043B\u0430\u043B\u0438 \u0430\u043D\u0430\u043B\u0438\u0437"
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 58e1f163-769c-4578-bff2-3c3705f5b04f
+    <GroupID>k__BackingField: ec9c7635-3452-4fa8-b265-8c1ca29b4024
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2878, y: 5452}
+  - <ID>k__BackingField: e8abc0ec-b1ff-4f6a-b955-0e26b9de5d17
+    <Name>k__BackingField: Stage8SMNo
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u0412 \u0442\u0430\u043A\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435
+      \u0441\u043E\u0432\u0435\u0442\u0443\u044E \u043F\u043E\u0431\u043E\u043B\u0442\u0430\u0442\u044C
+      \u0442\u0435\u0431\u0435 \u0441 \u043C\u043E\u0438\u043C\u0438 \u043A\u043E\u043B\u043B\u0435\u0433\u0430\u043C\u0438,
+      \u0438\u043C \u0435\u0441\u0442\u044C, \u0447\u0442\u043E \u0442\u0435\u0431\u0435
+      \u0440\u0430\u0441\u0441\u043A\u0430\u0437\u0430\u0442\u044C."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: ec9c7635-3452-4fa8-b265-8c1ca29b4024
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 839, y: 5740}
+  - <ID>k__BackingField: 79d06ac2-b078-4292-a08a-7e2df95a3fc0
+    <Name>k__BackingField: Stage2Start1
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041E\u0431\u0440\u0430\u0437\u0446\u044B \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u044B,
+      \u043C\u044B \u0432\u044B\u0440\u0430\u0441\u0442\u0438\u043C \u0438\u0445
+      \u0443 \u0441\u0435\u0431\u044F \u0438 \u0441\u0440\u0430\u0437\u0443 \u043F\u043E\u0439\u043C\u0451\u043C,
+      \u0432 \u0447\u0451\u043C \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0430."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 9760a191-4297-43bc-93ae-d78f7511e69e
+    <GroupID>k__BackingField: 03754fe8-d655-495c-a234-3e08beeec94c
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -731, y: 712}
+  - <ID>k__BackingField: a72a57b6-e89d-4c10-a86d-6e6f184669e1
+    <Name>k__BackingField: NeedCheckGarde2
+    <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+    <Text>k__BackingField: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C \u0435\u0433\u043E,
+      \u0438 \u044F \u043A\u0430\u0436\u0435\u0442\u0441\u044F \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E
+      \u043F\u0440\u043E\u0440\u043E\u043D\u0438\u043B \u043E\u0434\u043D\u043E \u0441\u0435\u043C\u0435\u0447\u043A\u043E
+      \u043F\u043E \u043F\u0443\u0442\u0438, \u0435\u0433\u043E \u043D\u0443\u0436\u043D\u043E
+      \u0432\u044B\u043A\u043E\u043F\u0430\u0442\u044C."
+    <Choices>k__BackingField:
+    - <Text>k__BackingField: Next Dialogue
+      <NodeID>k__BackingField: 
+    <GroupID>k__BackingField: dedaa8f3-9d89-4812-a69d-d5ff888a795f
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -439, y: 1052}
   <OldGroupNames>k__BackingField:
   - Stage3PlayerSeparatePlant
   - Stage3PlayerGarden
@@ -1420,21 +1438,17 @@ MonoBehaviour:
       - SMHypothesisWrongAnswer
       - SMObservationCorrectAnswer
       - SMObservationWrongAnswer
-      - AlreadyCheckGarden1
       - SMObservation2
       - SMObservation1
       - SMBasic
-      - AlreadyCheckGarden2
-      - SMObservation1addition
       - SMHypothesisCorrectAnswer
       - SMHypothesisCorrectAnswer2
+      - AlreadyCheckGarden1
+      - AlreadyCheckGarden2
+      - SMObservation1addition
     - Key: Stage3PlayerGarden
       Value:
       - PlayerCheckGarden
-    - Key: Stage3MainCheckGarden
-      Value:
-      - NeedCheckGarde1
-      - NeedCheckGarde2
     - Key: Stage3MainCheckGardenWait
       Value:
       - NeedCheckGardeWait
@@ -1452,8 +1466,8 @@ MonoBehaviour:
       - SMExperiment1
       - SMExperiment2
       - SMExperiment3
-      - SMExperiment4
       - SMExperiment0
+      - SMExperiment4
     - Key: Stage4WaitSeedPlant
       Value:
       - Stage4WaitSeedPlant
@@ -1464,22 +1478,12 @@ MonoBehaviour:
     - Key: Stage4End
       Value:
       - Stage4End
-    - Key: Stage2Start
-      Value:
-      - Stage2Start1
-      - Stage2Start2
-    - Key: Stage2End
-      Value:
-      - Stage2End1
     - Key: Stage5Start
       Value:
       - Stage5Start1
       - Stage5Start2
-      - Stage5Start3
       - Stage5DataQuality1
-      - Stage5DataQuantitative1
       - Stage5DataAsk2
-      - Stage5DataAskWrong
       - Stage5DataAskCorrect1
       - Stage5DataAskCorrect2
       - Stage5DataAskCorrect3
@@ -1487,6 +1491,9 @@ MonoBehaviour:
       - Stage5DataAskCorrect5
       - Stage5DataAskCorrect6
       - Stage5DataAsk1
+      - Stage5Start3
+      - Stage5DataQuantitative1
+      - Stage5DataAskWrong
     - Key: Stage5WaitMesureStick
       Value:
       - Stage5WaitMesureStick
@@ -1505,8 +1512,8 @@ MonoBehaviour:
     - Key: Stage5EndMeasurement
       Value:
       - Stage5EndMeasurement1
-      - Stage5EndMeasurement2
       - Stage5EndMeasurement3
+      - Stage5EndMeasurement2
     - Key: Stage5End
       Value:
       - Stage5End
@@ -1534,9 +1541,9 @@ MonoBehaviour:
       Value:
       - Stage6Start3
       - Stage6Start2
-      - Stage6Start4
       - Stage6Start0
       - Stage6Start1
+      - Stage6Start4
     - Key: Stage6Graph
       Value:
       - Stage6Graph1
@@ -1553,7 +1560,6 @@ MonoBehaviour:
       Value:
       - Stage7Start2
       - Stage7Start1
-      - Stage7Experiment
       - Stage7AfterScienceMethod1
       - Stage7AfterScienceMethod2
       - Stage7Conclusion
@@ -1561,19 +1567,31 @@ MonoBehaviour:
       - Stage7Hypothesis
       - Stage7Analysis
       - Stage7AfterScienceMethod3
+      - Stage7Experiment
     - Key: Stage7End
       Value:
-      - Stage7End2
       - Stage7End1
+      - Stage7End2
     - Key: Stage8ScienceMethod
       Value:
       - Stage8SMStart1
-      - Stage8SMNo
       - Stage8SMBase
       - Stage8SMHypothesis
       - Stage8SMStart2
       - Stage8SMObservation
       - Stage8SMExperiment
-      - Stage8SMAnalysis
       - Stage8SMConclusion
       - Stage8SMEnd
+      - Stage8SMAnalysis
+      - Stage8SMNo
+    - Key: Stage2Start
+      Value:
+      - Stage2Start2
+      - Stage2Start1
+    - Key: Stage2End
+      Value:
+      - Stage2End1
+    - Key: Stage3MainCheckGarden
+      Value:
+      - NeedCheckGarde1
+      - NeedCheckGarde2

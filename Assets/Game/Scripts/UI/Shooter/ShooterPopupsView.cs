@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -46,7 +47,12 @@ namespace YooE.Diploma
 
         public void ShowRetryButton()
         {
+            _retryButtonPopup.transform.DOScale(0f, 0f).SetLink(_retryButtonPopup).Play();
             _retryButtonPopup.SetActive(true);
+            _retryButtonPopup.transform.DOScale(1f, 0.6f).SetLink(_retryButtonPopup).Play();
+
+            _fadeImage.DOFade(0f, 0f).SetLink(_fadeImage.gameObject).Play();
+            _fadeImage.DOFade(0.72f, 0.5f).SetLink(_fadeImage.gameObject).Play();
             _fadeImage.enabled = true;
         }
 
@@ -54,8 +60,14 @@ namespace YooE.Diploma
         {
             _enemyStatisticText.text = enemyDefeatPercent;
             _timeStatisticText.text = spentTime;
+
+            _fadeImage.DOFade(0f, 0f).SetLink(_fadeImage.gameObject).Play();
+            _fadeImage.DOFade(0.72f, 0.5f).SetLink(_fadeImage.gameObject).Play();
             _fadeImage.enabled = true;
+
+            _endPopup.transform.DOScale(0f, 0f).SetLink(_endPopup).Play();
             _endPopup.SetActive(true);
+            _endPopup.transform.DOScale(1f, 0.6f).SetLink(_endPopup).Play();
         }
 
         public void SetupNewRecordText(string recordText)

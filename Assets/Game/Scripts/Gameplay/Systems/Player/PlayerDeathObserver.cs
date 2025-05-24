@@ -36,7 +36,16 @@ namespace YooE.Diploma
         private void EndDeathActions()
         {
             _playerShooterBrain.AnimationEvents.OnDeathAnimationEnd -= EndDeathActions;
-            _popupsPresenter.ShowEndGamePopup();
+            
+            if (_isEndless)
+            {
+                _popupsPresenter.ShowEndGamePopup();
+            }
+            else
+            {
+                _popupsPresenter.ShowRetryPanel();
+            }
+
             OnDeathEnd?.Invoke();
         }
     }

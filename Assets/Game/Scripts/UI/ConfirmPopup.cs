@@ -58,12 +58,21 @@ namespace YooE
 
         public void Hide()
         {
+           // _popupGameObject.transform.DOScale(0f, 0.5f).SetLink(_popupGameObject).Play();
+            _popupGameObject.SetActive(false);
+          //  _popupGameObject.transform.DOScale(1, 0f).SetLink(_popupGameObject).Play();
+        } 
+        
+        public void HideNoAnimation()
+        {
             _popupGameObject.SetActive(false);
         }
 
         public void Show()
         {
+            //_popupGameObject.transform.DOScale(0f, 0f).SetLink(_popupGameObject).Play();
             _popupGameObject.SetActive(true);
+            //_popupGameObject.transform.DOScale(1, 0.5f).SetLink(_popupGameObject).Play();
         }
     }
 }

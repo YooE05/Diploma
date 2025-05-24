@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace YooE.Diploma
 {
@@ -25,11 +26,13 @@ namespace YooE.Diploma
             Hide();
             _parentGO.SetActive(true);
 
+            _independentVarGO.transform.DOScale(1f, 0.5f).From(0f).SetLink(_independentVarGO).Play();
             _independentVarGO.SetActive(true);
         }
 
         public void ShowDependentPopup()
         {
+            _dependentVarGO.transform.DOScale(1f, 0.5f).From(0f).SetLink(_dependentVarGO).Play();
             _dependentVarGO.SetActive(true);
         }
     }

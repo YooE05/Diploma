@@ -13,7 +13,7 @@ namespace YooE.Diploma
         private void Awake()
         {
             _gameViewFade.SetActive(false);
-            _confirmPopupView.Hide();
+            _confirmPopupView.HideNoAnimation();
         }
 
         private void OnEnable()

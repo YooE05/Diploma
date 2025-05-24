@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
-
 public abstract class Pool<T> where T : Object
 {
     public event Action<T> OnAddObject;

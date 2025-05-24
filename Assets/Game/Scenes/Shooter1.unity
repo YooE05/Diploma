@@ -1198,6 +1198,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bd17aeaec29eb847aaeecb7c2e00d10, type: 3}
+--- !u!1 &169728486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7429225621298129439, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
+  m_PrefabInstance: {fileID: 750650135568401537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &175741436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6822,7 +6827,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6197096142285341886, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
   m_PrefabInstance: {fileID: 750650135568401537}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 169728486}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d5c955467a412bbd3504bf003cbe8f, type: 3}
@@ -8013,6 +8018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937050103c5ea264caaba7a2d43c2821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isEndless: 0
   _commonEnemyConfig: {fileID: 11400000, guid: 44e2b0c35101f34419341b20a29ac521, type: 2}
   _enemyPoolsSettings: {fileID: 11400000, guid: 558d79ecfa8b23b46b90fea346ce97db, type: 2}
   _enemiesParent: {fileID: 1386555316}
@@ -10484,6 +10490,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4203735794463848, guid: bba84dffd74116f409ff2fdb22a8855d, type: 3}
   m_PrefabInstance: {fileID: 1396357777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1397195525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1101699938980605587, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
+  m_PrefabInstance: {fileID: 750650135568401537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8283307643451d8ddfae8de58de795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1401922311
 GameObject:
   m_ObjectHideFlags: 0
@@ -13778,7 +13795,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shooterEndZone: {fileID: 580139760}
-  _nextSceneName: ScienceBase
   _audioClip: {fileID: 8300000, guid: 1e38feb6f8ac78d48916cd0015787708, type: 3}
 --- !u!1001 &1808565354
 PrefabInstance:
@@ -15733,6 +15749,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Popups
       objectReference: {fileID: 0}
+    - target: {fileID: 8512760990869191497, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994865439864653444, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+      propertyPath: _gameView
+      value: 
+      objectReference: {fileID: 169728486}
+    - target: {fileID: 8994865439864653444, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+      propertyPath: _pauseButton
+      value: 
+      objectReference: {fileID: 1397195525}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15933,6 +15961,10 @@ PrefabInstance:
     - target: {fileID: 7429225621298129439, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854512774802330546, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7999812340389351938, guid: 7b94dc3d8e1b18248929a4926894feeb, type: 3}
       propertyPath: m_AnchorMax.x

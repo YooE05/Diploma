@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Zenject;
 
@@ -78,6 +79,7 @@ namespace YooE.Diploma
         private void EnableWeapon(ButtonView buttonView)
         {
             var index = _weaponButtons.IndexOf(buttonView);
+
             ClearOtherSwitches(index);
             SwitchWeapon(_shootingConfigs[index]);
         }
@@ -95,9 +97,14 @@ namespace YooE.Diploma
                 if (i == weaponIndex)
                 {
                     ((SwitchButtonView)_weaponButtons[i]).SetSwitchPosition(true);
+                    ((SwitchButtonView)_weaponButtons[i]).gameObject.transform.DOScale(1.2f, 0.3f).Play()
+                        .SetLink(((SwitchButtonView)_weaponButtons[i]).gameObject);
+                    
                     continue;
                 }
 
+                ((SwitchButtonView)_weaponButtons[i]).gameObject.transform.DOScale(1f, 0.3f).Play()
+                    .SetLink(((SwitchButtonView)_weaponButtons[i]).gameObject);
                 ((SwitchButtonView)_weaponButtons[i]).SetSwitchPosition(false);
             }
         }

@@ -1,3 +1,5 @@
+using System;
+using DG.Tweening;
 using UnityEngine;
 
 namespace YooE.Diploma.Interaction
@@ -8,11 +10,20 @@ namespace YooE.Diploma.Interaction
         [SerializeField] private ButtonView _interactionButton;
 
         private bool _isInteractable;
+        private Vector3 _initScale;
 
         public virtual void OnInit()
         {
             DisableInteractView();
             EnableInteractionAbility();
+        }
+
+        private void Awake()
+        {
+            _initScale = _interactionButtonView.transform.localScale;
+            _interactionButtonView.transform.DOScale(_initScale * 1.2f, 0.7f).From(_initScale)
+                .SetLoops(-1, LoopType.Yoyo)
+                .SetLink(_interactionButtonView).Play();
         }
 
         public virtual void Interact()

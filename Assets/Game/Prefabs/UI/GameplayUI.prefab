@@ -1433,9 +1433,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d5c955467a412bbd3504bf003cbe8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isEndless: 0
   _enemySlider: {fileID: 7072623929801399943}
   <SoundButtonView>k__BackingField: {fileID: 997972326117278620}
   _waveNumber: {fileID: 3437839295248071370}
+  _recordScoreText: {fileID: 0}
+  _currentScoreText: {fileID: 0}
 --- !u!1 &7757475533541479021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6894160276957768038
 RectTransform:
   m_ObjectHideFlags: 0

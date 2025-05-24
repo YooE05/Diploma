@@ -94,9 +94,14 @@ namespace YooE.Diploma
 
         private void Button1Click()
         {
-            _notepadButton1.DisableButton();
             _notepadButton1.OnButtonClicked -= Button1Click;
+            _notepadButton1.transform.DOScale(0f, 0.5f).SetLink(_notepadButton1.gameObject).OnComplete(() =>
+            {
+                _notepadButton1.DisableButton();
+            }).Play();
+
             //play Animation
+            _graphPoint1.transform.DOScale(1f, 0.5f).From(0f).SetLink(_graphPoint1).Play();
             _graphPoint1.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
@@ -105,9 +110,13 @@ namespace YooE.Diploma
 
         private void Button2Click()
         {
-            _notepadButton2.DisableButton();
             _notepadButton2.OnButtonClicked -= Button2Click;
+            _notepadButton2.transform.DOScale(0f, 0.5f).SetLink(_notepadButton2.gameObject).OnComplete(() =>
+            {
+                _notepadButton2.DisableButton();
+            }).Play();
             //play Animation
+            _graphPoint2.transform.DOScale(1f, 0.5f).From(0f).SetLink(_graphPoint1).Play();
             _graphPoint2.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
@@ -116,9 +125,14 @@ namespace YooE.Diploma
 
         private void Button3Click()
         {
-            _notepadButton3.DisableButton();
-            _notepadButton3.OnButtonClicked -= Button3Click;
+            _notepadButton3.OnButtonClicked -= Button2Click;
+            _notepadButton3.transform.DOScale(0f, 0.5f).SetLink(_notepadButton3.gameObject).OnComplete(() =>
+            {
+                _notepadButton3.DisableButton();
+            }).Play();
+            
             //play Animation
+            _graphPoint3.transform.DOScale(1f, 0.5f).From(0f).SetLink(_graphPoint1).Play();
             _graphPoint3.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
@@ -135,11 +149,11 @@ namespace YooE.Diploma
 
         private async UniTaskVoid ShowGraphAnimation()
         {
-            var tween = _graphLineImage.DOFade(1f, 4f).From(0).SetLink(_graphLine);
+            var tween = _graphLineImage.DOFade(1f, 2.5f).From(0).SetLink(_graphLine);
             tween.Play();
             _graphLine.SetActive(true);
 
-            await UniTask.Delay(TimeSpan.FromSeconds(7f), cancellationToken: CancellationToken.None);
+            await UniTask.Delay(TimeSpan.FromSeconds(2f), cancellationToken: CancellationToken.None);
             Hide();
             GoNextMainDialogue();
         }

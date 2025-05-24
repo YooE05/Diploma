@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemyCactusPool
   m_EditorClassIdentifier: 
   <Prefab>k__BackingField: {fileID: 3207008342682301884, guid: 567f76f0497e46f4280d287334e693f8, type: 3}
-  <InitCount>k__BackingField: 5
+  <InitCount>k__BackingField: 30
   <EnemyCharacteristics>k__BackingField: {fileID: 11400000, guid: 44e2b0c35101f34419341b20a29ac521, type: 2}
