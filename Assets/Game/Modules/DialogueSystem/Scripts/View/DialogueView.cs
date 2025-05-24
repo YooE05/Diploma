@@ -36,7 +36,7 @@ namespace YooE.DialogueSystem
         private void Show()
         {
             _dialoguePanel.transform.DOLocalMoveX(-1924.63f, 0f).Play().SetLink(_dialoguePanel);
-            _dialoguePanel.transform.DOLocalMoveX(-8f, 0.5f).Play().SetLink(_dialoguePanel);
+            _dialoguePanel.transform.DOLocalMoveX(-8f, 0.3f).Play().SetLink(_dialoguePanel);
             _dialoguePanel.SetActive(true);
             _continueButton.ClearListeners();
             _continueButton.OnButtonClicked += ContinueDialogue;
@@ -44,7 +44,7 @@ namespace YooE.DialogueSystem
 
         private void Hide()
         {
-            _dialoguePanel.transform.DOLocalMoveX(-1924.63f, 0.5f).Play().SetLink(_dialoguePanel)
+            _dialoguePanel.transform.DOLocalMoveX(-1924.63f, 0.2f).Play().SetLink(_dialoguePanel)
                 .OnComplete(() => { _dialoguePanel.SetActive(false); });
 
             _continueButton.ClearListeners();
