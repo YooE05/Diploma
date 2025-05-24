@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Zenject;
 
 namespace YooE.Diploma
 {
@@ -93,12 +94,15 @@ namespace YooE.Diploma
         private readonly EnemiesInitializer _enemiesInitializer;
         private readonly UpdateTimer _timer;
         private readonly bool _isEndless;
+        private readonly ShooterLoader _shooterLoader;
 
         public ShooterPopupsPresenter(ShooterPopupsView shooterPopupsView,
+            ShooterLoader shooterLoader,
 //            ShooterGameLoopController shooterGameLoopController,
             EnemiesInitializer enemiesInitializer, UpdateTimer timer, bool isEndless = false)
         {
             _isEndless = isEndless;
+            _shooterLoader = shooterLoader;
 
             _shooterPopupsView = shooterPopupsView;
             _enemiesInitializer = enemiesInitializer;
@@ -113,6 +117,7 @@ namespace YooE.Diploma
 
         private void GoNextLevel()
         {
+            _shooterLoader.UnloadShooterScene();
             //_shooterGameLoopController.GoNextLevel();
             Time.timeScale = 1f;
             SceneManager.LoadScene("ScienceBaseVisual");

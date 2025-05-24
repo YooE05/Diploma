@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a01ddea8c82050845af9bc1949096ebf
+  m_SerializeEntries:
+  - m_GUID: 1cbbe499b3a18ab409a972aaa8014b67
+    m_Address: Shooter1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68fdbda42c4b43342a91e33c9f523ffa
+    m_Address: Shooter2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86a0f793f7b4a6646825ae92b7ec9213
+    m_Address: Shooter3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e8e7fa1050d02740a4a5ca9e10072bb
+    m_Address: Shooter4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51ada217fb6d2d84ca61f25de602d8ae
+    m_Address: Shooter5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e6dc55de3ed466409da03d5fd9479d2
+    m_Address: ShooterEndless
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eee1ea985c25ab145aea60e0195c353d
+    m_Address: ShooterTutorial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ca4f777fbc1b01d4f8d83764272e1385, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9e4965c248d6ee344835802758761e59, type: 2}
+    - {fileID: 11400000, guid: 3d1a7d65f7dd751428a672db1c286ac4, type: 2}

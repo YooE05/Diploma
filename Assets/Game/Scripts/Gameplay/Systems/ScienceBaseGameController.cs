@@ -20,16 +20,19 @@ namespace YooE.Diploma
         private AudioManager _audioManager;
         private LifecycleManager _lifecycleManager;
         private PlayerDataContainer _playerDataContainer;
+        private ShooterLoader _shooterLoader;
 
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, SaveLoadManager saveLoadManager,
             ScienceMethodPopup scienceMethodPopup, AudioManager audioManager,
-            PlayerDataContainer playerDataContainer)
+            PlayerDataContainer playerDataContainer, ShooterLoader shooterLoader)
         {
             _playerDataContainer = playerDataContainer;
             _lifecycleManager = lifecycleManager;
             _audioManager = audioManager;
             _saveLoadManager = saveLoadManager;
+
+            _shooterLoader = shooterLoader;
         }
 
         private void Start()
@@ -65,7 +68,7 @@ namespace YooE.Diploma
 
             // LoadShooterScene(_scientistCharacterComponent.GetCharacterData().GroupIndex);
 
-            LoadShooterScene(_scientistCharacterComponent.GetCharacterData().GroupIndex);
+            _shooterLoader.LoadShooterScene(_scientistCharacterComponent.GetCharacterData().GroupIndex);
 
             /*if (_scientistCharacterComponent.GetCharacterData().GroupIndex == 0)
             {
@@ -77,7 +80,7 @@ namespace YooE.Diploma
             }*/
         }
 
-        private void LoadShooterScene(int mainDialogueGroupIndex)
+        /*private void LoadShooterScene(int mainDialogueGroupIndex)
         {
             var sceneName = mainDialogueGroupIndex switch
             {
@@ -91,7 +94,7 @@ namespace YooE.Diploma
             };
 
             SceneManager.LoadScene(sceneName);
-        }
+        }*/
 
         [Button]
         public void ResetGame()
