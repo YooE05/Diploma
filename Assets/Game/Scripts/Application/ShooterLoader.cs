@@ -21,6 +21,8 @@ namespace YooE
 
         public void UnloadShooterScene()
         {
+            if (!_sceneHandle.IsValid()) return;
+            
             if (!_sceneHandle.Result.Scene.isLoaded)
             {
                 return;

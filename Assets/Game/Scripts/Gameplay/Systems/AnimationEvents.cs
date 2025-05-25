@@ -22,7 +22,7 @@ namespace YooE.Diploma
 
         private async UniTaskVoid DeathDelayAsync()
         {
-            await UniTask.WaitForSeconds(1f);
+            await UniTask.WaitForSeconds(0.3f);
             OnDeathAnimationEnd?.Invoke();
         }
 

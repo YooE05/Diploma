@@ -32,7 +32,7 @@ namespace YooE.Diploma
                 OnHpEmpty?.Invoke(gameObject);
             }
 
-            _hpSlider?.SetNewValue(HitPoints / (float)_startHp);
+            _hpSlider?.SetNewValue(HitPoints / _startHp);
         }
 
         public void SetStartHp(float configHitPoints)

@@ -17,6 +17,7 @@ namespace YooE.Diploma
 
         public void Start()
         {
+            Debug.Log("HP start " + gameObject.name);
             _camera = Camera.main;
             if (_needHideBeforeDamage)
             {
