@@ -59,5 +59,10 @@ namespace YooE.Diploma
         {
             _enemyGO.transform.rotation = spawnRotation;
         }
+
+        public void SetRandomRotation()
+        {
+            _enemyGO.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+        }
     }
 }

@@ -80,7 +80,7 @@ namespace YooE.Diploma
 
                 var newEnemyView = _enemyPools[type].GetEnemy();
                 newEnemyView.SetPosition(currentSpawnPoints[i].SpawnPosition);
-                newEnemyView.SetRotation(currentSpawnPoints[i].SpawnRotation);
+                newEnemyView.SetRandomRotation();
                 _enemiesInitializer.InitEnemy(newEnemyView, 
                     _enemyPoolsConfigs[type].EnemyCharacteristics.GetCloneWithNewValues(enemyWave.EnemyWaveData[type]));
             }
@@ -104,7 +104,7 @@ namespace YooE.Diploma
 
                 var newEnemyView = _enemyPools[type].GetEnemy();
                 newEnemyView.SetPosition(_spawnPoints[i].SpawnPosition);
-                newEnemyView.SetRotation(_spawnPoints[i].SpawnRotation);
+                newEnemyView.SetRandomRotation();
                 _enemiesInitializer.InitEnemy(newEnemyView, _enemyPoolsConfigs[type].EnemyCharacteristics);
             }
         }
