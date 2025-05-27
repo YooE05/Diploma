@@ -21,8 +21,8 @@ namespace YooE.Diploma
         public override void InitGameView()
         {
             _charactersTransform.MovePlayerToNPC();
-            _charactersDataHandler.GetCharacterDialogueComponent(DialogueCharacterID.MainScientist)
-                .StartCurrentDialogueGroup().Forget();
+            /*_charactersDataHandler.GetCharacterDialogueComponent(DialogueCharacterID.MainScientist)
+                .StartCurrentDialogueGroup().Forget();*/
             _playerMotionController.СanAct = false;
             _playerInteraction.DisableInteraction();
 
