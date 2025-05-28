@@ -3,12 +3,12 @@ using DS.ScriptableObjects;
 
 namespace YooE.DialogueSystem
 {
-    public abstract class DialogueEventController
+    public abstract class DialogueEvent
     {
         protected readonly DialogueState _dialogueState;
         protected readonly List<DSDialogueSO> _dialogues = new();
 
-        protected DialogueEventController(DialogueState dialogueState, List<DSDialogueSO> dialogues)
+        protected DialogueEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues)
         {
             _dialogueState = dialogueState;
             _dialogues.AddRange(dialogues);

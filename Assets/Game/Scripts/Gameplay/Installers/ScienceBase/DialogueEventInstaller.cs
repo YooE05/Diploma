@@ -8,6 +8,7 @@ namespace YooE.Diploma
 {
     public class DialogueEventInstaller : MonoInstaller
     {
+        [SerializeField] private StoreManager _storeManager;
         [SerializeField] private CharacterDialogueComponent _mainNPC;
 
         [SerializeField] private List<DSDialogueSO> _saveGameDialogues;
@@ -33,7 +34,10 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _stage5GetMeasureStickDialogues;
         [SerializeField] private List<DSDialogueSO> _stage5GetNotepadDialogues;
 
+        [SerializeField] private List<DSDialogueSO> _completeGameDialogues;
+
         //Popups
+        [Header("Popups")]
         [SerializeField] private List<DSDialogueSO> _showIndependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _showDependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _hideVarsDialogues;
@@ -63,6 +67,8 @@ namespace YooE.Diploma
         public override void InstallBindings()
         {
             Container.Bind<SaveGameEvent>().AsCached().WithArguments(_saveGameDialogues).NonLazy();
+            Container.Bind<CompleteGameEvent>().AsCached().WithArguments(_completeGameDialogues, _storeManager)
+                .NonLazy();
 
             Container.Bind<EnableFightDoorEvent>().AsCached().WithArguments(_enableFightDoorDialogues).NonLazy();
             Container.Bind<StartShooterEvent>().AsCached().WithArguments(_startShooterDialogues).NonLazy();

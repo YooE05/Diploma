@@ -9,7 +9,7 @@ using YooE.SaveLoad;
 
 namespace YooE.Diploma
 {
-    public sealed class StartShooterEvent : DialogueEventController
+    public sealed class StartShooterEvent : DialogueEvent
     {
         private readonly CubeHandler _cubeHandler;
         private readonly ScienceBaseGameController _scienceBaseGameController;
@@ -34,7 +34,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableFightDoorEvent : DialogueEventController
+    public sealed class EnableFightDoorEvent : DialogueEvent
     {
         private readonly FightDoorInteractionComponent _fightDoor;
 
@@ -51,7 +51,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableMotionEvent : DialogueEventController
+    public sealed class EnableMotionEvent : DialogueEvent
     {
         private readonly PlayerMotionController _playerMotionController;
         private readonly PlayerInteraction _playerInteraction;
@@ -71,7 +71,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class GoNextMainDialogueEvent : DialogueEventController
+    public sealed class GoNextMainDialogueEvent : DialogueEvent
     {
         private readonly CharactersDataHandler _charactersDataHandler;
 
@@ -89,7 +89,33 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class HideTaskPanelEvent : DialogueEventController
+    public sealed class CompleteGameEvent : DialogueEvent
+    {
+        private readonly CharactersDataHandler _charactersDataHandler;
+        private readonly PlayerDataContainer _playerDataContainer;
+        private readonly StoreManager _storeManager;
+
+        public CompleteGameEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            CharactersDataHandler charactersDataHandler, PlayerDataContainer playerDataContainer,
+            StoreManager storeManager) :
+            base(dialogueState, dialogues)
+        {
+            _charactersDataHandler = charactersDataHandler;
+            _playerDataContainer = playerDataContainer;
+            _storeManager = storeManager;
+        }
+
+        protected override void FinishActions()
+        {
+            /*_charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
+            _charactersDataHandler.UpdateCharacterDialogueIndex(DialogueCharacterID.MainScientist);*/
+
+            _playerDataContainer.IsGameCompleted = true;
+            _storeManager.OnStart();
+        }
+    }
+
+    public sealed class HideTaskPanelEvent : DialogueEvent
     {
         private readonly TaskPanel _taskPanel;
 
@@ -106,7 +132,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class SaveGameEvent : DialogueEventController
+    public sealed class SaveGameEvent : DialogueEvent
     {
         private readonly SaveLoadManager _saveLoadManager;
 

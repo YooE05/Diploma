@@ -47940,6 +47940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ee65f25c007434bb6317607e0324a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _storeManager: {fileID: 896169412}
   _mainNPC: {fileID: 1691424246}
   _saveGameDialogues:
   - {fileID: 11400000, guid: 25fcf4dfc50a5ff4695b6921ef6a523c, type: 2}
@@ -48021,6 +48022,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 953d1d2393e93a9479c828915490969c, type: 2}
   _stage5GetNotepadDialogues:
   - {fileID: 11400000, guid: 691a8988a8cc65c4c9fca6b174ce48a5, type: 2}
+  _completeGameDialogues:
+  - {fileID: 11400000, guid: 89446d7037db880498a12b0059783638, type: 2}
   _showIndependentVarDialogues:
   - {fileID: 11400000, guid: 124f7b522bc9261478eb191eea24b24f, type: 2}
   _showDependentVarDialogues:
@@ -78209,6 +78212,10 @@ PrefabInstance:
     - target: {fileID: 4882642579488066526, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_Name
       value: '[ScienceBaseCanvas]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042441724673043754, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -8.899902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

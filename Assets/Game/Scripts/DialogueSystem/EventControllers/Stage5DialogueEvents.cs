@@ -5,7 +5,7 @@ using YooE.Diploma.Interaction;
 
 namespace YooE.Diploma
 {
-    public sealed class EnableStage5InteractionsEvent : DialogueEventController
+    public sealed class EnableStage5InteractionsEvent : DialogueEvent
     {
         private readonly LockersViewController _lockersController;
         private readonly Stage5TaskTracker _taskTracker;
@@ -26,7 +26,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage5GetNotepadEvent : DialogueEventController
+    public sealed class Stage5GetNotepadEvent : DialogueEvent
     {
         private readonly Stage5TaskTracker _taskTracker;
         private readonly UIAnimationController _uiAnimationController;
@@ -61,7 +61,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage5GetMeasureStickEvent : DialogueEventController
+    public sealed class Stage5GetMeasureStickEvent : DialogueEvent
     {
         private readonly Stage5TaskTracker _taskTracker;
         private readonly UIAnimationController _uiAnimationController;
@@ -96,7 +96,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableGardenStage5InteractionsEvent : DialogueEventController
+    public sealed class EnableGardenStage5InteractionsEvent : DialogueEvent
     {
         private readonly GardenViewController _gardenViewController;
         private readonly Stage5TaskTracker _taskTracker;
@@ -116,7 +116,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage5ShowWaitAnimationEvent : DialogueEventController
+    public sealed class Stage5ShowWaitAnimationEvent : DialogueEvent
     {
         private readonly UIAnimationController _uiAnimations;
         private readonly CharactersDataHandler _charactersDataHandler;

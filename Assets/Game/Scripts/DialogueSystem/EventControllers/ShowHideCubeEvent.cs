@@ -4,7 +4,7 @@ using YooE.DialogueSystem;
 
 namespace YooE.Diploma
 {
-    public sealed class ShowHideCubeEvent : DialogueEventController
+    public sealed class ShowHideCubeEvent : DialogueEvent
     {
         private readonly CubeHandler _cubeHandler;
 

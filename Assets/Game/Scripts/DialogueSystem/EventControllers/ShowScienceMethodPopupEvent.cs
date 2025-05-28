@@ -4,7 +4,7 @@ using YooE.DialogueSystem;
 
 namespace YooE.Diploma
 {
-    public sealed class ShowScienceMethodPopupEvent : DialogueEventController
+    public sealed class ShowScienceMethodPopupEvent : DialogueEvent
     {
         private readonly ScienceMethodPopup _scienceMethodPopup;
 
@@ -21,7 +21,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class HideScienceMethodPopupEvent : DialogueEventController
+    public sealed class HideScienceMethodPopupEvent : DialogueEvent
     {
         private readonly ScienceMethodPopup _scienceMethodPopup;
 
@@ -38,7 +38,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableObservationEvent : DialogueEventController
+    public sealed class EnableObservationEvent : DialogueEvent
     {
         private readonly ScienceMethodPopup _scienceMethodPopup;
 
@@ -56,7 +56,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableHypothesisEvent : DialogueEventController
+    public sealed class EnableHypothesisEvent : DialogueEvent
     {
         private readonly ScienceMethodPopup _scienceMethodPopup;
 
@@ -74,7 +74,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableExperimentEvent : DialogueEventController
+    public sealed class EnableExperimentEvent : DialogueEvent
     {
         private readonly ScienceMethodPopup _scienceMethodPopup;
 
@@ -92,7 +92,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableAnalysisEvent : DialogueEventController
+    public sealed class EnableAnalysisEvent : DialogueEvent
     {
         private readonly ScienceMethodPopup _scienceMethodPopup;
 
@@ -110,7 +110,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class EnableConclusionEvent : DialogueEventController
+    public sealed class EnableConclusionEvent : DialogueEvent
     {
         private readonly ScienceMethodPopup _scienceMethodPopup;
 

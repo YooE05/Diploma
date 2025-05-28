@@ -4,7 +4,7 @@ using YooE.DialogueSystem;
 
 namespace YooE.Diploma
 {
-    public sealed class Stage6ShowAverageNotesEvent : DialogueEventController
+    public sealed class Stage6ShowAverageNotesEvent : DialogueEvent
     {
         private readonly AverageNotesAndConclusionUI _averageNotesUI;
 
@@ -21,7 +21,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage6HideAverageNotesEvent : DialogueEventController
+    public sealed class Stage6HideAverageNotesEvent : DialogueEvent
     {
         private readonly AverageNotesAndConclusionUI _averageNotesUI;
 
@@ -38,7 +38,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage6ShowConclusionPopupEvent : DialogueEventController
+    public sealed class Stage6ShowConclusionPopupEvent : DialogueEvent
     {
         private readonly AverageNotesAndConclusionUI _averageNotesUI;
 
@@ -55,7 +55,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage6HideConclusionPopupEvent : DialogueEventController
+    public sealed class Stage6HideConclusionPopupEvent : DialogueEvent
     {
         private readonly AverageNotesAndConclusionUI _averageNotesUI;
 
@@ -72,7 +72,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage6ShowGraphEvent : DialogueEventController
+    public sealed class Stage6ShowGraphEvent : DialogueEvent
     {
         private readonly GraphPanelInteraction _graphPanel;
 

@@ -4,7 +4,7 @@ using YooE.DialogueSystem;
 
 namespace YooE.Diploma
 {
-    public sealed class ShowIndependentVarEvent : DialogueEventController
+    public sealed class ShowIndependentVarEvent : DialogueEvent
     {
         private readonly VariablesPopup _variablesPopup;
 
@@ -21,7 +21,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class ShowDependentVarEvent : DialogueEventController
+    public sealed class ShowDependentVarEvent : DialogueEvent
     {
         private readonly VariablesPopup _variablesPopup;
 
@@ -38,7 +38,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class HideVariablesEvent : DialogueEventController
+    public sealed class HideVariablesEvent : DialogueEvent
     {
         private readonly VariablesPopup _variablesPopup;
 
@@ -55,7 +55,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class ShowQualityDataEvent : DialogueEventController
+    public sealed class ShowQualityDataEvent : DialogueEvent
     {
         private readonly DataPopup _dataPopup;
 
@@ -72,7 +72,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class ShowQuantitativeDataEvent : DialogueEventController
+    public sealed class ShowQuantitativeDataEvent : DialogueEvent
     {
         private readonly DataPopup _dataPopup;
 
@@ -89,7 +89,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class HideDataEvent : DialogueEventController
+    public sealed class HideDataEvent : DialogueEvent
     {
         private readonly DataPopup _dataPopup;
 

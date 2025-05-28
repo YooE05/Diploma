@@ -4,7 +4,7 @@ using YooE.DialogueSystem;
 
 namespace YooE.Diploma
 {
-    public sealed class Stage3TaskCheckGardenEvent : DialogueEventController
+    public sealed class Stage3TaskCheckGardenEvent : DialogueEvent
     {
         private readonly Stage3TaskTracker _taskTracker;
 
@@ -21,7 +21,7 @@ namespace YooE.Diploma
         }
     }
 
-    public sealed class Stage3TaskCheckSeparatePlantEvent : DialogueEventController
+    public sealed class Stage3TaskCheckSeparatePlantEvent : DialogueEvent
     {
         private readonly Stage3TaskTracker _taskTracker;
 
