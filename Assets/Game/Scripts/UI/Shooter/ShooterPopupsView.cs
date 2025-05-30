@@ -131,7 +131,8 @@ namespace YooE.Diploma
         {
             //_shooterGameLoopController.RetryGameLoop();
             _loadingScreen.Show();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            _shooterLoader.ReloadScene();
+//            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         private void InitPopupsView()

@@ -28,6 +28,8 @@ namespace YooE.Diploma
         [SerializeField] private GameObject _graphLine;
         [SerializeField] private Image _graphLineImage;
 
+        [SerializeField] private GameObject _littleGraphGO;
+
         private int _clickedButtonsCount;
         private CharactersDataHandler _charactersDataHandler;
         private CharacterDialogueComponent _mainNPC;
@@ -35,6 +37,7 @@ namespace YooE.Diploma
         public void OnInit()
         {
             _panelGO.SetActive(false);
+            _littleGraphGO.SetActive(false);
         }
 
         [Inject]
@@ -66,6 +69,17 @@ namespace YooE.Diploma
 
             _panelGO.SetActive(true);
             ShowTutorialHand();
+        }
+
+        public void ShowLittleGraph()
+        {
+            _littleGraphGO.SetActive(true);
+        }
+
+        public void HideLittleGraph()
+        {
+            _littleGraphGO.SetActive(false);
+            _littleGraphGO.transform.DOScaleY(0f, 0.5f);
         }
 
         [Button]
@@ -100,8 +114,7 @@ namespace YooE.Diploma
                 _notepadButton1.DisableButton();
             }).Play();
 
-            //play Animation
-            _graphPoint1.transform.DOScale(1f, 0.5f).From(0f).SetLink(_graphPoint1).Play();
+            _graphPoint1.transform.DOScale(1f, 0.3f).From(0f).SetLink(_graphPoint1).Play();
             _graphPoint1.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
@@ -115,8 +128,8 @@ namespace YooE.Diploma
             {
                 _notepadButton2.DisableButton();
             }).Play();
-            //play Animation
-            _graphPoint2.transform.DOScale(1f, 0.5f).From(0f).SetLink(_graphPoint1).Play();
+
+            _graphPoint2.transform.DOScale(1f, 0.3f).From(0f).SetLink(_graphPoint1).Play();
             _graphPoint2.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
@@ -130,9 +143,8 @@ namespace YooE.Diploma
             {
                 _notepadButton3.DisableButton();
             }).Play();
-            
-            //play Animation
-            _graphPoint3.transform.DOScale(1f, 0.5f).From(0f).SetLink(_graphPoint1).Play();
+
+            _graphPoint3.transform.DOScale(1f, 0.3f).From(0f).SetLink(_graphPoint1).Play();
             _graphPoint3.SetActive(true);
             _clickedButtonsCount++;
             CheckIsAllButtonsClick();
@@ -149,12 +161,12 @@ namespace YooE.Diploma
 
         private async UniTaskVoid ShowGraphAnimation()
         {
-            var tween = _graphLineImage.DOFade(1f, 2.5f).From(0).SetLink(_graphLine);
-            tween.Play();
+            _graphLineImage.DOFade(1f, 2.5f).From(0).SetLink(_graphLine).Play();
             _graphLine.SetActive(true);
 
             await UniTask.Delay(TimeSpan.FromSeconds(2f), cancellationToken: CancellationToken.None);
             Hide();
+            ShowLittleGraph();
             GoNextMainDialogue();
         }
     }

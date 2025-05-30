@@ -43,14 +43,14 @@ namespace YooE.Diploma
         private void OpenPausePanel()
         {
             _gameView.SetActive(false);
-            _confirmPopupView.Show();
+            _confirmPopupView.ShowNoAnimation();
             Time.timeScale = 0f;
         }
 
         private void HidePausePanel()
         {
             _gameView.SetActive(true);
-            _confirmPopupView.Hide();
+            _confirmPopupView.HideNoAnimation();
             Time.timeScale = 1f;
         }
 

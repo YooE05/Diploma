@@ -1,5 +1,7 @@
 ﻿using System;
+using Audio;
 using UnityEngine;
+using Zenject;
 
 namespace YooE.Diploma
 {
@@ -10,6 +12,8 @@ namespace YooE.Diploma
         private readonly PlayerShooterBrain _playerShooterBrain;
         private readonly ShooterPopupsPresenter _popupsPresenter;
         private readonly bool _isEndless;
+
+        [Inject] private AudioManager _audioManager;
 
         public PlayerDeathObserver(PlayerShooterBrain playerShooterBrain, ShooterPopupsPresenter popupsPresenter,
             bool isEndless = false)
@@ -31,12 +35,17 @@ namespace YooE.Diploma
         {
             _playerShooterBrain.StartDeathActions();
             base.StartDeathProcess(obj);
+
+            if (_audioManager.TryGetAudioClipByName($"playerDeath", out var audioClip))
+            {
+                _audioManager.PlaySoundOneShot(audioClip, AudioOutput.Master);
+            }
         }
 
         private void EndDeathActions()
         {
             _playerShooterBrain.AnimationEvents.OnDeathAnimationEnd -= EndDeathActions;
-            
+
             if (_isEndless)
             {
                 _popupsPresenter.ShowEndGamePopup();

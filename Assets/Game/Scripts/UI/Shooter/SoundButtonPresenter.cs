@@ -31,10 +31,10 @@ namespace YooE.Diploma
 
         private void OnSoundButtonClicked(bool isEnable)
         {
-            if (_audioManager.TryGetAudioClipByName(_clipName, out var audioClip))
+            /*if (_audioManager.TryGetAudioClipByName(_clipName, out var audioClip))
             {
                 _audioManager.PlaySound(audioClip, AudioOutput.UI);
-            }
+            }*/
 
             _audioManager.SetSoundsEnabling(isEnable);
             _saveLoadManager.SaveGame();

@@ -7,22 +7,14 @@ namespace YooE
 {
     public sealed class ShooterLoader
     {
-        /*private readonly MenuLoader _menuLoader;*/
-        // private const string SceneKey = "GameScene";
+        private string _currentScene;
 
         private AsyncOperationHandle<SceneInstance> _sceneHandle;
-
-        /*
-        public GameLoader(MenuLoader menuLoader)
-        {
-            _menuLoader = menuLoader;
-            _menuLoader.OnBackToMenu += UnloadGame;
-        }*/
 
         public void UnloadShooterScene()
         {
             if (!_sceneHandle.IsValid()) return;
-            
+
             if (!_sceneHandle.Result.Scene.isLoaded)
             {
                 return;
@@ -55,10 +47,17 @@ namespace YooE
                 return;
             }
 
-            const bool activateOnLoad = false;
+            _currentScene = assetKey;
+         //   const bool activateOnLoad = false;
 
-            _sceneHandle = Addressables.LoadSceneAsync(assetKey, LoadSceneMode.Single, activateOnLoad);
-            _sceneHandle.Completed += delegate { _sceneHandle.Result.ActivateAsync(); };
+            _sceneHandle = Addressables.LoadSceneAsync(_currentScene, LoadSceneMode.Single);
+                // _sceneHandle.Completed += delegate { _sceneHandle.Result.ActivateAsync(); };
+        }
+
+        public void ReloadScene()
+        {
+            _sceneHandle = Addressables.LoadSceneAsync(_currentScene, LoadSceneMode.Single);
+         //   _sceneHandle.Completed += delegate { _sceneHandle.Result.ActivateAsync(); };
         }
     }
 }

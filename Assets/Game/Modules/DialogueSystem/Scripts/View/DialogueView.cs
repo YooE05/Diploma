@@ -90,11 +90,18 @@ namespace YooE.DialogueSystem
             else
             {
                 _answersPanel.SetActive(true);
+                if (!_answersPanel.activeSelf)
+                {
+                    _answersPanel.transform.DOScale(1, 0.3f).From(0).SetEase(Ease.Unset).SetLink(_answersPanel)
+                        .Play();
+                }
+
                 _continueButton.Hide();
 
                 for (var i = 0; i < choices.Count; i++)
                 {
                     _choiceButtons[i].SetUpAndShow(choices[i]);
+                    _choiceButtons[i].AnimateWithDelay(0.3f + 0.15f * i);
                 }
 
                 SubscribeUnsubscribeOnButtons(true);

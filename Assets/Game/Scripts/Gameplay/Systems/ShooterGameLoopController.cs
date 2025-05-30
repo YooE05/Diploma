@@ -51,7 +51,11 @@ namespace YooE.Diploma
         {
             _saveLoadManager.OnDataLoaded -= StartGameplay;
 
-            _audioManager.PlaySound(_audioClip, AudioOutput.Music);
+            if (_audioManager.TryGetAudioClipByName("battleTheme", out var audioClip))
+            {
+                _audioManager.PlaySound(audioClip, AudioOutput.Music);
+            }
+
             _lifecycleManager.OnStart();
             _timer.RestartTimer();
             _loadingScreen.Hide();

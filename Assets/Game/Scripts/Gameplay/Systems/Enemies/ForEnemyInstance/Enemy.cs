@@ -1,4 +1,5 @@
 ﻿using System;
+using Audio;
 using UniRx;
 
 namespace YooE.Diploma
@@ -9,6 +10,7 @@ namespace YooE.Diploma
 
         private readonly CompositeDisposable _disposable = new();
         private readonly EnemyConfig _enemyConfig;
+        private readonly AudioManager _audioManager;
 
         private EnemyTargetSearcher _targetSearcher;
         private EnemyMotionController _motionController;
@@ -19,8 +21,9 @@ namespace YooE.Diploma
 
         private bool _canAct;
 
-        public Enemy(EnemyConfig enemyConfig, EnemyView enemyView)
+        public Enemy(EnemyConfig enemyConfig, EnemyView enemyView, AudioManager audioManager)
         {
+            _audioManager = audioManager;
             _enemyConfig = enemyConfig;
             View = enemyView;
             Init();
@@ -35,10 +38,10 @@ namespace YooE.Diploma
             _motionController =
                 new EnemyMotionController(View, _enemyConfig.RotationSpeed, _enemyConfig.MovementSpeed,
                     _targetSearcher);
-            _deathObserver = new EnemyDeathObserver(View);
+            _deathObserver = new EnemyDeathObserver(View, _audioManager);
             _targetAttack = new TargetAttack(_enemyConfig.Damage, View.AnimationEvents,
                 _enemyConfig.AttackRangeSensorConfig,
-                View.Transform);
+                View.Transform, _audioManager);
 
             _targetSearcher.CurrentTarget.Subscribe(_targetAttack.SetTargetHp).AddTo(_disposable);
             _canAct = true;

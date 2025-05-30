@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using DG.Tweening;
+using UnityEditor;
 using UnityEngine;
 using Zenject;
 
@@ -18,6 +19,9 @@ namespace YooE.Diploma
         [SerializeField] private ConfirmPopupView _restartConfirmPopupView;
 
         [Inject] private ScienceBaseGameController _scienceBaseGameController;
+        [Inject] private PlayerMotionController _playerMotionController;
+
+        private bool _playerCanMove;
 
         private void Awake()
         {
@@ -57,14 +61,29 @@ namespace YooE.Diploma
 
         private void OpenSettingsPanel()
         {
-            Time.timeScale = 0f;
+            //  Time.timeScale = 0f;
+
+            _playerCanMove = _playerMotionController.СanAct;
+            if (_playerCanMove)
+            {
+                _playerMotionController.DisableMotion();
+            }
+
             _gameViewFade.SetActive(true);
+
             _settingsPanel.SetActive(true);
+            _settingsPanel.transform.DOScale(1f, 0.5f).From(0f).SetLink(_settingsPanel).Play();
         }
 
         private void HideSettingsPanel()
         {
-            Time.timeScale = 1f;
+            //   Time.timeScale = 1f;
+
+            if (_playerCanMove)
+            {
+                _playerMotionController.EnableMotion();
+            }
+
             _gameViewFade.SetActive(false);
             _settingsPanel.SetActive(false);
         }
@@ -111,7 +130,7 @@ namespace YooE.Diploma
 
         private void RestartGame()
         {
-            Time.timeScale = 1f;
+            //  Time.timeScale = 1f;
             _scienceBaseGameController.ResetGame();
         }
 

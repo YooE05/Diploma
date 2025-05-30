@@ -48,6 +48,7 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _showAverageNotesDialogues;
         [SerializeField] private List<DSDialogueSO> _hideAverageNotesDialogues;
         [SerializeField] private List<DSDialogueSO> _showGraphDialogues;
+        [SerializeField] private List<DSDialogueSO> _hideLittleGraphDialogues;
         [SerializeField] private List<DSDialogueSO> _showConclusionPopupDialogues;
         [SerializeField] private List<DSDialogueSO> _hideConclusionPopupDialogues;
 
@@ -137,6 +138,9 @@ namespace YooE.Diploma
                 .NonLazy();
             Container.Bind<Stage6ShowGraphEvent>().AsCached()
                 .WithArguments(_showGraphDialogues)
+                .NonLazy();        
+            Container.Bind<Stage6HideLittleGraphEvent>().AsCached()
+                .WithArguments(_hideLittleGraphDialogues)
                 .NonLazy();
             Container.Bind<Stage6ShowConclusionPopupEvent>().AsCached()
                 .WithArguments(_showConclusionPopupDialogues)

@@ -15,3 +15,31 @@ MonoBehaviour:
   _clips:
   - Name: buttonClick
     Clip: {fileID: 8300000, guid: 09e0b6743d1d5f745a1c88fe1583e25d, type: 3}
+  - Name: pen
+    Clip: {fileID: 8300000, guid: b67b5fcd6e1f30c41a46ae3a9d6154fe, type: 3}
+  - Name: clock
+    Clip: {fileID: 8300000, guid: ae08fb322181236469313844b2aaf28b, type: 3}
+  - Name: battleTheme
+    Clip: {fileID: 8300000, guid: a1d78672093d9ed43a2ede88ced33f73, type: 3}
+  - Name: pop1
+    Clip: {fileID: 8300000, guid: c4add091d9ed6ee48853c959aeb8137d, type: 3}
+  - Name: pop2
+    Clip: {fileID: 8300000, guid: d3348aed83eefc6488aeadfe74402430, type: 3}
+  - Name: pop3
+    Clip: {fileID: 8300000, guid: de33e08c4b171264abd3a29dce543620, type: 3}
+  - Name: pop4
+    Clip: {fileID: 8300000, guid: f1c92d9be9af9744dbae045b75d7ae92, type: 3}
+  - Name: correctAnswer
+    Clip: {fileID: 8300000, guid: c417b22150987924e8559606f8205c41, type: 3}
+  - Name: wrongAnswer
+    Clip: {fileID: 8300000, guid: 5cbff2228366f234695dbfd779766de4, type: 3}
+  - Name: enemyDeath1
+    Clip: {fileID: 8300000, guid: d34681876706405498a374a7d7c3b23f, type: 3}
+  - Name: enemyDeath2
+    Clip: {fileID: 8300000, guid: b3eeb4ec2645ccf49867ffebcd91c73d, type: 3}
+  - Name: enemyDeath3
+    Clip: {fileID: 8300000, guid: d34681876706405498a374a7d7c3b23f, type: 3}
+  - Name: playerHurt
+    Clip: {fileID: 8300000, guid: c3c2c8b2fbcfb3441bd4d84561d02ee0, type: 3}
+  - Name: playerDeath
+    Clip: {fileID: 8300000, guid: c6afca3558a472b4a94f4df15ccd5c51, type: 3}

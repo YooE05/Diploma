@@ -1,6 +1,8 @@
 ﻿using System;
+using Audio;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace YooE
 {
@@ -14,6 +16,8 @@ namespace YooE
         [SerializeField] protected Sprite _enableSprite;
         [SerializeField] protected Sprite _disableSprite;
 
+        [Inject] protected AudioManager _audioManager;
+
         private void OnEnable()
         {
             _button.onClick.AddListener(InvokeButtonClick);
@@ -21,6 +25,11 @@ namespace YooE
 
         private void InvokeButtonClick()
         {
+            if (_audioManager.TryGetAudioClipByName("buttonClick", out var audioClip))
+            {
+                _audioManager.PlaySound(audioClip, AudioOutput.UI);
+            }
+
             OnButtonClicked?.Invoke();
             OnCurrentButtonClicked?.Invoke(this);
         }

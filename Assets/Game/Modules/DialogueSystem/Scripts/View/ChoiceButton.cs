@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using DS.Data;
 using DS.ScriptableObjects;
 
@@ -19,6 +20,12 @@ namespace YooE.DialogueSystem
             OnButtonClicked += DoChoice;
 
             Show();
+        }
+
+        public void AnimateWithDelay(float delay)
+        {
+            transform.DOScale(1, 0.5f).From(0).SetDelay(delay).SetEase(Ease.OutBounce).SetLink(gameObject)
+                .Play();
         }
 
         private void DoChoice()

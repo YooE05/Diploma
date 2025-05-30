@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Audio;
 using Zenject;
 
 namespace YooE.Diploma
@@ -18,6 +19,7 @@ namespace YooE.Diploma
         public int BestScore;
 
         [Inject] private PlayerDataContainer _playerDataContainer;
+        [Inject] private AudioManager _audioManager;
 
         public void OnUpdate(float deltaTime)
         {
@@ -49,7 +51,7 @@ namespace YooE.Diploma
 
         public void InitEnemy(EnemyView view, EnemyConfig config)
         {
-            var newEnemy = new Enemy(config, view);
+            var newEnemy = new Enemy(config, view, _audioManager);
             newEnemy.OnDied += IncreaseDiedCount;
             _enemies.Add(newEnemy);
         }

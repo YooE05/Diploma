@@ -87,5 +87,22 @@ namespace YooE.Diploma
         {
             _graphPanel.Show();
         }
+    } 
+    
+    public sealed class Stage6HideLittleGraphEvent : DialogueEvent
+    {
+        private readonly GraphPanelInteraction _graphPanel;
+
+        public Stage6HideLittleGraphEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            GraphPanelInteraction graphPanel) :
+            base(dialogueState, dialogues)
+        {
+            _graphPanel = graphPanel;
+        }
+
+        protected override void StartActions()
+        {
+            _graphPanel.HideLittleGraph();
+        }
     }
 }

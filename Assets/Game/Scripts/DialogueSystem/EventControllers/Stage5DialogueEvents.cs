@@ -135,7 +135,7 @@ namespace YooE.Diploma
 
         protected override void FinishActions()
         {
-            _uiAnimations.ShowWaitingFade();
+            _uiAnimations.ShowWaitingFade().Forget();
             _uiAnimations.OnWaitingEnd += AfterWaitingActions;
         }
 

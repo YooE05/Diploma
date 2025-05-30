@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 namespace YooE
@@ -58,11 +59,10 @@ namespace YooE
 
         public void Hide()
         {
-           // _popupGameObject.transform.DOScale(0f, 0.5f).SetLink(_popupGameObject).Play();
             _popupGameObject.SetActive(false);
-          //  _popupGameObject.transform.DOScale(1, 0f).SetLink(_popupGameObject).Play();
-        } 
-        
+            _popupGameObject.transform.DOScale(0, 0.5f).SetLink(_popupGameObject).Play();
+        }
+
         public void HideNoAnimation()
         {
             _popupGameObject.SetActive(false);
@@ -70,9 +70,13 @@ namespace YooE
 
         public void Show()
         {
-            //_popupGameObject.transform.DOScale(0f, 0f).SetLink(_popupGameObject).Play();
             _popupGameObject.SetActive(true);
-            //_popupGameObject.transform.DOScale(1, 0.5f).SetLink(_popupGameObject).Play();
+            _popupGameObject.transform.DOScale(1, 0.5f).From(0).SetLink(_popupGameObject).Play();
+        }
+
+        public void ShowNoAnimation()
+        {
+            _popupGameObject.SetActive(true);
         }
     }
 }

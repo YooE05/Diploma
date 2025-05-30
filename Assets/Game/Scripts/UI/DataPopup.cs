@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace YooE.Diploma
 {
@@ -25,11 +26,13 @@ namespace YooE.Diploma
             Hide();
             _parentGO.SetActive(true);
 
+            _qualityDataGO.transform.DOScale(1f, 0.5f).From(0f).SetLink(_qualityDataGO).Play();
             _qualityDataGO.SetActive(true);
         }
 
         public void ShowQuantitativePopup()
         {
+            _quantitativeDataGO.transform.DOScale(1f, 0.5f).From(0f).SetLink(_quantitativeDataGO).Play();
             _quantitativeDataGO.SetActive(true);
         }
     }

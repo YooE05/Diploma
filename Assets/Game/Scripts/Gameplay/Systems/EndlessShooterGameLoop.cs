@@ -30,6 +30,8 @@ namespace YooE.Diploma
         [SerializeField] private WaveDataFactory _waveDataFactory;
         private int _waveIndex;
 
+        [Inject] private LoadingScreen _loadingScreen;
+
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, EnemyWaveObserver enemyWaveObserver,
             EnemySpawner enemySpawner,
@@ -63,20 +65,25 @@ namespace YooE.Diploma
         {
             _saveLoadManager.OnDataLoaded -= InitGameplay;
 
-            _audioManager.PlaySound(_audioClip, AudioOutput.Music);
+            if (_audioManager.TryGetAudioClipByName("battleTheme", out var audioClip))
+            {
+                _audioManager.PlaySound(audioClip, AudioOutput.Music);
+            }
 
             _gameplayScreenView.Hide();
             _startPanel.SetActive(true);
             _startButton.OnButtonClicked += StartGame;
+            _loadingScreen.Hide();
+            
+            SpawnEnemyWave(0f).Forget();
         }
 
         private void StartGame()
         {
-            SpawnEnemyWave(0f).Forget();
             _gameplayScreenView.Show();
             _startPanel.SetActive(false);
             _startButton.OnButtonClicked -= StartGame;
-            
+
             _lifecycleManager.OnStart();
             _timer.RestartTimer();
         }
@@ -109,6 +116,11 @@ namespace YooE.Diploma
                 }
             ));
 
+            if (_waveIndex == 0)
+            {
+                await UniTask.WaitForSeconds(2f);
+            }
+            
             _gameplayScreenView.HideWaveNumber();
         }
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Audio;
+using UnityEngine;
 
 namespace YooE.Diploma
 {
@@ -8,14 +9,17 @@ namespace YooE.Diploma
         private readonly AnimationEvents _animationEvents;
         private readonly TargetSensorConfig _targetSensorConfig;
         private readonly Transform _selfTransform;
+        private readonly AudioManager _audioManager;
 
         private TargetSensor _targetSensor;
         private HitPointsComponent _targetHp;
         private bool _hasAttackAbility;
 
         public TargetAttack(float damage, AnimationEvents animationEvents, TargetSensorConfig targetSensorConfig,
-            Transform selfTransform)
+            Transform selfTransform, AudioManager audioManager)
         {
+            _audioManager = audioManager;
+            
             _damage = damage;
             _animationEvents = animationEvents;
             _targetSensorConfig = targetSensorConfig;
@@ -46,6 +50,11 @@ namespace YooE.Diploma
         {
             if (CanDoDamage())
             {
+                if (_audioManager.TryGetAudioClipByName("playerHurt", out var audioClip))
+                {
+                    _audioManager.PlaySoundOneShot(audioClip, AudioOutput.Master);
+                }
+                
                 _targetHp.TakeDamage(_damage);
             }
         }

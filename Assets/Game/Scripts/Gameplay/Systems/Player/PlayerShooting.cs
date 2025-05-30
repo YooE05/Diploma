@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 
 namespace YooE.Diploma
@@ -10,13 +11,16 @@ namespace YooE.Diploma
         private readonly BulletsSystem _bulletsSystem;
         private readonly UpdateTimer _timer;
         private ShootingConfig _shootingConfig;
+        private AudioManager _audioManager;
 
         private float _nextShotTime;
         private bool _canShoot;
 
         public PlayerShooting(BulletsSystem bulletsSystem, WeaponView[] weaponsView, TargetPicker targetPicker,
-            ShootingConfig shootingConfig, UpdateTimer timer)
+            ShootingConfig shootingConfig, UpdateTimer timer, AudioManager audioManager)
         {
+            _audioManager = audioManager;
+
             _shootingConfig = shootingConfig;
             _targetPicker = targetPicker;
             _weaponsView = weaponsView;
@@ -117,6 +121,18 @@ namespace YooE.Diploma
                 _shootingConfig.BulletSpeed);
             _bulletsSystem.FlyBullet(weaponView.ShootingPointPosition, _shootingConfig.Damage, velocity,
                 _shootingConfig.EnemyType, _shootingConfig.BulletColor);
+
+            PlayBulletSound();
+        }
+
+        private void PlayBulletSound()
+        {
+            var popName = $"pop{Random.Range(1, 5)}";
+
+            if (_audioManager.TryGetAudioClipByName(popName, out var audioClip))
+            {
+                _audioManager.PlaySoundOneShot(audioClip, AudioOutput.UI);
+            }
         }
 
         private Vector3 GetShotDirection(Vector3 startShootingPosition, Vector3 targetPosition)
