@@ -37,8 +37,7 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _completeGameDialogues;
 
         //Popups
-        [Header("Popups")]
-        [SerializeField] private List<DSDialogueSO> _showIndependentVarDialogues;
+        [Header("Popups")] [SerializeField] private List<DSDialogueSO> _showIndependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _showDependentVarDialogues;
         [SerializeField] private List<DSDialogueSO> _hideVarsDialogues;
 
@@ -64,6 +63,12 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _enableAnalysisDialogues;
         [SerializeField] private List<DSDialogueSO> _enableConclusionDialogues;
 
+        [Header("Navigation")] [SerializeField] private List<DSDialogueSO> _hideNavigation;
+        [SerializeField] private List<DSDialogueSO> _showNPCNavigation;
+        [SerializeField] private List<DSDialogueSO> _showDoorNavigation;
+        [SerializeField] private List<DSDialogueSO> _showSeedNavigation;
+        [SerializeField] private List<DSDialogueSO> _showLeverNavigation;
+
         public override void InstallBindings()
         {
             Container.Bind<SaveGameEvent>().AsCached().WithArguments(_saveGameDialogues).NonLazy();
@@ -81,6 +86,7 @@ namespace YooE.Diploma
             Stage6();
 
             DialoguePopups();
+            Navigation();
         }
 
         private void Stage34()
@@ -164,6 +170,16 @@ namespace YooE.Diploma
             Container.Bind<EnableExperimentEvent>().AsCached().WithArguments(_enableExperimentDialogues).NonLazy();
             Container.Bind<EnableAnalysisEvent>().AsCached().WithArguments(_enableAnalysisDialogues).NonLazy();
             Container.Bind<EnableConclusionEvent>().AsCached().WithArguments(_enableConclusionDialogues).NonLazy();
+        }
+
+        private void Navigation()
+        {
+            Container.Bind<HideNavigationEvent>().AsCached().WithArguments(_hideNavigation).NonLazy();
+
+            Container.Bind<SetDoorNavigationEvent>().AsCached().WithArguments(_showDoorNavigation).NonLazy();
+            Container.Bind<SetNPCNavigationEvent>().AsCached().WithArguments(_showNPCNavigation).NonLazy();
+            Container.Bind<SetSeedNavigationEvent>().AsCached().WithArguments(_showSeedNavigation).NonLazy();
+            Container.Bind<SetLeverNavigationEvent>().AsCached().WithArguments(_showLeverNavigation).NonLazy();
         }
     }
 }

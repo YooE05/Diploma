@@ -15,6 +15,7 @@ namespace YooE.Diploma
         [SerializeField] private CharacterDialogueComponent _scientistCharacterComponent;
         [SerializeField] private AudioClip _audioClip;
         [SerializeField] private StagesManger _stagesManger;
+        [SerializeField] private LoadingScreen _loadingScreen;
 
         private SaveLoadManager _saveLoadManager;
         private AudioManager _audioManager;
@@ -37,6 +38,7 @@ namespace YooE.Diploma
 
         private void Start()
         {
+            _loadingScreen.Show();
             _saveLoadManager.OnDataLoaded += StartGameplay;
             _saveLoadManager.LoadGame();
         }
@@ -59,10 +61,12 @@ namespace YooE.Diploma
             _playerDataContainer.IsGameCompleted = _scientistCharacterComponent.GetCharacterData().GroupIndex > 20;
 
             _lifecycleManager.OnStart();
+            _loadingScreen.Hide();
         }
 
         public void GoToShooterScene()
         {
+            _loadingScreen.Show();
             _audioManager.PlaySound(null, AudioOutput.Music);
             _saveLoadManager.SaveGame();
 

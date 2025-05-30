@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Game.Tutorial.Gameplay;
 using YooE.DialogueSystem;
 
 namespace YooE.Diploma
@@ -10,14 +11,18 @@ namespace YooE.Diploma
 
         private readonly CharactersDataHandler _charactersDataHandler;
         private readonly TaskPanel _taskPanel;
+        private readonly NavigationManager _navigationManager;
 
         private const string CheckGardenText = "Осмотреть грядку";
         private const string CheckSeparatePlantText = "Убрать семечко";
 
-        public Stage3TaskTracker(CharactersDataHandler charactersDataHandler, TaskPanel taskPanel)
+        public Stage3TaskTracker(CharactersDataHandler charactersDataHandler, TaskPanel taskPanel,
+            NavigationManager navigationManager)
         {
             _taskPanel = taskPanel;
             _charactersDataHandler = charactersDataHandler;
+            _navigationManager = navigationManager;
+
             ResetTasks();
         }
 
@@ -29,6 +34,10 @@ namespace YooE.Diploma
 
             _taskPanel.CompleteTask(CheckGardenText);
             _gardenChecked = true;
+
+            if (!_separatePlantChecked)
+                _navigationManager.SetNavigationToSeed();
+
             CheckTaskCompletion();
         }
 
@@ -38,6 +47,10 @@ namespace YooE.Diploma
 
             _taskPanel.CompleteTask(CheckSeparatePlantText);
             _separatePlantChecked = true;
+
+            if (!_gardenChecked)
+                _navigationManager.SetNavigationToGarden();
+
             CheckTaskCompletion();
         }
 
@@ -54,6 +67,8 @@ namespace YooE.Diploma
 
             _charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
             _charactersDataHandler.UpdateCharacterDialogueIndex(DialogueCharacterID.MainScientist);
+
+            _navigationManager.SetNavigationToMainNpc();
         }
 
         public void ShowTasksText()

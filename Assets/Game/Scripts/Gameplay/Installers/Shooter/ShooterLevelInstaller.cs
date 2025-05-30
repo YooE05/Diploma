@@ -14,6 +14,7 @@ namespace YooE.Diploma
         [SerializeField] private ShooterPopupsView _popupsView;
 
         [SerializeField] private string _buttonsClickSoundName = "buttonClick";
+        [SerializeField] private LoadingScreen _loadingScreen;
 
         // ReSharper disable Unity.PerformanceAnalysis
         public override void InstallBindings()
@@ -32,6 +33,7 @@ namespace YooE.Diploma
 
         private void UI()
         {
+            Container.Bind<LoadingScreen>().FromInstance(_loadingScreen).AsCached().NonLazy();
             Container.BindInterfacesAndSelfTo<ShooterGameplayScreenPresenter>()
                 .AsCached()
                 .WithArguments(_gameplayScreenView)

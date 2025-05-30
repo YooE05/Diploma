@@ -47,8 +47,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: eee1ea985c25ab145aea60e0195c353d
-    m_Address: ShooterTutorial
+  - m_GUID: bc9b46945f263f74eb8f07eb57089633
+    m_Address: ShooterTutorialEasy
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

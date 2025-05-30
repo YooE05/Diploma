@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Tutorial.Gameplay;
+using UnityEngine;
 using YooE.Diploma.Interaction;
 using Zenject;
 
@@ -9,6 +10,7 @@ namespace YooE.Diploma
         [SerializeField] private GardenViewController _gardenView;
 
         [Inject] private FightDoorInteractionComponent _fightZoneInteraction;
+        [Inject] private NavigationManager _navigationManager;
 
         public override void InitGameView()
         {
@@ -21,6 +23,8 @@ namespace YooE.Diploma
             _gardenView.HideLightLevers();
 
             _fightZoneInteraction.EnableInteractionAbility();
+
+            _navigationManager.SetNavigationToDoor();
         }
     }
 }

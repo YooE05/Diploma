@@ -8587,7 +8587,7 @@ Transform:
   m_GameObject: {fileID: 277444565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.02, y: 0.029, z: 5.9}
+  m_LocalPosition: {x: 26.71, y: 0.029, z: 4.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24053,7 +24053,7 @@ Transform:
   m_GameObject: {fileID: 833358892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.38, y: 0.029, z: 5.84}
+  m_LocalPosition: {x: 26.79, y: 0.029, z: 5.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29718,7 +29718,7 @@ Transform:
   m_GameObject: {fileID: 1022533403}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.77, y: 0.029, z: 2.92}
+  m_LocalPosition: {x: 23.99, y: 0.029, z: 1.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31891,6 +31891,7 @@ MonoBehaviour:
   _gameplayScreenView: {fileID: 931743169}
   _popupsView: {fileID: 1657813627}
   _buttonsClickSoundName: buttonClick
+  _loadingScreen: {fileID: 210904890563812295}
 --- !u!114 &1101352809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62284,6 +62285,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+--- !u!114 &210904890563812295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8942849289651930554, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+  m_PrefabInstance: {fileID: 210904890563812294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4a8f349cd876244a7ef594d68c0f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &750650135568401537
 PrefabInstance:
   m_ObjectHideFlags: 0

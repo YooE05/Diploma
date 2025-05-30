@@ -95,12 +95,15 @@ namespace YooE.Diploma
         private readonly UpdateTimer _timer;
         private readonly bool _isEndless;
         private readonly ShooterLoader _shooterLoader;
+        private readonly LoadingScreen _loadingScreen;
 
         public ShooterPopupsPresenter(ShooterPopupsView shooterPopupsView,
             ShooterLoader shooterLoader,
 //            ShooterGameLoopController shooterGameLoopController,
-            EnemiesInitializer enemiesInitializer, UpdateTimer timer, bool isEndless = false)
+            EnemiesInitializer enemiesInitializer, UpdateTimer timer, LoadingScreen loadingScreen,
+            bool isEndless = false)
         {
+            _loadingScreen = loadingScreen;
             _isEndless = isEndless;
             _shooterLoader = shooterLoader;
 
@@ -118,6 +121,7 @@ namespace YooE.Diploma
         private void GoNextLevel()
         {
             _shooterLoader.UnloadShooterScene();
+            _loadingScreen.Show();
             //_shooterGameLoopController.GoNextLevel();
             Time.timeScale = 1f;
             SceneManager.LoadScene("ScienceBaseVisual");
@@ -126,6 +130,7 @@ namespace YooE.Diploma
         private void RetryGame()
         {
             //_shooterGameLoopController.RetryGameLoop();
+            _loadingScreen.Show();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 

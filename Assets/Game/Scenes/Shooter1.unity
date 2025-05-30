@@ -15010,6 +15010,7 @@ MonoBehaviour:
   _gameplayScreenView: {fileID: 931743169}
   _popupsView: {fileID: 1657813627}
   _buttonsClickSoundName: buttonClick
+  _loadingScreen: {fileID: 210904890563812295}
 --- !u!114 &1101352809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15622,7 +15623,7 @@ Transform:
   m_GameObject: {fileID: 1165391346}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.14, y: 0, z: -9.05}
+  m_LocalPosition: {x: 45.76, y: 0, z: -15.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18206,7 +18207,7 @@ Transform:
   m_GameObject: {fileID: 1281642193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.96, y: 0, z: -6.82}
+  m_LocalPosition: {x: 46.53, y: 0, z: -6.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22996,7 +22997,7 @@ Transform:
   m_GameObject: {fileID: 1569406615}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.95, y: 0, z: -4.2}
+  m_LocalPosition: {x: 45.28, y: 0, z: 4.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30303,6 +30304,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+--- !u!114 &210904890563812295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8942849289651930554, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+  m_PrefabInstance: {fileID: 210904890563812294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4a8f349cd876244a7ef594d68c0f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &750650135568401537
 PrefabInstance:
   m_ObjectHideFlags: 0

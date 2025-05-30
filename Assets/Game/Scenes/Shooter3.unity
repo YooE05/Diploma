@@ -12289,6 +12289,7 @@ MonoBehaviour:
   _gameplayScreenView: {fileID: 931743169}
   _popupsView: {fileID: 1657813627}
   _buttonsClickSoundName: buttonClick
+  _loadingScreen: {fileID: 210904890563812295}
 --- !u!114 &1101352809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23597,6 +23598,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+--- !u!114 &210904890563812295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8942849289651930554, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+  m_PrefabInstance: {fileID: 210904890563812294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4a8f349cd876244a7ef594d68c0f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &750650135568401537
 PrefabInstance:
   m_ObjectHideFlags: 0

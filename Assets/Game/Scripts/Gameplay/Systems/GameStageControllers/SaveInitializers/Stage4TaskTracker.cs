@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Game.Tutorial.Gameplay;
 using YooE.DialogueSystem;
 
 namespace YooE.Diploma
@@ -10,14 +11,17 @@ namespace YooE.Diploma
 
         private readonly CharactersDataHandler _charactersDataHandler;
         private readonly TaskPanel _taskPanel;
+        private readonly NavigationManager _navigationManager;
 
         private const string AdjustGardenLightText = "Настроить свет";
         private const string PlantSeedsText = "Посадить семена";
 
-        public Stage4TaskTracker(CharactersDataHandler charactersDataHandler, TaskPanel taskPanel)
+        public Stage4TaskTracker(CharactersDataHandler charactersDataHandler, TaskPanel taskPanel,
+            NavigationManager navigationManager)
         {
             _taskPanel = taskPanel;
             _charactersDataHandler = charactersDataHandler;
+            _navigationManager = navigationManager;
 
             _taskPanel.Hide();
             ResetTasks();
@@ -56,6 +60,8 @@ namespace YooE.Diploma
 
             _charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
             _charactersDataHandler.UpdateCharacterDialogueIndex(DialogueCharacterID.MainScientist);
+
+            _navigationManager.SetNavigationToMainNpc();
         }
 
         public void ShowTasksText()

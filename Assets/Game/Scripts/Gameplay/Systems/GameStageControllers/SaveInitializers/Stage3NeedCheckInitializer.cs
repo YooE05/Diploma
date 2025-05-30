@@ -1,4 +1,5 @@
-﻿using YooE.Diploma.Interaction;
+﻿using Game.Tutorial.Gameplay;
+using YooE.Diploma.Interaction;
 using Zenject;
 
 namespace YooE.Diploma
@@ -8,6 +9,7 @@ namespace YooE.Diploma
         [Inject] private GardenViewController _gardenView;
         [Inject] private FightDoorInteractionComponent _fightZoneInteraction;
         [Inject] private Stage3TaskTracker _taskTracker;
+        [Inject] private NavigationManager _navigationManager;
 
         public override void InitGameView()
         {
@@ -20,6 +22,8 @@ namespace YooE.Diploma
             _taskTracker.ShowTasksText();
             _charactersTransform.MovePlayerToNPC();
             _fightZoneInteraction.DisableInteractionAbility();
+            
+            _navigationManager.SetNavigationToGarden();
         }
     }
 }

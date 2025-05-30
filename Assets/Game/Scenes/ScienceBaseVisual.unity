@@ -25077,7 +25077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 662033796}
   - component: {fileID: 662033797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NavigationArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25114,6 +25114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arrow: {fileID: 1289132661}
   _playerTransform: {fileID: 1968047085108912961}
+  _mainNPC: {fileID: 1691424245}
+  _door: {fileID: 237423132}
+  _seed: {fileID: 2083004074}
+  _garden: {fileID: 1718497399}
+  _lever: {fileID: 1346415102}
 --- !u!4 &664266927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
@@ -31603,7 +31608,7 @@ GameObject:
   - component: {fileID: 824721728}
   - component: {fileID: 824721730}
   - component: {fileID: 824721729}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47797,7 +47802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289132660}
   - component: {fileID: 1289132661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NavigationArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47834,6 +47839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rootGameObject: {fileID: 1289132659}
   _rootTransform: {fileID: 1289132660}
+  _canvasGO: {fileID: 824721727}
 --- !u!1 &1289871829
 GameObject:
   m_ObjectHideFlags: 0
@@ -48076,6 +48082,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2bcb598a6b815204d9567bf885644a46, type: 2}
   - {fileID: 11400000, guid: c8f505e5bcba19d4680ef6b38bfc4f9b, type: 2}
   - {fileID: 11400000, guid: 18a883962a58f4e43ac3d00e480c0d15, type: 2}
+  _hideNavigation:
+  - {fileID: 11400000, guid: b9731172c6f90a6408151d627cc947d9, type: 2}
+  - {fileID: 11400000, guid: 314980e0ca95c9e41836316076994d55, type: 2}
+  - {fileID: 11400000, guid: 7928df60b0dfb3d4f953f0f368ce50c2, type: 2}
+  - {fileID: 11400000, guid: 77ba3c89c7d781247b639f8bdaa290d8, type: 2}
+  - {fileID: 11400000, guid: 2d88472a2049ba54ead5752e48c92f15, type: 2}
+  - {fileID: 11400000, guid: b01b265782751544ba38a77f9524ef21, type: 2}
+  - {fileID: 11400000, guid: b9731172c6f90a6408151d627cc947d9, type: 2}
+  - {fileID: 11400000, guid: bfb0fac8930b2444c84b436102d2d087, type: 2}
+  - {fileID: 11400000, guid: 4809c158776e460478762df27872bfda, type: 2}
+  _showNPCNavigation: []
+  _showDoorNavigation:
+  - {fileID: 11400000, guid: 3b5c605c651b2ec41bb48443374a3d5a, type: 2}
+  - {fileID: 11400000, guid: edb860c3d73f5924ab931f21e223accb, type: 2}
+  - {fileID: 11400000, guid: d39870236229e5f41916e460e7ccbf32, type: 2}
+  _showSeedNavigation:
+  - {fileID: 11400000, guid: e1548be13ebff3844a8bad8c388432ae, type: 2}
+  _showLeverNavigation:
+  - {fileID: 11400000, guid: 9d8b1338ec35e334db3edcf285a65874, type: 2}
 --- !u!114 &1289871835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55153,6 +55178,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4589686466580447430, guid: 71f13bbf0fe0ed44c8f71c60dee12bd6, type: 3}
   m_PrefabInstance: {fileID: 1518392799}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519912373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8721134669420636617, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+  m_PrefabInstance: {fileID: 162375585447597691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4a8f349cd876244a7ef594d68c0f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1520349679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59870,7 +59906,7 @@ GameObject:
   - component: {fileID: 1649710768}
   - component: {fileID: 1649710770}
   - component: {fileID: 1649710769}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62047,6 +62083,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccbc569bd314b3aa0e6e26ef3c896b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1718497399 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8514144091744566034, guid: 66762f22ae9350649b7fcd1e3e797340, type: 3}
+  m_PrefabInstance: {fileID: 705982579771453206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1719520110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68191,6 +68232,7 @@ MonoBehaviour:
   _scientistCharacterComponent: {fileID: 1691424246}
   _audioClip: {fileID: 8300000, guid: 4a9893eb90affa44db4476cfc5dbf2a2, type: 3}
   _stagesManger: {fileID: 837995344}
+  _loadingScreen: {fileID: 1519912373}
 --- !u!114 &1893153182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78212,10 +78254,6 @@ PrefabInstance:
     - target: {fileID: 4882642579488066526, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_Name
       value: '[ScienceBaseCanvas]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042441724673043754, guid: d30969a502530684ca17c13aa70f392f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -8.899902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

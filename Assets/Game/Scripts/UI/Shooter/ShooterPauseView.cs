@@ -11,11 +11,13 @@ namespace YooE.Diploma
 
         [SerializeField] private ConfirmPopupView _confirmPopupView;
 
+        private LoadingScreen _loadingScreen;
         private ShooterLoader _shooterLoader;
 
         [Inject]
-        public void Construct(ShooterLoader shooterLoader)
+        public void Construct(ShooterLoader shooterLoader, LoadingScreen loadingScreen)
         {
+            _loadingScreen = loadingScreen;
             _shooterLoader = shooterLoader;
         }
 
@@ -54,8 +56,9 @@ namespace YooE.Diploma
 
         private void ExitLevel()
         {
+            _loadingScreen.Show();
             _shooterLoader.UnloadShooterScene();
-            
+
             Time.timeScale = 1f;
             SceneManager.LoadScene("ScienceBaseVisual");
         }

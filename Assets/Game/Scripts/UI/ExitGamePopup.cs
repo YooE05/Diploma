@@ -1,47 +1,84 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using Zenject;
 
 namespace YooE.Diploma
 {
     public sealed class ExitGamePopup : MonoBehaviour
     {
         [SerializeField] private GameObject _gameViewFade;
-        [SerializeField] private ButtonView _homeButton;
+        [SerializeField] private GameObject _settingsPanel;
+        [SerializeField] private ButtonView _openSettingsButton;
+        [SerializeField] private ButtonView _hideSettingsButton;
 
-        [SerializeField] private ConfirmPopupView _confirmPopupView;
+        [SerializeField] private ButtonView _showExitPopupButton;
+        [SerializeField] private ConfirmPopupView _exitConfirmPopupView;
+
+        [SerializeField] private ButtonView _showRestartGamePopupButton;
+        [SerializeField] private ConfirmPopupView _restartConfirmPopupView;
+
+        [Inject] private ScienceBaseGameController _scienceBaseGameController;
 
         private void Awake()
         {
             _gameViewFade.SetActive(false);
-            _confirmPopupView.HideNoAnimation();
+            _settingsPanel.SetActive(false);
+            _exitConfirmPopupView.HideNoAnimation();
+            _restartConfirmPopupView.HideNoAnimation();
         }
 
         private void OnEnable()
         {
-            _homeButton.OnButtonClicked += OpenExitPanel;
-            _confirmPopupView.OnConfirm += ExitGame;
-            _confirmPopupView.OnDecline += HideExitPanel;
+            _openSettingsButton.OnButtonClicked += OpenSettingsPanel;
+            _hideSettingsButton.OnButtonClicked += HideSettingsPanel;
+
+            _showExitPopupButton.OnButtonClicked += ShowExitPanel;
+            _exitConfirmPopupView.OnConfirm += ExitGame;
+            _exitConfirmPopupView.OnDecline += HideExitPanel;
+
+            _showRestartGamePopupButton.OnButtonClicked += ShowRestartPanel;
+            _restartConfirmPopupView.OnConfirm += RestartGame;
+            _restartConfirmPopupView.OnDecline += HideRestartPanel;
         }
 
         private void OnDisable()
         {
-            _homeButton.OnButtonClicked -= OpenExitPanel;
-            _confirmPopupView.OnConfirm -= ExitGame;
-            _confirmPopupView.OnDecline -= HideExitPanel;
+            _openSettingsButton.OnButtonClicked -= OpenSettingsPanel;
+            _hideSettingsButton.OnButtonClicked -= HideSettingsPanel;
+
+            _showExitPopupButton.OnButtonClicked -= ShowExitPanel;
+            _exitConfirmPopupView.OnConfirm -= ExitGame;
+            _exitConfirmPopupView.OnDecline -= HideExitPanel;
+
+            _showRestartGamePopupButton.OnButtonClicked -= ShowRestartPanel;
+            _restartConfirmPopupView.OnConfirm -= RestartGame;
+            _restartConfirmPopupView.OnDecline -= HideRestartPanel;
         }
 
-        private void OpenExitPanel()
+        private void OpenSettingsPanel()
         {
             Time.timeScale = 0f;
             _gameViewFade.SetActive(true);
-            _confirmPopupView.Show();
+            _settingsPanel.SetActive(true);
+        }
+
+        private void HideSettingsPanel()
+        {
+            Time.timeScale = 1f;
+            _gameViewFade.SetActive(false);
+            _settingsPanel.SetActive(false);
+        }
+
+        private void ShowExitPanel()
+        {
+            _settingsPanel.SetActive(false);
+            _exitConfirmPopupView.Show();
         }
 
         private void HideExitPanel()
         {
-            Time.timeScale = 1f;
-            _gameViewFade.SetActive(false);
-            _confirmPopupView.Hide();
+            _settingsPanel.SetActive(true);
+            _exitConfirmPopupView.Hide();
         }
 
         private void ExitGame()
@@ -58,6 +95,24 @@ namespace YooE.Diploma
 #else
             Application.Quit();
 #endif
+        }
+
+        private void ShowRestartPanel()
+        {
+            _settingsPanel.SetActive(false);
+            _restartConfirmPopupView.Show();
+        }
+
+        private void HideRestartPanel()
+        {
+            _settingsPanel.SetActive(true);
+            _restartConfirmPopupView.Hide();
+        }
+
+        private void RestartGame()
+        {
+            Time.timeScale = 1f;
+            _scienceBaseGameController.ResetGame();
         }
 
         /*

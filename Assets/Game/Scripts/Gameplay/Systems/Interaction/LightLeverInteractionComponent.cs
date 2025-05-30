@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Game.Tutorial.Gameplay;
 using UnityEngine;
 using Zenject;
 
@@ -20,6 +21,8 @@ namespace YooE.Diploma.Interaction
         [SerializeField] private float _smallLightAlfa;
         [SerializeField] private float _middleLightAlfa;
         [SerializeField] private float _bigLightAlfa;
+
+        [Inject] private NavigationManager _navigationManager;
 
         private void Awake()
         {
@@ -46,6 +49,7 @@ namespace YooE.Diploma.Interaction
 
         public override void Interact()
         {
+            _navigationManager.Stop();
             base.Interact();
             //Show Animation
             TurnOnLight().Forget();

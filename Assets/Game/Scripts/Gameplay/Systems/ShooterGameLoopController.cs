@@ -10,16 +10,18 @@ namespace YooE.Diploma
 {
     public class ShooterGameLoopController : MonoBehaviour
     {
-        protected LifecycleManager _lifecycleManager;
-        protected EnemyWaveObserver _enemyWaveObserver;
-        protected PlayerShooterBrain _playerBrain;
-        protected UpdateTimer _timer;
-        protected SaveLoadManager _saveLoadManager;
-        protected AudioManager _audioManager;
-        protected CharactersDataHandler _charactersDataHandler;
-        [SerializeField] protected ShooterEndZone _shooterEndZone;
+        private LifecycleManager _lifecycleManager;
+        private EnemyWaveObserver _enemyWaveObserver;
+        private PlayerShooterBrain _playerBrain;
+        private UpdateTimer _timer;
+        private SaveLoadManager _saveLoadManager;
+        private AudioManager _audioManager;
+        private CharactersDataHandler _charactersDataHandler;
+        [SerializeField] private ShooterEndZone _shooterEndZone;
 
-        [SerializeField] protected AudioClip _audioClip;
+        [SerializeField] private AudioClip _audioClip;
+
+        [Inject] private LoadingScreen _loadingScreen;
 
         [Inject]
         public void Construct(LifecycleManager lifecycleManager, EnemyWaveObserver enemyWaveObserver,
@@ -40,6 +42,7 @@ namespace YooE.Diploma
 
         private void Start()
         {
+            _loadingScreen.Show();
             _saveLoadManager.OnDataLoaded += StartGameplay;
             _saveLoadManager.LoadGame();
         }
@@ -51,6 +54,7 @@ namespace YooE.Diploma
             _audioManager.PlaySound(_audioClip, AudioOutput.Music);
             _lifecycleManager.OnStart();
             _timer.RestartTimer();
+            _loadingScreen.Hide();
         }
 
         private void FinishGame()
@@ -69,6 +73,7 @@ namespace YooE.Diploma
 
         public void RetryGameLoop()
         {
+            _loadingScreen.Show();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 

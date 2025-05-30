@@ -35,7 +35,7 @@ namespace YooE
         {
             var sceneName = mainDialogueGroupIndex switch
             {
-                0 => "ShooterTutorial",
+                0 => "ShooterTutorialEasy",
                 2 => "Shooter1",
                 6 => "Shooter2",
                 10 => "Shooter3",
