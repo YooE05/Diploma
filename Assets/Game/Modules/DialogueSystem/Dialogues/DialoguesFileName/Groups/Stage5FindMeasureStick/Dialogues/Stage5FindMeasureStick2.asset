@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage5FindMeasureStick2
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Stage5FindMeasureStick2
-  <CharacterName>k__BackingField: "\u041C\u044B"
-  <Text>k__BackingField: "\u0412\u043E\u0442 \u0438 \u043B\u0438\u043D\u0435\u0439\u043A\u0430"
+  <CharacterName>k__BackingField: "\u041C\u0430\u0440\u0430\u0442"
+  <Text>k__BackingField: "\u0412\u043E\u0442 \u0438 \u043B\u0438\u043D\u0435\u0439\u043A\u0430!"
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 0}

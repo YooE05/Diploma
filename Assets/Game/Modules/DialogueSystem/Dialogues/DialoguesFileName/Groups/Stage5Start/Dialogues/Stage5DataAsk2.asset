@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage5DataAsk2
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Stage5DataAsk2
-  <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+  <CharacterName>k__BackingField: "\u041A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
   <Text>k__BackingField: "\u041D\u0435 \u0432\u043E\u043B\u043D\u0443\u0439\u0441\u044F,
     \u0441\u0435\u0439\u0447\u0430\u0441 \u043C\u044B \u0432\u0441\u0451 \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u043C."
   <Choices>k__BackingField:

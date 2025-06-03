@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stage5WaitMesureStick
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Stage5WaitMesureStick
-  <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+  <CharacterName>k__BackingField: "\u041A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
   <Text>k__BackingField: "\u0415\u0449\u0451 \u043D\u0435 \u043D\u0430\u0448\u0451\u043B
-    \u043B\u0438\u043D\u0435\u0439\u043A\u0443 \u0441 \u0431\u043B\u043E\u043A\u043D\u043E\u0442\u043E\u043C?"
+    \u043B\u0438\u043D\u0435\u0439\u043A\u0443 \u0438 \u043C\u043E\u0439 \u0431\u043B\u043E\u043A\u043D\u043E\u0442?"
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 0}

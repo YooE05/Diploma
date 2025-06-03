@@ -62,6 +62,7 @@ namespace Game.Tutorial.Gameplay
         [SerializeField] private Transform _seed;
         [SerializeField] private Transform _garden;
         [SerializeField] private Transform _lever;
+        [SerializeField] private Transform _shop;
 
         public void SetNavigationToMainNpc()
         {
@@ -86,6 +87,11 @@ namespace Game.Tutorial.Gameplay
         public void SetNavigationToLever()
         {
             StartLookAt(_lever);
+        }
+        
+        public void SetNavigationToShop()
+        {
+            StartLookAt(_shop);
         }
     }
 }

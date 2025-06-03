@@ -88,6 +88,23 @@ namespace YooE.Diploma
         {
             _navigationManager.SetNavigationToLever();
         }
+    } 
+    
+    public sealed class SetShopNavigationEvent : DialogueEvent
+    {
+        private readonly NavigationManager _navigationManager;
+
+        public SetShopNavigationEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            NavigationManager navigationManager) :
+            base(dialogueState, dialogues)
+        {
+            _navigationManager = navigationManager;
+        }
+
+        protected override void FinishActions()
+        {
+            _navigationManager.SetNavigationToShop();
+        }
     }
     
 }

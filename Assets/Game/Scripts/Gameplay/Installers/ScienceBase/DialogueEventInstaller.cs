@@ -69,11 +69,13 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _showDoorNavigation;
         [SerializeField] private List<DSDialogueSO> _showSeedNavigation;
         [SerializeField] private List<DSDialogueSO> _showLeverNavigation;
+        
+        [SerializeField] private List<DSDialogueSO> _showShopNavigation;
 
         public override void InstallBindings()
         {
             Container.Bind<SaveGameEvent>().AsCached().WithArguments(_saveGameDialogues).NonLazy();
-            Container.Bind<CompleteGameEvent>().AsCached().WithArguments(_completeGameDialogues, _storeManager)
+            Container.Bind<CompleteGameEvent>().AsCached().WithArguments(_completeGameDialogues, _storeManager, _mainNPC)
                 .NonLazy();
 
             Container.Bind<EnableFightDoorEvent>().AsCached().WithArguments(_enableFightDoorDialogues).NonLazy();
@@ -184,6 +186,7 @@ namespace YooE.Diploma
             Container.Bind<SetNPCNavigationEvent>().AsCached().WithArguments(_showNPCNavigation).NonLazy();
             Container.Bind<SetSeedNavigationEvent>().AsCached().WithArguments(_showSeedNavigation).NonLazy();
             Container.Bind<SetLeverNavigationEvent>().AsCached().WithArguments(_showLeverNavigation).NonLazy();
+            Container.Bind<SetShopNavigationEvent>().AsCached().WithArguments(_showShopNavigation).NonLazy();
         }
     }
 }

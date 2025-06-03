@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using Audio;
 using Cysharp.Threading.Tasks;
 using DS.ScriptableObjects;
 using YooE.DialogueSystem;
@@ -94,12 +95,22 @@ namespace YooE.Diploma
         private readonly CharactersDataHandler _charactersDataHandler;
         private readonly PlayerDataContainer _playerDataContainer;
         private readonly StoreManager _storeManager;
+        private readonly CharacterDialogueComponent _mainNPC;
+        private readonly AudioManager _audioManager;
+        private readonly PlayerMotionController _playerMotionController;
+        private readonly PlayerInteraction _playerInteraction;
 
         public CompleteGameEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
             CharactersDataHandler charactersDataHandler, PlayerDataContainer playerDataContainer,
-            StoreManager storeManager) :
+            StoreManager storeManager, CharacterDialogueComponent mainNPC, AudioManager audioManager,
+            PlayerMotionController playerMotionController, PlayerInteraction playerInteraction) :
             base(dialogueState, dialogues)
         {
+            _playerMotionController = playerMotionController;
+            _playerInteraction = playerInteraction;
+
+            _audioManager = audioManager;
+            _mainNPC = mainNPC;
             _charactersDataHandler = charactersDataHandler;
             _playerDataContainer = playerDataContainer;
             _storeManager = storeManager;
@@ -110,6 +121,22 @@ namespace YooE.Diploma
             /*_charactersDataHandler.SetNextCharacterDialogueGroup(DialogueCharacterID.MainScientist);
             _charactersDataHandler.UpdateCharacterDialogueIndex(DialogueCharacterID.MainScientist);*/
 
+            if (_audioManager.TryGetAudioClipByName("completeGame", out var audioClip))
+            {
+                _audioManager.PlaySoundOneShot(audioClip, AudioOutput.Music);
+            }
+
+            DelayStartDialogue().Forget();
+        }
+
+        private async UniTaskVoid DelayStartDialogue()
+        {
+            await UniTask.WaitForSeconds(2.5f);
+
+            _playerMotionController.DisableMotion();
+            _playerInteraction.DisableInteraction();
+
+            _mainNPC.StartCurrentDialogueGroup().Forget();
             _playerDataContainer.IsGameCompleted = true;
             _storeManager.OnStart();
         }

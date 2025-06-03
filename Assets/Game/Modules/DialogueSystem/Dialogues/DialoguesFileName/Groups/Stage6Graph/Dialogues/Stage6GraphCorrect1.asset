@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stage6GraphCorrect1
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Stage6GraphCorrect1
-  <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-  <Text>k__BackingField: "\u0412\u0441\u0451 \u0438\u043C\u0435\u043D\u043D\u043E
-    \u0442\u0430\u043A. "
+  <CharacterName>k__BackingField: "\u041A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
+  <Text>k__BackingField: "\u041E \u0434\u0430, \u044F \u0442\u043E\u0436\u0435 \u044D\u0442\u043E
+    \u0432\u0438\u0436\u0443!"
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 2bcb598a6b815204d9567bf885644a46, type: 2}

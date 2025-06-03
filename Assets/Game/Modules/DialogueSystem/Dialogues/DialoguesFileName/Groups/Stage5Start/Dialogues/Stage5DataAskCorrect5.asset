@@ -13,14 +13,12 @@ MonoBehaviour:
   m_Name: Stage5DataAskCorrect5
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Stage5DataAskCorrect5
-  <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
-  <Text>k__BackingField: "\u0422\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u0442\u044C
-    \u043A \u043D\u0438\u043C \u0432 \u043B\u044E\u0431\u043E\u0435 \u0432\u0440\u0435\u043C\u044F,
-    \u043E\u043D\u0438 \u043B\u044E\u0431\u044F\u0442 \u043F\u043E\u0431\u043E\u043B\u0442\u0430\u0442\u044C
-    \u0442\u0430\u043A\u0436\u0435 \u0441\u0438\u043B\u044C\u043D\u043E \u043A\u0430\u043A
-    \u0438 \u043D\u0430\u0443\u043A\u0443!"
+  <CharacterName>k__BackingField: "\u041A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
+  <Text>k__BackingField: "\u042F \u0442\u043E\u0447\u043D\u043E \u043D\u0435 \u043F\u043E\u043C\u043D\u044E,
+    \u0433\u0434\u0435 \u0435\u0433\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u043B,
+    \u043D\u043E \u0443\u0432\u0435\u0440\u0435\u043D, \u0442\u044B \u043D\u0430\u0439\u0434\u0451\u0448\u044C."
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: e7478bc9c61a76e479fd8e278dcd01ca, type: 2}
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 58d53f1748484034996d9850dcadf020, type: 2}
   <DialogueType>k__BackingField: 0
   <IsStartingDialogue>k__BackingField: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage6GraphAsk
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Stage6GraphAsk
-  <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439"
+  <CharacterName>k__BackingField: "\u041A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
   <Text>k__BackingField: "\u0427\u0442\u043E \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
     \u0441\u043A\u0430\u0437\u0430\u0442\u044C, \u0433\u043B\u044F\u0434\u044F \u043D\u0430
     \u043D\u0435\u0433\u043E?"

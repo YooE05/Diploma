@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage5FindMeasureStick1
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: Stage5FindMeasureStick1
-  <CharacterName>k__BackingField: "\u041C\u044B"
+  <CharacterName>k__BackingField: "\u041C\u0430\u0440\u0430\u0442"
   <Text>k__BackingField: "\u0410\u0433\u0430!"
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue

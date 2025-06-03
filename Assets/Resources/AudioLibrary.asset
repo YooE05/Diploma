@@ -43,3 +43,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: c3c2c8b2fbcfb3441bd4d84561d02ee0, type: 3}
   - Name: playerDeath
     Clip: {fileID: 8300000, guid: c6afca3558a472b4a94f4df15ccd5c51, type: 3}
+  - Name: completeGame
+    Clip: {fileID: 8300000, guid: 9eab8d55c12240f4d87b62939ab3061a, type: 3}
+  - Name: endLevel
+    Clip: {fileID: 8300000, guid: 50789089f8ef32542ab48b44c2ade637, type: 3}

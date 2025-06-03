@@ -1,4 +1,5 @@
 ﻿using System;
+using Audio;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -96,13 +97,15 @@ namespace YooE.Diploma
         private readonly bool _isEndless;
         private readonly ShooterLoader _shooterLoader;
         private readonly LoadingScreen _loadingScreen;
+        private readonly AudioManager _audioManager;
 
         public ShooterPopupsPresenter(ShooterPopupsView shooterPopupsView,
-            ShooterLoader shooterLoader,
+            ShooterLoader shooterLoader, AudioManager audioManager,
 //            ShooterGameLoopController shooterGameLoopController,
             EnemiesInitializer enemiesInitializer, UpdateTimer timer, LoadingScreen loadingScreen,
             bool isEndless = false)
         {
+            _audioManager = audioManager;
             _loadingScreen = loadingScreen;
             _isEndless = isEndless;
             _shooterLoader = shooterLoader;
@@ -158,6 +161,11 @@ namespace YooE.Diploma
 
         public void ShowEndGamePopup()
         {
+            if (_audioManager.TryGetAudioClipByName("endLevel", out var audioClip))
+            {
+                _audioManager.PlaySoundOneShot(audioClip, AudioOutput.Music);
+            }
+            
             string stringDefeat;
             if (_isEndless)
             {

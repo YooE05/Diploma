@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Game.Tutorial.Gameplay;
 using TMPro;
 using UnityEngine;
 using YooE.SaveLoad;
@@ -19,6 +20,7 @@ namespace YooE.Diploma
         [SerializeField] private GameObject _warningPanel;
         [SerializeField] private GameObject _moneyPanel;
         [SerializeField] private TextMeshProUGUI _moneyText;
+        [SerializeField] private NavigationManager _navigation;
 
         [SerializeField] private List<StoreItemButton> _itemsList;
         private PlayerDataContainer _playerDataContainer;
@@ -35,6 +37,8 @@ namespace YooE.Diploma
 
         public void OpenStore()
         {
+            _navigation.Stop();
+
             _warningPanel.SetActive(false);
             _storePanel.SetActive(true);
 
