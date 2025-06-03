@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
-  m_Name: SMHypothesisCorrectAnswer2
+  m_Name: Stage2Start11
   m_EditorClassIdentifier: 
-  <DialogueName>k__BackingField: SMHypothesisCorrectAnswer2
+  <DialogueName>k__BackingField: Stage2Start11
   <CharacterName>k__BackingField: "\u041A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
-  <Text>k__BackingField: "\u041F\u0440\u0438\u043D\u0435\u0441\u0438 \u0435\u0449\u0451
-    \u0441\u0435\u043C\u044F\u043D, \u044F \u0431\u0443\u0434\u0443 \u0436\u0434\u0430\u0442\u044C!"
+  <Text>k__BackingField: "\u041E\u043E\u043E\u0442\u043B\u0438\u0447\u043D\u043E,
+    \u043C\u044B \u0432\u044B\u0440\u0430\u0441\u0442\u0438\u043C \u0438\u0445 \u0443
+    \u0441\u0435\u0431\u044F \u0432 \u0441\u0430\u0434\u0443 \u0438 \u0443\u0437\u043D\u0430\u0435\u043C,
+    \u0447\u0442\u043E \u0441 \u043D\u0438\u043C\u0438 \u043D\u0435 \u0442\u0430\u043A."
   <Choices>k__BackingField:
   - <Text>k__BackingField: Next Dialogue
-    <NextDialogue>k__BackingField: {fileID: 0}
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 690b2bfff2a0b9542a93db8b93010e7f, type: 2}
   <DialogueType>k__BackingField: 0
   <IsStartingDialogue>k__BackingField: 0

@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: SMObservation2
   m_EditorClassIdentifier: 
   <DialogueName>k__BackingField: SMObservation2
-  <CharacterName>k__BackingField: "\u0423\u0447\u0451\u043D\u044B\u0439\r"
-  <Text>k__BackingField: "\u0427\u0442\u043E \u0442\u044B \u043F\u043E\u0434\u043C\u0435\u0442\u0438\u043B
-    \u043D\u0430\u0441\u0447\u0451\u0442 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u0439?"
+  <CharacterName>k__BackingField: "\u041A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
+  <Text>k__BackingField: "\u0427\u0442\u043E \u0442\u044B \u0437\u0430\u043C\u0435\u0442\u0438\u043B
+    \u0432 \u0441\u0430\u0434\u0443, \u043C\u0443\u0440? "
   <Choices>k__BackingField:
-  - <Text>k__BackingField: "\u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u0432\u044B\u0440\u043E\u0441\u043B\u0438
+  - <Text>k__BackingField: "\u0420\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u0432\u044B\u0440\u043E\u0441\u043B\u0438
       \u0432\u0435\u0437\u0434\u0435 \u043E\u0434\u0438\u043D\u0430\u043A\u043E\u0432\u043E"
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 4e2ca50ff540a1540bb46d9c996b9ca0, type: 2}
-  - <Text>k__BackingField: "\u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u043D\u0430
+  - <Text>k__BackingField: "\u0420\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u043D\u0430
       \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445
       \u0432\u044B\u0440\u043E\u0441\u043B\u0438 \u0431\u043E\u043B\u044C\u0448\u0435"
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 037350e6a47a631448cf0abf61d609f2, type: 2}
-  - <Text>k__BackingField: "\u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u043D\u0435
+  - <Text>k__BackingField: "\u0420\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u043D\u0435
       \u0440\u0430\u0441\u0442\u0443\u0442 \u0441\u043E\u0432\u0441\u0435\u043C"
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 4e2ca50ff540a1540bb46d9c996b9ca0, type: 2}
   <DialogueType>k__BackingField: 1

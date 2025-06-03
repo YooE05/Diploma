@@ -73293,7 +73293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759617201032993770, guid: 98e66404414bb4e45a84be2130e918f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.02
+      value: 58.021
       objectReference: {fileID: 0}
     - target: {fileID: 2759617201032993770, guid: 98e66404414bb4e45a84be2130e918f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -73301,7 +73301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759617201032993770, guid: 98e66404414bb4e45a84be2130e918f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.7300005
+      value: -3.979
       objectReference: {fileID: 0}
     - target: {fileID: 2759617201032993770, guid: 98e66404414bb4e45a84be2130e918f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -73373,8 +73373,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.91253775, y: 1.1617864, z: 0.31085294}
-  m_Center: {x: 0.17329183, y: 0.5808932, z: 0.010773338}
+  m_Size: {x: 0.91253763, y: 1.1617864, z: 0.4661071}
+  m_Center: {x: 0.17329182, y: 0.5808932, z: -0.06685378}
 --- !u!1001 &1993392060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78918,11 +78918,15 @@ PrefabInstance:
       objectReference: {fileID: 245235987}
     - target: {fileID: 1635219495862057727, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2103946219124438929, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255904219982944809, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_text
+      value: "\u043A\u043E\u0442 \u0423\u0447\u0451\u043D\u044B\u0439"
       objectReference: {fileID: 0}
     - target: {fileID: 2639221470424406284, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_AnchorMax.y
@@ -78983,6 +78987,22 @@ PrefabInstance:
     - target: {fileID: 6323934457658866075, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790886115990276260, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_text
+      value: "\u0425\u043C\u043C, \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E!
+        \u0414\u0430\u0432\u0430\u0439 \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043C
+        <color=#E33099>\u041D\u0410\u0423\u0427\u041D\u042B\u0419 \u041C\u0415\u0422\u041E\u0414</color>,
+        \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u043D\u044F\u0442\u044C, \u0447\u0442\u043E
+        \u0436\u0435 \u0442\u0430\u043C \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790886115990276260, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_fontSize
+      value: 44.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790886115990276260, guid: d30969a502530684ca17c13aa70f392f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 44.8
       objectReference: {fileID: 0}
     - target: {fileID: 7025293789492501426, guid: d30969a502530684ca17c13aa70f392f, type: 3}
       propertyPath: m_IsActive
