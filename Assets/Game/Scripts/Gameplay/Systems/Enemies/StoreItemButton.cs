@@ -19,7 +19,7 @@ namespace YooE.Diploma
             if (!isUnlocked)
             {
                 _button.image.sprite = _lockedSprite;
-                SetText($"{_price} монет");
+                SetText($"{_price} семян");
                 _sceneObject.SetActive(false);
                 return;
             }

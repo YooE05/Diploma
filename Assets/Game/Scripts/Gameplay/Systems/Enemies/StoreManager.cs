@@ -118,6 +118,7 @@ namespace YooE.Diploma
             {
                 var storeItemButton =
                     _itemsList.Find(item => item.Id == _playerDataContainer.UnlockedStoreItemsID[i]);
+                if (storeItemButton == null) return;
                 storeItemButton.InitItem(true);
             }
 
