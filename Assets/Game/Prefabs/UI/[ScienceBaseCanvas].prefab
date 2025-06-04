@@ -581,7 +581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8347132187476079499
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2702,7 +2702,7 @@ MonoBehaviour:
   Id: tileBlack
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 5
   _sceneObject: {fileID: 0}
 --- !u!1 &1861012372417392836
 GameObject:
@@ -3053,7 +3053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439 \u043F\u0438\u0442\u043E\u043C\u0435\u0446"
+  m_text: "\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0435 \u043F\u0438\u0442\u043E\u043C\u0446\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 117b0738eca7545faa9cde2a85c84e9f, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: b9c76cec7e15b4026a1d73d9f515e0bc, type: 2}
@@ -3794,7 +3794,7 @@ MonoBehaviour:
   Id: carpets
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 15
   _sceneObject: {fileID: 0}
 --- !u!1 &2248142779873091393
 GameObject:
@@ -4150,7 +4150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u0438\u0440\u0442\u0443\u0430\u043B\u044C\u043D\u044B\u0435 \u0440\u044B\u0431\u043A\u0438"
+  m_text: "\u041B\u0435\u0442\u0430\u044E\u0449\u0438\u0435 \u0440\u044B\u0431\u043A\u0438"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 117b0738eca7545faa9cde2a85c84e9f, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: b9c76cec7e15b4026a1d73d9f515e0bc, type: 2}
@@ -7650,7 +7650,7 @@ MonoBehaviour:
   Id: tileRed
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 5
   _sceneObject: {fileID: 0}
 --- !u!1 &4820388309862627243
 GameObject:
@@ -8498,7 +8498,7 @@ MonoBehaviour:
   Id: secretCharacter
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 100
   _sceneObject: {fileID: 0}
 --- !u!1 &5279937561047030439
 GameObject:
@@ -8531,13 +8531,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8347132187476079499}
+  - {fileID: 1645655235528083215}
   - {fileID: 9132819226945878038}
   m_Father: {fileID: 5118988216875574944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 145, y: -67.1}
-  m_SizeDelta: {x: 302.54, y: 100}
+  m_AnchoredPosition: {x: 151.27002, y: -69.68405}
+  m_SizeDelta: {x: 302.54, y: 139.3681}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6525018252320135699
 CanvasRenderer:
@@ -10383,8 +10384,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281153023
-  m_fontColor: {r: 1, g: 0.20954831, b: 0.1745283, a: 1}
+    rgba: 4287823852
+  m_fontColor: {r: 0.9265932, g: 1, b: 0.5707547, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13022,7 +13023,7 @@ MonoBehaviour:
   Id: fishes
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 30
   _sceneObject: {fileID: 0}
 --- !u!1 &8082395288503874968
 GameObject:
@@ -13683,7 +13684,7 @@ MonoBehaviour:
   Id: pets
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 30
   _sceneObject: {fileID: 0}
 --- !u!1 &8319217368952553391
 GameObject:
@@ -13919,7 +13920,7 @@ MonoBehaviour:
   Id: wallpaper
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 10
   _sceneObject: {fileID: 0}
 --- !u!1 &8472953212955527484
 GameObject:
@@ -14344,6 +14345,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8852191957017378845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645655235528083215}
+  - component: {fileID: 607231240916528928}
+  - component: {fileID: 682519433463145553}
+  m_Layer: 5
+  m_Name: StatisticIcon (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1645655235528083215
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852191957017378845}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 6121012160491152701}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 85, y: 1}
+  m_SizeDelta: {x: 143, y: 158}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &607231240916528928
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852191957017378845}
+  m_CullTransparentMesh: 1
+--- !u!114 &682519433463145553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852191957017378845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ab825acb0b3f1fc4f9cb2506005c3327, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &9158426327645366371
 GameObject:
   m_ObjectHideFlags: 0
@@ -14444,7 +14520,7 @@ MonoBehaviour:
   Id: toys
   IsItemUnlocked: 0
   _lockedSprite: {fileID: 21300000, guid: b3172725fb616cf4089f946e67723a9d, type: 3}
-  _price: 2
+  _price: 20
   _sceneObject: {fileID: 0}
 --- !u!1 &9191184898312376094
 GameObject:

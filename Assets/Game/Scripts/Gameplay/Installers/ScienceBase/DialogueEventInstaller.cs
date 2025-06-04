@@ -10,6 +10,7 @@ namespace YooE.Diploma
     {
         [SerializeField] private StoreManager _storeManager;
         [SerializeField] private CharacterDialogueComponent _mainNPC;
+        [SerializeField] private GameObject _tutorialHand;
 
         [SerializeField] private List<DSDialogueSO> _saveGameDialogues;
 
@@ -19,6 +20,7 @@ namespace YooE.Diploma
 
         [SerializeField] private List<DSDialogueSO> _enableFightDoorDialogues;
         [SerializeField] private List<DSDialogueSO> _hideTaskPanelDialogues;
+        [SerializeField] private List<DSDialogueSO> _hideTutorialHandDialogues;
 
         [SerializeField] private List<DSDialogueSO> _stage3CheckGardenDialogues;
         [SerializeField] private List<DSDialogueSO> _stage3CheckPlantDialogues;
@@ -69,20 +71,23 @@ namespace YooE.Diploma
         [SerializeField] private List<DSDialogueSO> _showDoorNavigation;
         [SerializeField] private List<DSDialogueSO> _showSeedNavigation;
         [SerializeField] private List<DSDialogueSO> _showLeverNavigation;
-        
+
         [SerializeField] private List<DSDialogueSO> _showShopNavigation;
 
         public override void InstallBindings()
         {
             Container.Bind<SaveGameEvent>().AsCached().WithArguments(_saveGameDialogues).NonLazy();
-            Container.Bind<CompleteGameEvent>().AsCached().WithArguments(_completeGameDialogues, _storeManager, _mainNPC)
+            Container.Bind<CompleteGameEvent>().AsCached()
+                .WithArguments(_completeGameDialogues, _storeManager, _mainNPC)
                 .NonLazy();
 
             Container.Bind<EnableFightDoorEvent>().AsCached().WithArguments(_enableFightDoorDialogues).NonLazy();
             Container.Bind<StartShooterEvent>().AsCached().WithArguments(_startShooterDialogues).NonLazy();
             Container.Bind<EnableMotionEvent>().AsCached().WithArguments(_enableMotionDialogues).NonLazy();
             Container.Bind<GoNextMainDialogueEvent>().AsCached().WithArguments(_goNextMainQuestDialogues).NonLazy();
-            Container.Bind<HideTaskPanelEvent>().AsCached().WithArguments(_hideTaskPanelDialogues).NonLazy();
+            Container.Bind<HideTaskPanelEvent>().AsCached().WithArguments(_hideTaskPanelDialogues)
+                .NonLazy();
+            Container.Bind<HideTutorialHandEvent>().AsCached().WithArguments(_hideTutorialHandDialogues, _tutorialHand).NonLazy();
 
             Stage34();
             Stage5();
@@ -140,7 +145,7 @@ namespace YooE.Diploma
                 .NonLazy();
             Container.Bind<Stage6ShowGraphEvent>().AsCached()
                 .WithArguments(_showGraphDialogues)
-                .NonLazy();        
+                .NonLazy();
             Container.Bind<Stage6HideLittleGraphEvent>().AsCached()
                 .WithArguments(_hideLittleGraphDialogues)
                 .NonLazy();

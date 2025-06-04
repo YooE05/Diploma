@@ -4,6 +4,7 @@ using System.Threading;
 using Audio;
 using Cysharp.Threading.Tasks;
 using DS.ScriptableObjects;
+using UnityEngine;
 using YooE.DialogueSystem;
 using YooE.Diploma.Interaction;
 using YooE.SaveLoad;
@@ -156,6 +157,23 @@ namespace YooE.Diploma
         protected override void StartActions()
         {
             _taskPanel.Hide();
+        }
+    }
+    
+    public sealed class HideTutorialHandEvent : DialogueEvent
+    {
+        private readonly GameObject _tutorialHand;
+
+        public HideTutorialHandEvent(DialogueState dialogueState, List<DSDialogueSO> dialogues,
+            GameObject tutorialHand) :
+            base(dialogueState, dialogues)
+        {
+            _tutorialHand = tutorialHand;
+        }
+
+        protected override void StartActions()
+        {
+            _tutorialHand.SetActive(false);
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using Audio;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -29,6 +30,8 @@ namespace YooE.Diploma
         [SerializeField] private ShooterQuestionsGenerator _questionsGenerator;
         [SerializeField] private WaveDataFactory _waveDataFactory;
         private int _waveIndex;
+
+        private CancellationTokenSource _cancellationTokenSource;
 
         [Inject] private LoadingScreen _loadingScreen;
 
@@ -74,7 +77,7 @@ namespace YooE.Diploma
             _startPanel.SetActive(true);
             _startButton.OnButtonClicked += StartGame;
             _loadingScreen.Hide();
-            
+
             SpawnEnemyWave(0f).Forget();
         }
 
@@ -98,8 +101,11 @@ namespace YooE.Diploma
 
         private async UniTaskVoid SpawnEnemyWave(float delay)
         {
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource = new CancellationTokenSource();
+
             _gameplayScreenView.ShowWaveNumber(_waveIndex + 1);
-            await UniTask.WaitForSeconds(delay);
+            await UniTask.WaitForSeconds(delay, cancellationToken: _cancellationTokenSource.Token);
 
             _enemyWaveObserver.OnAllEnemiesDead += DefeatWave;
 
@@ -118,9 +124,9 @@ namespace YooE.Diploma
 
             if (_waveIndex == 0)
             {
-                await UniTask.WaitForSeconds(2f);
+                await UniTask.WaitForSeconds(2f, cancellationToken: _cancellationTokenSource.Token);
             }
-            
+
             _gameplayScreenView.HideWaveNumber();
         }
 
@@ -177,6 +183,12 @@ namespace YooE.Diploma
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene("ScienceBaseVisual");
+        }
+        
+        private void OnDestroy()
+        {
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource?.Dispose();
         }
     }
 }

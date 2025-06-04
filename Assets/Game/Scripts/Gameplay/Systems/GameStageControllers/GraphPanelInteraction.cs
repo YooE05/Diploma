@@ -96,7 +96,7 @@ namespace YooE.Diploma
         private void ShowTutorialHand()
         {
             _tutorialHand.SetActive(true);
-            _handAnimation = _tutorialHand.transform.DOScaleY(0.73f, 0.5f).From(1f).SetLoops(-1, LoopType.Yoyo);
+            _handAnimation = _tutorialHand.transform.DOScaleY(0.73f, 0.5f).From(1f).SetLoops(-1, LoopType.Yoyo).SetLink(_tutorialHand);
             _handAnimation.Restart();
         }
 
