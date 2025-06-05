@@ -1,6 +1,9 @@
 ﻿using Audio;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using YooE.DialogueSystem;
 using YooE.SaveLoad;
@@ -106,11 +109,14 @@ namespace YooE.Diploma
             _saveLoadManager.ResetGame();
             ReloadScene();
         }
+        
+        private AsyncOperationHandle<SceneInstance> _sceneHandle;
 
         [Button]
         public void ReloadScene()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            _sceneHandle = Addressables.LoadSceneAsync("ScienceBaseVisual", LoadSceneMode.Single);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

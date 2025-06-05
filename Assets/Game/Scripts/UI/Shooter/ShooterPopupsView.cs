@@ -3,6 +3,9 @@ using Audio;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
@@ -120,6 +123,8 @@ namespace YooE.Diploma
             _shooterPopupsView.OnRetryButtonClicked += RetryGame;
             _shooterPopupsView.OnContinueButtonClicked += GoNextLevel;
         }
+        
+        private AsyncOperationHandle<SceneInstance> _sceneHandle;
 
         private void GoNextLevel()
         {
@@ -127,7 +132,8 @@ namespace YooE.Diploma
             _loadingScreen.Show();
             //_shooterGameLoopController.GoNextLevel();
             Time.timeScale = 1f;
-            SceneManager.LoadScene("ScienceBaseVisual");
+            //SceneManager.LoadScene("ScienceBaseVisual");
+            _sceneHandle = Addressables.LoadSceneAsync("ScienceBaseVisual", LoadSceneMode.Single);
         }
 
         private void RetryGame()

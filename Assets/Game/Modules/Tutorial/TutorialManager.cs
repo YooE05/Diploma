@@ -1,3 +1,4 @@
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace YooE.Diploma
 
         [SerializeField] private ButtonView _nextButton;
         [SerializeField] private TutorialZone _weaponTutorialZone;
+
+        private CancellationTokenSource _cancellationTokenSource;
 
         public void OnStart()
         {
@@ -28,9 +31,10 @@ namespace YooE.Diploma
 
         private async UniTaskVoid ShowWeaponPanel()
         {
-            await UniTask.WaitForSeconds(0.5f);
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource = new CancellationTokenSource();
 
-            _nextButton.OnButtonClicked += HideWeaponInfoPanel;
+            await UniTask.WaitForSeconds(0.5f, cancellationToken: _cancellationTokenSource.Token);
 
             _weaponPanel.transform.DOMoveY(-153.84f, 0f).SetLink(_weaponPanel).Play();
             _weaponPanel.SetActive(true);
@@ -40,8 +44,10 @@ namespace YooE.Diploma
             _weaponInfo.SetActive(true);
             _weaponInfo.transform.DOScale(0.81f, 0.6f).SetLink(_weaponInfo).Play();
 
-            await UniTask.WaitForSeconds(1f);
+            await UniTask.WaitForSeconds(1f, cancellationToken: _cancellationTokenSource.Token);
             Time.timeScale = 0f;
+
+            _nextButton.OnButtonClicked += HideWeaponInfoPanel;
         }
 
         private void HideWeaponInfoPanel()
@@ -51,6 +57,12 @@ namespace YooE.Diploma
 
             _weaponInfo.transform.DOScale(0f, 0.5f).SetLink(_weaponInfo)
                 .OnComplete(() => { _weaponInfo.SetActive(false); }).Play();
+        }
+        
+        private void OnDestroy()
+        {
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource?.Dispose();
         }
     }
 }

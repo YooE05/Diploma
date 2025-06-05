@@ -3,6 +3,9 @@ using System.Threading;
 using Audio;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using YooE.DialogueSystem;
 using YooE.SaveLoad;
@@ -178,11 +181,12 @@ namespace YooE.Diploma
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
+        private AsyncOperationHandle<SceneInstance> _sceneHandle;
         public void GoNextLevel()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("ScienceBaseVisual");
+            _sceneHandle = Addressables.LoadSceneAsync("ScienceBaseVisual", LoadSceneMode.Single);
+           // SceneManager.LoadScene("ScienceBaseVisual");
         }
         
         private void OnDestroy()

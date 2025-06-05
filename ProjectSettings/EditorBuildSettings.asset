@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Game/Scenes/ScienceBase.unity
     guid: 8516c73bd7bc28d45826fc2555b0bf14
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/ScienceBaseVisual.unity
     guid: 8f8b5ce75615c684c9be65966396c4a7
   - enabled: 0
@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Game/Scenes/ShooterEndless.unity
     guid: 3e6dc55de3ed466409da03d5fd9479d2
+  - enabled: 1
+    path: Assets/Game/Scenes/Bootstrap.unity
+    guid: f9aa2a3920b8b784abe4940aa48949c9
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 18980d1c9a1a8f047950b42c618594d3, type: 2}

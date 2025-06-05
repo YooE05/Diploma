@@ -30299,6 +30299,10 @@ PrefabInstance:
       propertyPath: _pauseButton
       value: 
       objectReference: {fileID: 1397195525}
+    - target: {fileID: 9050832903922407155, guid: a0ad7140a6c5ebf45aa267e79866435f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

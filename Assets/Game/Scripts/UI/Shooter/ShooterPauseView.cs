@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -54,13 +57,16 @@ namespace YooE.Diploma
             Time.timeScale = 1f;
         }
 
+        private AsyncOperationHandle<SceneInstance> _sceneHandle;
+        
         private void ExitLevel()
         {
             _loadingScreen.Show();
             _shooterLoader.UnloadShooterScene();
 
             Time.timeScale = 1f;
-            SceneManager.LoadScene("ScienceBaseVisual");
+            _sceneHandle = Addressables.LoadSceneAsync("ScienceBaseVisual", LoadSceneMode.Single);
+          //  SceneManager.LoadScene("ScienceBaseVisual");
         }
     }
 }
