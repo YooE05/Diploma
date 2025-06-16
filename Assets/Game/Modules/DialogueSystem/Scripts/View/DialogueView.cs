@@ -22,6 +22,9 @@ namespace YooE.DialogueSystem
         private DialogueState _dialogueState;
         private bool _isButtonsSubscribed;
 
+        private int _totalCharsInLine;
+        private Tween _typewriteTween;
+
         [Inject]
         public void Construct(DialogueState dialogueState)
         {
@@ -60,7 +63,21 @@ namespace YooE.DialogueSystem
 
         private void InitDialogueView(DSDialogueSO dialogue)
         {
-            _dialogueText.text = $"{dialogue.Text}";
+            _typewriteTween.Complete();
+            _dialogueText.text = (dialogue.Text);
+            _dialogueText.maxVisibleCharacters = 0;
+
+            _totalCharsInLine = dialogue.Text.Length;
+
+            _typewriteTween = DOTween.To(
+                () => _dialogueText.maxVisibleCharacters,
+                x => _dialogueText.maxVisibleCharacters = x,
+                _totalCharsInLine,
+                (1.6f / 104f * _totalCharsInLine)
+            ).SetEase(Ease.Linear);
+            _typewriteTween.Play();
+
+            // _dialogueText.text = $"{dialogue.Text}";
             _characterNameText.text = $"{dialogue.CharacterName}";
             SetupChoiceButtons(dialogue.Choices);
 
@@ -160,6 +177,7 @@ namespace YooE.DialogueSystem
 
         public void Dispose()
         {
+            _typewriteTween?.Complete();
             _dialogueState.OnDialogueStart -= InitDialogueView;
             _dialogueState.OnDialogueGroupFinished -= Hide;
         }
